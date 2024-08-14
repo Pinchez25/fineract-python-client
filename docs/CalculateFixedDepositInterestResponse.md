@@ -1,0 +1,10 @@
+# CalculateFixedDepositInterestResponse
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**maturity_amount** | **float** |  | [optional] 
+**warning** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
