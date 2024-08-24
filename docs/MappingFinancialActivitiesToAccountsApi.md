@@ -288,7 +288,7 @@ This endpoint does not need any parameter.
 
 Update a Financial Activity to Account Mapping
 
-the API updates the Ledger account linked to a Financial Activity  
+the API updates the Ledger account linked to a Financial Activity 
 
 ### Example
 ```python

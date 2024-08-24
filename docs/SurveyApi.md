@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create an entry in the survey table
 
-Insert and entry in a survey table (full fill the survey).  Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ] 
+Insert and entry in a survey table (full fill the survey).  Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ]
 
 ### Example
 ```python

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Create an Identifier for a Client
 
-Mandatory Fields documentKey, documentTypeId 
+Mandatory Fields documentKey, documentTypeId
 
 ### Example
 ```python

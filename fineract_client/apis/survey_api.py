@@ -35,7 +35,7 @@ class SurveyApi(object):
     def create_datatable_entry1(self, body, survey_name, apptable_id, **kwargs):  # noqa: E501
         """Create an entry in the survey table  # noqa: E501
 
-        Insert and entry in a survey table (full fill the survey).  Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ]   # noqa: E501
+        Insert and entry in a survey table (full fill the survey).  Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ]  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_datatable_entry1(body, survey_name, apptable_id, async_req=True)
@@ -59,7 +59,7 @@ class SurveyApi(object):
     def create_datatable_entry1_with_http_info(self, body, survey_name, apptable_id, **kwargs):  # noqa: E501
         """Create an entry in the survey table  # noqa: E501
 
-        Insert and entry in a survey table (full fill the survey).  Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ]   # noqa: E501
+        Insert and entry in a survey table (full fill the survey).  Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ]  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_datatable_entry1_with_http_info(body, survey_name, apptable_id, async_req=True)

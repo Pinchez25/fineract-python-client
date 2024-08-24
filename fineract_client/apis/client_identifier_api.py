@@ -35,7 +35,7 @@ class ClientIdentifierApi(object):
     def create_client_identifier(self, body, client_id, **kwargs):  # noqa: E501
         """Create an Identifier for a Client  # noqa: E501
 
-        Mandatory Fields documentKey, documentTypeId   # noqa: E501
+        Mandatory Fields documentKey, documentTypeId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_client_identifier(body, client_id, async_req=True)
@@ -58,7 +58,7 @@ class ClientIdentifierApi(object):
     def create_client_identifier_with_http_info(self, body, client_id, **kwargs):  # noqa: E501
         """Create an Identifier for a Client  # noqa: E501
 
-        Mandatory Fields documentKey, documentTypeId   # noqa: E501
+        Mandatory Fields documentKey, documentTypeId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_client_identifier_with_http_info(body, client_id, async_req=True)

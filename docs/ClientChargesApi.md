@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 Delete a Client Charge
 
-Deletes a Client Charge on which no transactions have taken place (either payments or waivers). 
+Deletes a Client Charge on which no transactions have taken place (either payments or waivers).
 
 ### Example
 ```python

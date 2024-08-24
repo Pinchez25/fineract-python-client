@@ -490,7 +490,7 @@ class MappingFinancialActivitiesToAccountsApi(object):
     def update_gl_account(self, mapping_id, **kwargs):  # noqa: E501
         """Update a Financial Activity to Account Mapping  # noqa: E501
 
-        the API updates the Ledger account linked to a Financial Activity    # noqa: E501
+        the API updates the Ledger account linked to a Financial Activity   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_gl_account(mapping_id, async_req=True)
@@ -513,7 +513,7 @@ class MappingFinancialActivitiesToAccountsApi(object):
     def update_gl_account_with_http_info(self, mapping_id, **kwargs):  # noqa: E501
         """Update a Financial Activity to Account Mapping  # noqa: E501
 
-        the API updates the Ledger account linked to a Financial Activity    # noqa: E501
+        the API updates the Ledger account linked to a Financial Activity   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_gl_account_with_http_info(mapping_id, async_req=True)

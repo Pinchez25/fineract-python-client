@@ -36,6 +36,7 @@ class GetClientsLoanAccounts(object):
         'loan_type': 'GetClientsLoanAccountsType',
         'product_id': 'int',
         'product_name': 'str',
+        'short_product_name': 'str',
         'status': 'GetClientsLoanAccountsStatus'
     }
 
@@ -48,10 +49,11 @@ class GetClientsLoanAccounts(object):
         'loan_type': 'loanType',
         'product_id': 'productId',
         'product_name': 'productName',
+        'short_product_name': 'shortProductName',
         'status': 'status'
     }
 
-    def __init__(self, account_no=None, currency=None, external_id=None, id=None, loan_cycle=None, loan_type=None, product_id=None, product_name=None, status=None):  # noqa: E501
+    def __init__(self, account_no=None, currency=None, external_id=None, id=None, loan_cycle=None, loan_type=None, product_id=None, product_name=None, short_product_name=None, status=None):  # noqa: E501
         """GetClientsLoanAccounts - a model defined in Swagger"""  # noqa: E501
         self._account_no = None
         self._currency = None
@@ -61,6 +63,7 @@ class GetClientsLoanAccounts(object):
         self._loan_type = None
         self._product_id = None
         self._product_name = None
+        self._short_product_name = None
         self._status = None
         self.discriminator = None
         if account_no is not None:
@@ -79,6 +82,8 @@ class GetClientsLoanAccounts(object):
             self.product_id = product_id
         if product_name is not None:
             self.product_name = product_name
+        if short_product_name is not None:
+            self.short_product_name = short_product_name
         if status is not None:
             self.status = status
 
@@ -249,6 +254,27 @@ class GetClientsLoanAccounts(object):
         """
 
         self._product_name = product_name
+
+    @property
+    def short_product_name(self):
+        """Gets the short_product_name of this GetClientsLoanAccounts.  # noqa: E501
+
+
+        :return: The short_product_name of this GetClientsLoanAccounts.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_product_name
+
+    @short_product_name.setter
+    def short_product_name(self, short_product_name):
+        """Sets the short_product_name of this GetClientsLoanAccounts.
+
+
+        :param short_product_name: The short_product_name of this GetClientsLoanAccounts.  # noqa: E501
+        :type: str
+        """
+
+        self._short_product_name = short_product_name
 
     @property
     def status(self):

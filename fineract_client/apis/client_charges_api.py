@@ -142,7 +142,7 @@ class ClientChargesApi(object):
     def delete_client_charge(self, client_id, charge_id, **kwargs):  # noqa: E501
         """Delete a Client Charge  # noqa: E501
 
-        Deletes a Client Charge on which no transactions have taken place (either payments or waivers).   # noqa: E501
+        Deletes a Client Charge on which no transactions have taken place (either payments or waivers).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_client_charge(client_id, charge_id, async_req=True)
@@ -165,7 +165,7 @@ class ClientChargesApi(object):
     def delete_client_charge_with_http_info(self, client_id, charge_id, **kwargs):  # noqa: E501
         """Delete a Client Charge  # noqa: E501
 
-        Deletes a Client Charge on which no transactions have taken place (either payments or waivers).   # noqa: E501
+        Deletes a Client Charge on which no transactions have taken place (either payments or waivers).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_client_charge_with_http_info(client_id, charge_id, async_req=True)
