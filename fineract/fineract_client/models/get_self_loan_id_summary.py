@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_loans_loan_id_currency import GetLoansLoanIdCurrency
 from fineract_client.models.get_loans_loan_id_disbursement_details import GetLoansLoanIdDisbursementDetails
@@ -91,11 +91,11 @@ class GetSelfLoanIdSummary(BaseModel):
     total_written_off: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalWrittenOff")
     __properties: ClassVar[List[str]] = ["canDisburse", "currency", "disbursementDetails", "emiAmountVariations", "feeChargesCharged", "feeChargesDueAtDisbursementCharged", "feeChargesOutstanding", "feeChargesOverdue", "feeChargesPaid", "feeChargesWaived", "feeChargesWrittenOff", "fixedEmiAmount", "inArrears", "interestCharged", "interestOutstanding", "interestOverdue", "interestPaid", "interestWaived", "interestWrittenOff", "isNPA", "linkedAccount", "maxOutstandingLoanBalance", "overdueCharges", "overdueSinceDate", "penaltyChargesCharged", "penaltyChargesOutstanding", "penaltyChargesOverdue", "penaltyChargesPaid", "penaltyChargesWaived", "penaltyChargesWrittenOff", "principalAdjustments", "principalDisbursed", "principalOutstanding", "principalOverdue", "principalPaid", "principalWrittenOff", "totalChargeAdjustment", "totalChargeAdjustmentReversed", "totalChargeback", "totalCostOfLoan", "totalCreditBalanceRefund", "totalCreditBalanceRefundReversed", "totalExpectedCostOfLoan", "totalExpectedRepayment", "totalGoodwillCredit", "totalGoodwillCreditReversed", "totalMerchantRefund", "totalMerchantRefundReversed", "totalOutstanding", "totalOverdue", "totalPayoutRefund", "totalPayoutRefundReversed", "totalRepayment", "totalRepaymentTransaction", "totalRepaymentTransactionReversed", "totalWaived", "totalWrittenOff"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -136,9 +136,9 @@ class GetSelfLoanIdSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in disbursement_details (list)
         _items = []
         if self.disbursement_details:
-            for _item_disbursement_details in self.disbursement_details:
-                if _item_disbursement_details:
-                    _items.append(_item_disbursement_details.to_dict())
+            for _item in self.disbursement_details:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['disbursementDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of linked_account
         if self.linked_account:
@@ -146,9 +146,9 @@ class GetSelfLoanIdSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in overdue_charges (list)
         _items = []
         if self.overdue_charges:
-            for _item_overdue_charges in self.overdue_charges:
-                if _item_overdue_charges:
-                    _items.append(_item_overdue_charges.to_dict())
+            for _item in self.overdue_charges:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['overdueCharges'] = _items
         return _dict
 

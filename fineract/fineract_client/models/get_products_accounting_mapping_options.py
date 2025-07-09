@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_products_asset_account_options import GetProductsAssetAccountOptions
 from fineract_client.models.get_products_equity_account_options import GetProductsEquityAccountOptions
@@ -37,11 +37,11 @@ class GetProductsAccountingMappingOptions(BaseModel):
     liability_account_options: Optional[List[GetProductsLiabilityAccountOptions]] = Field(default=None, alias="liabilityAccountOptions")
     __properties: ClassVar[List[str]] = ["assetAccountOptions", "equityAccountOptions", "incomeAccountOptions", "liabilityAccountOptions"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -79,30 +79,30 @@ class GetProductsAccountingMappingOptions(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in asset_account_options (list)
         _items = []
         if self.asset_account_options:
-            for _item_asset_account_options in self.asset_account_options:
-                if _item_asset_account_options:
-                    _items.append(_item_asset_account_options.to_dict())
+            for _item in self.asset_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['assetAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in equity_account_options (list)
         _items = []
         if self.equity_account_options:
-            for _item_equity_account_options in self.equity_account_options:
-                if _item_equity_account_options:
-                    _items.append(_item_equity_account_options.to_dict())
+            for _item in self.equity_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['equityAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in income_account_options (list)
         _items = []
         if self.income_account_options:
-            for _item_income_account_options in self.income_account_options:
-                if _item_income_account_options:
-                    _items.append(_item_income_account_options.to_dict())
+            for _item in self.income_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['incomeAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in liability_account_options (list)
         _items = []
         if self.liability_account_options:
-            for _item_liability_account_options in self.liability_account_options:
-                if _item_liability_account_options:
-                    _items.append(_item_liability_account_options.to_dict())
+            for _item in self.liability_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['liabilityAccountOptions'] = _items
         return _dict
 

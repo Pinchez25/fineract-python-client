@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from pydantic import BaseModel, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_charges_applies_to_response import GetChargesAppliesToResponse
 from fineract_client.models.get_charges_calculation_type_response import GetChargesCalculationTypeResponse
@@ -49,11 +49,11 @@ class GetChargesTemplateResponse(BaseModel):
     savings_charge_time_type_options: Optional[List[GetChargesTemplateLoanChargeTimeTypeOptions]] = Field(default=None, alias="savingsChargeTimeTypeOptions")
     __properties: ClassVar[List[str]] = ["active", "chargeAppliesToOptions", "chargeCalculationTypeOptions", "chargePaymentModeOptions", "chargeTimeTypeOptions", "currencyOptions", "feeFrequencyOptions", "loanChargeCalculationTypeOptions", "loanChargeTimeTypeOptions", "penalty", "savingsChargeCalculationTypeOptions", "savingsChargeTimeTypeOptions"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -91,72 +91,72 @@ class GetChargesTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charge_applies_to_options (list)
         _items = []
         if self.charge_applies_to_options:
-            for _item_charge_applies_to_options in self.charge_applies_to_options:
-                if _item_charge_applies_to_options:
-                    _items.append(_item_charge_applies_to_options.to_dict())
+            for _item in self.charge_applies_to_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargeAppliesToOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charge_calculation_type_options (list)
         _items = []
         if self.charge_calculation_type_options:
-            for _item_charge_calculation_type_options in self.charge_calculation_type_options:
-                if _item_charge_calculation_type_options:
-                    _items.append(_item_charge_calculation_type_options.to_dict())
+            for _item in self.charge_calculation_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargeCalculationTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charge_payment_mode_options (list)
         _items = []
         if self.charge_payment_mode_options:
-            for _item_charge_payment_mode_options in self.charge_payment_mode_options:
-                if _item_charge_payment_mode_options:
-                    _items.append(_item_charge_payment_mode_options.to_dict())
+            for _item in self.charge_payment_mode_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargePaymentModeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charge_time_type_options (list)
         _items = []
         if self.charge_time_type_options:
-            for _item_charge_time_type_options in self.charge_time_type_options:
-                if _item_charge_time_type_options:
-                    _items.append(_item_charge_time_type_options.to_dict())
+            for _item in self.charge_time_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargeTimeTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in currency_options (list)
         _items = []
         if self.currency_options:
-            for _item_currency_options in self.currency_options:
-                if _item_currency_options:
-                    _items.append(_item_currency_options.to_dict())
+            for _item in self.currency_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['currencyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in fee_frequency_options (list)
         _items = []
         if self.fee_frequency_options:
-            for _item_fee_frequency_options in self.fee_frequency_options:
-                if _item_fee_frequency_options:
-                    _items.append(_item_fee_frequency_options.to_dict())
+            for _item in self.fee_frequency_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['feeFrequencyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in loan_charge_calculation_type_options (list)
         _items = []
         if self.loan_charge_calculation_type_options:
-            for _item_loan_charge_calculation_type_options in self.loan_charge_calculation_type_options:
-                if _item_loan_charge_calculation_type_options:
-                    _items.append(_item_loan_charge_calculation_type_options.to_dict())
+            for _item in self.loan_charge_calculation_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['loanChargeCalculationTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in loan_charge_time_type_options (list)
         _items = []
         if self.loan_charge_time_type_options:
-            for _item_loan_charge_time_type_options in self.loan_charge_time_type_options:
-                if _item_loan_charge_time_type_options:
-                    _items.append(_item_loan_charge_time_type_options.to_dict())
+            for _item in self.loan_charge_time_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['loanChargeTimeTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in savings_charge_calculation_type_options (list)
         _items = []
         if self.savings_charge_calculation_type_options:
-            for _item_savings_charge_calculation_type_options in self.savings_charge_calculation_type_options:
-                if _item_savings_charge_calculation_type_options:
-                    _items.append(_item_savings_charge_calculation_type_options.to_dict())
+            for _item in self.savings_charge_calculation_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['savingsChargeCalculationTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in savings_charge_time_type_options (list)
         _items = []
         if self.savings_charge_time_type_options:
-            for _item_savings_charge_time_type_options in self.savings_charge_time_type_options:
-                if _item_savings_charge_time_type_options:
-                    _items.append(_item_savings_charge_time_type_options.to_dict())
+            for _item in self.savings_charge_time_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['savingsChargeTimeTypeOptions'] = _items
         return _dict
 

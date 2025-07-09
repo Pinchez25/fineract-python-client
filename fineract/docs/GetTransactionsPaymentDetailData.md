@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of GetTransactionsPaymentDetailData from a JSON string
 get_transactions_payment_detail_data_instance = GetTransactionsPaymentDetailData.from_json(json)
 # print the JSON string representation of the object
-print(GetTransactionsPaymentDetailData.to_json())
+print GetTransactionsPaymentDetailData.to_json()
 
 # convert the object into a dict
 get_transactions_payment_detail_data_dict = get_transactions_payment_detail_data_instance.to_dict()
 # create an instance of GetTransactionsPaymentDetailData from a dict
-get_transactions_payment_detail_data_from_dict = GetTransactionsPaymentDetailData.from_dict(get_transactions_payment_detail_data_dict)
+get_transactions_payment_detail_data_form_dict = get_transactions_payment_detail_data.from_dict(get_transactions_payment_detail_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

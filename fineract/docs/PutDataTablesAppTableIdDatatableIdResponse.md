@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of PutDataTablesAppTableIdDatatableIdResponse from a JSON string
 put_data_tables_app_table_id_datatable_id_response_instance = PutDataTablesAppTableIdDatatableIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(PutDataTablesAppTableIdDatatableIdResponse.to_json())
+print PutDataTablesAppTableIdDatatableIdResponse.to_json()
 
 # convert the object into a dict
 put_data_tables_app_table_id_datatable_id_response_dict = put_data_tables_app_table_id_datatable_id_response_instance.to_dict()
 # create an instance of PutDataTablesAppTableIdDatatableIdResponse from a dict
-put_data_tables_app_table_id_datatable_id_response_from_dict = PutDataTablesAppTableIdDatatableIdResponse.from_dict(put_data_tables_app_table_id_datatable_id_response_dict)
+put_data_tables_app_table_id_datatable_id_response_form_dict = put_data_tables_app_table_id_datatable_id_response.from_dict(put_data_tables_app_table_id_datatable_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

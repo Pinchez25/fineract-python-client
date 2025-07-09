@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of PostCollectionSheetResponse from a JSON string
 post_collection_sheet_response_instance = PostCollectionSheetResponse.from_json(json)
 # print the JSON string representation of the object
-print(PostCollectionSheetResponse.to_json())
+print PostCollectionSheetResponse.to_json()
 
 # convert the object into a dict
 post_collection_sheet_response_dict = post_collection_sheet_response_instance.to_dict()
 # create an instance of PostCollectionSheetResponse from a dict
-post_collection_sheet_response_from_dict = PostCollectionSheetResponse.from_dict(post_collection_sheet_response_dict)
+post_collection_sheet_response_form_dict = post_collection_sheet_response.from_dict(post_collection_sheet_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetFloatingRatesRatePeriods from a JSON string
 get_floating_rates_rate_periods_instance = GetFloatingRatesRatePeriods.from_json(json)
 # print the JSON string representation of the object
-print(GetFloatingRatesRatePeriods.to_json())
+print GetFloatingRatesRatePeriods.to_json()
 
 # convert the object into a dict
 get_floating_rates_rate_periods_dict = get_floating_rates_rate_periods_instance.to_dict()
 # create an instance of GetFloatingRatesRatePeriods from a dict
-get_floating_rates_rate_periods_from_dict = GetFloatingRatesRatePeriods.from_dict(get_floating_rates_rate_periods_dict)
+get_floating_rates_rate_periods_form_dict = get_floating_rates_rate_periods.from_dict(get_floating_rates_rate_periods_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

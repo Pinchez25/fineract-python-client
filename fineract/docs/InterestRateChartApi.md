@@ -190,10 +190,7 @@ Name | Type | Description  | Notes
 
 Retrieve all Charts
 
-Retrieve list of charts associated with a term deposit product(FD or RD).
-Example Requests:
-
-interestratecharts?productId=1
+Retrieve list of charts associated with a term deposit product(FD or RD). Example Requests:  interestratecharts?productId=1
 
 ### Example
 
@@ -279,10 +276,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Chart
 
-It retrieves the Interest Rate Chart
-Example Requests:
-
-interestratecharts/1
+It retrieves the Interest Rate Chart Example Requests:  interestratecharts/1
 
 ### Example
 
@@ -368,13 +362,7 @@ Name | Type | Description  | Notes
 
 Retrieve Chart Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for creating a chart. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed Value Lists
-Example Request:
-
-interestratecharts/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for creating a chart. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists Example Request:  interestratecharts/template
 
 ### Example
 

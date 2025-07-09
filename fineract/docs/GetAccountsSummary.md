@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetAccountsSummary from a JSON string
 get_accounts_summary_instance = GetAccountsSummary.from_json(json)
 # print the JSON string representation of the object
-print(GetAccountsSummary.to_json())
+print GetAccountsSummary.to_json()
 
 # convert the object into a dict
 get_accounts_summary_dict = get_accounts_summary_instance.to_dict()
 # create an instance of GetAccountsSummary from a dict
-get_accounts_summary_from_dict = GetAccountsSummary.from_dict(get_accounts_summary_dict)
+get_accounts_summary_form_dict = get_accounts_summary.from_dict(get_accounts_summary_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

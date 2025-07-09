@@ -14,19 +14,7 @@ Method | HTTP request | Description
 
 List Audits
 
-Get a 200 list of audits that match the criteria supplied and sorted by audit id in descending order, and are within the requestors' data scope. Also it supports pagination and sorting
-
-Example Requests:
-
-audits
-
-audits?fields=madeOnDate,maker,processingResult
-
-audits?makerDateTimeFrom=2013-03-25 08:00:00&makerDateTimeTo=2013-04-04 18:00:00
-
-audits?officeId=1
-
-audits?officeId=1&includeJson=true
+Get a 200 list of audits that match the criteria supplied and sorted by audit id in descending order, and are within the requestors' data scope. Also it supports pagination and sorting  Example Requests:  audits  audits?fields=madeOnDate,maker,processingResult  audits?makerDateTimeFrom=2013-03-25 08:00:00&makerDateTimeTo=2013-04-04 18:00:00  audits?officeId=1  audits?officeId=1&includeJson=true
 
 ### Example
 
@@ -150,10 +138,7 @@ Name | Type | Description  | Notes
 
 Retrieve an Audit Entry
 
-Example Requests:
-
-audits/20
-audits/20?fields=madeOnDate,maker,processingResult
+Example Requests:  audits/20 audits/20?fields=madeOnDate,maker,processingResult
 
 ### Example
 
@@ -239,12 +224,7 @@ Name | Type | Description  | Notes
 
 Audit Search Template
 
-This is a convenience resource. It can be useful when building an Audit Search UI. "appUsers" are data scoped to the office/branch the requestor is associated with.
-
-Example Requests:
-
-audits/searchtemplate
-audits/searchtemplate?fields=actionNames
+This is a convenience resource. It can be useful when building an Audit Search UI. \"appUsers\" are data scoped to the office/branch the requestor is associated with.  Example Requests:  audits/searchtemplate audits/searchtemplate?fields=actionNames
 
 ### Example
 

@@ -15,11 +15,7 @@ Method | HTTP request | Description
 
 Create Entity-Datatable Checks
 
-Mandatory Fields : 
-entity, status, datatableName
-
-Non-Mandatory Fields : 
-productId
+Mandatory Fields :  entity, status, datatableName  Non-Mandatory Fields :  productId
 
 ### Example
 
@@ -194,12 +190,7 @@ Name | Type | Description  | Notes
 
 Retrieve Entity-Datatable Checks Template
 
-This is a convenience resource useful for building maintenance user interface screens for Entity-Datatable Checks applications. The template data returned consists of:
-
-Allowed description Lists
-Example Request:
-
-entityDatatableChecks/template
+This is a convenience resource useful for building maintenance user interface screens for Entity-Datatable Checks applications. The template data returned consists of:  Allowed description Lists Example Request:  entityDatatableChecks/template
 
 ### Example
 
@@ -281,13 +272,7 @@ This endpoint does not need any parameter.
 
 List Entity-Datatable Checks
 
-The list capability of Entity-Datatable Checks can support pagination.
-
-OPTIONAL ARGUMENTS
-offset Integer optional, defaults to 0 Indicates the result from which pagination startslimit Integer optional, defaults to 200 Restricts the size of results returned. To override the default and return all entries you must explicitly pass a non-positive integer value for limit e.g. limit=0, or limit=-1
-Example Request:
-
-entityDatatableChecks?offset=0&limit=15
+The list capability of Entity-Datatable Checks can support pagination.  OPTIONAL ARGUMENTS offset Integer optional, defaults to 0 Indicates the result from which pagination startslimit Integer optional, defaults to 200 Restricts the size of results returned. To override the default and return all entries you must explicitly pass a non-positive integer value for limit e.g. limit=0, or limit=-1 Example Request:  entityDatatableChecks?offset=0&limit=15
 
 ### Example
 

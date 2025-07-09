@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.post_column_header_data import PostColumnHeaderData
 from typing import Optional, Set
@@ -35,11 +35,11 @@ class PostDataTablesRequest(BaseModel):
     multi_row: Optional[StrictBool] = Field(default=None, description="Allows to create multiple entries in the Data Table. Optional, defaults to false. If this property is not provided Data Table will allow only one entry.", alias="multiRow")
     __properties: ClassVar[List[str]] = ["apptableName", "columns", "datatableName", "entitySubType", "multiRow"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -77,9 +77,9 @@ class PostDataTablesRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in columns (list)
         _items = []
         if self.columns:
-            for _item_columns in self.columns:
-                if _item_columns:
-                    _items.append(_item_columns.to_dict())
+            for _item in self.columns:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['columns'] = _items
         return _dict
 

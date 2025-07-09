@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_loan_products_accounting_rule import GetLoanProductsAccountingRule
 from fineract_client.models.get_loan_products_amortization_type import GetLoanProductsAmortizationType
@@ -80,11 +80,11 @@ class GetLoanProductsResponse(BaseModel):
     use_borrower_cycle: Optional[StrictBool] = Field(default=None, alias="useBorrowerCycle")
     __properties: ClassVar[List[str]] = ["accountingRule", "amortizationType", "annualInterestRate", "currency", "daysInMonthType", "daysInYearType", "endDate", "fixedLength", "fixedPrincipalPercentagePerInstallment", "id", "includeInBorrowerCycle", "interestCalculationPeriodType", "interestRateFrequencyType", "interestRatePerPeriod", "interestRateVariationsForBorrowerCycle", "interestRecalculationData", "interestType", "isInterestRecalculationEnabled", "maxNumberOfRepayments", "maxPrincipal", "minNumberOfRepayments", "minPrincipal", "name", "numberOfRepaymentVariationsForBorrowerCycle", "numberOfRepayments", "principal", "principalThresholdForLastInstalment", "principalVariationsForBorrowerCycle", "repaymentEvery", "repaymentFrequencyType", "repaymentStartDateType", "shortName", "startDate", "status", "supportedInterestRefundTypes", "transactionProcessingStrategy", "transactionProcessingStrategyName", "useBorrowerCycle"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -155,9 +155,9 @@ class GetLoanProductsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in supported_interest_refund_types (list)
         _items = []
         if self.supported_interest_refund_types:
-            for _item_supported_interest_refund_types in self.supported_interest_refund_types:
-                if _item_supported_interest_refund_types:
-                    _items.append(_item_supported_interest_refund_types.to_dict())
+            for _item in self.supported_interest_refund_types:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['supportedInterestRefundTypes'] = _items
         return _dict
 

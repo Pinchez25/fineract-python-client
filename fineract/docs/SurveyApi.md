@@ -18,9 +18,7 @@ Method | HTTP request | Description
 
 Create an entry in the survey table
 
-Insert and entry in a survey table (full fill the survey).
-
-Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ]
+Insert and entry in a survey table (full fill the survey).  Refer Link for sample Body:  [ https://fineract.apache.org/legacy-docs/apiLive.htm#survey_create ]
 
 ### Example
 
@@ -109,6 +107,8 @@ Name | Type | Description  | Notes
 # **delete_datatable_entries1**
 > str delete_datatable_entries1(survey_name, client_id, fulfilled_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -193,6 +193,8 @@ Name | Type | Description  | Notes
 # **get_client_survey_overview**
 > str get_client_survey_overview(survey_name, client_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -274,6 +276,8 @@ Name | Type | Description  | Notes
 
 # **get_survey_entry**
 > str get_survey_entry(survey_name, client_id, entry_id)
+
+
 
 ### Example
 
@@ -358,6 +362,8 @@ Name | Type | Description  | Notes
 
 # **register**
 > str register(survey_name, apptable, body=body)
+
+
 
 ### Example
 

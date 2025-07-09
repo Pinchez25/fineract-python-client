@@ -66,6 +66,8 @@ Method | HTTP request | Description
 # **activate**
 > str activate(resource_id, command=command, body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -149,6 +151,8 @@ Name | Type | Description  | Notes
 
 # **add_credit_report**
 > str add_credit_report(credit_bureau_id=credit_bureau_id, date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
+
+
 
 ### Example
 
@@ -235,6 +239,8 @@ Name | Type | Description  | Notes
 
 # **add_new_client_image1**
 > str add_new_client_image1(entity, entity_id, content_length=content_length, date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
+
+
 
 ### Example
 
@@ -326,6 +332,8 @@ Name | Type | Description  | Notes
 # **create1**
 > str create1(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -405,6 +413,8 @@ Name | Type | Description  | Notes
 
 # **create_campaign**
 > str create_campaign(body=body)
+
+
 
 ### Example
 
@@ -488,11 +498,7 @@ Name | Type | Description  | Notes
 
 Create a SMS Campaign
 
-Mandatory Fields
-campaignName, campaignType, triggerType, providerId, runReportId, message
-
-Mandatory Fields for Cash based on selected report id
-paramValue in json format
+Mandatory Fields campaignName, campaignType, triggerType, providerId, runReportId, message  Mandatory Fields for Cash based on selected report id paramValue in json format
 
 ### Example
 
@@ -577,6 +583,8 @@ Name | Type | Description  | Notes
 # **delete1**
 > str delete1(resource_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -656,6 +664,8 @@ Name | Type | Description  | Notes
 
 # **delete2**
 > str delete2(resource_id)
+
+
 
 ### Example
 
@@ -823,6 +833,8 @@ Name | Type | Description  | Notes
 # **delete8**
 > str delete8(transaction_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -903,6 +915,8 @@ Name | Type | Description  | Notes
 # **delete_all_external_events**
 > delete_all_external_events()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -976,6 +990,8 @@ void (empty response body)
 
 # **delete_client_image**
 > str delete_client_image(entity, entity_id)
+
+
 
 ### Example
 
@@ -1059,6 +1075,8 @@ Name | Type | Description  | Notes
 # **delete_credit_report**
 > str delete_credit_report(credit_bureau_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1138,6 +1156,8 @@ Name | Type | Description  | Notes
 
 # **fetch_credit_report**
 > str fetch_credit_report(body=body)
+
+
 
 ### Example
 
@@ -1219,6 +1239,8 @@ Name | Type | Description  | Notes
 # **get**
 > str get()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1294,6 +1316,8 @@ This endpoint does not need any parameter.
 
 # **get_advanced_payment_allocation_rules_of_loan**
 > List[AdvancedPaymentData] get_advanced_payment_allocation_rules_of_loan(loan_id)
+
+
 
 ### Example
 
@@ -1375,6 +1399,8 @@ Name | Type | Description  | Notes
 
 # **get_all_external_events**
 > str get_all_external_events(idempotency_key=idempotency_key, type=type, category=category, aggregate_root_id=aggregate_root_id)
+
+
 
 ### Example
 
@@ -1462,6 +1488,8 @@ Name | Type | Description  | Notes
 # **get_client_audit_fields**
 > str get_client_audit_fields(client_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1541,6 +1569,8 @@ Name | Type | Description  | Notes
 
 # **get_cob_partitions**
 > str get_cob_partitions(partition_size)
+
+
 
 ### Example
 
@@ -1622,6 +1652,8 @@ Name | Type | Description  | Notes
 # **get_external_grammar**
 > get_external_grammar(path)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1699,6 +1731,8 @@ void (empty response body)
 
 # **get_loan_audit_fields**
 > str get_loan_audit_fields(loan_id)
+
+
 
 ### Example
 
@@ -1779,6 +1813,8 @@ Name | Type | Description  | Notes
 
 # **get_loan_transaction_audit_fields**
 > str get_loan_transaction_audit_fields(loan_id, transaction_id)
+
+
 
 ### Example
 
@@ -1862,6 +1898,8 @@ Name | Type | Description  | Notes
 # **get_loans_by_status**
 > str get_loans_by_status(status_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1942,6 +1980,8 @@ Name | Type | Description  | Notes
 # **get_saved_credit_report**
 > str get_saved_credit_report(credit_bureau_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -2021,6 +2061,8 @@ Name | Type | Description  | Notes
 
 # **get_wadl**
 > get_wadl()
+
+
 
 ### Example
 
@@ -2184,6 +2226,8 @@ Name | Type | Description  | Notes
 # **new_office_transaction_details**
 > str new_office_transaction_details()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -2259,6 +2303,8 @@ This endpoint does not need any parameter.
 
 # **place_lock_on_loan_account**
 > place_lock_on_loan_account(loan_id, lock_owner, body=body)
+
+
 
 ### Example
 
@@ -2342,6 +2388,8 @@ void (empty response body)
 # **preview**
 > str preview(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -2421,6 +2469,8 @@ Name | Type | Description  | Notes
 
 # **preview1**
 > str preview1(body=body)
+
+
 
 ### Example
 
@@ -2502,6 +2552,8 @@ Name | Type | Description  | Notes
 # **retrieve_all5**
 > str retrieve_all5()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -2577,6 +2629,8 @@ This endpoint does not need any parameter.
 
 # **retrieve_all9**
 > str retrieve_all9()
+
+
 
 ### Example
 
@@ -2654,6 +2708,8 @@ This endpoint does not need any parameter.
 # **retrieve_all_campaign**
 > str retrieve_all_campaign()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -2729,6 +2785,8 @@ This endpoint does not need any parameter.
 
 # **retrieve_all_email_by_status**
 > str retrieve_all_email_by_status(sql_search=sql_search, offset=offset, limit=limit, status=status, order_by=order_by, sort_order=sort_order, from_date=from_date, to_date=to_date, locale=locale, date_format=date_format)
+
+
 
 ### Example
 
@@ -2828,6 +2886,8 @@ Name | Type | Description  | Notes
 # **retrieve_all_emails**
 > str retrieve_all_emails()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -2906,9 +2966,7 @@ This endpoint does not need any parameter.
 
 List SMS Campaigns
 
-Example Requests:
-
-smscampaigns
+Example Requests:  smscampaigns
 
 ### Example
 
@@ -3000,10 +3058,7 @@ Name | Type | Description  | Notes
 
 Retrieve a SMS Campaign
 
-Example Requests:
-
-smscampaigns/1
-
+Example Requests:  smscampaigns/1 
 
 ### Example
 
@@ -3086,6 +3141,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_failed_email**
 > str retrieve_failed_email(sql_search=sql_search, offset=offset, limit=limit, order_by=order_by, sort_order=sort_order)
+
+
 
 ### Example
 
@@ -3175,6 +3232,8 @@ Name | Type | Description  | Notes
 # **retrieve_image**
 > retrieve_image(entity, entity_id, max_width=max_width, max_height=max_height, output=output, accept=accept)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -3263,6 +3322,8 @@ void (empty response body)
 # **retrieve_office_transactions**
 > str retrieve_office_transactions()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -3338,6 +3399,8 @@ This endpoint does not need any parameter.
 
 # **retrieve_one1**
 > str retrieve_one1(resource_id)
+
+
 
 ### Example
 
@@ -3419,6 +3482,8 @@ Name | Type | Description  | Notes
 # **retrieve_one_campaign**
 > str retrieve_one_campaign(resource_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -3499,6 +3564,8 @@ Name | Type | Description  | Notes
 # **retrieve_one_template**
 > str retrieve_one_template(resource_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -3578,6 +3645,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_pending_email**
 > str retrieve_pending_email(offset=offset, limit=limit, order_by=order_by, sort_order=sort_order)
+
+
 
 ### Example
 
@@ -3665,6 +3734,8 @@ Name | Type | Description  | Notes
 # **retrieve_sent_email**
 > str retrieve_sent_email(offset=offset, limit=limit, order_by=order_by, sort_order=sort_order)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -3751,6 +3822,8 @@ Name | Type | Description  | Notes
 # **save_credit_report**
 > str save_credit_report(credit_bureau_id=credit_bureau_id, national_id=national_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -3833,6 +3906,8 @@ Name | Type | Description  | Notes
 # **template1**
 > str template1()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -3911,15 +3986,7 @@ This endpoint does not need any parameter.
 
 Retrieve a SMS Campaign
 
-Example Requests:
-
-smscampaigns/1
-
-
-smscampaigns/1?template=true
-
-
-smscampaigns/template
+Example Requests:  smscampaigns/1   smscampaigns/1?template=true   smscampaigns/template
 
 ### Example
 
@@ -3998,6 +4065,8 @@ This endpoint does not need any parameter.
 
 # **transfer_money_from**
 > str transfer_money_from(body=body)
+
+
 
 ### Example
 
@@ -4078,6 +4147,8 @@ Name | Type | Description  | Notes
 
 # **update2**
 > str update2(resource_id, body=body)
+
+
 
 ### Example
 
@@ -4160,6 +4231,8 @@ Name | Type | Description  | Notes
 
 # **update_campaign**
 > str update_campaign(resource_id, body=body)
+
+
 
 ### Example
 
@@ -4330,6 +4403,8 @@ Name | Type | Description  | Notes
 # **update_client_image1**
 > str update_client_image1(entity, entity_id, content_length=content_length, date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -4420,6 +4495,8 @@ Name | Type | Description  | Notes
 # **update_configuration**
 > str update_configuration(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -4500,6 +4577,8 @@ Name | Type | Description  | Notes
 # **update_configuration3**
 > str update_configuration3(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -4579,6 +4658,8 @@ Name | Type | Description  | Notes
 
 # **update_global_configuration**
 > update_global_configuration(config_id, config_value, body=body)
+
+
 
 ### Example
 
@@ -4661,6 +4742,8 @@ void (empty response body)
 
 # **update_loan_cob_last_date**
 > update_loan_cob_last_date(loan_id, body=body)
+
+
 
 ### Example
 

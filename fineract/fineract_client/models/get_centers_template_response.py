@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
+from pydantic import BaseModel, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_centers_office_options import GetCentersOfficeOptions
 from fineract_client.models.get_centers_staff_options import GetCentersStaffOptions
@@ -37,11 +37,11 @@ class GetCentersTemplateResponse(BaseModel):
     staff_options: Optional[List[GetCentersStaffOptions]] = Field(default=None, alias="staffOptions")
     __properties: ClassVar[List[str]] = ["activationDate", "active", "officeId", "officeOptions", "staffOptions"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -79,16 +79,16 @@ class GetCentersTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in office_options (list)
         _items = []
         if self.office_options:
-            for _item_office_options in self.office_options:
-                if _item_office_options:
-                    _items.append(_item_office_options.to_dict())
+            for _item in self.office_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['officeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in staff_options (list)
         _items = []
         if self.staff_options:
-            for _item_staff_options in self.staff_options:
-                if _item_staff_options:
-                    _items.append(_item_staff_options.to_dict())
+            for _item in self.staff_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['staffOptions'] = _items
         return _dict
 

@@ -96,11 +96,7 @@ void (empty response body)
 
 Retrieve Scheduler Status
 
-Returns the scheduler status.
-
-Example Requests:
-
-scheduler
+Returns the scheduler status.  Example Requests:  scheduler
 
 ### Example
 

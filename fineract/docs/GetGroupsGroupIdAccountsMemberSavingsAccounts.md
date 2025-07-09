@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of GetGroupsGroupIdAccountsMemberSavingsAccounts from a JSON string
 get_groups_group_id_accounts_member_savings_accounts_instance = GetGroupsGroupIdAccountsMemberSavingsAccounts.from_json(json)
 # print the JSON string representation of the object
-print(GetGroupsGroupIdAccountsMemberSavingsAccounts.to_json())
+print GetGroupsGroupIdAccountsMemberSavingsAccounts.to_json()
 
 # convert the object into a dict
 get_groups_group_id_accounts_member_savings_accounts_dict = get_groups_group_id_accounts_member_savings_accounts_instance.to_dict()
 # create an instance of GetGroupsGroupIdAccountsMemberSavingsAccounts from a dict
-get_groups_group_id_accounts_member_savings_accounts_from_dict = GetGroupsGroupIdAccountsMemberSavingsAccounts.from_dict(get_groups_group_id_accounts_member_savings_accounts_dict)
+get_groups_group_id_accounts_member_savings_accounts_form_dict = get_groups_group_id_accounts_member_savings_accounts.from_dict(get_groups_group_id_accounts_member_savings_accounts_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

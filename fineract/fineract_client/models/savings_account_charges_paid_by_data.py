@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.savings_account_charge_data import SavingsAccountChargeData
 from typing import Optional, Set
@@ -35,11 +35,11 @@ class SavingsAccountChargesPaidByData(BaseModel):
     savings_account_charge_data: Optional[SavingsAccountChargeData] = Field(default=None, alias="savingsAccountChargeData")
     __properties: ClassVar[List[str]] = ["amount", "chargeId", "feeCharge", "penaltyCharge", "savingsAccountChargeData"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

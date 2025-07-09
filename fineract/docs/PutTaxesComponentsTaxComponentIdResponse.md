@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PutTaxesComponentsTaxComponentIdResponse from a JSON string
 put_taxes_components_tax_component_id_response_instance = PutTaxesComponentsTaxComponentIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(PutTaxesComponentsTaxComponentIdResponse.to_json())
+print PutTaxesComponentsTaxComponentIdResponse.to_json()
 
 # convert the object into a dict
 put_taxes_components_tax_component_id_response_dict = put_taxes_components_tax_component_id_response_instance.to_dict()
 # create an instance of PutTaxesComponentsTaxComponentIdResponse from a dict
-put_taxes_components_tax_component_id_response_from_dict = PutTaxesComponentsTaxComponentIdResponse.from_dict(put_taxes_components_tax_component_id_response_dict)
+put_taxes_components_tax_component_id_response_form_dict = put_taxes_components_tax_component_id_response.from_dict(put_taxes_components_tax_component_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

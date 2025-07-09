@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.put_data_tables_request_add_columns import PutDataTablesRequestAddColumns
 from fineract_client.models.put_data_tables_request_change_columns import PutDataTablesRequestChangeColumns
@@ -36,11 +36,11 @@ class PutDataTablesRequest(BaseModel):
     drop_columns: Optional[List[PutDataTablesRequestDropColumns]] = Field(default=None, alias="dropColumns")
     __properties: ClassVar[List[str]] = ["addColumns", "apptableName", "changeColumns", "dropColumns"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -78,23 +78,23 @@ class PutDataTablesRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in add_columns (list)
         _items = []
         if self.add_columns:
-            for _item_add_columns in self.add_columns:
-                if _item_add_columns:
-                    _items.append(_item_add_columns.to_dict())
+            for _item in self.add_columns:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['addColumns'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in change_columns (list)
         _items = []
         if self.change_columns:
-            for _item_change_columns in self.change_columns:
-                if _item_change_columns:
-                    _items.append(_item_change_columns.to_dict())
+            for _item in self.change_columns:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['changeColumns'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in drop_columns (list)
         _items = []
         if self.drop_columns:
-            for _item_drop_columns in self.drop_columns:
-                if _item_drop_columns:
-                    _items.append(_item_drop_columns.to_dict())
+            for _item in self.drop_columns:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['dropColumns'] = _items
         return _dict
 

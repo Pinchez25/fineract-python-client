@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of GetFixedDepositProductsProductIdCurrency from a JSON string
 get_fixed_deposit_products_product_id_currency_instance = GetFixedDepositProductsProductIdCurrency.from_json(json)
 # print the JSON string representation of the object
-print(GetFixedDepositProductsProductIdCurrency.to_json())
+print GetFixedDepositProductsProductIdCurrency.to_json()
 
 # convert the object into a dict
 get_fixed_deposit_products_product_id_currency_dict = get_fixed_deposit_products_product_id_currency_instance.to_dict()
 # create an instance of GetFixedDepositProductsProductIdCurrency from a dict
-get_fixed_deposit_products_product_id_currency_from_dict = GetFixedDepositProductsProductIdCurrency.from_dict(get_fixed_deposit_products_product_id_currency_dict)
+get_fixed_deposit_products_product_id_currency_form_dict = get_fixed_deposit_products_product_id_currency.from_dict(get_fixed_deposit_products_product_id_currency_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

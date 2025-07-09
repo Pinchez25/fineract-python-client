@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetClientIdProductIdAccountingMappings from a JSON string
 get_client_id_product_id_accounting_mappings_instance = GetClientIdProductIdAccountingMappings.from_json(json)
 # print the JSON string representation of the object
-print(GetClientIdProductIdAccountingMappings.to_json())
+print GetClientIdProductIdAccountingMappings.to_json()
 
 # convert the object into a dict
 get_client_id_product_id_accounting_mappings_dict = get_client_id_product_id_accounting_mappings_instance.to_dict()
 # create an instance of GetClientIdProductIdAccountingMappings from a dict
-get_client_id_product_id_accounting_mappings_from_dict = GetClientIdProductIdAccountingMappings.from_dict(get_client_id_product_id_accounting_mappings_dict)
+get_client_id_product_id_accounting_mappings_form_dict = get_client_id_product_id_accounting_mappings.from_dict(get_client_id_product_id_accounting_mappings_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

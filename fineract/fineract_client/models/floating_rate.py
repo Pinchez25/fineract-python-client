@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -42,11 +42,11 @@ class FloatingRate(BaseModel):
     new: Optional[StrictBool] = None
     __properties: ClassVar[List[str]] = ["active", "baseLendingRate", "createdBy", "createdDate", "createdDateTime", "floatingRatePeriods", "id", "lastModifiedBy", "lastModifiedDate", "lastModifiedDateTime", "name", "new"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -84,9 +84,9 @@ class FloatingRate(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in floating_rate_periods (list)
         _items = []
         if self.floating_rate_periods:
-            for _item_floating_rate_periods in self.floating_rate_periods:
-                if _item_floating_rate_periods:
-                    _items.append(_item_floating_rate_periods.to_dict())
+            for _item in self.floating_rate_periods:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['floatingRatePeriods'] = _items
         return _dict
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -39,11 +39,11 @@ class GetOfficesResponse(BaseModel):
     opening_date: Optional[date] = Field(default=None, alias="openingDate")
     __properties: ClassVar[List[str]] = ["allowedParents", "dateFormat", "externalId", "hierarchy", "id", "locale", "name", "nameDecorated", "openingDate"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -81,9 +81,9 @@ class GetOfficesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_parents (list)
         _items = []
         if self.allowed_parents:
-            for _item_allowed_parents in self.allowed_parents:
-                if _item_allowed_parents:
-                    _items.append(_item_allowed_parents.to_dict())
+            for _item in self.allowed_parents:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedParents'] = _items
         return _dict
 

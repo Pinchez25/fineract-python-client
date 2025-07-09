@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.post_collection_sheet_bulk_repayment_transactions import PostCollectionSheetBulkRepaymentTransactions
 from typing import Optional, Set
@@ -37,11 +37,11 @@ class PostCollectionSheetRequest(BaseModel):
     transaction_date: Optional[StrictStr] = Field(default=None, alias="transactionDate")
     __properties: ClassVar[List[str]] = ["actualDisbursementDate", "bulkDisbursementTransactions", "bulkRepaymentTransactions", "bulkSavingsDueTransactions", "dateFormat", "locale", "transactionDate"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

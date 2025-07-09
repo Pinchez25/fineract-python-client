@@ -34,12 +34,12 @@ json = "{}"
 # create an instance of InteropIdentifiersResponseData from a JSON string
 interop_identifiers_response_data_instance = InteropIdentifiersResponseData.from_json(json)
 # print the JSON string representation of the object
-print(InteropIdentifiersResponseData.to_json())
+print InteropIdentifiersResponseData.to_json()
 
 # convert the object into a dict
 interop_identifiers_response_data_dict = interop_identifiers_response_data_instance.to_dict()
 # create an instance of InteropIdentifiersResponseData from a dict
-interop_identifiers_response_data_from_dict = InteropIdentifiersResponseData.from_dict(interop_identifiers_response_data_dict)
+interop_identifiers_response_data_form_dict = interop_identifiers_response_data.from_dict(interop_identifiers_response_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

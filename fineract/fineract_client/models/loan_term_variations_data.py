@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.loan_term_type_options import LoanTermTypeOptions
 from typing import Optional, Set
@@ -38,11 +38,11 @@ class LoanTermVariationsData(BaseModel):
     term_variation_applicable_from: Optional[date] = Field(default=None, alias="termVariationApplicableFrom")
     __properties: ClassVar[List[str]] = ["dateValue", "decimalValue", "id", "isProcessed", "isSpecificToInstallment", "termType", "termVariationApplicableFrom"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

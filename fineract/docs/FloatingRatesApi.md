@@ -15,9 +15,7 @@ Method | HTTP request | Description
 
 Create a new Floating Rate
 
-Creates a new Floating Rate
-Mandatory Fields: name
-Optional Fields: isBaseLendingRate, isActive, ratePeriods
+Creates a new Floating Rate Mandatory Fields: name Optional Fields: isBaseLendingRate, isActive, ratePeriods
 
 ### Example
 

@@ -99,11 +99,7 @@ void (empty response body)
 
 Create a Survey
 
-Adds a new survey to collect client related data.
-
-Mandatory Fields
-
-countryCode, key, name, questions, responses, sequenceNo, text, description
+Adds a new survey to collect client related data.  Mandatory Fields  countryCode, key, name, questions, responses, sequenceNo, text, description
 
 ### Example
 
@@ -184,6 +180,8 @@ void (empty response body)
 
 # **edit_survey**
 > str edit_survey(id, survey_data=survey_data)
+
+
 
 ### Example
 

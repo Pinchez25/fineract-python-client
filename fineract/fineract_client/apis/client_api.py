@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictBool, StrictBytes, StrictInt, StrictStr
-from typing import Any, Dict, Optional, Tuple, Union
+from typing import Any, Dict, Optional, Union
 from typing_extensions import Annotated
 from fineract_client.models.delete_clients_client_id_response import DeleteClientsClientIdResponse
 from fineract_client.models.get_client_obligee_details_response import GetClientObligeeDetailsResponse
@@ -293,9 +293,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -314,12 +312,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -600,9 +597,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -621,12 +616,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -881,9 +875,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -896,12 +888,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1169,9 +1160,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1186,12 +1175,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1459,9 +1447,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1476,12 +1462,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1769,9 +1754,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1798,12 +1781,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/vnd.ms-excel'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/vnd.ms-excel'
+            ]
+        )
 
 
         # authentication setting
@@ -1836,7 +1818,7 @@ class ClientApi:
         legal_form_type: Optional[StrictStr] = None,
         date_format: Optional[StrictStr] = None,
         locale: Optional[StrictStr] = None,
-        uploaded_input_stream: Optional[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]]] = None,
+        uploaded_input_stream: Optional[Union[StrictBytes, StrictStr]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1913,7 +1895,7 @@ class ClientApi:
         legal_form_type: Optional[StrictStr] = None,
         date_format: Optional[StrictStr] = None,
         locale: Optional[StrictStr] = None,
-        uploaded_input_stream: Optional[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]]] = None,
+        uploaded_input_stream: Optional[Union[StrictBytes, StrictStr]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1990,7 +1972,7 @@ class ClientApi:
         legal_form_type: Optional[StrictStr] = None,
         date_format: Optional[StrictStr] = None,
         locale: Optional[StrictStr] = None,
-        uploaded_input_stream: Optional[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]]] = None,
+        uploaded_input_stream: Optional[Union[StrictBytes, StrictStr]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2078,9 +2060,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2101,12 +2081,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    '*/*'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                '*/*'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -2504,9 +2483,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2565,12 +2542,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -2815,9 +2791,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2830,12 +2804,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -3080,9 +3053,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -3095,12 +3066,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -3345,9 +3315,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -3360,12 +3328,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -3610,9 +3577,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -3625,12 +3590,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -3885,9 +3849,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -3904,12 +3866,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -4164,9 +4125,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -4183,12 +4142,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -4456,9 +4414,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -4481,12 +4437,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -4731,9 +4686,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -4746,12 +4699,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -4996,9 +4948,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -5011,12 +4961,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
 
         # authentication setting
@@ -5271,9 +5220,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -5288,12 +5235,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -5561,9 +5507,7 @@ class ClientApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
+        _files: Dict[str, str] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -5578,12 +5522,11 @@ class ClientApi:
 
 
         # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
 
         # set the HTTP header `Content-Type`
         if _content_type:

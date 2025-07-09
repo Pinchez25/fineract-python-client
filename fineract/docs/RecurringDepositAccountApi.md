@@ -21,6 +21,8 @@ Method | HTTP request | Description
 # **account_closure_template1**
 > str account_closure_template1(account_id, command=command)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -189,6 +191,8 @@ Name | Type | Description  | Notes
 # **get_recurring_deposit_template**
 > get_recurring_deposit_template(office_id=office_id, staff_id=staff_id, date_format=date_format)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -270,6 +274,8 @@ void (empty response body)
 
 # **get_recurring_deposit_transaction_template**
 > get_recurring_deposit_transaction_template(office_id=office_id, date_format=date_format)
+
+
 
 ### Example
 
@@ -353,53 +359,7 @@ void (empty response body)
 
 Approve recurring deposit application | Undo approval recurring deposit application | Reject recurring deposit application | Withdraw recurring deposit application | Activate a recurring deposit account | Update the recommended deposit amount for a recurring deposit account | Close a recurring deposit account | Premature Close a recurring deposit account | Calculate Premature amount on Recurring deposit account | Calculate Interest on recurring Deposit Account | Post Interest on recurring Deposit Account
 
-Approve recurring deposit application:
-
-Approves recurring deposit application so long as its in 'Submitted and pending approval' state.
-
-Undo approval recurring deposit application:
-
-Will move 'approved' recurring deposit application back to 'Submitted and pending approval' state.
-
-Reject recurring deposit application
-
-Rejects recurring deposit application so long as its in 'Submitted and pending approval' state.
-
-Withdraw recurring deposit application:
-
-Used when an applicant withdraws from the recurring deposit application. It must be in 'Submitted and pending approval' state.
-
-Activate a recurring deposit account:
-
-Results in an approved recurring deposit application being converted into an 'active' recurring deposit account.
-
-Update the recommended deposit amount for a recurring deposit account:
-
-Updates the recommended deposit amount for a RD account as on the effective date.
-
-Close a recurring deposit account
-
-Results in a Matured recurring deposit account being converted into a 'closed' recurring deposit account.
-
-On account close allowed actions are.Premature Close a recurring deposit account:
-
-Results in an Active recurring deposit account being converted into a 'Premature Closed' recurring deposit account with options to withdraw prematured amount. (premature amount is calculated using interest rate chart applicable along with penal interest if any.)
-
-On account premature closure allowed actions are.
-
-Calculate Premature amount on Recurring deposit account:
-
-Calculate premature amount on recurring deposit till premature close date. Premature amount is calculated based on interest chart and penal interest applicable if any.
-
-Calculate Interest on recurring Deposit Account:
-
-Calculates interest earned on a recurring deposit account based on todays date. It does not attempt to post or credit the interest on the account. That is responsibility of the Post Interest API that will likely be called by overnight process.
-
-Post Interest on recurring Deposit Account:
-
-Calculates and Posts interest earned on a recurring deposit account based on todays date and whether an interest posting or crediting event is due.
-
-Showing request/response for 'Post Interest on recurring Deposit Account'
+Approve recurring deposit application:  Approves recurring deposit application so long as its in 'Submitted and pending approval' state.  Undo approval recurring deposit application:  Will move 'approved' recurring deposit application back to 'Submitted and pending approval' state.  Reject recurring deposit application  Rejects recurring deposit application so long as its in 'Submitted and pending approval' state.  Withdraw recurring deposit application:  Used when an applicant withdraws from the recurring deposit application. It must be in 'Submitted and pending approval' state.  Activate a recurring deposit account:  Results in an approved recurring deposit application being converted into an 'active' recurring deposit account.  Update the recommended deposit amount for a recurring deposit account:  Updates the recommended deposit amount for a RD account as on the effective date.  Close a recurring deposit account  Results in a Matured recurring deposit account being converted into a 'closed' recurring deposit account.  On account close allowed actions are.Premature Close a recurring deposit account:  Results in an Active recurring deposit account being converted into a 'Premature Closed' recurring deposit account with options to withdraw prematured amount. (premature amount is calculated using interest rate chart applicable along with penal interest if any.)  On account premature closure allowed actions are.  Calculate Premature amount on Recurring deposit account:  Calculate premature amount on recurring deposit till premature close date. Premature amount is calculated based on interest chart and penal interest applicable if any.  Calculate Interest on recurring Deposit Account:  Calculates interest earned on a recurring deposit account based on todays date. It does not attempt to post or credit the interest on the account. That is responsibility of the Post Interest API that will likely be called by overnight process.  Post Interest on recurring Deposit Account:  Calculates and Posts interest earned on a recurring deposit account based on todays date and whether an interest posting or crediting event is due.  Showing request/response for 'Post Interest on recurring Deposit Account'
 
 ### Example
 
@@ -487,6 +447,8 @@ Name | Type | Description  | Notes
 # **post_recurring_deposit_template**
 > str post_recurring_deposit_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -570,6 +532,8 @@ Name | Type | Description  | Notes
 
 # **post_recurring_deposit_transactions_template**
 > str post_recurring_deposit_transactions_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
+
+
 
 ### Example
 
@@ -657,14 +621,7 @@ Name | Type | Description  | Notes
 
 List Recurring deposit applications/accounts
 
-Lists Recurring deposit applications/accounts
-
-Example Requests:
-
-recurringdepositaccounts
-
-
-recurringdepositaccounts?fields=name
+Lists Recurring deposit applications/accounts  Example Requests:  recurringdepositaccounts   recurringdepositaccounts?fields=name
 
 ### Example
 
@@ -758,14 +715,7 @@ Name | Type | Description  | Notes
 
 Retrieve a recurring deposit application/account
 
-Retrieves a recurring deposit application/account
-
-Example Requests :
-
-recurringdepositaccounts/1
-
-
-recurringdepositaccounts/1?associations=all
+Retrieves a recurring deposit application/account  Example Requests :  recurringdepositaccounts/1   recurringdepositaccounts/1?associations=all
 
 ### Example
 
@@ -855,13 +805,7 @@ Name | Type | Description  | Notes
 
 Submit new recurring deposit application
 
-Submits new recurring deposit application
-
-Mandatory Fields: clientId or groupId, productId, submittedOnDate, depositAmount, depositPeriod, depositPeriodFrequencyId
-
-Optional Fields: accountNo, externalId, fieldOfficerId,linkAccountId(if provided initial deposit amount will be collected from this account),transferInterestToSavings(By enabling this flag all interest postings will be transferred to linked saving account )
-
-Inherited from Product (if not provided): interestCompoundingPeriodType, interestCalculationType, interestCalculationDaysInYearType, lockinPeriodFrequency, lockinPeriodFrequencyType, preClosurePenalApplicable, preClosurePenalInterest, preClosurePenalInterestOnTypeId, charts, withHoldTax
+Submits new recurring deposit application  Mandatory Fields: clientId or groupId, productId, submittedOnDate, depositAmount, depositPeriod, depositPeriodFrequencyId  Optional Fields: accountNo, externalId, fieldOfficerId,linkAccountId(if provided initial deposit amount will be collected from this account),transferInterestToSavings(By enabling this flag all interest postings will be transferred to linked saving account )  Inherited from Product (if not provided): interestCompoundingPeriodType, interestCalculationType, interestCalculationDaysInYearType, lockinPeriodFrequency, lockinPeriodFrequencyType, preClosurePenalApplicable, preClosurePenalInterest, preClosurePenalInterestOnTypeId, charts, withHoldTax
 
 ### Example
 
@@ -948,17 +892,7 @@ Name | Type | Description  | Notes
 
 Retrieve recurring Deposit Account Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for recurring deposit applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed Value Lists
-
-Example Requests:
-
-recurringdepositaccounts/template?clientId=1
-
-
-recurringdepositaccounts/template?clientId=1&productId=1
+This is a convenience resource. It can be useful when building maintenance user interface screens for recurring deposit applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists  Example Requests:  recurringdepositaccounts/template?clientId=1   recurringdepositaccounts/template?clientId=1&productId=1
 
 ### Example
 

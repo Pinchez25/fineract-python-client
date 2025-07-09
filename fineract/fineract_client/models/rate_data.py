@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.enum_option_data import EnumOptionData
 from typing import Optional, Set
@@ -35,11 +35,11 @@ class RateData(BaseModel):
     product_apply: Optional[EnumOptionData] = Field(default=None, alias="productApply")
     __properties: ClassVar[List[str]] = ["active", "id", "name", "percentage", "productApply"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

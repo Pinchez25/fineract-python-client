@@ -11,6 +11,8 @@ Method | HTTP request | Description
 # **retrieve_all12**
 > str retrieve_all12(ppi_name)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -90,6 +92,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_all13**
 > str retrieve_all13(ppi_name, likelihood_id)
+
+
 
 ### Example
 

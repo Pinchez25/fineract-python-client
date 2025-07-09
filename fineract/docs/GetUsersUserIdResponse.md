@@ -28,12 +28,12 @@ json = "{}"
 # create an instance of GetUsersUserIdResponse from a JSON string
 get_users_user_id_response_instance = GetUsersUserIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetUsersUserIdResponse.to_json())
+print GetUsersUserIdResponse.to_json()
 
 # convert the object into a dict
 get_users_user_id_response_dict = get_users_user_id_response_instance.to_dict()
 # create an instance of GetUsersUserIdResponse from a dict
-get_users_user_id_response_from_dict = GetUsersUserIdResponse.from_dict(get_users_user_id_response_dict)
+get_users_user_id_response_form_dict = get_users_user_id_response.from_dict(get_users_user_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of GlobalConfigurationPropertyData from a JSON string
 global_configuration_property_data_instance = GlobalConfigurationPropertyData.from_json(json)
 # print the JSON string representation of the object
-print(GlobalConfigurationPropertyData.to_json())
+print GlobalConfigurationPropertyData.to_json()
 
 # convert the object into a dict
 global_configuration_property_data_dict = global_configuration_property_data_instance.to_dict()
 # create an instance of GlobalConfigurationPropertyData from a dict
-global_configuration_property_data_from_dict = GlobalConfigurationPropertyData.from_dict(global_configuration_property_data_dict)
+global_configuration_property_data_form_dict = global_configuration_property_data.from_dict(global_configuration_property_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -17,21 +17,7 @@ Method | HTTP request | Description
 
 Create a Document
 
-Note: A document is created using a Multi-part form upload 
-
-Body Parts
-
-name : 
-Name or summary of the document
-
-description : 
-Description of the document
-
-file : 
-The file to be uploaded
-
-Mandatory Fields : 
-file and description
+Note: A document is created using a Multi-part form upload   Body Parts  name :  Name or summary of the document  description :  Description of the document  file :  The file to be uploaded  Mandatory Fields :  file and description
 
 ### Example
 
@@ -219,14 +205,7 @@ Name | Type | Description  | Notes
 
 Retrieve Binary File associated with Document
 
-Request used to download the file associated with the document
-
-Example Requests:
-
-clients/1/documents/1/attachment
-
-
-loans/1/documents/1/attachment
+Request used to download the file associated with the document  Example Requests:  clients/1/documents/1/attachment   loans/1/documents/1/attachment
 
 ### Example
 
@@ -313,15 +292,7 @@ void (empty response body)
 
 Retrieve a Document
 
-Example Requests:
-
-clients/1/documents/1
-
-
-loans/1/documents/1
-
-
-client_identifiers/1/documents/1?fields=name,description
+Example Requests:  clients/1/documents/1   loans/1/documents/1   client_identifiers/1/documents/1?fields=name,description
 
 ### Example
 
@@ -411,13 +382,7 @@ Name | Type | Description  | Notes
 
 List documents
 
-Example Requests:
-
-clients/1/documents
-
-client_identifiers/1/documents
-
-loans/1/documents?fields=name,description
+Example Requests:  clients/1/documents  client_identifiers/1/documents  loans/1/documents?fields=name,description
 
 ### Example
 
@@ -505,14 +470,7 @@ Name | Type | Description  | Notes
 
 Update a Document
 
-Note: A document is updated using a Multi-part form upload 
-Body Parts
-name
-Name or summary of the document
-description
-Description of the document
-file
-The file to be uploaded
+Note: A document is updated using a Multi-part form upload  Body Parts name Name or summary of the document description Description of the document file The file to be uploaded
 
 ### Example
 

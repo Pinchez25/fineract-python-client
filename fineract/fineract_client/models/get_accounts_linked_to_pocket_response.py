@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_pocket_loan_accounts import GetPocketLoanAccounts
 from fineract_client.models.get_pocket_saving_accounts import GetPocketSavingAccounts
@@ -34,11 +34,11 @@ class GetAccountsLinkedToPocketResponse(BaseModel):
     share_accounts: Optional[List[Dict[str, Any]]] = Field(default=None, alias="shareAccounts")
     __properties: ClassVar[List[str]] = ["loanAccounts", "savingAccounts", "shareAccounts"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -76,16 +76,16 @@ class GetAccountsLinkedToPocketResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in loan_accounts (list)
         _items = []
         if self.loan_accounts:
-            for _item_loan_accounts in self.loan_accounts:
-                if _item_loan_accounts:
-                    _items.append(_item_loan_accounts.to_dict())
+            for _item in self.loan_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['loanAccounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in saving_accounts (list)
         _items = []
         if self.saving_accounts:
-            for _item_saving_accounts in self.saving_accounts:
-                if _item_saving_accounts:
-                    _items.append(_item_saving_accounts.to_dict())
+            for _item in self.saving_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['savingAccounts'] = _items
         return _dict
 

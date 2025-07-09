@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetSavingsProductsGlAccount from a JSON string
 get_savings_products_gl_account_instance = GetSavingsProductsGlAccount.from_json(json)
 # print the JSON string representation of the object
-print(GetSavingsProductsGlAccount.to_json())
+print GetSavingsProductsGlAccount.to_json()
 
 # convert the object into a dict
 get_savings_products_gl_account_dict = get_savings_products_gl_account_instance.to_dict()
 # create an instance of GetSavingsProductsGlAccount from a dict
-get_savings_products_gl_account_from_dict = GetSavingsProductsGlAccount.from_dict(get_savings_products_gl_account_dict)
+get_savings_products_gl_account_form_dict = get_savings_products_gl_account.from_dict(get_savings_products_gl_account_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

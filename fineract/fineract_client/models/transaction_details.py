@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_type import EnumOptionType
 from fineract_client.models.get_resource_type_resource_id_notes_response import GetResourceTypeResourceIdNotesResponse
@@ -36,11 +36,11 @@ class TransactionDetails(BaseModel):
     transaction_type: Optional[EnumOptionType] = Field(default=None, alias="transactionType")
     __properties: ClassVar[List[str]] = ["noteData", "paymentDetails", "transactionId", "transactionType"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

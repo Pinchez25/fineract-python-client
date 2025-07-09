@@ -10,6 +10,8 @@ Method | HTTP request | Description
 # **fetch_all_surveys**
 > List[SurveyData] fetch_all_surveys()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):

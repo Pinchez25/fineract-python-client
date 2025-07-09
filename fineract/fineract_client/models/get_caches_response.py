@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from pydantic import BaseModel, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_data import EnumOptionData
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class GetCachesResponse(BaseModel):
     enabled: Optional[StrictBool] = None
     __properties: ClassVar[List[str]] = ["cacheType", "enabled"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

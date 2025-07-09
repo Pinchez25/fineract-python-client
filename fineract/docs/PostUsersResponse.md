@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PostUsersResponse from a JSON string
 post_users_response_instance = PostUsersResponse.from_json(json)
 # print the JSON string representation of the object
-print(PostUsersResponse.to_json())
+print PostUsersResponse.to_json()
 
 # convert the object into a dict
 post_users_response_dict = post_users_response_instance.to_dict()
 # create an instance of PostUsersResponse from a dict
-post_users_response_from_dict = PostUsersResponse.from_dict(post_users_response_dict)
+post_users_response_form_dict = post_users_response.from_dict(post_users_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

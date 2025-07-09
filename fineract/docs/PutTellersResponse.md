@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of PutTellersResponse from a JSON string
 put_tellers_response_instance = PutTellersResponse.from_json(json)
 # print the JSON string representation of the object
-print(PutTellersResponse.to_json())
+print PutTellersResponse.to_json()
 
 # convert the object into a dict
 put_tellers_response_dict = put_tellers_response_instance.to_dict()
 # create an instance of PutTellersResponse from a dict
-put_tellers_response_from_dict = PutTellersResponse.from_dict(put_tellers_response_dict)
+put_tellers_response_form_dict = put_tellers_response.from_dict(put_tellers_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -40,11 +40,11 @@ class Survey(BaseModel):
     valid_to: Optional[date] = Field(default=None, alias="validTo")
     __properties: ClassVar[List[str]] = ["components", "countryCode", "description", "id", "key", "name", "new", "questions", "validFrom", "validTo"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -82,16 +82,16 @@ class Survey(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in components (list)
         _items = []
         if self.components:
-            for _item_components in self.components:
-                if _item_components:
-                    _items.append(_item_components.to_dict())
+            for _item in self.components:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['components'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in questions (list)
         _items = []
         if self.questions:
-            for _item_questions in self.questions:
-                if _item_questions:
-                    _items.append(_item_questions.to_dict())
+            for _item in self.questions:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['questions'] = _items
         return _dict
 

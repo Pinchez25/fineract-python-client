@@ -11,6 +11,8 @@ Method | HTTP request | Description
 # **retrieve_all_products1**
 > str retrieve_all_products1(client_id=client_id, offset=offset, limit=limit)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -94,6 +96,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_product1**
 > str retrieve_product1(product_id, type, client_id=client_id)
+
+
 
 ### Example
 

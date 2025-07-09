@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.tax_group_mappings_data import TaxGroupMappingsData
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class TaxGroupData(BaseModel):
     tax_associations: Optional[List[TaxGroupMappingsData]] = Field(default=None, alias="taxAssociations")
     __properties: ClassVar[List[str]] = ["taxAssociations"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class TaxGroupData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tax_associations (list)
         _items = []
         if self.tax_associations:
-            for _item_tax_associations in self.tax_associations:
-                if _item_tax_associations:
-                    _items.append(_item_tax_associations.to_dict())
+            for _item in self.tax_associations:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['taxAssociations'] = _items
         return _dict
 

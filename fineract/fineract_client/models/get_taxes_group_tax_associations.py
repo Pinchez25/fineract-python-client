@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_taxes_group_tax_component import GetTaxesGroupTaxComponent
 from typing import Optional, Set
@@ -34,11 +34,11 @@ class GetTaxesGroupTaxAssociations(BaseModel):
     tax_component: Optional[GetTaxesGroupTaxComponent] = Field(default=None, alias="taxComponent")
     __properties: ClassVar[List[str]] = ["id", "startDate", "taxComponent"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

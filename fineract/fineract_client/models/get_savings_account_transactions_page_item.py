@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_savings_account_charges_paid_by_data import GetSavingsAccountChargesPaidByData
 from fineract_client.models.get_transactions_currency import GetTransactionsCurrency
@@ -64,11 +64,11 @@ class GetSavingsAccountTransactionsPageItem(BaseModel):
             raise ValueError("must be one of enum values ('CREDIT', 'DEBIT')")
         return value
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -106,9 +106,9 @@ class GetSavingsAccountTransactionsPageItem(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charges_paid_by_data (list)
         _items = []
         if self.charges_paid_by_data:
-            for _item_charges_paid_by_data in self.charges_paid_by_data:
-                if _item_charges_paid_by_data:
-                    _items.append(_item_charges_paid_by_data.to_dict())
+            for _item in self.charges_paid_by_data:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargesPaidByData'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:

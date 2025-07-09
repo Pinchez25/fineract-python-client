@@ -21,31 +21,7 @@ Method | HTTP request | Description
 
 Activate a Center | Generate Collection Sheet | Save Collection Sheet | Close a Center | Associate Groups | Disassociate Groups
 
-Activate a Center:
-
-Centers can be created in a Pending state. This API exists to enable center activation. If the center happens to be already active, this API will result in an error.
-
-Close a Center:
-
-Centers can be closed if they don't have any non-closed groups or saving accounts. If the Center has any active groups or savings accounts, this API will result in an error.
-
-Associate Groups:
-
-This API allows associating existing groups to a center. The groups are listed from the office to which the center is associated. If group(s) is already associated with a center, this API will result in an error.
-
-Disassociate Groups:
-
-This API allows to disassociate groups from a center.
-
-Generate Collection Sheet:
-
-This Api retrieves repayment details of all jlg loans under a center as on a specified meeting date.
-
-Save Collection Sheet:
-
-This Api allows the loan officer to perform bulk repayments of JLG loans for a center on a given meeting date.
-
-Showing Request/Response for Close a Center
+Activate a Center:  Centers can be created in a Pending state. This API exists to enable center activation. If the center happens to be already active, this API will result in an error.  Close a Center:  Centers can be closed if they don't have any non-closed groups or saving accounts. If the Center has any active groups or savings accounts, this API will result in an error.  Associate Groups:  This API allows associating existing groups to a center. The groups are listed from the office to which the center is associated. If group(s) is already associated with a center, this API will result in an error.  Disassociate Groups:  This API allows to disassociate groups from a center.  Generate Collection Sheet:  This Api retrieves repayment details of all jlg loans under a center as on a specified meeting date.  Save Collection Sheet:  This Api allows the loan officer to perform bulk repayments of JLG loans for a center on a given meeting date.  Showing Request/Response for Close a Center
 
 ### Example
 
@@ -136,11 +112,7 @@ Name | Type | Description  | Notes
 
 Create a Center
 
-Creates a Center
-
-Mandatory Fields: name, officeId, active, activationDate (if active=true)
-
-Optional Fields: externalId, staffId, groupMembers
+Creates a Center  Mandatory Fields: name, officeId, active, activationDate (if active=true)  Optional Fields: externalId, staffId, groupMembers
 
 ### Example
 
@@ -311,6 +283,8 @@ Name | Type | Description  | Notes
 # **get_centers_template**
 > get_centers_template(office_id=office_id, staff_id=staff_id, date_format=date_format)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -392,6 +366,8 @@ void (empty response body)
 
 # **post_centers_template**
 > str post_centers_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
+
+
 
 ### Example
 
@@ -479,25 +455,7 @@ Name | Type | Description  | Notes
 
 List Centers
 
-The default implementation supports pagination and sorting with the default pagination size set to 200 records. The parameter limit with description -1 will return all entries.
-
-Example Requests:
-
-
-
-centers
-
-
-
-centers?fields=name,officeName,joinedDate
-
-
-
-centers?offset=10&limit=50
-
-
-
-centers?orderBy=name&sortOrder=DESC
+The default implementation supports pagination and sorting with the default pagination size set to 200 records. The parameter limit with description -1 will return all entries.  Example Requests:    centers    centers?fields=name,officeName,joinedDate    centers?offset=10&limit=50    centers?orderBy=name&sortOrder=DESC
 
 ### Example
 
@@ -607,17 +565,7 @@ Name | Type | Description  | Notes
 
 Retrieve Center accounts overview
 
-An example of how a savings summary for a Center can be provided. This is requested in a specific use case of the reference application.
-
-It is quite reasonable to add resources like this to simplify User Interface development.
-
-
-
-Example Requests:
-
-
-
-centers/9/accounts
+An example of how a savings summary for a Center can be provided. This is requested in a specific use case of the reference application.  It is quite reasonable to add resources like this to simplify User Interface development.    Example Requests:    centers/9/accounts
 
 ### Example
 
@@ -703,17 +651,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Center
 
-Retrieves a Center
-
-Example Requests:
-
-
-
-centers/1
-
-
-
-centers/1?associations=groupMembers
+Retrieves a Center  Example Requests:    centers/1    centers/1?associations=groupMembers
 
 ### Example
 
@@ -801,17 +739,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Center Template
 
-Retrieves a Center Template
-
-Example Requests:
-
-
-
-centers/template
-
-
-
-centers/template?officeId=2
+Retrieves a Center Template  Example Requests:    centers/template    centers/template?officeId=2
 
 ### Example
 

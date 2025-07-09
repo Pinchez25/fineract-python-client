@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of TaxGroupMappings from a JSON string
 tax_group_mappings_instance = TaxGroupMappings.from_json(json)
 # print the JSON string representation of the object
-print(TaxGroupMappings.to_json())
+print TaxGroupMappings.to_json()
 
 # convert the object into a dict
 tax_group_mappings_dict = tax_group_mappings_instance.to_dict()
 # create an instance of TaxGroupMappings from a dict
-tax_group_mappings_from_dict = TaxGroupMappings.from_dict(tax_group_mappings_dict)
+tax_group_mappings_form_dict = tax_group_mappings.from_dict(tax_group_mappings_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

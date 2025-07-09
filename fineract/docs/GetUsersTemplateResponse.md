@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetUsersTemplateResponse from a JSON string
 get_users_template_response_instance = GetUsersTemplateResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetUsersTemplateResponse.to_json())
+print GetUsersTemplateResponse.to_json()
 
 # convert the object into a dict
 get_users_template_response_dict = get_users_template_response_instance.to_dict()
 # create an instance of GetUsersTemplateResponse from a dict
-get_users_template_response_from_dict = GetUsersTemplateResponse.from_dict(get_users_template_response_dict)
+get_users_template_response_form_dict = get_users_template_response.from_dict(get_users_template_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

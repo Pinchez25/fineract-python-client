@@ -35,12 +35,12 @@ json = "{}"
 # create an instance of LoanProductProvisioningEntryData from a JSON string
 loan_product_provisioning_entry_data_instance = LoanProductProvisioningEntryData.from_json(json)
 # print the JSON string representation of the object
-print(LoanProductProvisioningEntryData.to_json())
+print LoanProductProvisioningEntryData.to_json()
 
 # convert the object into a dict
 loan_product_provisioning_entry_data_dict = loan_product_provisioning_entry_data_instance.to_dict()
 # create an instance of LoanProductProvisioningEntryData from a dict
-loan_product_provisioning_entry_data_from_dict = LoanProductProvisioningEntryData.from_dict(loan_product_provisioning_entry_data_dict)
+loan_product_provisioning_entry_data_form_dict = loan_product_provisioning_entry_data.from_dict(loan_product_provisioning_entry_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

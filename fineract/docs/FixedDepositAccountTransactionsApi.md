@@ -13,6 +13,8 @@ Method | HTTP request | Description
 # **adjust_transaction**
 > str adjust_transaction(fixed_deposit_account_id, transaction_id, command=command, body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -99,6 +101,8 @@ Name | Type | Description  | Notes
 # **retrieve_one18**
 > str retrieve_one18(fixed_deposit_account_id, transaction_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -181,6 +185,8 @@ Name | Type | Description  | Notes
 # **retrieve_template14**
 > str retrieve_template14(fixed_deposit_account_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -260,6 +266,8 @@ Name | Type | Description  | Notes
 
 # **transaction**
 > str transaction(fixed_deposit_account_id, command=command, body=body)
+
+
 
 ### Example
 

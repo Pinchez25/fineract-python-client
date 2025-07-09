@@ -10,6 +10,8 @@ Method | HTTP request | Description
 # **retrieve_all28**
 > str retrieve_all28(savings_id, guarantor_funding_id=guarantor_funding_id, offset=offset, limit=limit, order_by=order_by, sort_order=sort_order)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.single_debit_or_credit_entry_command import SingleDebitOrCreditEntryCommand
 from typing import Optional, Set
@@ -46,11 +46,11 @@ class JournalEntryCommand(BaseModel):
     transaction_date: Optional[date] = Field(default=None, alias="transactionDate")
     __properties: ClassVar[List[str]] = ["accountNumber", "accountingRuleId", "amount", "bankNumber", "checkNumber", "comments", "credits", "currencyCode", "debits", "officeId", "paymentTypeId", "receiptNumber", "referenceNumber", "routingCode", "transactionDate"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -88,16 +88,16 @@ class JournalEntryCommand(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in credits (list)
         _items = []
         if self.credits:
-            for _item_credits in self.credits:
-                if _item_credits:
-                    _items.append(_item_credits.to_dict())
+            for _item in self.credits:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['credits'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in debits (list)
         _items = []
         if self.debits:
-            for _item_debits in self.debits:
-                if _item_debits:
-                    _items.append(_item_debits.to_dict())
+            for _item in self.debits:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['debits'] = _items
         return _dict
 

@@ -194,13 +194,7 @@ Name | Type | Description  | Notes
 
 Retrieve Collateral Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed Value Lists
-Example Request:
-
-loans/1/collaterals/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists Example Request:  loans/1/collaterals/template
 
 ### Example
 
@@ -286,12 +280,7 @@ Name | Type | Description  | Notes
 
 List Loan Collaterals
 
-Example Requests:
-
-loans/1/collaterals
-
-
-loans/1/collaterals?fields=value,description
+Example Requests:  loans/1/collaterals   loans/1/collaterals?fields=value,description
 
 ### Example
 
@@ -377,12 +366,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Collateral
 
-Example Requests:
-
-/loans/1/collaterals/1
-
-
-/loans/1/collaterals/1?fields=description,description
+Example Requests:  /loans/1/collaterals/1   /loans/1/collaterals/1?fields=description,description
 
 ### Example
 

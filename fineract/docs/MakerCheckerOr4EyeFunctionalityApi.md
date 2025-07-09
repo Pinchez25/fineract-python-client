@@ -185,12 +185,7 @@ Name | Type | Description  | Notes
 
 Maker Checker Search Template
 
-This is a convenience resource. It can be useful when building a Checker Inbox UI. "appUsers" are data scoped to the office/branch the requestor is associated with. "actionNames" and "entityNames" returned are those that the requestor has Checker approval permissions for.
-
-Example Requests:
-
-makercheckers/searchtemplate
-makercheckers/searchtemplate?fields=entityNames
+This is a convenience resource. It can be useful when building a Checker Inbox UI. \"appUsers\" are data scoped to the office/branch the requestor is associated with. \"actionNames\" and \"entityNames\" returned are those that the requestor has Checker approval permissions for.  Example Requests:  makercheckers/searchtemplate makercheckers/searchtemplate?fields=entityNames
 
 ### Example
 
@@ -272,19 +267,7 @@ This endpoint does not need any parameter.
 
 List Maker Checker Entries
 
-Get a list of entries that can be checked by the requestor that match the criteria supplied.
-
-Example Requests:
-
-makercheckers
-
-makercheckers?fields=madeOnDate,maker,processingResult
-
-makercheckers?makerDateTimeFrom=2013-03-25 08:00:00&makerDateTimeTo=2013-04-04 18:00:00
-
-makercheckers?officeId=1
-
-makercheckers?officeId=1&includeJson=true
+Get a list of entries that can be checked by the requestor that match the criteria supplied.  Example Requests:  makercheckers  makercheckers?fields=madeOnDate,maker,processingResult  makercheckers?makerDateTimeFrom=2013-03-25 08:00:00&makerDateTimeTo=2013-04-04 18:00:00  makercheckers?officeId=1  makercheckers?officeId=1&includeJson=true
 
 ### Example
 

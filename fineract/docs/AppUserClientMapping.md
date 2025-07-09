@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of AppUserClientMapping from a JSON string
 app_user_client_mapping_instance = AppUserClientMapping.from_json(json)
 # print the JSON string representation of the object
-print(AppUserClientMapping.to_json())
+print AppUserClientMapping.to_json()
 
 # convert the object into a dict
 app_user_client_mapping_dict = app_user_client_mapping_instance.to_dict()
 # create an instance of AppUserClientMapping from a dict
-app_user_client_mapping_from_dict = AppUserClientMapping.from_dict(app_user_client_mapping_dict)
+app_user_client_mapping_form_dict = app_user_client_mapping.from_dict(app_user_client_mapping_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

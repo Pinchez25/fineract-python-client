@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of CenterData from a JSON string
 center_data_instance = CenterData.from_json(json)
 # print the JSON string representation of the object
-print(CenterData.to_json())
+print CenterData.to_json()
 
 # convert the object into a dict
 center_data_dict = center_data_instance.to_dict()
 # create an instance of CenterData from a dict
-center_data_from_dict = CenterData.from_dict(center_data_dict)
+center_data_form_dict = center_data.from_dict(center_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetEntityDatatableChecksResponse from a JSON string
 get_entity_datatable_checks_response_instance = GetEntityDatatableChecksResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetEntityDatatableChecksResponse.to_json())
+print GetEntityDatatableChecksResponse.to_json()
 
 # convert the object into a dict
 get_entity_datatable_checks_response_dict = get_entity_datatable_checks_response_instance.to_dict()
 # create an instance of GetEntityDatatableChecksResponse from a dict
-get_entity_datatable_checks_response_from_dict = GetEntityDatatableChecksResponse.from_dict(get_entity_datatable_checks_response_dict)
+get_entity_datatable_checks_response_form_dict = get_entity_datatable_checks_response.from_dict(get_entity_datatable_checks_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

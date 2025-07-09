@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of GetSelfClientsLoanAccountsStatus from a JSON string
 get_self_clients_loan_accounts_status_instance = GetSelfClientsLoanAccountsStatus.from_json(json)
 # print the JSON string representation of the object
-print(GetSelfClientsLoanAccountsStatus.to_json())
+print GetSelfClientsLoanAccountsStatus.to_json()
 
 # convert the object into a dict
 get_self_clients_loan_accounts_status_dict = get_self_clients_loan_accounts_status_instance.to_dict()
 # create an instance of GetSelfClientsLoanAccountsStatus from a dict
-get_self_clients_loan_accounts_status_from_dict = GetSelfClientsLoanAccountsStatus.from_dict(get_self_clients_loan_accounts_status_dict)
+get_self_clients_loan_accounts_status_form_dict = get_self_clients_loan_accounts_status.from_dict(get_self_clients_loan_accounts_status_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

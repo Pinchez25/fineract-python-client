@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of PostGroupsGroupIdCommandUnassignStaffResponse from a JSON string
 post_groups_group_id_command_unassign_staff_response_instance = PostGroupsGroupIdCommandUnassignStaffResponse.from_json(json)
 # print the JSON string representation of the object
-print(PostGroupsGroupIdCommandUnassignStaffResponse.to_json())
+print PostGroupsGroupIdCommandUnassignStaffResponse.to_json()
 
 # convert the object into a dict
 post_groups_group_id_command_unassign_staff_response_dict = post_groups_group_id_command_unassign_staff_response_instance.to_dict()
 # create an instance of PostGroupsGroupIdCommandUnassignStaffResponse from a dict
-post_groups_group_id_command_unassign_staff_response_from_dict = PostGroupsGroupIdCommandUnassignStaffResponse.from_dict(post_groups_group_id_command_unassign_staff_response_dict)
+post_groups_group_id_command_unassign_staff_response_form_dict = post_groups_group_id_command_unassign_staff_response.from_dict(post_groups_group_id_command_unassign_staff_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

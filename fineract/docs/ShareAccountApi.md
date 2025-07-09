@@ -19,13 +19,7 @@ Method | HTTP request | Description
 
 Submit new share application
 
-Submits new share application
-
-Mandatory Fields: clientId, productId, submittedDate, savingsAccountId, requestedShares, applicationDate
-
-Optional Fields: accountNo, externalId
-
-Inherited from Product (if not provided): minimumActivePeriod, minimumActivePeriodFrequencyType, lockinPeriodFrequency, lockinPeriodFrequencyType
+Submits new share application  Mandatory Fields: clientId, productId, submittedDate, savingsAccountId, requestedShares, applicationDate  Optional Fields: accountNo, externalId  Inherited from Product (if not provided): minimumActivePeriod, minimumActivePeriodFrequencyType, lockinPeriodFrequency, lockinPeriodFrequencyType
 
 ### Example
 
@@ -112,6 +106,8 @@ Name | Type | Description  | Notes
 # **get_shared_accounts_template**
 > get_shared_accounts_template(type, office_id=office_id, date_format=date_format)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -196,63 +192,7 @@ void (empty response body)
 
 Approve share application | Undo approval share application | Reject share application | Activate a share account | Close a share account | Apply additional shares on a share account | Approve additional shares request on a share account | Reject additional shares request on a share account | Redeem shares on a share account
 
-Approve share application:
-
-Approves share application so long as its in 'Submitted and pending approval' state.
-
-Undo approval share application:
-
-Will move 'approved' share application back to 'Submitted and pending approval' state.
-
-Reject share application:
-
-Rejects share application so long as its in 'Submitted and pending approval' state.
-
-Activate a share account:
-
-Results in an approved share application being converted into an 'active' share account.
-
-Close a share account:
-
-Results in an Activated share application being converted into an 'closed' share account.
-
-closedDate is closure date of share account
-
-Mandatory Fields: dateFormat,locale,closedDate
-
-Apply additional shares on a share account:
-
-requestedDate is requsted date of share purchase
-
-requestedShares is number of shares to be purchase
-
-Mandatory Fields: dateFormat,locale,requestedDate, requestedShares
-
-Approve additional shares request on a share account
-
-requestedShares is Share purchase transaction ids
-
-Mandatory Fields: requestedShares
-
-Reject additional shares request on a share account:
-
-requestedShares is Share purchase transaction ids
-
-Mandatory Fields: requestedShares
-
-Redeem shares on a share account:
-
-Results redeem some/all shares from share account.
-
-requestedDate is requsted date of shares redeem
-
-requestedShares is number of shares to be redeemed
-
-Mandatory Fields: dateFormat,locale,requestedDate,requestedShares
-
-Showing request/response for 'Reject additional shares request on a share account'
-
-For more info visit this link - https://fineract.apache.org/legacy-docs/apiLive.htm#shareaccounts
+Approve share application:  Approves share application so long as its in 'Submitted and pending approval' state.  Undo approval share application:  Will move 'approved' share application back to 'Submitted and pending approval' state.  Reject share application:  Rejects share application so long as its in 'Submitted and pending approval' state.  Activate a share account:  Results in an approved share application being converted into an 'active' share account.  Close a share account:  Results in an Activated share application being converted into an 'closed' share account.  closedDate is closure date of share account  Mandatory Fields: dateFormat,locale,closedDate  Apply additional shares on a share account:  requestedDate is requsted date of share purchase  requestedShares is number of shares to be purchase  Mandatory Fields: dateFormat,locale,requestedDate, requestedShares  Approve additional shares request on a share account  requestedShares is Share purchase transaction ids  Mandatory Fields: requestedShares  Reject additional shares request on a share account:  requestedShares is Share purchase transaction ids  Mandatory Fields: requestedShares  Redeem shares on a share account:  Results redeem some/all shares from share account.  requestedDate is requsted date of shares redeem  requestedShares is number of shares to be redeemed  Mandatory Fields: dateFormat,locale,requestedDate,requestedShares  Showing request/response for 'Reject additional shares request on a share account'  For more info visit this link - https://fineract.apache.org/legacy-docs/apiLive.htm#shareaccounts
 
 ### Example
 
@@ -343,6 +283,8 @@ Name | Type | Description  | Notes
 # **post_shared_accounts_template**
 > str post_shared_accounts_template(type, date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -431,11 +373,7 @@ Name | Type | Description  | Notes
 
 Retrieve a share application/account
 
-Retrieves a share application/account
-
-Example Requests :
-
-shareaccount/1
+Retrieves a share application/account  Example Requests :  shareaccount/1
 
 ### Example
 
@@ -523,11 +461,7 @@ Name | Type | Description  | Notes
 
 List share applications/accounts
 
-Lists share applications/accounts
-
-Example Requests:
-
-shareaccount
+Lists share applications/accounts  Example Requests:  shareaccount
 
 ### Example
 
@@ -617,17 +551,7 @@ Name | Type | Description  | Notes
 
 Retrieve Share Account Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed Value Lists
-
-Example Requests:
-
-accounts/share/template?clientId=1
-
-
-accounts/share/template?clientId=1&productId=1
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists  Example Requests:  accounts/share/template?clientId=1   accounts/share/template?clientId=1&productId=1
 
 ### Example
 

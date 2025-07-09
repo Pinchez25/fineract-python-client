@@ -12,6 +12,8 @@ Method | HTTP request | Description
 # **retrieve1**
 > GetPasswordPreferencesTemplateResponse retrieve1()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -91,10 +93,7 @@ This endpoint does not need any parameter.
 
 List Application Password validation policies
 
-ARGUMENTS
-Example Requests:
-
-passwordpreferences
+ARGUMENTS Example Requests:  passwordpreferences
 
 ### Example
 

@@ -11,6 +11,8 @@ Method | HTTP request | Description
 # **create_scorecard**
 > create_scorecard(survey_id, scorecard_data=scorecard_data)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -91,6 +93,8 @@ void (empty response body)
 
 # **find_by_client**
 > List[ScorecardData] find_by_client(client_id)
+
+
 
 ### Example
 

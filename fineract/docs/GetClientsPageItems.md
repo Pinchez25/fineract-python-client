@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetClientsPageItems from a JSON string
 get_clients_page_items_instance = GetClientsPageItems.from_json(json)
 # print the JSON string representation of the object
-print(GetClientsPageItems.to_json())
+print GetClientsPageItems.to_json()
 
 # convert the object into a dict
 get_clients_page_items_dict = get_clients_page_items_instance.to_dict()
 # create an instance of GetClientsPageItems from a dict
-get_clients_page_items_from_dict = GetClientsPageItems.from_dict(get_clients_page_items_dict)
+get_clients_page_items_form_dict = get_clients_page_items.from_dict(get_clients_page_items_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

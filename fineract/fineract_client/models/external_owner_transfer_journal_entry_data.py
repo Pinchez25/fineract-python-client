@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.external_transfer_data import ExternalTransferData
 from fineract_client.models.page_journal_entry_data import PageJournalEntryData
@@ -33,11 +33,11 @@ class ExternalOwnerTransferJournalEntryData(BaseModel):
     transfer_data: Optional[ExternalTransferData] = Field(default=None, alias="transferData")
     __properties: ClassVar[List[str]] = ["journalEntryData", "transferData"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

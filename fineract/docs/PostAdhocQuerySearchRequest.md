@@ -29,12 +29,12 @@ json = "{}"
 # create an instance of PostAdhocQuerySearchRequest from a JSON string
 post_adhoc_query_search_request_instance = PostAdhocQuerySearchRequest.from_json(json)
 # print the JSON string representation of the object
-print(PostAdhocQuerySearchRequest.to_json())
+print PostAdhocQuerySearchRequest.to_json()
 
 # convert the object into a dict
 post_adhoc_query_search_request_dict = post_adhoc_query_search_request_instance.to_dict()
 # create an instance of PostAdhocQuerySearchRequest from a dict
-post_adhoc_query_search_request_from_dict = PostAdhocQuerySearchRequest.from_dict(post_adhoc_query_search_request_dict)
+post_adhoc_query_search_request_form_dict = post_adhoc_query_search_request.from_dict(post_adhoc_query_search_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

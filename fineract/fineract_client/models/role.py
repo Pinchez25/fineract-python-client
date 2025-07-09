@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.permission import Permission
 from typing import Optional, Set
@@ -36,11 +36,11 @@ class Role(BaseModel):
     permissions: Optional[List[Permission]] = None
     __properties: ClassVar[List[str]] = ["disabled", "enabled", "id", "name", "new", "permissions"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -78,9 +78,9 @@ class Role(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in permissions (list)
         _items = []
         if self.permissions:
-            for _item_permissions in self.permissions:
-                if _item_permissions:
-                    _items.append(_item_permissions.to_dict())
+            for _item in self.permissions:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['permissions'] = _items
         return _dict
 

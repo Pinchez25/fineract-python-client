@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of PageExternalTransferData from a JSON string
 page_external_transfer_data_instance = PageExternalTransferData.from_json(json)
 # print the JSON string representation of the object
-print(PageExternalTransferData.to_json())
+print PageExternalTransferData.to_json()
 
 # convert the object into a dict
 page_external_transfer_data_dict = page_external_transfer_data_instance.to_dict()
 # create an instance of PageExternalTransferData from a dict
-page_external_transfer_data_from_dict = PageExternalTransferData.from_dict(page_external_transfer_data_dict)
+page_external_transfer_data_form_dict = page_external_transfer_data.from_dict(page_external_transfer_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

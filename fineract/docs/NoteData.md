@@ -31,12 +31,12 @@ json = "{}"
 # create an instance of NoteData from a JSON string
 note_data_instance = NoteData.from_json(json)
 # print the JSON string representation of the object
-print(NoteData.to_json())
+print NoteData.to_json()
 
 # convert the object into a dict
 note_data_dict = note_data_instance.to_dict()
 # create an instance of NoteData from a dict
-note_data_from_dict = NoteData.from_dict(note_data_dict)
+note_data_form_dict = note_data.from_dict(note_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

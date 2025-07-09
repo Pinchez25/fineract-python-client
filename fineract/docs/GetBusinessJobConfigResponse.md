@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of GetBusinessJobConfigResponse from a JSON string
 get_business_job_config_response_instance = GetBusinessJobConfigResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetBusinessJobConfigResponse.to_json())
+print GetBusinessJobConfigResponse.to_json()
 
 # convert the object into a dict
 get_business_job_config_response_dict = get_business_job_config_response_instance.to_dict()
 # create an instance of GetBusinessJobConfigResponse from a dict
-get_business_job_config_response_from_dict = GetBusinessJobConfigResponse.from_dict(get_business_job_config_response_dict)
+get_business_job_config_response_form_dict = get_business_job_config_response.from_dict(get_business_job_config_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

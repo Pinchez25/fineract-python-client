@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.external_id import ExternalId
 from fineract_client.models.id_document import IdDocument
@@ -60,11 +60,11 @@ class InteropKycResponseData(BaseModel):
     transaction_id: Optional[StrictStr] = Field(default=None, alias="transactionId")
     __properties: ClassVar[List[str]] = ["birthCountry", "changes", "clientId", "commandId", "contactPhone", "creditBureauReportData", "dateOfBirth", "emailAddress", "gender", "glimId", "groupId", "gsimId", "idDocument", "loanId", "nationality", "officeId", "postalAddress", "productId", "resourceExternalId", "resourceId", "resourceIdentifier", "rollbackTransaction", "savingsId", "subResourceExternalId", "subResourceId", "subjectName", "transactionId"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -102,9 +102,9 @@ class InteropKycResponseData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in id_document (list)
         _items = []
         if self.id_document:
-            for _item_id_document in self.id_document:
-                if _item_id_document:
-                    _items.append(_item_id_document.to_dict())
+            for _item in self.id_document:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['idDocument'] = _items
         # override the default output from pydantic by calling `to_dict()` of postal_address
         if self.postal_address:

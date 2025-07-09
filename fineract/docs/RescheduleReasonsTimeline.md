@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of RescheduleReasonsTimeline from a JSON string
 reschedule_reasons_timeline_instance = RescheduleReasonsTimeline.from_json(json)
 # print the JSON string representation of the object
-print(RescheduleReasonsTimeline.to_json())
+print RescheduleReasonsTimeline.to_json()
 
 # convert the object into a dict
 reschedule_reasons_timeline_dict = reschedule_reasons_timeline_instance.to_dict()
 # create an instance of RescheduleReasonsTimeline from a dict
-reschedule_reasons_timeline_from_dict = RescheduleReasonsTimeline.from_dict(reschedule_reasons_timeline_dict)
+reschedule_reasons_timeline_form_dict = reschedule_reasons_timeline.from_dict(reschedule_reasons_timeline_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

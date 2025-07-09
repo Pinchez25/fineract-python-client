@@ -17,9 +17,7 @@ Method | HTTP request | Description
 
 Create an Account number format
 
-Note: You may associate a single Account number format for a given account type
-Mandatory Fields for Account number formats
-accountType
+Note: You may associate a single Account number format for a given account type Mandatory Fields for Account number formats accountType
 
 ### Example
 
@@ -192,12 +190,7 @@ Name | Type | Description  | Notes
 
 List Account number formats
 
-Example Requests:
-
-accountnumberformats
-
-
-accountnumberformats?fields=accountType,prefixType
+Example Requests:  accountnumberformats   accountnumberformats?fields=accountType,prefixType
 
 ### Example
 
@@ -279,15 +272,7 @@ This endpoint does not need any parameter.
 
 Retrieve an Account number format
 
-Example Requests:
-
-accountnumberformats/1
-
-
-accountnumberformats/1?template=true
-
-
-accountnumberformats/1?fields=accountType,prefixType
+Example Requests:  accountnumberformats/1   accountnumberformats/1?template=true   accountnumberformats/1?fields=accountType,prefixType
 
 ### Example
 
@@ -373,14 +358,7 @@ Name | Type | Description  | Notes
 
 Retrieve Account number format Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed Value Lists
-
-Example Request:
-
-accountnumberformats/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists  Example Request:  accountnumberformats/template
 
 ### Example
 

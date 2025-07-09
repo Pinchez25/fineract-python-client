@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.filter_data import FilterData
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class ColumnFilterData(BaseModel):
     filters: Optional[List[FilterData]] = None
     __properties: ClassVar[List[str]] = ["column", "filters"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -74,9 +74,9 @@ class ColumnFilterData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filters (list)
         _items = []
         if self.filters:
-            for _item_filters in self.filters:
-                if _item_filters:
-                    _items.append(_item_filters.to_dict())
+            for _item in self.filters:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['filters'] = _items
         return _dict
 

@@ -32,12 +32,12 @@ json = "{}"
 # create an instance of GetAccountsCharges from a JSON string
 get_accounts_charges_instance = GetAccountsCharges.from_json(json)
 # print the JSON string representation of the object
-print(GetAccountsCharges.to_json())
+print GetAccountsCharges.to_json()
 
 # convert the object into a dict
 get_accounts_charges_dict = get_accounts_charges_instance.to_dict()
 # create an instance of GetAccountsCharges from a dict
-get_accounts_charges_from_dict = GetAccountsCharges.from_dict(get_accounts_charges_dict)
+get_accounts_charges_form_dict = get_accounts_charges.from_dict(get_accounts_charges_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

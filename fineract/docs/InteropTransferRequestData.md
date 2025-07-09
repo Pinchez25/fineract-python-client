@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of InteropTransferRequestData from a JSON string
 interop_transfer_request_data_instance = InteropTransferRequestData.from_json(json)
 # print the JSON string representation of the object
-print(InteropTransferRequestData.to_json())
+print InteropTransferRequestData.to_json()
 
 # convert the object into a dict
 interop_transfer_request_data_dict = interop_transfer_request_data_instance.to_dict()
 # create an instance of InteropTransferRequestData from a dict
-interop_transfer_request_data_from_dict = InteropTransferRequestData.from_dict(interop_transfer_request_data_dict)
+interop_transfer_request_data_form_dict = interop_transfer_request_data.from_dict(interop_transfer_request_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

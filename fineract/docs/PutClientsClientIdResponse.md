@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of PutClientsClientIdResponse from a JSON string
 put_clients_client_id_response_instance = PutClientsClientIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(PutClientsClientIdResponse.to_json())
+print PutClientsClientIdResponse.to_json()
 
 # convert the object into a dict
 put_clients_client_id_response_dict = put_clients_client_id_response_instance.to_dict()
 # create an instance of PutClientsClientIdResponse from a dict
-put_clients_client_id_response_from_dict = PutClientsClientIdResponse.from_dict(put_clients_client_id_response_dict)
+put_clients_client_id_response_form_dict = put_clients_client_id_response.from_dict(put_clients_client_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

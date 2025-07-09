@@ -16,6 +16,8 @@ Method | HTTP request | Description
 # **modify_savings_account_application**
 > str modify_savings_account_application(account_id, command=command, body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -102,15 +104,7 @@ Name | Type | Description  | Notes
 
 List Savings Charges
 
-Lists Savings Charges
-
-Example Requests:
-
-self/savingsaccounts/1/charges
-
-self/savingsaccounts/1/charges?chargeStatus=inactive
-
-self/savingsaccounts/1/charges?fields=name,amountOrPercentage
+Lists Savings Charges  Example Requests:  self/savingsaccounts/1/charges  self/savingsaccounts/1/charges?chargeStatus=inactive  self/savingsaccounts/1/charges?fields=name,amountOrPercentage
 
 ### Example
 
@@ -198,14 +192,7 @@ Name | Type | Description  | Notes
 
 Retrieve a savings account
 
-Retrieves a savings account
-
-Example Requests :
-
-self/savingsaccounts/1
-
-
-self/savingsaccounts/1?associations=transactions
+Retrieves a savings account  Example Requests :  self/savingsaccounts/1   self/savingsaccounts/1?associations=transactions
 
 ### Example
 
@@ -293,14 +280,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Savings account Charge
 
-Retrieves a Savings account Charge
-
-Example Requests:
-
-self/savingsaccounts/1/charges/5
-
-
-self/savingsaccounts/1/charges/5?fields=name,amountOrPercentage
+Retrieves a Savings account Charge  Example Requests:  self/savingsaccounts/1/charges/5   self/savingsaccounts/1/charges/5?fields=name,amountOrPercentage
 
 ### Example
 
@@ -388,11 +368,7 @@ Name | Type | Description  | Notes
 
 Retrieve Savings Account Transaction
 
-Retrieves Savings Account Transaction
-
-Example Requests:
-
-self/savingsaccounts/1/transactions/1
+Retrieves Savings Account Transaction  Example Requests:  self/savingsaccounts/1/transactions/1
 
 ### Example
 
@@ -478,6 +454,8 @@ Name | Type | Description  | Notes
 # **submit_savings_account_application**
 > str submit_savings_account_application(command=command, body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -559,6 +537,8 @@ Name | Type | Description  | Notes
 
 # **template18**
 > str template18(client_id=client_id, product_id=product_id)
+
+
 
 ### Example
 

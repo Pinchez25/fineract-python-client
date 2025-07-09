@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of LoanProductVariableInstallmentConfig from a JSON string
 loan_product_variable_installment_config_instance = LoanProductVariableInstallmentConfig.from_json(json)
 # print the JSON string representation of the object
-print(LoanProductVariableInstallmentConfig.to_json())
+print LoanProductVariableInstallmentConfig.to_json()
 
 # convert the object into a dict
 loan_product_variable_installment_config_dict = loan_product_variable_installment_config_instance.to_dict()
 # create an instance of LoanProductVariableInstallmentConfig from a dict
-loan_product_variable_installment_config_from_dict = LoanProductVariableInstallmentConfig.from_dict(loan_product_variable_installment_config_dict)
+loan_product_variable_installment_config_form_dict = loan_product_variable_installment_config.from_dict(loan_product_variable_installment_config_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

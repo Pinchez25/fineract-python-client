@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.global_configuration_property_data import GlobalConfigurationPropertyData
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetGlobalConfigurationsResponse(BaseModel):
     global_configuration: Optional[List[GlobalConfigurationPropertyData]] = Field(default=None, alias="globalConfiguration")
     __properties: ClassVar[List[str]] = ["globalConfiguration"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class GetGlobalConfigurationsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in global_configuration (list)
         _items = []
         if self.global_configuration:
-            for _item_global_configuration in self.global_configuration:
-                if _item_global_configuration:
-                    _items.append(_item_global_configuration.to_dict())
+            for _item in self.global_configuration:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['globalConfiguration'] = _items
         return _dict
 

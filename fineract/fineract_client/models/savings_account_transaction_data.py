@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.currency_data import CurrencyData
 from fineract_client.models.payment_detail_data import PaymentDetailData
@@ -122,11 +122,11 @@ class SavingsAccountTransactionData(BaseModel):
             raise ValueError("must be one of enum values ('CREDIT', 'DEBIT')")
         return value
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -164,9 +164,9 @@ class SavingsAccountTransactionData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charges_paid_by_data (list)
         _items = []
         if self.charges_paid_by_data:
-            for _item_charges_paid_by_data in self.charges_paid_by_data:
-                if _item_charges_paid_by_data:
-                    _items.append(_item_charges_paid_by_data.to_dict())
+            for _item in self.charges_paid_by_data:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargesPaidByData'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -177,23 +177,23 @@ class SavingsAccountTransactionData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in payment_type_options (list)
         _items = []
         if self.payment_type_options:
-            for _item_payment_type_options in self.payment_type_options:
-                if _item_payment_type_options:
-                    _items.append(_item_payment_type_options.to_dict())
+            for _item in self.payment_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in savings_account_charges_paid (list)
         _items = []
         if self.savings_account_charges_paid:
-            for _item_savings_account_charges_paid in self.savings_account_charges_paid:
-                if _item_savings_account_charges_paid:
-                    _items.append(_item_savings_account_charges_paid.to_dict())
+            for _item in self.savings_account_charges_paid:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['savingsAccountChargesPaid'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in tax_details (list)
         _items = []
         if self.tax_details:
-            for _item_tax_details in self.tax_details:
-                if _item_tax_details:
-                    _items.append(_item_tax_details.to_dict())
+            for _item in self.tax_details:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['taxDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of transaction_type
         if self.transaction_type:

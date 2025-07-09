@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of LoanAccountLock from a JSON string
 loan_account_lock_instance = LoanAccountLock.from_json(json)
 # print the JSON string representation of the object
-print(LoanAccountLock.to_json())
+print LoanAccountLock.to_json()
 
 # convert the object into a dict
 loan_account_lock_dict = loan_account_lock_instance.to_dict()
 # create an instance of LoanAccountLock from a dict
-loan_account_lock_from_dict = LoanAccountLock.from_dict(loan_account_lock_dict)
+loan_account_lock_form_dict = loan_account_lock.from_dict(loan_account_lock_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

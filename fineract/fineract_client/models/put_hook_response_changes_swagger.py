@@ -18,10 +18,10 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.event import Event
-from fineract_client.models.model_field import ModelField
+from fineract_client.models.field import Field
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,16 +29,16 @@ class PutHookResponseChangesSwagger(BaseModel):
     """
     PutHookResponseChangesSwagger
     """ # noqa: E501
-    config: Optional[List[ModelField]] = None
+    config: Optional[List[Field]] = None
     display_name: Optional[StrictStr] = Field(default=None, alias="displayName")
     events: Optional[List[Event]] = None
     __properties: ClassVar[List[str]] = ["config", "displayName", "events"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -76,16 +76,16 @@ class PutHookResponseChangesSwagger(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in config (list)
         _items = []
         if self.config:
-            for _item_config in self.config:
-                if _item_config:
-                    _items.append(_item_config.to_dict())
+            for _item in self.config:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['config'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in events (list)
         _items = []
         if self.events:
-            for _item_events in self.events:
-                if _item_events:
-                    _items.append(_item_events.to_dict())
+            for _item in self.events:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['events'] = _items
         return _dict
 
@@ -99,7 +99,7 @@ class PutHookResponseChangesSwagger(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "config": [ModelField.from_dict(_item) for _item in obj["config"]] if obj.get("config") is not None else None,
+            "config": [Field.from_dict(_item) for _item in obj["config"]] if obj.get("config") is not None else None,
             "displayName": obj.get("displayName"),
             "events": [Event.from_dict(_item) for _item in obj["events"]] if obj.get("events") is not None else None
         })

@@ -102,11 +102,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Fund
 
-Returns the details of a Fund.
-
-Example Requests:
-
-funds/1
+Returns the details of a Fund.  Example Requests:  funds/1
 
 ### Example
 
@@ -192,11 +188,7 @@ Name | Type | Description  | Notes
 
 Retrieve Funds
 
-Returns the list of funds.
-
-Example Requests:
-
-funds
+Returns the list of funds.  Example Requests:  funds
 
 ### Example
 

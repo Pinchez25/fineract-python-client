@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -43,11 +43,11 @@ class PostSurveySurveyNameApptableIdRequest(BaseModel):
     ppi_towels_cd_q9_towels: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["date", "dateFormat", "locale", "ppi_businessoccupation_cd_q3_businessoccupation", "ppi_floortype_cd_q5_floortype", "ppi_fryingpans_cd_q10_fryingpans", "ppi_habitablerooms_cd_q4_habitablerooms", "ppi_highestschool_cd_q2_highestschool", "ppi_household_members_cd_q1_householdmembers", "ppi_irons_cd_q7_irons", "ppi_lightingsource_cd_q6_lightingsource", "ppi_mosquitonets_cd_q8_mosquitonets", "ppi_towels_cd_q9_towels"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

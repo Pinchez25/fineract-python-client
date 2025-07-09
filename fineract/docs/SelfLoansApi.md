@@ -20,25 +20,7 @@ Method | HTTP request | Description
 
 Calculate Loan Repayment Schedule | Submit a new Loan Application
 
-Calculate Loan Repayment Schedule:
-
-Calculates Loan Repayment Schedule
-
-Mandatory Fields: productId, principal, loanTermFrequency, loanTermFrequencyType, numberOfRepayments, repaymentEvery, repaymentFrequencyType, interestRatePerPeriod, amortizationType, interestType, interestCalculationPeriodType, expectedDisbursementDate, transactionProcessingStrategyCode
-
-Submit a new Loan Application:
-
-Mandatory Fields: clientId, productId, principal, loanTermFrequency, loanTermFrequencyType, loanType, numberOfRepayments, repaymentEvery, repaymentFrequencyType, interestRatePerPeriod, amortizationType, interestType, interestCalculationPeriodType, transactionProcessingStrategyCode, expectedDisbursementDate, submittedOnDate, loanType
-
-Additional Mandatory Fields if interest recalculation is enabled for product and Rest frequency not same as repayment period: recalculationRestFrequencyDate
-
-Additional Mandatory Fields if interest recalculation with interest/fee compounding is enabled for product and compounding frequency not same as repayment period: recalculationCompoundingFrequencyDate
-
-Additional Mandatory Field if Entity-Datatable Check is enabled for the entity of type loan: datatables
-
-Optional Fields: graceOnPrincipalPayment, graceOnInterestPayment, graceOnInterestCharged, linkAccountId, allowPartialPeriodInterestCalcualtion, fixedEmiAmount, maxOutstandingLoanBalance, disbursementData, graceOnArrearsAgeing, createStandingInstructionAtDisbursement (requires linkedAccountId if set to true)
-
-Showing request/response for 'Submit a new Loan Application'
+Calculate Loan Repayment Schedule:  Calculates Loan Repayment Schedule  Mandatory Fields: productId, principal, loanTermFrequency, loanTermFrequencyType, numberOfRepayments, repaymentEvery, repaymentFrequencyType, interestRatePerPeriod, amortizationType, interestType, interestCalculationPeriodType, expectedDisbursementDate, transactionProcessingStrategyCode  Submit a new Loan Application:  Mandatory Fields: clientId, productId, principal, loanTermFrequency, loanTermFrequencyType, loanType, numberOfRepayments, repaymentEvery, repaymentFrequencyType, interestRatePerPeriod, amortizationType, interestType, interestCalculationPeriodType, transactionProcessingStrategyCode, expectedDisbursementDate, submittedOnDate, loanType  Additional Mandatory Fields if interest recalculation is enabled for product and Rest frequency not same as repayment period: recalculationRestFrequencyDate  Additional Mandatory Fields if interest recalculation with interest/fee compounding is enabled for product and compounding frequency not same as repayment period: recalculationCompoundingFrequencyDate  Additional Mandatory Field if Entity-Datatable Check is enabled for the entity of type loan: datatables  Optional Fields: graceOnPrincipalPayment, graceOnInterestPayment, graceOnInterestCharged, linkAccountId, allowPartialPeriodInterestCalcualtion, fixedEmiAmount, maxOutstandingLoanBalance, disbursementData, graceOnArrearsAgeing, createStandingInstructionAtDisbursement (requires linkedAccountId if set to true)  Showing request/response for 'Submit a new Loan Application'
 
 ### Example
 
@@ -216,14 +198,7 @@ Name | Type | Description  | Notes
 
 List Loan Charges
 
-Lists loan Charges
-
-Example Requests:
-
-self/loans/1/charges
-
-
-self/loans/1/charges?fields=name,amountOrPercentage
+Lists loan Charges  Example Requests:  self/loans/1/charges   self/loans/1/charges?fields=name,amountOrPercentage
 
 ### Example
 
@@ -307,6 +282,8 @@ Name | Type | Description  | Notes
 # **retrieve_guarantor_details2**
 > str retrieve_guarantor_details2(loan_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -389,17 +366,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan
 
-Retrieves a Loan
-
-Example Requests:
-
-self/loans/1
-
-
-self/loans/1?fields=id,principal,annualInterestRate
-
-
-self/loans/1?fields=id,principal,annualInterestRate&associations=repaymentSchedule,transactions
+Retrieves a Loan  Example Requests:  self/loans/1   self/loans/1?fields=id,principal,annualInterestRate   self/loans/1?fields=id,principal,annualInterestRate&associations=repaymentSchedule,transactions
 
 ### Example
 
@@ -485,14 +452,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan Charge
 
-Retrieves a Loan Charge
-
-Example Requests:
-
-self/loans/1/charges/1
-
-
-self/loans/1/charges/1?fields=name,amountOrPercentage
+Retrieves a Loan Charge  Example Requests:  self/loans/1/charges/1   self/loans/1/charges/1?fields=name,amountOrPercentage
 
 ### Example
 
@@ -580,9 +540,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan Transaction Details
 
-Retrieves a Loan Transaction DetailsExample Request:
-
-self/loans/5/transactions/3
+Retrieves a Loan Transaction DetailsExample Request:  self/loans/5/transactions/3
 
 ### Example
 
@@ -672,9 +630,7 @@ Name | Type | Description  | Notes
 
 Applicant Withdraws from Loan Application
 
-Applicant Withdraws from Loan Application
-
-Mandatory Fields: withdrawnOnDate
+Applicant Withdraws from Loan Application  Mandatory Fields: withdrawnOnDate
 
 ### Example
 
@@ -765,19 +721,7 @@ Name | Type | Description  | Notes
 
 Retrieve Loan Details Template
 
-Retrieves Loan Details Template
-
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed description Lists
-
-Example Requests:
-
-self/loans/template?templateType=individual&clientId=1
-
-
-self/loans/template?templateType=individual&clientId=1&productId=1
+Retrieves Loan Details Template  This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists  Example Requests:  self/loans/template?templateType=individual&clientId=1   self/loans/template?templateType=individual&clientId=1&productId=1
 
 ### Example
 

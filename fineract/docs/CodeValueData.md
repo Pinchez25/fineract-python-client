@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of CodeValueData from a JSON string
 code_value_data_instance = CodeValueData.from_json(json)
 # print the JSON string representation of the object
-print(CodeValueData.to_json())
+print CodeValueData.to_json()
 
 # convert the object into a dict
 code_value_data_dict = code_value_data_instance.to_dict()
 # create an instance of CodeValueData from a dict
-code_value_data_from_dict = CodeValueData.from_dict(code_value_data_dict)
+code_value_data_form_dict = code_value_data.from_dict(code_value_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

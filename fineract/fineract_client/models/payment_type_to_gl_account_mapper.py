@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.gl_account_data import GLAccountData
 from fineract_client.models.payment_type_data import PaymentTypeData
@@ -33,11 +33,11 @@ class PaymentTypeToGLAccountMapper(BaseModel):
     payment_type: Optional[PaymentTypeData] = Field(default=None, alias="paymentType")
     __properties: ClassVar[List[str]] = ["fundSourceAccount", "paymentType"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

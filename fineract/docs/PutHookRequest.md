@@ -6,7 +6,7 @@ PutHookRequest
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**List[ModelField]**](ModelField.md) |  | [optional] 
+**config** | [**List[Field]**](Field.md) |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **events** | [**List[Event]**](Event.md) |  | [optional] 
 **is_active** | **bool** |  | [optional] 
@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of PutHookRequest from a JSON string
 put_hook_request_instance = PutHookRequest.from_json(json)
 # print the JSON string representation of the object
-print(PutHookRequest.to_json())
+print PutHookRequest.to_json()
 
 # convert the object into a dict
 put_hook_request_dict = put_hook_request_instance.to_dict()
 # create an instance of PutHookRequest from a dict
-put_hook_request_from_dict = PutHookRequest.from_dict(put_hook_request_dict)
+put_hook_request_form_dict = put_hook_request.from_dict(put_hook_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

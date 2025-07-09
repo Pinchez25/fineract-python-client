@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of DelinquencyBucket from a JSON string
 delinquency_bucket_instance = DelinquencyBucket.from_json(json)
 # print the JSON string representation of the object
-print(DelinquencyBucket.to_json())
+print DelinquencyBucket.to_json()
 
 # convert the object into a dict
 delinquency_bucket_dict = delinquency_bucket_instance.to_dict()
 # create an instance of DelinquencyBucket from a dict
-delinquency_bucket_from_dict = DelinquencyBucket.from_dict(delinquency_bucket_dict)
+delinquency_bucket_form_dict = delinquency_bucket.from_dict(delinquency_bucket_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

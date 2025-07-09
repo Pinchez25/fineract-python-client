@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_accounts_charges_currency import GetAccountsChargesCurrency
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetAccountsTypeSummary(BaseModel):
     currency: Optional[GetAccountsChargesCurrency] = None
     __properties: ClassVar[List[str]] = ["currency"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_centers_account_type import GetCentersAccountType
 from fineract_client.models.get_centers_center_id_currency import GetCentersCenterIdCurrency
@@ -43,11 +43,11 @@ class GetCentersSavingsAccounts(BaseModel):
     timeline: Optional[GetCentersTimeline] = None
     __properties: ClassVar[List[str]] = ["accountNo", "accountType", "currency", "depositType", "id", "productId", "productName", "status", "timeline"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

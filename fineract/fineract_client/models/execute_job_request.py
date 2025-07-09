@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.job_parameter_dto import JobParameterDTO
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class ExecuteJobRequest(BaseModel):
     job_parameters: Optional[List[JobParameterDTO]] = Field(default=None, alias="jobParameters")
     __properties: ClassVar[List[str]] = ["jobParameters"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class ExecuteJobRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in job_parameters (list)
         _items = []
         if self.job_parameters:
-            for _item_job_parameters in self.job_parameters:
-                if _item_job_parameters:
-                    _items.append(_item_job_parameters.to_dict())
+            for _item in self.job_parameters:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['jobParameters'] = _items
         return _dict
 

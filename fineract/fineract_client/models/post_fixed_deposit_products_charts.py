@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.post_fixed_deposit_products_chart_slabs import PostFixedDepositProductsChartSlabs
 from typing import Optional, Set
@@ -34,11 +34,11 @@ class PostFixedDepositProductsCharts(BaseModel):
     locale: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["chartSlabs", "dateFormat", "fromDate", "locale"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -76,9 +76,9 @@ class PostFixedDepositProductsCharts(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in chart_slabs (list)
         _items = []
         if self.chart_slabs:
-            for _item_chart_slabs in self.chart_slabs:
-                if _item_chart_slabs:
-                    _items.append(_item_chart_slabs.to_dict())
+            for _item in self.chart_slabs:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chartSlabs'] = _items
         return _dict
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_delinquency_ranges_response import GetDelinquencyRangesResponse
 from typing import Optional, Set
@@ -36,11 +36,11 @@ class GetDelinquencyTagHistoryResponse(BaseModel):
     loan_id: Optional[StrictInt] = Field(default=None, alias="loanId")
     __properties: ClassVar[List[str]] = ["addedOnDate", "delinquencyRange", "id", "liftedOnDate", "loanId"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

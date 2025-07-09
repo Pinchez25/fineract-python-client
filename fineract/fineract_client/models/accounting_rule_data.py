@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.accounting_tag_rule_data import AccountingTagRuleData
 from fineract_client.models.code_value_data import CodeValueData
@@ -50,11 +50,11 @@ class AccountingRuleData(BaseModel):
     system_defined: Optional[StrictBool] = Field(default=None, alias="systemDefined")
     __properties: ClassVar[List[str]] = ["allowMultipleCreditEntries", "allowMultipleDebitEntries", "allowedAccounts", "allowedCreditTagOptions", "allowedDebitTagOptions", "allowedOffices", "creditAccounts", "creditTags", "debitAccounts", "debitTags", "description", "id", "name", "officeId", "officeName", "systemDefined"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -92,58 +92,58 @@ class AccountingRuleData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_accounts (list)
         _items = []
         if self.allowed_accounts:
-            for _item_allowed_accounts in self.allowed_accounts:
-                if _item_allowed_accounts:
-                    _items.append(_item_allowed_accounts.to_dict())
+            for _item in self.allowed_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedAccounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_credit_tag_options (list)
         _items = []
         if self.allowed_credit_tag_options:
-            for _item_allowed_credit_tag_options in self.allowed_credit_tag_options:
-                if _item_allowed_credit_tag_options:
-                    _items.append(_item_allowed_credit_tag_options.to_dict())
+            for _item in self.allowed_credit_tag_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedCreditTagOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_debit_tag_options (list)
         _items = []
         if self.allowed_debit_tag_options:
-            for _item_allowed_debit_tag_options in self.allowed_debit_tag_options:
-                if _item_allowed_debit_tag_options:
-                    _items.append(_item_allowed_debit_tag_options.to_dict())
+            for _item in self.allowed_debit_tag_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedDebitTagOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_offices (list)
         _items = []
         if self.allowed_offices:
-            for _item_allowed_offices in self.allowed_offices:
-                if _item_allowed_offices:
-                    _items.append(_item_allowed_offices.to_dict())
+            for _item in self.allowed_offices:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedOffices'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in credit_accounts (list)
         _items = []
         if self.credit_accounts:
-            for _item_credit_accounts in self.credit_accounts:
-                if _item_credit_accounts:
-                    _items.append(_item_credit_accounts.to_dict())
+            for _item in self.credit_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['creditAccounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in credit_tags (list)
         _items = []
         if self.credit_tags:
-            for _item_credit_tags in self.credit_tags:
-                if _item_credit_tags:
-                    _items.append(_item_credit_tags.to_dict())
+            for _item in self.credit_tags:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['creditTags'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in debit_accounts (list)
         _items = []
         if self.debit_accounts:
-            for _item_debit_accounts in self.debit_accounts:
-                if _item_debit_accounts:
-                    _items.append(_item_debit_accounts.to_dict())
+            for _item in self.debit_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['debitAccounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in debit_tags (list)
         _items = []
         if self.debit_tags:
-            for _item_debit_tags in self.debit_tags:
-                if _item_debit_tags:
-                    _items.append(_item_debit_tags.to_dict())
+            for _item in self.debit_tags:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['debitTags'] = _items
         return _dict
 

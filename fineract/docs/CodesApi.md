@@ -189,11 +189,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Code
 
-Returns the details of a Code.
-
-Example Requests:
-
-codes/1
+Returns the details of a Code.  Example Requests:  codes/1
 
 ### Example
 
@@ -279,11 +275,7 @@ Name | Type | Description  | Notes
 
 Retrieve Codes
 
-Returns the list of codes.
-
-Example Requests:
-
-codes
+Returns the list of codes.  Example Requests:  codes
 
 ### Example
 

@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of GetFixedDepositAccountsAccountChartCurrency from a JSON string
 get_fixed_deposit_accounts_account_chart_currency_instance = GetFixedDepositAccountsAccountChartCurrency.from_json(json)
 # print the JSON string representation of the object
-print(GetFixedDepositAccountsAccountChartCurrency.to_json())
+print GetFixedDepositAccountsAccountChartCurrency.to_json()
 
 # convert the object into a dict
 get_fixed_deposit_accounts_account_chart_currency_dict = get_fixed_deposit_accounts_account_chart_currency_instance.to_dict()
 # create an instance of GetFixedDepositAccountsAccountChartCurrency from a dict
-get_fixed_deposit_accounts_account_chart_currency_from_dict = GetFixedDepositAccountsAccountChartCurrency.from_dict(get_fixed_deposit_accounts_account_chart_currency_dict)
+get_fixed_deposit_accounts_account_chart_currency_form_dict = get_fixed_deposit_accounts_account_chart_currency.from_dict(get_fixed_deposit_accounts_account_chart_currency_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

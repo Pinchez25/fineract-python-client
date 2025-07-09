@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of PutTemplatesTemplateIdRequest from a JSON string
 put_templates_template_id_request_instance = PutTemplatesTemplateIdRequest.from_json(json)
 # print the JSON string representation of the object
-print(PutTemplatesTemplateIdRequest.to_json())
+print PutTemplatesTemplateIdRequest.to_json()
 
 # convert the object into a dict
 put_templates_template_id_request_dict = put_templates_template_id_request_instance.to_dict()
 # create an instance of PutTemplatesTemplateIdRequest from a dict
-put_templates_template_id_request_from_dict = PutTemplatesTemplateIdRequest.from_dict(put_templates_template_id_request_dict)
+put_templates_template_id_request_form_dict = put_templates_template_id_request.from_dict(put_templates_template_id_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -17,17 +17,7 @@ Method | HTTP request | Description
 
 Create a Hook
 
-The following parameters can be passed for the creation of a hook :-
-
-name - string - Required. The name of the template that is being called. (See /hooks/template for the list of valid hook names.)
-
-isActive - boolean - Determines whether the hook is actually triggered.
-
-events - array - Determines what events the hook is triggered for.
-
-config - hash - Required. Key/value pairs to provide settings for this hook. These settings vary between the templates.
-
-templateId - Optional. The UGD template ID associated with the same entity (client or loan).
+The following parameters can be passed for the creation of a hook :-  name - string - Required. The name of the template that is being called. (See /hooks/template for the list of valid hook names.)  isActive - boolean - Determines whether the hook is actually triggered.  events - array - Determines what events the hook is triggered for.  config - hash - Required. Key/value pairs to provide settings for this hook. These settings vary between the templates.  templateId - Optional. The UGD template ID associated with the same entity (client or loan).
 
 ### Example
 
@@ -200,11 +190,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Hook
 
-Returns the details of a Hook.
-
-Example Requests:
-
-hooks/1
+Returns the details of a Hook.  Example Requests:  hooks/1
 
 ### Example
 
@@ -290,11 +276,7 @@ Name | Type | Description  | Notes
 
 Retrieve Hooks
 
-Returns the list of hooks.
-
-Example Requests:
-
-hooks
+Returns the list of hooks.  Example Requests:  hooks
 
 ### Example
 
@@ -376,13 +358,7 @@ This endpoint does not need any parameter.
 
 Retrieve Hooks Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed description Lists
-Example Request:
-
-hooks/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  hooks/template
 
 ### Example
 

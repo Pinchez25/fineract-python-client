@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.advanced_payment_data import AdvancedPaymentData
 from fineract_client.models.allow_attribute_overrides import AllowAttributeOverrides
@@ -151,11 +151,11 @@ class PostLoanProductsRequest(BaseModel):
     write_off_account_id: Optional[StrictInt] = Field(default=None, alias="writeOffAccountId")
     __properties: ClassVar[List[str]] = ["accountMovesOutOfNPAOnlyOnArrearsCompletion", "accountingRule", "allowApprovedDisbursedAmountsOverApplied", "allowAttributeOverrides", "allowCompoundingOnEod", "allowPartialPeriodInterestCalcualtion", "allowVariableInstallments", "amortizationType", "canDefineInstallmentAmount", "canUseForTopup", "chargeOffExpenseAccountId", "chargeOffFraudExpenseAccountId", "charges", "closeDate", "creditAllocation", "currencyCode", "dateFormat", "daysInMonthType", "daysInYearType", "delinquencyBucketId", "description", "digitsAfterDecimal", "disallowExpectedDisbursements", "disbursedAmountPercentageForDownPayment", "dueDaysForRepaymentEvent", "enableAccrualActivityPosting", "enableAutoRepaymentForDownPayment", "enableDownPayment", "enableInstallmentLevelDelinquency", "externalId", "feeToIncomeAccountMappings", "fixedLength", "fixedPrincipalPercentagePerInstallment", "fundId", "fundSourceAccountId", "goodwillCreditAccountId", "graceOnArrearsAgeing", "graceOnInterestPayment", "graceOnPrincipalPayment", "holdGuaranteeFunds", "inArrearsTolerance", "inMultiplesOf", "includeInBorrowerCycle", "incomeFromChargeOffFeesAccountId", "incomeFromChargeOffInterestAccountId", "incomeFromChargeOffPenaltyAccountId", "incomeFromFeeAccountId", "incomeFromGoodwillCreditFeesAccountId", "incomeFromGoodwillCreditInterestAccountId", "incomeFromGoodwillCreditPenaltyAccountId", "incomeFromPenaltyAccountId", "incomeFromRecoveryAccountId", "installmentAmountInMultiplesOf", "interestCalculationPeriodType", "interestOnLoanAccountId", "interestRateFrequencyType", "interestRatePerPeriod", "interestRateVariationsForBorrowerCycle", "interestRecalculationCompoundingMethod", "interestType", "isArrearsBasedOnOriginalSchedule", "isCompoundingToBePostedAsTransaction", "isEqualAmortization", "isInterestRecalculationEnabled", "isLinkedToFloatingInterestRates", "loanPortfolioAccountId", "loanScheduleProcessingType", "loanScheduleType", "locale", "maxInterestRatePerPeriod", "maxNumberOfRepayments", "maxPrincipal", "maxTrancheCount", "minInterestRatePerPeriod", "minNumberOfRepayments", "minPrincipal", "minimumDaysBetweenDisbursalAndFirstRepayment", "multiDisburseLoan", "name", "numberOfRepaymentVariationsForBorrowerCycle", "numberOfRepayments", "outstandingLoanBalance", "overAppliedCalculationType", "overAppliedNumber", "overDueDaysForRepaymentEvent", "overdueDaysForNPA", "overpaymentLiabilityAccountId", "paymentAllocation", "paymentChannelToFundSourceMappings", "penaltyToIncomeAccountMappings", "preClosureInterestCalculationStrategy", "principal", "principalThresholdForLastInstallment", "principalVariationsForBorrowerCycle", "rates", "recalculationCompoundingFrequencyInterval", "recalculationCompoundingFrequencyOnDayType", "recalculationCompoundingFrequencyType", "recalculationRestFrequencyInterval", "recalculationRestFrequencyType", "receivableFeeAccountId", "receivableInterestAccountId", "receivablePenaltyAccountId", "repaymentEvery", "repaymentFrequencyType", "repaymentStartDateType", "rescheduleStrategyMethod", "shortName", "startDate", "supportedInterestRefundTypes", "transactionProcessingStrategyCode", "transfersInSuspenseAccountId", "useBorrowerCycle", "writeOffAccountId"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -196,51 +196,51 @@ class PostLoanProductsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item_charges in self.charges:
-                if _item_charges:
-                    _items.append(_item_charges.to_dict())
+            for _item in self.charges:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in credit_allocation (list)
         _items = []
         if self.credit_allocation:
-            for _item_credit_allocation in self.credit_allocation:
-                if _item_credit_allocation:
-                    _items.append(_item_credit_allocation.to_dict())
+            for _item in self.credit_allocation:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['creditAllocation'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in fee_to_income_account_mappings (list)
         _items = []
         if self.fee_to_income_account_mappings:
-            for _item_fee_to_income_account_mappings in self.fee_to_income_account_mappings:
-                if _item_fee_to_income_account_mappings:
-                    _items.append(_item_fee_to_income_account_mappings.to_dict())
+            for _item in self.fee_to_income_account_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['feeToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in payment_allocation (list)
         _items = []
         if self.payment_allocation:
-            for _item_payment_allocation in self.payment_allocation:
-                if _item_payment_allocation:
-                    _items.append(_item_payment_allocation.to_dict())
+            for _item in self.payment_allocation:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentAllocation'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in payment_channel_to_fund_source_mappings (list)
         _items = []
         if self.payment_channel_to_fund_source_mappings:
-            for _item_payment_channel_to_fund_source_mappings in self.payment_channel_to_fund_source_mappings:
-                if _item_payment_channel_to_fund_source_mappings:
-                    _items.append(_item_payment_channel_to_fund_source_mappings.to_dict())
+            for _item in self.payment_channel_to_fund_source_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentChannelToFundSourceMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in penalty_to_income_account_mappings (list)
         _items = []
         if self.penalty_to_income_account_mappings:
-            for _item_penalty_to_income_account_mappings in self.penalty_to_income_account_mappings:
-                if _item_penalty_to_income_account_mappings:
-                    _items.append(_item_penalty_to_income_account_mappings.to_dict())
+            for _item in self.penalty_to_income_account_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['penaltyToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in rates (list)
         _items = []
         if self.rates:
-            for _item_rates in self.rates:
-                if _item_rates:
-                    _items.append(_item_rates.to_dict())
+            for _item in self.rates:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['rates'] = _items
         return _dict
 

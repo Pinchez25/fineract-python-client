@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of PostFixedDepositAccountsAccountIdResponse from a JSON string
 post_fixed_deposit_accounts_account_id_response_instance = PostFixedDepositAccountsAccountIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(PostFixedDepositAccountsAccountIdResponse.to_json())
+print PostFixedDepositAccountsAccountIdResponse.to_json()
 
 # convert the object into a dict
 post_fixed_deposit_accounts_account_id_response_dict = post_fixed_deposit_accounts_account_id_response_instance.to_dict()
 # create an instance of PostFixedDepositAccountsAccountIdResponse from a dict
-post_fixed_deposit_accounts_account_id_response_from_dict = PostFixedDepositAccountsAccountIdResponse.from_dict(post_fixed_deposit_accounts_account_id_response_dict)
+post_fixed_deposit_accounts_account_id_response_form_dict = post_fixed_deposit_accounts_account_id_response.from_dict(post_fixed_deposit_accounts_account_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

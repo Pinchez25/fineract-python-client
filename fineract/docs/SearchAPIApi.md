@@ -14,16 +14,7 @@ Method | HTTP request | Description
 
 Adhoc query search
 
-AdHocQuery search has more search options, it is a POST request, it uses request body to send search parameters
-
-
-Mandatory fields:entities
-
-Optional fields:loanStatus, loanProducts, offices, loanDateOption, loanFromDate, loanToDate, 
-includeOutStandingAmountPercentage, outStandingAmountPercentageCondition, 
-minOutStandingAmountPercentage and maxOutStandingAmountPercentage OR outStandingAmountPercentage, 
-includeOutstandingAmount, outstandingAmountCondition, 
-minOutstandingAmount and maxOutstandingAmount OR outstandingAmount
+AdHocQuery search has more search options, it is a POST request, it uses request body to send search parameters   Mandatory fields:entities  Optional fields:loanStatus, loanProducts, offices, loanDateOption, loanFromDate, loanToDate,  includeOutStandingAmountPercentage, outStandingAmountPercentageCondition,  minOutStandingAmountPercentage and maxOutStandingAmountPercentage OR outStandingAmountPercentage,  includeOutstandingAmount, outstandingAmountCondition,  minOutstandingAmount and maxOutstandingAmount OR outstandingAmount
 
 ### Example
 
@@ -110,10 +101,7 @@ Name | Type | Description  | Notes
 
 Retrive Adhoc Search query template
 
-Mandatory Fields
-
-search?query=000000001
-
+Mandatory Fields  search?query=000000001 
 
 ### Example
 
@@ -195,15 +183,7 @@ This endpoint does not need any parameter.
 
 Search Resources
 
-Example Requests:
-
-search?query=000000001
-
-
-search?query=Petra&resource=clients,groups
-
-
-search?query=Petra&resource=clients,groups&exactMatch=true
+Example Requests:  search?query=000000001   search?query=Petra&resource=clients,groups   search?query=Petra&resource=clients,groups&exactMatch=true
 
 ### Example
 

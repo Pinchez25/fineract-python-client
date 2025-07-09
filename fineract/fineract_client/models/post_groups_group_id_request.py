@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.post_groups_group_id_clients import PostGroupsGroupIdClients
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class PostGroupsGroupIdRequest(BaseModel):
     destination_group_id: Optional[StrictInt] = Field(default=None, alias="destinationGroupId")
     __properties: ClassVar[List[str]] = ["clients", "destinationGroupId"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -74,9 +74,9 @@ class PostGroupsGroupIdRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in clients (list)
         _items = []
         if self.clients:
-            for _item_clients in self.clients:
-                if _item_clients:
-                    _items.append(_item_clients.to_dict())
+            for _item in self.clients:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['clients'] = _items
         return _dict
 

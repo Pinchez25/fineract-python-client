@@ -15,6 +15,8 @@ Method | HTTP request | Description
 # **create_calendar**
 > str create_calendar(entity_type, entity_id, body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,6 +100,8 @@ Name | Type | Description  | Notes
 
 # **delete_calendar**
 > str delete_calendar(entity_type, entity_id, calendar_id)
+
+
 
 ### Example
 
@@ -183,6 +187,8 @@ Name | Type | Description  | Notes
 # **retrieve_calendar**
 > str retrieve_calendar(calendar_id, entity_type, entity_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -266,6 +272,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_calendars_by_entity**
 > str retrieve_calendars_by_entity(entity_type, entity_id, calendar_type=calendar_type)
+
+
 
 ### Example
 
@@ -351,6 +359,8 @@ Name | Type | Description  | Notes
 # **retrieve_new_calendar_details**
 > str retrieve_new_calendar_details(entity_type, entity_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -432,6 +442,8 @@ Name | Type | Description  | Notes
 
 # **update_calendar**
 > str update_calendar(entity_type, entity_id, calendar_id, body=body)
+
+
 
 ### Example
 

@@ -14,9 +14,7 @@ Method | HTTP request | Description
 
 List Working days
 
-Example Requests:
-
-workingdays
+Example Requests:  workingdays
 
 ### Example
 
@@ -98,11 +96,7 @@ This endpoint does not need any parameter.
 
 Working Days Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for working days.
-
-Example Request:
-
-workingdays/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for working days.  Example Request:  workingdays/template
 
 ### Example
 
@@ -184,8 +178,7 @@ This endpoint does not need any parameter.
 
 Update a Working Day
 
-Mandatory Fields
-recurrence,repaymentRescheduleType,extendTermForDailyRepayments,locale
+Mandatory Fields recurrence,repaymentRescheduleType,extendTermForDailyRepayments,locale
 
 ### Example
 

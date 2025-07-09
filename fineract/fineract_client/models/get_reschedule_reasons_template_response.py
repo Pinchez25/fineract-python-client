@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_reschedule_reasons_allowed_types import GetRescheduleReasonsAllowedTypes
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetRescheduleReasonsTemplateResponse(BaseModel):
     reschedule_reasons: Optional[List[GetRescheduleReasonsAllowedTypes]] = Field(default=None, alias="rescheduleReasons")
     __properties: ClassVar[List[str]] = ["rescheduleReasons"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class GetRescheduleReasonsTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in reschedule_reasons (list)
         _items = []
         if self.reschedule_reasons:
-            for _item_reschedule_reasons in self.reschedule_reasons:
-                if _item_reschedule_reasons:
-                    _items.append(_item_reschedule_reasons.to_dict())
+            for _item in self.reschedule_reasons:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['rescheduleReasons'] = _items
         return _dict
 

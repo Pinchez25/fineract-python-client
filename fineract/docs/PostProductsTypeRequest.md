@@ -38,12 +38,12 @@ json = "{}"
 # create an instance of PostProductsTypeRequest from a JSON string
 post_products_type_request_instance = PostProductsTypeRequest.from_json(json)
 # print the JSON string representation of the object
-print(PostProductsTypeRequest.to_json())
+print PostProductsTypeRequest.to_json()
 
 # convert the object into a dict
 post_products_type_request_dict = post_products_type_request_instance.to_dict()
 # create an instance of PostProductsTypeRequest from a dict
-post_products_type_request_from_dict = PostProductsTypeRequest.from_dict(post_products_type_request_dict)
+post_products_type_request_form_dict = post_products_type_request.from_dict(post_products_type_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

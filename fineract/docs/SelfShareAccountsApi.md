@@ -14,19 +14,7 @@ Method | HTTP request | Description
 
 Submit new share application
 
-Mandatory fields:
-
-clientId, productId, submittedDate, savingsAccountId, requestedShares, applicationDate
-
-
-Optional Fields
-
-accountNo, externalId
-
-
-Inherited from Product (if not provided)
-
-minimumActivePeriod, minimumActivePeriodFrequencyType, lockinPeriodFrequency, lockinPeriodFrequencyType.
+Mandatory fields:  clientId, productId, submittedDate, savingsAccountId, requestedShares, applicationDate   Optional Fields  accountNo, externalId   Inherited from Product (if not provided)  minimumActivePeriod, minimumActivePeriodFrequencyType, lockinPeriodFrequency, lockinPeriodFrequencyType.
 
 ### Example
 
@@ -112,13 +100,7 @@ Name | Type | Description  | Notes
 
 Retrieve a share application/account
 
-
-
-
-Example Requests:
-
-self/shareaccounts/12
-
+   Example Requests:  self/shareaccounts/12 
 
 ### Example
 
@@ -203,22 +185,7 @@ Name | Type | Description  | Notes
 
 Retrieve Share Account Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-Field Defaults
-
-Allowed Value Lists
-
-
-Arguments
-
-clientId:Integer mandatory
-productId:Integer optionalIf entered, productId, productName and selectedProduct fields are returned.
-Example Requests:
-
-self/shareaccounts/template?clientId=14
-
-self/shareaccounts/template?clientId=14&productId=3
-
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of: Field Defaults  Allowed Value Lists   Arguments  clientId:Integer mandatory productId:Integer optionalIf entered, productId, productName and selectedProduct fields are returned. Example Requests:  self/shareaccounts/template?clientId=14  self/shareaccounts/template?clientId=14&productId=3 
 
 ### Example
 

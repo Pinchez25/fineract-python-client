@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of PutLoansLoanIdDisbursementData from a JSON string
 put_loans_loan_id_disbursement_data_instance = PutLoansLoanIdDisbursementData.from_json(json)
 # print the JSON string representation of the object
-print(PutLoansLoanIdDisbursementData.to_json())
+print PutLoansLoanIdDisbursementData.to_json()
 
 # convert the object into a dict
 put_loans_loan_id_disbursement_data_dict = put_loans_loan_id_disbursement_data_instance.to_dict()
 # create an instance of PutLoansLoanIdDisbursementData from a dict
-put_loans_loan_id_disbursement_data_from_dict = PutLoansLoanIdDisbursementData.from_dict(put_loans_loan_id_disbursement_data_dict)
+put_loans_loan_id_disbursement_data_form_dict = put_loans_loan_id_disbursement_data.from_dict(put_loans_loan_id_disbursement_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

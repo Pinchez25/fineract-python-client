@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.post_loans_disbursement_data import PostLoansDisbursementData
 from typing import Optional, Set
@@ -65,11 +65,11 @@ class PostLoansRequest(BaseModel):
     transaction_processing_strategy_code: Optional[StrictStr] = Field(default=None, alias="transactionProcessingStrategyCode")
     __properties: ClassVar[List[str]] = ["amortizationType", "clientId", "dateFormat", "daysInYearType", "disbursedAmountPercentageForDownPayment", "disbursementData", "enableAutoRepaymentForDownPayment", "enableDownPayment", "enableInstallmentLevelDelinquency", "expectedDisbursementDate", "externalId", "fixedLength", "fixedPrincipalPercentagePerInstallment", "graceOnArrearsAgeing", "graceOnInterestCharged", "graceOnInterestPayment", "graceOnPrincipalPayment", "interestCalculationPeriodType", "interestRatePerPeriod", "interestType", "loanScheduleProcessingType", "loanTermFrequency", "loanTermFrequencyType", "loanType", "locale", "maxOutstandingLoanBalance", "numberOfRepayments", "principal", "productId", "repaymentEvery", "repaymentFrequencyType", "repaymentsStartingFromDate", "submittedOnDate", "transactionProcessingStrategyCode"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -107,9 +107,9 @@ class PostLoansRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in disbursement_data (list)
         _items = []
         if self.disbursement_data:
-            for _item_disbursement_data in self.disbursement_data:
-                if _item_disbursement_data:
-                    _items.append(_item_disbursement_data.to_dict())
+            for _item in self.disbursement_data:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['disbursementData'] = _items
         return _dict
 

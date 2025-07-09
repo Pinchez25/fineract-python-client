@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_fixed_deposit_accounts_currency import GetFixedDepositAccountsCurrency
 from fineract_client.models.get_fixed_deposit_accounts_deposit_period_frequency import GetFixedDepositAccountsDepositPeriodFrequency
@@ -67,11 +67,11 @@ class GetFixedDepositAccountsResponse(BaseModel):
     timeline: Optional[GetFixedDepositAccountsTimeline] = None
     __properties: ClassVar[List[str]] = ["accountNo", "clientId", "clientName", "currency", "depositAmount", "depositPeriod", "depositPeriodFrequency", "fieldOfficerId", "id", "interestCalculationDaysInYearType", "interestCalculationType", "interestCompoundingPeriodType", "interestFreePeriodApplicable", "interestPostingPeriodType", "maturityAmount", "maturityDate", "maxDepositTerm", "maxDepositTermType", "minDepositTerm", "minDepositTermType", "preClosurePenalApplicable", "savingsProductId", "savingsProductName", "status", "summary", "timeline"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

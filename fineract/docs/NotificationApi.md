@@ -11,6 +11,8 @@ Method | HTTP request | Description
 # **get_all_notifications**
 > GetNotificationsResponse get_all_notifications(order_by=order_by, limit=limit, offset=offset, sort_order=sort_order, is_read=is_read)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -99,6 +101,8 @@ Name | Type | Description  | Notes
 
 # **update5**
 > update5()
+
+
 
 ### Example
 

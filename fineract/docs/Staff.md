@@ -33,12 +33,12 @@ json = "{}"
 # create an instance of Staff from a JSON string
 staff_instance = Staff.from_json(json)
 # print the JSON string representation of the object
-print(Staff.to_json())
+print Staff.to_json()
 
 # convert the object into a dict
 staff_dict = staff_instance.to_dict()
 # create an instance of Staff from a dict
-staff_from_dict = Staff.from_dict(staff_dict)
+staff_form_dict = staff.from_dict(staff_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

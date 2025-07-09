@@ -21,13 +21,7 @@ Method | HTTP request | Description
 
 List Client Transactions
 
-The list capability of client transaction can support pagination.
-
-Example Requests:
-
-clients/189/transactions
-
-clients/189/transactions?offset=10&limit=50
+The list capability of client transaction can support pagination.  Example Requests:  clients/189/transactions  clients/189/transactions?offset=10&limit=50
 
 ### Example
 
@@ -117,13 +111,7 @@ Name | Type | Description  | Notes
 
 List Client Transactions
 
-The list capability of client transaction can support pagination.
-
-Example Requests:
-
-clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions
-
-clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?offset=10&limit=50
+The list capability of client transaction can support pagination.  Example Requests:  clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions  clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?offset=10&limit=50
 
 ### Example
 
@@ -213,11 +201,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Transaction
 
-Example Requests:
-clients/1/transactions/1
-
-
-clients/1/transactions/1?fields=id,officeName
+Example Requests: clients/1/transactions/1   clients/1/transactions/1?fields=id,officeName
 
 ### Example
 
@@ -305,11 +289,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Transaction
 
-Example Requests:
-clients/1/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854
-
-
-clients/1/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,officeName
+Example Requests: clients/1/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854   clients/1/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,officeName
 
 ### Example
 
@@ -397,11 +377,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Transaction
 
-Example Requests:
-clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/1
-
-
-clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/1?fields=id,officeName
+Example Requests: clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/1   clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/1?fields=id,officeName
 
 ### Example
 
@@ -489,11 +465,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Transaction
 
-Example Requests:
-clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854
-
-
-clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,officeName
+Example Requests: clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854   clients/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,officeName
 
 ### Example
 

@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PutReportResponse from a JSON string
 put_report_response_instance = PutReportResponse.from_json(json)
 # print the JSON string representation of the object
-print(PutReportResponse.to_json())
+print PutReportResponse.to_json()
 
 # convert the object into a dict
 put_report_response_dict = put_report_response_instance.to_dict()
 # create an instance of PutReportResponse from a dict
-put_report_response_from_dict = PutReportResponse.from_dict(put_report_response_dict)
+put_report_response_form_dict = put_report_response.from_dict(put_report_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

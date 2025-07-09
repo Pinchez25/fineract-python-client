@@ -41,12 +41,12 @@ json = "{}"
 # create an instance of GLAccountData from a JSON string
 gl_account_data_instance = GLAccountData.from_json(json)
 # print the JSON string representation of the object
-print(GLAccountData.to_json())
+print GLAccountData.to_json()
 
 # convert the object into a dict
 gl_account_data_dict = gl_account_data_instance.to_dict()
 # create an instance of GLAccountData from a dict
-gl_account_data_from_dict = GLAccountData.from_dict(gl_account_data_dict)
+gl_account_data_form_dict = gl_account_data.from_dict(gl_account_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

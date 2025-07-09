@@ -13,11 +13,7 @@ Method | HTTP request | Description
 
 Retrieve Cache Types
 
-Returns the list of caches.
-
-Example Requests:
-
-caches
+Returns the list of caches.  Example Requests:  caches
 
 ### Example
 

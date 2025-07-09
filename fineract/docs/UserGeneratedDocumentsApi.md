@@ -19,16 +19,7 @@ Method | HTTP request | Description
 
 Add a UGD
 
-Adds a new UGD.
-
-Mandatory Fields
-name
-
-
-
-Example Requests:
-
-templates/1
+Adds a new UGD.  Mandatory Fields name    Example Requests:  templates/1
 
 ### Example
 
@@ -197,6 +188,8 @@ Name | Type | Description  | Notes
 # **get_template_by_template**
 > str get_template_by_template(template_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -276,6 +269,8 @@ Name | Type | Description  | Notes
 
 # **merge_template**
 > str merge_template(template_id, body=body)
+
+
 
 ### Example
 
@@ -361,26 +356,7 @@ Name | Type | Description  | Notes
 
 Retrieve all UGDs
 
-Example Requests:
-
-templates
-
-It is also possible to get specific UGDs by entity and type:
-
-templates?type=0&entity=0
-[Entity: Id]
-
-
-
-
-
-client: 0, loan: 1
-
-[Type: Id]
-
-
-
-Document: 0, E-Mail (not yet): 1,  SMS: 2
+Example Requests:  templates  It is also possible to get specific UGDs by entity and type:  templates?type=0&entity=0 [Entity: Id]      client: 0, loan: 1  [Type: Id]    Document: 0, E-Mail (not yet): 1,  SMS: 2
 
 ### Example
 
@@ -468,9 +444,7 @@ Name | Type | Description  | Notes
 
 Retrieve a UGD
 
-Example Requests:
-
-templates/1
+Example Requests:  templates/1
 
 ### Example
 
@@ -643,13 +617,7 @@ Name | Type | Description  | Notes
 
 Retrieve UGD Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for UGDs. The UGD data returned consists of any or all of:
-
-ARGUMENTS
-name String entity String type String text String optional mappers Mapper optional
-Example Request:
-
-templates/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for UGDs. The UGD data returned consists of any or all of:  ARGUMENTS name String entity String type String text String optional mappers Mapper optional Example Request:  templates/template
 
 ### Example
 

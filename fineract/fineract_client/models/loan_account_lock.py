@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date, datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -58,11 +58,11 @@ class LoanAccountLock(BaseModel):
             raise ValueError("must be one of enum values ('LOAN_COB_CHUNK_PROCESSING', 'LOAN_INLINE_COB_PROCESSING')")
         return value
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_charges_applies_to import GetChargesAppliesTo
 from fineract_client.models.get_charges_charge_calculation_type import GetChargesChargeCalculationType
@@ -42,11 +42,11 @@ class GetSavingsChargesOptions(BaseModel):
     penalty: Optional[StrictBool] = None
     __properties: ClassVar[List[str]] = ["active", "amount", "chargeCalculationType", "chargeTimeType", "chargesAppliesTo", "currency", "id", "name", "penalty"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

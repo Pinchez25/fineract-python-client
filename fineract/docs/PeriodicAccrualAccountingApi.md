@@ -12,10 +12,7 @@ Method | HTTP request | Description
 
 Executes Periodic Accrual Accounting
 
-Mandatory Fields
-
-tillDate
-
+Mandatory Fields  tillDate 
 
 ### Example
 

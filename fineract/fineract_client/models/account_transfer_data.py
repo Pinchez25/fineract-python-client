@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.currency_data import CurrencyData
 from fineract_client.models.enum_option_data import EnumOptionData
@@ -56,11 +56,11 @@ class AccountTransferData(BaseModel):
     transfer_description: Optional[StrictStr] = Field(default=None, alias="transferDescription")
     __properties: ClassVar[List[str]] = ["currency", "fromAccount", "fromAccountOptions", "fromAccountType", "fromAccountTypeOptions", "fromClient", "fromClientOptions", "fromOffice", "fromOfficeOptions", "id", "reversed", "toAccount", "toAccountOptions", "toAccountType", "toAccountTypeOptions", "toClient", "toClientOptions", "toOffice", "toOfficeOptions", "transferAmount", "transferDate", "transferDescription"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -104,9 +104,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_account_options (list)
         _items = []
         if self.from_account_options:
-            for _item_from_account_options in self.from_account_options:
-                if _item_from_account_options:
-                    _items.append(_item_from_account_options.to_dict())
+            for _item in self.from_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['fromAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of from_account_type
         if self.from_account_type:
@@ -114,9 +114,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_account_type_options (list)
         _items = []
         if self.from_account_type_options:
-            for _item_from_account_type_options in self.from_account_type_options:
-                if _item_from_account_type_options:
-                    _items.append(_item_from_account_type_options.to_dict())
+            for _item in self.from_account_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['fromAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of from_client
         if self.from_client:
@@ -124,9 +124,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_client_options (list)
         _items = []
         if self.from_client_options:
-            for _item_from_client_options in self.from_client_options:
-                if _item_from_client_options:
-                    _items.append(_item_from_client_options.to_dict())
+            for _item in self.from_client_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['fromClientOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of from_office
         if self.from_office:
@@ -134,9 +134,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_office_options (list)
         _items = []
         if self.from_office_options:
-            for _item_from_office_options in self.from_office_options:
-                if _item_from_office_options:
-                    _items.append(_item_from_office_options.to_dict())
+            for _item in self.from_office_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['fromOfficeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of to_account
         if self.to_account:
@@ -144,9 +144,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in to_account_options (list)
         _items = []
         if self.to_account_options:
-            for _item_to_account_options in self.to_account_options:
-                if _item_to_account_options:
-                    _items.append(_item_to_account_options.to_dict())
+            for _item in self.to_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['toAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of to_account_type
         if self.to_account_type:
@@ -154,9 +154,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in to_account_type_options (list)
         _items = []
         if self.to_account_type_options:
-            for _item_to_account_type_options in self.to_account_type_options:
-                if _item_to_account_type_options:
-                    _items.append(_item_to_account_type_options.to_dict())
+            for _item in self.to_account_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['toAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of to_client
         if self.to_client:
@@ -164,9 +164,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in to_client_options (list)
         _items = []
         if self.to_client_options:
-            for _item_to_client_options in self.to_client_options:
-                if _item_to_client_options:
-                    _items.append(_item_to_client_options.to_dict())
+            for _item in self.to_client_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['toClientOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of to_office
         if self.to_office:
@@ -174,9 +174,9 @@ class AccountTransferData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in to_office_options (list)
         _items = []
         if self.to_office_options:
-            for _item_to_office_options in self.to_office_options:
-                if _item_to_office_options:
-                    _items.append(_item_to_office_options.to_dict())
+            for _item in self.to_office_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['toOfficeOptions'] = _items
         return _dict
 

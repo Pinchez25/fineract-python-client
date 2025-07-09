@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetLoansLoanIdChargePaymentMode from a JSON string
 get_loans_loan_id_charge_payment_mode_instance = GetLoansLoanIdChargePaymentMode.from_json(json)
 # print the JSON string representation of the object
-print(GetLoansLoanIdChargePaymentMode.to_json())
+print GetLoansLoanIdChargePaymentMode.to_json()
 
 # convert the object into a dict
 get_loans_loan_id_charge_payment_mode_dict = get_loans_loan_id_charge_payment_mode_instance.to_dict()
 # create an instance of GetLoansLoanIdChargePaymentMode from a dict
-get_loans_loan_id_charge_payment_mode_from_dict = GetLoansLoanIdChargePaymentMode.from_dict(get_loans_loan_id_charge_payment_mode_dict)
+get_loans_loan_id_charge_payment_mode_form_dict = get_loans_loan_id_charge_payment_mode.from_dict(get_loans_loan_id_charge_payment_mode_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

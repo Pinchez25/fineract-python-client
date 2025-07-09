@@ -16,10 +16,7 @@ Method | HTTP request | Description
 
 Create a new Tax Group
 
-Create a new Tax Group
-Mandatory Fields: name and taxComponents
-Mandatory Fields in taxComponents: taxComponentId
-Optional Fields in taxComponents: id, startDate and endDate
+Create a new Tax Group Mandatory Fields: name and taxComponents Mandatory Fields in taxComponents: taxComponentId Optional Fields in taxComponents: id, startDate and endDate
 
 ### Example
 
@@ -271,6 +268,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_template22**
 > str retrieve_template22()
+
+
 
 ### Example
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_products_liability_type import GetProductsLiabilityType
 from fineract_client.models.get_products_liability_usage import GetProductsLiabilityUsage
@@ -42,11 +42,11 @@ class GetProductsLiabilityAccountOptions(BaseModel):
     usage: Optional[GetProductsLiabilityUsage] = None
     __properties: ClassVar[List[str]] = ["description", "disabled", "glCode", "id", "manualEntriesAllowed", "name", "nameDecorated", "tagId", "type", "usage"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

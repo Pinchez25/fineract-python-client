@@ -38,12 +38,12 @@ json = "{}"
 # create an instance of ClientFamilyMembersData from a JSON string
 client_family_members_data_instance = ClientFamilyMembersData.from_json(json)
 # print the JSON string representation of the object
-print(ClientFamilyMembersData.to_json())
+print ClientFamilyMembersData.to_json()
 
 # convert the object into a dict
 client_family_members_data_dict = client_family_members_data_instance.to_dict()
 # create an instance of ClientFamilyMembersData from a dict
-client_family_members_data_from_dict = ClientFamilyMembersData.from_dict(client_family_members_data_dict)
+client_family_members_data_form_dict = client_family_members_data.from_dict(client_family_members_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

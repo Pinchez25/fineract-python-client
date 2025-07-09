@@ -29,12 +29,12 @@ json = "{}"
 # create an instance of FloatingRatePeriod from a JSON string
 floating_rate_period_instance = FloatingRatePeriod.from_json(json)
 # print the JSON string representation of the object
-print(FloatingRatePeriod.to_json())
+print FloatingRatePeriod.to_json()
 
 # convert the object into a dict
 floating_rate_period_dict = floating_rate_period_instance.to_dict()
 # create an instance of FloatingRatePeriod from a dict
-floating_rate_period_from_dict = FloatingRatePeriod.from_dict(floating_rate_period_dict)
+floating_rate_period_form_dict = floating_rate_period.from_dict(floating_rate_period_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

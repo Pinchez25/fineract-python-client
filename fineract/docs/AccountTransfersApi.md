@@ -104,13 +104,7 @@ Name | Type | Description  | Notes
 
 List account transfers
 
-Lists account's transfers
-
-Example Requests:
-
-
-
-accounttransfers
+Lists account's transfers  Example Requests:    accounttransfers
 
 ### Example
 
@@ -206,13 +200,7 @@ Name | Type | Description  | Notes
 
 Retrieve account transfer
 
-Retrieves account transfer
-
-Example Requests :
-
-
-
-accounttransfers/1
+Retrieves account transfer  Example Requests :    accounttransfers/1
 
 ### Example
 
@@ -298,27 +286,7 @@ Name | Type | Description  | Notes
 
 Retrieve Account Transfer Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-
-
-Field Defaults
-
-Allowed Value Lists
-
-Example Requests:
-
-
-
-accounttransfers/template?fromAccountType=2&fromOfficeId=1
-
-
-
-accounttransfers/template?fromAccountType=2&fromOfficeId=1&fromClientId=1
-
-
-
-accounttransfers/template?fromClientId=1&fromAccountType=2&fromAccountId=1
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:    Field Defaults  Allowed Value Lists  Example Requests:    accounttransfers/template?fromAccountType=2&fromOfficeId=1    accounttransfers/template?fromAccountType=2&fromOfficeId=1&fromClientId=1    accounttransfers/template?fromClientId=1&fromAccountType=2&fromAccountId=1
 
 ### Example
 
@@ -418,11 +386,7 @@ Name | Type | Description  | Notes
 
 Retrieve Refund of an Active Loan by Transfer Template
 
-Retrieves Refund of an Active Loan by Transfer TemplateExample Requests :
-
-
-
-accounttransfers/templateRefundByTransfer?fromAccountId=2&fromAccountType=1& toAccountId=1&toAccountType=2&toClientId=1&toOfficeId=1
+Retrieves Refund of an Active Loan by Transfer TemplateExample Requests :    accounttransfers/templateRefundByTransfer?fromAccountId=2&fromAccountType=1& toAccountId=1&toAccountType=2&toClientId=1&toOfficeId=1
 
 ### Example
 

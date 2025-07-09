@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_interest_rate_charts_template_period_types import GetInterestRateChartsTemplatePeriodTypes
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetInterestRateChartsTemplateResponse(BaseModel):
     period_types: Optional[List[GetInterestRateChartsTemplatePeriodTypes]] = Field(default=None, alias="periodTypes")
     __properties: ClassVar[List[str]] = ["periodTypes"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class GetInterestRateChartsTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in period_types (list)
         _items = []
         if self.period_types:
-            for _item_period_types in self.period_types:
-                if _item_period_types:
-                    _items.append(_item_period_types.to_dict())
+            for _item in self.period_types:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['periodTypes'] = _items
         return _dict
 

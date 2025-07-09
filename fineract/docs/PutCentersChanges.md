@@ -17,12 +17,12 @@ json = "{}"
 # create an instance of PutCentersChanges from a JSON string
 put_centers_changes_instance = PutCentersChanges.from_json(json)
 # print the JSON string representation of the object
-print(PutCentersChanges.to_json())
+print PutCentersChanges.to_json()
 
 # convert the object into a dict
 put_centers_changes_dict = put_centers_changes_instance.to_dict()
 # create an instance of PutCentersChanges from a dict
-put_centers_changes_from_dict = PutCentersChanges.from_dict(put_centers_changes_dict)
+put_centers_changes_form_dict = put_centers_changes.from_dict(put_centers_changes_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

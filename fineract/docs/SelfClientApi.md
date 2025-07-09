@@ -20,6 +20,8 @@ Method | HTTP request | Description
 # **add_new_client_image2**
 > str add_new_client_image2(client_id, content_length=content_length, date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -108,6 +110,8 @@ Name | Type | Description  | Notes
 # **delete_client_image1**
 > str delete_client_image1(client_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -190,17 +194,7 @@ Name | Type | Description  | Notes
 
 List Clients associated to the user
 
-The list capability of clients can support pagination and sorting.
-
-Example Requests:
-
-self/clients
-
-self/clients?fields=displayName,officeName
-
-self/clients?offset=10&limit=50
-
-self/clients?orderBy=displayName&sortOrder=DESC
+The list capability of clients can support pagination and sorting.  Example Requests:  self/clients  self/clients?fields=displayName,officeName  self/clients?offset=10&limit=50  self/clients?orderBy=displayName&sortOrder=DESC
 
 ### Example
 
@@ -300,13 +294,7 @@ Name | Type | Description  | Notes
 
 List Client Charges
 
-The list capability of client charges supports pagination.
-
-Example Requests:
-
-self/clients/1/charges
-
-self/clients/1/charges?offset=0&limit=5
+The list capability of client charges supports pagination.  Example Requests:  self/clients/1/charges  self/clients/1/charges?offset=0&limit=5
 
 ### Example
 
@@ -400,13 +388,7 @@ Name | Type | Description  | Notes
 
 List Client Transactions
 
-The list capability of client transaction can support pagination.
-
-Example Requests:
-
-self/clients/189/transactions
-
-self/clients/189/transactions?offset=10&limit=50
+The list capability of client transaction can support pagination.  Example Requests:  self/clients/189/transactions  self/clients/189/transactions?offset=10&limit=50
 
 ### Example
 
@@ -496,15 +478,7 @@ Name | Type | Description  | Notes
 
 Retrieve client accounts overview
 
-An example of how a loan portfolio summary can be provided. This is requested in a specific use case of the community application.
-It is quite reasonable to add resources like this to simplify User Interface development.
-
-Example Requests:
-
-self/clients/1/accounts
-
-
-self/clients/1/accounts?fields=loanAccounts,savingsAccounts
+An example of how a loan portfolio summary can be provided. This is requested in a specific use case of the community application. It is quite reasonable to add resources like this to simplify User Interface development.  Example Requests:  self/clients/1/accounts   self/clients/1/accounts?fields=loanAccounts,savingsAccounts
 
 ### Example
 
@@ -590,14 +564,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Charge
 
-Retrieves a Client Charge
-
-Example Requests:
-
-self/clients/1/charges/1
-
-
-self/clients/1/charges/1?fields=name,id
+Retrieves a Client Charge  Example Requests:  self/clients/1/charges/1   self/clients/1/charges/1?fields=name,id
 
 ### Example
 
@@ -685,12 +652,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Transaction
 
-Retrieves a Client TransactionExample Requests:
-
-self/clients/1/transactions/1
-
-
-self/clients/1/transactions/1?fields=id,officeName
+Retrieves a Client TransactionExample Requests:  self/clients/1/transactions/1   self/clients/1/transactions/1?fields=id,officeName
 
 ### Example
 
@@ -778,11 +740,7 @@ Name | Type | Description  | Notes
 
 Retrieve Client Image
 
-Optional arguments are identical to those of Get Image associated with an Entity (Binary file)
-
-Example Requests:
-
-self/clients/1/images
+Optional arguments are identical to those of Get Image associated with an Entity (Binary file)  Example Requests:  self/clients/1/images
 
 ### Example
 
@@ -869,6 +827,8 @@ void (empty response body)
 # **retrieve_obligee_details2**
 > str retrieve_obligee_details2(client_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -951,13 +911,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Client
 
-Retrieves a Client
-
-Example Requests:
-
-self/clients/1
-
-self/clients/1?fields=id,displayName,officeName
+Retrieves a Client  Example Requests:  self/clients/1  self/clients/1?fields=id,displayName,officeName
 
 ### Example
 

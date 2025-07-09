@@ -33,12 +33,12 @@ json = "{}"
 # create an instance of GetClientsClientIdResponse from a JSON string
 get_clients_client_id_response_instance = GetClientsClientIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetClientsClientIdResponse.to_json())
+print GetClientsClientIdResponse.to_json()
 
 # convert the object into a dict
 get_clients_client_id_response_dict = get_clients_client_id_response_instance.to_dict()
 # create an instance of GetClientsClientIdResponse from a dict
-get_clients_client_id_response_from_dict = GetClientsClientIdResponse.from_dict(get_clients_client_id_response_dict)
+get_clients_client_id_response_form_dict = get_clients_client_id_response.from_dict(get_clients_client_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

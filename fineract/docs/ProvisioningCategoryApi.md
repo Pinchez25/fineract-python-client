@@ -13,6 +13,8 @@ Method | HTTP request | Description
 # **create_provisioning_category**
 > str create_provisioning_category(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -92,6 +94,8 @@ Name | Type | Description  | Notes
 
 # **delete_provisioning_category**
 > str delete_provisioning_category(category_id)
+
+
 
 ### Example
 
@@ -173,6 +177,8 @@ Name | Type | Description  | Notes
 # **retrieve_all15**
 > str retrieve_all15()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -248,6 +254,8 @@ This endpoint does not need any parameter.
 
 # **update_provisioning_category**
 > str update_provisioning_category(category_id, body=body)
+
+
 
 ### Example
 

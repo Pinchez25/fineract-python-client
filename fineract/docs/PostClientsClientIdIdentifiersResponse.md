@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of PostClientsClientIdIdentifiersResponse from a JSON string
 post_clients_client_id_identifiers_response_instance = PostClientsClientIdIdentifiersResponse.from_json(json)
 # print the JSON string representation of the object
-print(PostClientsClientIdIdentifiersResponse.to_json())
+print PostClientsClientIdIdentifiersResponse.to_json()
 
 # convert the object into a dict
 post_clients_client_id_identifiers_response_dict = post_clients_client_id_identifiers_response_instance.to_dict()
 # create an instance of PostClientsClientIdIdentifiersResponse from a dict
-post_clients_client_id_identifiers_response_from_dict = PostClientsClientIdIdentifiersResponse.from_dict(post_clients_client_id_identifiers_response_dict)
+post_clients_client_id_identifiers_response_form_dict = post_clients_client_id_identifiers_response.from_dict(post_clients_client_id_identifiers_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

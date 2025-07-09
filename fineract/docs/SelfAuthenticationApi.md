@@ -12,9 +12,7 @@ Method | HTTP request | Description
 
 Verify authentication
 
-Authenticates the credentials provided and returns the set roles and permissions allowed.
-
-Please visit this link for more info - https://fineract.apache.org/legacy-docs/apiLive.htm#selfbasicauth
+Authenticates the credentials provided and returns the set roles and permissions allowed.  Please visit this link for more info - https://fineract.apache.org/legacy-docs/apiLive.htm#selfbasicauth
 
 ### Example
 

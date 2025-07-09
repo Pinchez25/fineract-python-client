@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of GetGroupsGroupIdResponse from a JSON string
 get_groups_group_id_response_instance = GetGroupsGroupIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetGroupsGroupIdResponse.to_json())
+print GetGroupsGroupIdResponse.to_json()
 
 # convert the object into a dict
 get_groups_group_id_response_dict = get_groups_group_id_response_instance.to_dict()
 # create an instance of GetGroupsGroupIdResponse from a dict
-get_groups_group_id_response_from_dict = GetGroupsGroupIdResponse.from_dict(get_groups_group_id_response_dict)
+get_groups_group_id_response_form_dict = get_groups_group_id_response.from_dict(get_groups_group_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.delinquency_range import DelinquencyRange
 from typing import Optional, Set
@@ -42,11 +42,11 @@ class DelinquencyBucket(BaseModel):
     version: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["createdBy", "createdDate", "createdDateTime", "id", "lastModifiedBy", "lastModifiedDate", "lastModifiedDateTime", "name", "new", "ranges", "version"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -84,9 +84,9 @@ class DelinquencyBucket(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in ranges (list)
         _items = []
         if self.ranges:
-            for _item_ranges in self.ranges:
-                if _item_ranges:
-                    _items.append(_item_ranges.to_dict())
+            for _item in self.ranges:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['ranges'] = _items
         return _dict
 

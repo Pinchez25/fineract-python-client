@@ -13,6 +13,8 @@ Method | HTTP request | Description
 # **create_rate**
 > str create_rate(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -93,6 +95,8 @@ Name | Type | Description  | Notes
 # **get_all_rates**
 > str get_all_rates()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -168,6 +172,8 @@ This endpoint does not need any parameter.
 
 # **retrieve_rate**
 > str retrieve_rate(rate_id)
+
+
 
 ### Example
 
@@ -248,6 +254,8 @@ Name | Type | Description  | Notes
 
 # **update_rate**
 > str update_rate(rate_id, body=body)
+
+
 
 ### Example
 

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
-**var_schema** | [**List[ModelField]**](ModelField.md) |  | [optional] 
+**var_schema** | [**List[Field]**](Field.md) |  | [optional] 
 
 ## Example
 
@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of HookTemplateData from a JSON string
 hook_template_data_instance = HookTemplateData.from_json(json)
 # print the JSON string representation of the object
-print(HookTemplateData.to_json())
+print HookTemplateData.to_json()
 
 # convert the object into a dict
 hook_template_data_dict = hook_template_data_instance.to_dict()
 # create an instance of HookTemplateData from a dict
-hook_template_data_from_dict = HookTemplateData.from_dict(hook_template_data_dict)
+hook_template_data_form_dict = hook_template_data.from_dict(hook_template_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

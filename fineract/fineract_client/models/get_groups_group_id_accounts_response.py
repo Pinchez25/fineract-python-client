@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_groups_group_id_accounts_loan_accounts import GetGroupsGroupIdAccountsLoanAccounts
 from fineract_client.models.get_groups_group_id_accounts_member_loan_accounts import GetGroupsGroupIdAccountsMemberLoanAccounts
@@ -37,11 +37,11 @@ class GetGroupsGroupIdAccountsResponse(BaseModel):
     savings_accounts: Optional[List[GetGroupsGroupIdAccountsSavingAccounts]] = Field(default=None, alias="savingsAccounts")
     __properties: ClassVar[List[str]] = ["loanAccounts", "memberLoanAccounts", "memberSavingsAccounts", "savingsAccounts"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -79,30 +79,30 @@ class GetGroupsGroupIdAccountsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in loan_accounts (list)
         _items = []
         if self.loan_accounts:
-            for _item_loan_accounts in self.loan_accounts:
-                if _item_loan_accounts:
-                    _items.append(_item_loan_accounts.to_dict())
+            for _item in self.loan_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['loanAccounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in member_loan_accounts (list)
         _items = []
         if self.member_loan_accounts:
-            for _item_member_loan_accounts in self.member_loan_accounts:
-                if _item_member_loan_accounts:
-                    _items.append(_item_member_loan_accounts.to_dict())
+            for _item in self.member_loan_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['memberLoanAccounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in member_savings_accounts (list)
         _items = []
         if self.member_savings_accounts:
-            for _item_member_savings_accounts in self.member_savings_accounts:
-                if _item_member_savings_accounts:
-                    _items.append(_item_member_savings_accounts.to_dict())
+            for _item in self.member_savings_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['memberSavingsAccounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in savings_accounts (list)
         _items = []
         if self.savings_accounts:
-            for _item_savings_accounts in self.savings_accounts:
-                if _item_savings_accounts:
-                    _items.append(_item_savings_accounts.to_dict())
+            for _item in self.savings_accounts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['savingsAccounts'] = _items
         return _dict
 

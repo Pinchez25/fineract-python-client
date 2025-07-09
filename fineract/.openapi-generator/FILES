@@ -168,6 +168,7 @@ docs/ExternalTransferDataDetails.md
 docs/ExternalTransferLoanData.md
 docs/ExternalTransferOwnerData.md
 docs/FetchAuthenticatedUserDetailsApi.md
+docs/Field.md
 docs/FilterData.md
 docs/FinancialActivityData.md
 docs/FineractEntityApi.md
@@ -947,7 +948,6 @@ docs/MeetingsApi.md
 docs/MixMappingApi.md
 docs/MixReportApi.md
 docs/MixTaxonomyApi.md
-docs/ModelField.md
 docs/MonetaryCurrency.md
 docs/Money.md
 docs/MoneyData.md
@@ -1771,6 +1771,7 @@ fineract_client/models/external_transfer_data.py
 fineract_client/models/external_transfer_data_details.py
 fineract_client/models/external_transfer_loan_data.py
 fineract_client/models/external_transfer_owner_data.py
+fineract_client/models/field.py
 fineract_client/models/filter_data.py
 fineract_client/models/financial_activity_data.py
 fineract_client/models/floating_rate.py
@@ -2513,7 +2514,6 @@ fineract_client/models/local_time.py
 fineract_client/models/lookup_table_data.py
 fineract_client/models/lookup_table_entry.py
 fineract_client/models/media_type.py
-fineract_client/models/model_field.py
 fineract_client/models/monetary_currency.py
 fineract_client/models/money.py
 fineract_client/models/money_data.py
@@ -3009,4 +3009,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_field.py
 tox.ini

@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of PutOfficesOfficeIdRequest from a JSON string
 put_offices_office_id_request_instance = PutOfficesOfficeIdRequest.from_json(json)
 # print the JSON string representation of the object
-print(PutOfficesOfficeIdRequest.to_json())
+print PutOfficesOfficeIdRequest.to_json()
 
 # convert the object into a dict
 put_offices_office_id_request_dict = put_offices_office_id_request_instance.to_dict()
 # create an instance of PutOfficesOfficeIdRequest from a dict
-put_offices_office_id_request_from_dict = PutOfficesOfficeIdRequest.from_dict(put_offices_office_id_request_dict)
+put_offices_office_id_request_form_dict = put_offices_office_id_request.from_dict(put_offices_office_id_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

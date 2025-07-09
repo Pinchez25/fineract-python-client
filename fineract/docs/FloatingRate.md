@@ -28,12 +28,12 @@ json = "{}"
 # create an instance of FloatingRate from a JSON string
 floating_rate_instance = FloatingRate.from_json(json)
 # print the JSON string representation of the object
-print(FloatingRate.to_json())
+print FloatingRate.to_json()
 
 # convert the object into a dict
 floating_rate_dict = floating_rate_instance.to_dict()
 # create an instance of FloatingRate from a dict
-floating_rate_from_dict = FloatingRate.from_dict(floating_rate_dict)
+floating_rate_form_dict = floating_rate.from_dict(floating_rate_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_self_beneficiaries_account_options import GetSelfBeneficiariesAccountOptions
 from typing import Optional, Set
@@ -37,11 +37,11 @@ class GetSelfBeneficiariesTPTResponse(BaseModel):
     transfer_limit: Optional[StrictInt] = Field(default=None, alias="transferLimit")
     __properties: ClassVar[List[str]] = ["accountNumber", "accountType", "clientName", "id", "name", "officeName", "transferLimit"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

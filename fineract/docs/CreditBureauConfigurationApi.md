@@ -21,6 +21,8 @@ Method | HTTP request | Description
 # **add_organisation_credit_bureau**
 > str add_organisation_credit_bureau(organisation_credit_bureau_id, body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -102,6 +104,8 @@ Name | Type | Description  | Notes
 
 # **create_credit_bureau_configuration**
 > str create_credit_bureau_configuration(credit_bureau_id, body=body)
+
+
 
 ### Example
 
@@ -185,6 +189,8 @@ Name | Type | Description  | Notes
 # **create_credit_bureau_loan_product_mapping**
 > str create_credit_bureau_loan_product_mapping(organisation_credit_bureau_id, body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -267,6 +273,8 @@ Name | Type | Description  | Notes
 # **fetch_loan_products**
 > str fetch_loan_products()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -342,6 +350,8 @@ This endpoint does not need any parameter.
 
 # **fetch_mapping_by_loan_product_id**
 > str fetch_mapping_by_loan_product_id(loan_product_id)
+
+
 
 ### Example
 
@@ -423,6 +433,8 @@ Name | Type | Description  | Notes
 # **get_configuration**
 > str get_configuration(organisation_credit_bureau_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -503,6 +515,8 @@ Name | Type | Description  | Notes
 # **get_credit_bureau**
 > str get_credit_bureau()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -578,6 +592,8 @@ This endpoint does not need any parameter.
 
 # **get_credit_bureau_loan_product_mapping**
 > str get_credit_bureau_loan_product_mapping()
+
+
 
 ### Example
 
@@ -655,6 +671,8 @@ This endpoint does not need any parameter.
 # **get_organisation_credit_bureau**
 > str get_organisation_credit_bureau()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -730,6 +748,8 @@ This endpoint does not need any parameter.
 
 # **update_credit_bureau**
 > str update_credit_bureau(body=body)
+
+
 
 ### Example
 
@@ -810,6 +830,8 @@ Name | Type | Description  | Notes
 
 # **update_credit_bureau_configuration**
 > str update_credit_bureau_configuration(configuration_id, body=body)
+
+
 
 ### Example
 
@@ -892,6 +914,8 @@ Name | Type | Description  | Notes
 
 # **update_credit_bureau_loan_product_mapping**
 > str update_credit_bureau_loan_product_mapping(body=body)
+
+
 
 ### Example
 

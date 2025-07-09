@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.enum_option_data import EnumOptionData
 from fineract_client.models.get_delinquency_ranges_response import GetDelinquencyRangesResponse
@@ -105,11 +105,11 @@ class GetLoansLoanIdResponse(BaseModel):
     transactions: Optional[List[GetLoansLoanIdTransactions]] = Field(default=None, description="Set of GetLoansLoanIdTransactions")
     __properties: ClassVar[List[str]] = ["accountNo", "amortizationType", "annualInterestRate", "approvedPrincipal", "chargedOff", "charges", "clientExternalId", "clientId", "clientName", "clientOfficeId", "currency", "delinquencyRange", "delinquent", "disallowExpectedDisbursements", "disbursedAmountPercentageForDownPayment", "disbursementDetails", "enableAutoRepaymentForDownPayment", "enableDownPayment", "enableInstallmentLevelDelinquency", "externalId", "fixedLength", "fixedPrincipalPercentagePerInstallment", "fraud", "id", "inArrearsTolerance", "interestCalculationPeriodType", "interestRateFrequencyType", "interestRatePerPeriod", "interestType", "isFloatingInterestRate", "lastClosedBusinessDate", "loanOfficerId", "loanOfficerName", "loanProductDescription", "loanProductId", "loanProductName", "loanPurposeId", "loanPurposeName", "loanScheduleProcessingType", "loanScheduleType", "loanType", "netDisbursalAmount", "numberOfRepayments", "overpaidOnDate", "principal", "proposedPrincipal", "repaymentEvery", "repaymentFrequencyType", "repaymentSchedule", "status", "summary", "termFrequency", "termPeriodFrequencyType", "timeline", "totalOverpaid", "transactionProcessingStrategyCode", "transactions"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -150,9 +150,9 @@ class GetLoansLoanIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item_charges in self.charges:
-                if _item_charges:
-                    _items.append(_item_charges.to_dict())
+            for _item in self.charges:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -166,9 +166,9 @@ class GetLoansLoanIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in disbursement_details (list)
         _items = []
         if self.disbursement_details:
-            for _item_disbursement_details in self.disbursement_details:
-                if _item_disbursement_details:
-                    _items.append(_item_disbursement_details.to_dict())
+            for _item in self.disbursement_details:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['disbursementDetails'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_calculation_period_type
         if self.interest_calculation_period_type:
@@ -209,9 +209,9 @@ class GetLoansLoanIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in transactions (list)
         _items = []
         if self.transactions:
-            for _item_transactions in self.transactions:
-                if _item_transactions:
-                    _items.append(_item_transactions.to_dict())
+            for _item in self.transactions:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['transactions'] = _items
         return _dict
 

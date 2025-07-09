@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetStandingInstructionRunHistoryResponse from a JSON string
 get_standing_instruction_run_history_response_instance = GetStandingInstructionRunHistoryResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetStandingInstructionRunHistoryResponse.to_json())
+print GetStandingInstructionRunHistoryResponse.to_json()
 
 # convert the object into a dict
 get_standing_instruction_run_history_response_dict = get_standing_instruction_run_history_response_instance.to_dict()
 # create an instance of GetStandingInstructionRunHistoryResponse from a dict
-get_standing_instruction_run_history_response_from_dict = GetStandingInstructionRunHistoryResponse.from_dict(get_standing_instruction_run_history_response_dict)
+get_standing_instruction_run_history_response_form_dict = get_standing_instruction_run_history_response.from_dict(get_standing_instruction_run_history_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

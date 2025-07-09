@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_self_clients_page_items import GetSelfClientsPageItems
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class GetSelfClientsResponse(BaseModel):
     total_filtered_records: Optional[StrictInt] = Field(default=None, alias="totalFilteredRecords")
     __properties: ClassVar[List[str]] = ["pageItems", "totalFilteredRecords"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -74,9 +74,9 @@ class GetSelfClientsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in page_items (list)
         _items = []
         if self.page_items:
-            for _item_page_items in self.page_items:
-                if _item_page_items:
-                    _items.append(_item_page_items.to_dict())
+            for _item in self.page_items:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['pageItems'] = _items
         return _dict
 

@@ -28,12 +28,12 @@ json = "{}"
 # create an instance of GetNotification from a JSON string
 get_notification_instance = GetNotification.from_json(json)
 # print the JSON string representation of the object
-print(GetNotification.to_json())
+print GetNotification.to_json()
 
 # convert the object into a dict
 get_notification_dict = get_notification_instance.to_dict()
 # create an instance of GetNotification from a dict
-get_notification_from_dict = GetNotification.from_dict(get_notification_dict)
+get_notification_form_dict = get_notification.from_dict(get_notification_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

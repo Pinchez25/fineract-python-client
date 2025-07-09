@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.business_step import BusinessStep
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class GetBusinessStepConfigResponse(BaseModel):
     job_name: Optional[StrictStr] = Field(default=None, alias="jobName")
     __properties: ClassVar[List[str]] = ["businessSteps", "jobName"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -74,9 +74,9 @@ class GetBusinessStepConfigResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in business_steps (list)
         _items = []
         if self.business_steps:
-            for _item_business_steps in self.business_steps:
-                if _item_business_steps:
-                    _items.append(_item_business_steps.to_dict())
+            for _item in self.business_steps:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['businessSteps'] = _items
         return _dict
 

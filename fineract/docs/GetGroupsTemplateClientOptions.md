@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetGroupsTemplateClientOptions from a JSON string
 get_groups_template_client_options_instance = GetGroupsTemplateClientOptions.from_json(json)
 # print the JSON string representation of the object
-print(GetGroupsTemplateClientOptions.to_json())
+print GetGroupsTemplateClientOptions.to_json()
 
 # convert the object into a dict
 get_groups_template_client_options_dict = get_groups_template_client_options_instance.to_dict()
 # create an instance of GetGroupsTemplateClientOptions from a dict
-get_groups_template_client_options_from_dict = GetGroupsTemplateClientOptions.from_dict(get_groups_template_client_options_dict)
+get_groups_template_client_options_form_dict = get_groups_template_client_options.from_dict(get_groups_template_client_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

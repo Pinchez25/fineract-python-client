@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of GetLoanRescheduleRequestResponse from a JSON string
 get_loan_reschedule_request_response_instance = GetLoanRescheduleRequestResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetLoanRescheduleRequestResponse.to_json())
+print GetLoanRescheduleRequestResponse.to_json()
 
 # convert the object into a dict
 get_loan_reschedule_request_response_dict = get_loan_reschedule_request_response_instance.to_dict()
 # create an instance of GetLoanRescheduleRequestResponse from a dict
-get_loan_reschedule_request_response_from_dict = GetLoanRescheduleRequestResponse.from_dict(get_loan_reschedule_request_response_dict)
+get_loan_reschedule_request_response_form_dict = get_loan_reschedule_request_response.from_dict(get_loan_reschedule_request_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

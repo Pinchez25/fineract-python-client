@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -33,11 +33,11 @@ class GetClientsSavingProductOptions(BaseModel):
     withdrawal_fee_for_transfers: Optional[StrictBool] = Field(default=None, alias="withdrawalFeeForTransfers")
     __properties: ClassVar[List[str]] = ["allowOverdraft", "id", "name", "withdrawalFeeForTransfers"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

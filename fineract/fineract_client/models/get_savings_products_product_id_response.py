@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_savings_currency import GetSavingsCurrency
 from fineract_client.models.get_savings_products_accounting_mappings import GetSavingsProductsAccountingMappings
@@ -56,11 +56,11 @@ class GetSavingsProductsProductIdResponse(BaseModel):
     withdrawal_fee_for_transfers: Optional[StrictBool] = Field(default=None, alias="withdrawalFeeForTransfers")
     __properties: ClassVar[List[str]] = ["accountingMappings", "accountingRule", "charges", "currency", "description", "feeToIncomeAccountMappings", "id", "interestCalculationDaysInYearType", "interestCalculationType", "interestCompoundingPeriodType", "interestPostingPeriodType", "name", "nominalAnnualInterestRate", "paymentChannelToFundSourceMappings", "penaltyToIncomeAccountMappings", "shortName", "withdrawalFeeForTransfers"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -107,9 +107,9 @@ class GetSavingsProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in fee_to_income_account_mappings (list)
         _items = []
         if self.fee_to_income_account_mappings:
-            for _item_fee_to_income_account_mappings in self.fee_to_income_account_mappings:
-                if _item_fee_to_income_account_mappings:
-                    _items.append(_item_fee_to_income_account_mappings.to_dict())
+            for _item in self.fee_to_income_account_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['feeToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_calculation_days_in_year_type
         if self.interest_calculation_days_in_year_type:
@@ -126,16 +126,16 @@ class GetSavingsProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in payment_channel_to_fund_source_mappings (list)
         _items = []
         if self.payment_channel_to_fund_source_mappings:
-            for _item_payment_channel_to_fund_source_mappings in self.payment_channel_to_fund_source_mappings:
-                if _item_payment_channel_to_fund_source_mappings:
-                    _items.append(_item_payment_channel_to_fund_source_mappings.to_dict())
+            for _item in self.payment_channel_to_fund_source_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentChannelToFundSourceMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in penalty_to_income_account_mappings (list)
         _items = []
         if self.penalty_to_income_account_mappings:
-            for _item_penalty_to_income_account_mappings in self.penalty_to_income_account_mappings:
-                if _item_penalty_to_income_account_mappings:
-                    _items.append(_item_penalty_to_income_account_mappings.to_dict())
+            for _item in self.penalty_to_income_account_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['penaltyToIncomeAccountMappings'] = _items
         return _dict
 

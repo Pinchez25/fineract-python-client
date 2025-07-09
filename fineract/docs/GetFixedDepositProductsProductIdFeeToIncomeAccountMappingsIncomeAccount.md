@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetFixedDepositProductsProductIdFeeToIncomeAccountMappingsIncomeAccount from a JSON string
 get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account_instance = GetFixedDepositProductsProductIdFeeToIncomeAccountMappingsIncomeAccount.from_json(json)
 # print the JSON string representation of the object
-print(GetFixedDepositProductsProductIdFeeToIncomeAccountMappingsIncomeAccount.to_json())
+print GetFixedDepositProductsProductIdFeeToIncomeAccountMappingsIncomeAccount.to_json()
 
 # convert the object into a dict
 get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account_dict = get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account_instance.to_dict()
 # create an instance of GetFixedDepositProductsProductIdFeeToIncomeAccountMappingsIncomeAccount from a dict
-get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account_from_dict = GetFixedDepositProductsProductIdFeeToIncomeAccountMappingsIncomeAccount.from_dict(get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account_dict)
+get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account_form_dict = get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account.from_dict(get_fixed_deposit_products_product_id_fee_to_income_account_mappings_income_account_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

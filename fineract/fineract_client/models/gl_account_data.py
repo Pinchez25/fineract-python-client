@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.code_value_data import CodeValueData
 from fineract_client.models.enum_option_data import EnumOptionData
@@ -56,11 +56,11 @@ class GLAccountData(BaseModel):
     usage_options: Optional[List[EnumOptionData]] = Field(default=None, alias="usageOptions")
     __properties: ClassVar[List[str]] = ["accountTypeOptions", "allowedAssetsTagOptions", "allowedEquityTagOptions", "allowedExpensesTagOptions", "allowedIncomeTagOptions", "allowedLiabilitiesTagOptions", "assetHeaderAccountOptions", "description", "disabled", "equityHeaderAccountOptions", "expenseHeaderAccountOptions", "glCode", "id", "incomeHeaderAccountOptions", "liabilityHeaderAccountOptions", "manualEntriesAllowed", "name", "nameDecorated", "organizationRunningBalance", "parentId", "rowIndex", "tagId", "type", "usage", "usageOptions"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -98,79 +98,79 @@ class GLAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in account_type_options (list)
         _items = []
         if self.account_type_options:
-            for _item_account_type_options in self.account_type_options:
-                if _item_account_type_options:
-                    _items.append(_item_account_type_options.to_dict())
+            for _item in self.account_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['accountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_assets_tag_options (list)
         _items = []
         if self.allowed_assets_tag_options:
-            for _item_allowed_assets_tag_options in self.allowed_assets_tag_options:
-                if _item_allowed_assets_tag_options:
-                    _items.append(_item_allowed_assets_tag_options.to_dict())
+            for _item in self.allowed_assets_tag_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedAssetsTagOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_equity_tag_options (list)
         _items = []
         if self.allowed_equity_tag_options:
-            for _item_allowed_equity_tag_options in self.allowed_equity_tag_options:
-                if _item_allowed_equity_tag_options:
-                    _items.append(_item_allowed_equity_tag_options.to_dict())
+            for _item in self.allowed_equity_tag_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedEquityTagOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_expenses_tag_options (list)
         _items = []
         if self.allowed_expenses_tag_options:
-            for _item_allowed_expenses_tag_options in self.allowed_expenses_tag_options:
-                if _item_allowed_expenses_tag_options:
-                    _items.append(_item_allowed_expenses_tag_options.to_dict())
+            for _item in self.allowed_expenses_tag_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedExpensesTagOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_income_tag_options (list)
         _items = []
         if self.allowed_income_tag_options:
-            for _item_allowed_income_tag_options in self.allowed_income_tag_options:
-                if _item_allowed_income_tag_options:
-                    _items.append(_item_allowed_income_tag_options.to_dict())
+            for _item in self.allowed_income_tag_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedIncomeTagOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_liabilities_tag_options (list)
         _items = []
         if self.allowed_liabilities_tag_options:
-            for _item_allowed_liabilities_tag_options in self.allowed_liabilities_tag_options:
-                if _item_allowed_liabilities_tag_options:
-                    _items.append(_item_allowed_liabilities_tag_options.to_dict())
+            for _item in self.allowed_liabilities_tag_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['allowedLiabilitiesTagOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in asset_header_account_options (list)
         _items = []
         if self.asset_header_account_options:
-            for _item_asset_header_account_options in self.asset_header_account_options:
-                if _item_asset_header_account_options:
-                    _items.append(_item_asset_header_account_options.to_dict())
+            for _item in self.asset_header_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['assetHeaderAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in equity_header_account_options (list)
         _items = []
         if self.equity_header_account_options:
-            for _item_equity_header_account_options in self.equity_header_account_options:
-                if _item_equity_header_account_options:
-                    _items.append(_item_equity_header_account_options.to_dict())
+            for _item in self.equity_header_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['equityHeaderAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in expense_header_account_options (list)
         _items = []
         if self.expense_header_account_options:
-            for _item_expense_header_account_options in self.expense_header_account_options:
-                if _item_expense_header_account_options:
-                    _items.append(_item_expense_header_account_options.to_dict())
+            for _item in self.expense_header_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['expenseHeaderAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in income_header_account_options (list)
         _items = []
         if self.income_header_account_options:
-            for _item_income_header_account_options in self.income_header_account_options:
-                if _item_income_header_account_options:
-                    _items.append(_item_income_header_account_options.to_dict())
+            for _item in self.income_header_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['incomeHeaderAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in liability_header_account_options (list)
         _items = []
         if self.liability_header_account_options:
-            for _item_liability_header_account_options in self.liability_header_account_options:
-                if _item_liability_header_account_options:
-                    _items.append(_item_liability_header_account_options.to_dict())
+            for _item in self.liability_header_account_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['liabilityHeaderAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of tag_id
         if self.tag_id:
@@ -184,9 +184,9 @@ class GLAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in usage_options (list)
         _items = []
         if self.usage_options:
-            for _item_usage_options in self.usage_options:
-                if _item_usage_options:
-                    _items.append(_item_usage_options.to_dict())
+            for _item in self.usage_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['usageOptions'] = _items
         return _dict
 

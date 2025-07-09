@@ -939,14 +939,7 @@ Name | Type | Description  | Notes
 
 List Loan Charges
 
-It lists all the Loan Charges specific to a Loan 
-
-Example Requests:
-
-loans/1/charges
-
-
-loans/1/charges?fields=name,amountOrPercentage
+It lists all the Loan Charges specific to a Loan   Example Requests:  loans/1/charges   loans/1/charges?fields=name,amountOrPercentage
 
 ### Example
 
@@ -1032,14 +1025,7 @@ Name | Type | Description  | Notes
 
 List Loan Charges
 
-It lists all the Loan Charges specific to a Loan 
-
-Example Requests:
-
-loans/1/charges
-
-
-loans/1/charges?fields=name,amountOrPercentage
+It lists all the Loan Charges specific to a Loan   Example Requests:  loans/1/charges   loans/1/charges?fields=name,amountOrPercentage
 
 ### Example
 
@@ -1125,12 +1111,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan Charge
 
-Retrieves Loan Charge according to the Loan ID and Loan Charge IDExample Requests:
-
-/loans/1/charges/1
-
-
-/loans/1/charges/1?fields=name,amountOrPercentage
+Retrieves Loan Charge according to the Loan ID and Loan Charge IDExample Requests:  /loans/1/charges/1   /loans/1/charges/1?fields=name,amountOrPercentage
 
 ### Example
 
@@ -1218,12 +1199,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan Charge
 
-Retrieves Loan Charge according to the Loan ID and Loan Charge External IDExample Requests:
-
-/loans/1/charges/1
-
-
-/loans/1/charges/external-id/1?fields=name,amountOrPercentage
+Retrieves Loan Charge according to the Loan ID and Loan Charge External IDExample Requests:  /loans/1/charges/1   /loans/1/charges/external-id/1?fields=name,amountOrPercentage
 
 ### Example
 
@@ -1311,12 +1287,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan Charge
 
-Retrieves Loan Charge according to the Loan external ID and Loan Charge IDExample Requests:
-
-/loans/1/charges/1
-
-
-/loans/1/charges/1?fields=name,amountOrPercentage
+Retrieves Loan Charge according to the Loan external ID and Loan Charge IDExample Requests:  /loans/1/charges/1   /loans/1/charges/1?fields=name,amountOrPercentage
 
 ### Example
 
@@ -1404,12 +1375,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan Charge
 
-Retrieves Loan Charge according to the Loan External ID and Loan Charge External IDExample Requests:
-
-/loans/1/charges/1
-
-
-/loans/1/charges/1?fields=name,amountOrPercentage
+Retrieves Loan Charge according to the Loan External ID and Loan Charge External IDExample Requests:  /loans/1/charges/1   /loans/1/charges/1?fields=name,amountOrPercentage
 
 ### Example
 
@@ -1497,15 +1463,7 @@ Name | Type | Description  | Notes
 
 Retrieve Loan Charges Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed description Lists
-Example Request:
-
-loans/1/charges/template
-
-
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  loans/1/charges/template  
 
 ### Example
 
@@ -1591,15 +1549,7 @@ Name | Type | Description  | Notes
 
 Retrieve Loan Charges Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed description Lists
-Example Request:
-
-loans/1/charges/template
-
-
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  loans/1/charges/template  
 
 ### Example
 

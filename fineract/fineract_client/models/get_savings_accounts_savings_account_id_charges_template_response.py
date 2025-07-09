@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_savings_charges_options import GetSavingsChargesOptions
 from typing import Optional, Set
@@ -35,11 +35,11 @@ class GetSavingsAccountsSavingsAccountIdChargesTemplateResponse(BaseModel):
     penalty: Optional[StrictBool] = None
     __properties: ClassVar[List[str]] = ["amountPaid", "amountWaived", "amountWrittenOff", "chargeOptions", "penalty"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -77,9 +77,9 @@ class GetSavingsAccountsSavingsAccountIdChargesTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charge_options (list)
         _items = []
         if self.charge_options:
-            for _item_charge_options in self.charge_options:
-                if _item_charge_options:
-                    _items.append(_item_charge_options.to_dict())
+            for _item in self.charge_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargeOptions'] = _items
         return _dict
 

@@ -34,12 +34,12 @@ json = "{}"
 # create an instance of CashierTransactionData from a JSON string
 cashier_transaction_data_instance = CashierTransactionData.from_json(json)
 # print the JSON string representation of the object
-print(CashierTransactionData.to_json())
+print CashierTransactionData.to_json()
 
 # convert the object into a dict
 cashier_transaction_data_dict = cashier_transaction_data_instance.to_dict()
 # create an instance of CashierTransactionData from a dict
-cashier_transaction_data_from_dict = CashierTransactionData.from_dict(cashier_transaction_data_dict)
+cashier_transaction_data_form_dict = cashier_transaction_data.from_dict(cashier_transaction_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

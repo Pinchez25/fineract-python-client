@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of PageJournalEntryData from a JSON string
 page_journal_entry_data_instance = PageJournalEntryData.from_json(json)
 # print the JSON string representation of the object
-print(PageJournalEntryData.to_json())
+print PageJournalEntryData.to_json()
 
 # convert the object into a dict
 page_journal_entry_data_dict = page_journal_entry_data_instance.to_dict()
 # create an instance of PageJournalEntryData from a dict
-page_journal_entry_data_from_dict = PageJournalEntryData.from_dict(page_journal_entry_data_dict)
+page_journal_entry_data_form_dict = page_journal_entry_data.from_dict(page_journal_entry_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

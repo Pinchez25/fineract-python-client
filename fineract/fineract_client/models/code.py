@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -34,11 +34,11 @@ class Code(BaseModel):
     values: Optional[List[CodeValue]] = None
     __properties: ClassVar[List[str]] = ["id", "name", "new", "systemDefined", "values"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -76,9 +76,9 @@ class Code(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in values (list)
         _items = []
         if self.values:
-            for _item_values in self.values:
-                if _item_values:
-                    _items.append(_item_values.to_dict())
+            for _item in self.values:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['values'] = _items
         return _dict
 

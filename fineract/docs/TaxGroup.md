@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of TaxGroup from a JSON string
 tax_group_instance = TaxGroup.from_json(json)
 # print the JSON string representation of the object
-print(TaxGroup.to_json())
+print TaxGroup.to_json()
 
 # convert the object into a dict
 tax_group_dict = tax_group_instance.to_dict()
 # create an instance of TaxGroup from a dict
-tax_group_from_dict = TaxGroup.from_dict(tax_group_dict)
+tax_group_form_dict = tax_group.from_dict(tax_group_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

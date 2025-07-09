@@ -62,12 +62,12 @@ json = "{}"
 # create an instance of CommandWrapper from a JSON string
 command_wrapper_instance = CommandWrapper.from_json(json)
 # print the JSON string representation of the object
-print(CommandWrapper.to_json())
+print CommandWrapper.to_json()
 
 # convert the object into a dict
 command_wrapper_dict = command_wrapper_instance.to_dict()
 # create an instance of CommandWrapper from a dict
-command_wrapper_from_dict = CommandWrapper.from_dict(command_wrapper_dict)
+command_wrapper_form_dict = command_wrapper.from_dict(command_wrapper_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

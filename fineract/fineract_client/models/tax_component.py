@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.gl_account import GLAccount
 from fineract_client.models.tax_component_history import TaxComponentHistory
@@ -45,11 +45,11 @@ class TaxComponent(BaseModel):
     tax_group_mappings: Optional[List[TaxGroupMappings]] = Field(default=None, alias="taxGroupMappings")
     __properties: ClassVar[List[str]] = ["createdBy", "createdDate", "creditAccountType", "creditAcount", "debitAccountType", "debitAcount", "id", "lastModifiedBy", "lastModifiedDate", "new", "percentage", "taxComponentHistories", "taxGroupMappings"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -93,16 +93,16 @@ class TaxComponent(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tax_component_histories (list)
         _items = []
         if self.tax_component_histories:
-            for _item_tax_component_histories in self.tax_component_histories:
-                if _item_tax_component_histories:
-                    _items.append(_item_tax_component_histories.to_dict())
+            for _item in self.tax_component_histories:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['taxComponentHistories'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in tax_group_mappings (list)
         _items = []
         if self.tax_group_mappings:
-            for _item_tax_group_mappings in self.tax_group_mappings:
-                if _item_tax_group_mappings:
-                    _items.append(_item_tax_group_mappings.to_dict())
+            for _item in self.tax_group_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['taxGroupMappings'] = _items
         return _dict
 

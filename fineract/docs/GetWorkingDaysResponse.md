@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of GetWorkingDaysResponse from a JSON string
 get_working_days_response_instance = GetWorkingDaysResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetWorkingDaysResponse.to_json())
+print GetWorkingDaysResponse.to_json()
 
 # convert the object into a dict
 get_working_days_response_dict = get_working_days_response_instance.to_dict()
 # create an instance of GetWorkingDaysResponse from a dict
-get_working_days_response_from_dict = GetWorkingDaysResponse.from_dict(get_working_days_response_dict)
+get_working_days_response_form_dict = get_working_days_response.from_dict(get_working_days_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

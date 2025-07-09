@@ -10,6 +10,8 @@ Method | HTTP request | Description
 # **retrieve_all_groups**
 > str retrieve_all_groups()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):

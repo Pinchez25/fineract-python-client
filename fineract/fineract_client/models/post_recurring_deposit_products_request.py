@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.post_recurring_deposit_products_charts import PostRecurringDepositProductsCharts
 from typing import Optional, Set
@@ -55,11 +55,11 @@ class PostRecurringDepositProductsRequest(BaseModel):
     short_name: Optional[StrictStr] = Field(default=None, alias="shortName")
     __properties: ClassVar[List[str]] = ["accountingRule", "charts", "currencyCode", "depositAmount", "description", "digitsAfterDecimal", "inMultiplesOf", "interestCalculationDaysInYearType", "interestCalculationType", "interestCompoundingPeriodType", "interestPostingPeriodType", "locale", "maxDepositAmount", "maxDepositTerm", "maxDepositTermTypeId", "minDepositAmount", "minDepositTerm", "minDepositTermTypeId", "name", "preClosurePenalApplicable", "preClosurePenalInterest", "preClosurePenalInterestOnTypeId", "recurringDepositFrequency", "recurringDepositFrequencyTypeId", "shortName"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -97,9 +97,9 @@ class PostRecurringDepositProductsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charts (list)
         _items = []
         if self.charts:
-            for _item_charts in self.charts:
-                if _item_charts:
-                    _items.append(_item_charts.to_dict())
+            for _item in self.charts:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['charts'] = _items
         return _dict
 

@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of PostRecurringDepositProductsCharts from a JSON string
 post_recurring_deposit_products_charts_instance = PostRecurringDepositProductsCharts.from_json(json)
 # print the JSON string representation of the object
-print(PostRecurringDepositProductsCharts.to_json())
+print PostRecurringDepositProductsCharts.to_json()
 
 # convert the object into a dict
 post_recurring_deposit_products_charts_dict = post_recurring_deposit_products_charts_instance.to_dict()
 # create an instance of PostRecurringDepositProductsCharts from a dict
-post_recurring_deposit_products_charts_from_dict = PostRecurringDepositProductsCharts.from_dict(post_recurring_deposit_products_charts_dict)
+post_recurring_deposit_products_charts_form_dict = post_recurring_deposit_products_charts.from_dict(post_recurring_deposit_products_charts_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

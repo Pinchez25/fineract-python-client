@@ -103,9 +103,7 @@ Name | Type | Description  | Notes
 
 List Standing Instructions
 
-Example Requests:
-
-standinginstructions
+Example Requests:  standinginstructions
 
 ### Example
 
@@ -209,9 +207,7 @@ Name | Type | Description  | Notes
 
 Retrieve Standing Instruction
 
-Example Requests :
-
-standinginstructions/1
+Example Requests :  standinginstructions/1
 
 ### Example
 
@@ -307,17 +303,7 @@ Name | Type | Description  | Notes
 
 Retrieve Standing Instruction Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed Value Lists
-Example Requests:
-
-standinginstructions/template?fromAccountType=2&fromOfficeId=1
-
-standinginstructions/template?fromAccountType=2&fromOfficeId=1&fromClientId=1&transferType=1
-
-standinginstructions/template?fromClientId=1&fromAccountType=2&fromAccountId=1&transferType=1
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists Example Requests:  standinginstructions/template?fromAccountType=2&fromOfficeId=1  standinginstructions/template?fromAccountType=2&fromOfficeId=1&fromClientId=1&transferType=1  standinginstructions/template?fromClientId=1&fromAccountType=2&fromAccountId=1&transferType=1
 
 ### Example
 
@@ -419,14 +405,7 @@ Name | Type | Description  | Notes
 
 Update Standing Instruction | Delete Standing Instruction
 
-Ability to modify existing instruction for transfer of monetary funds from one account to another.
-
-PUT https://DomainName/api/v1/standinginstructions/1?command=update
-
-
-Ability to modify existing instruction for transfer of monetary funds from one account to another.
-
-PUT https://DomainName/api/v1/standinginstructions/1?command=delete
+Ability to modify existing instruction for transfer of monetary funds from one account to another.  PUT https://DomainName/api/v1/standinginstructions/1?command=update   Ability to modify existing instruction for transfer of monetary funds from one account to another.  PUT https://DomainName/api/v1/standinginstructions/1?command=delete
 
 ### Example
 

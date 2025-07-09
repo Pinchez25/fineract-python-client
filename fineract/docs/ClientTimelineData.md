@@ -28,12 +28,12 @@ json = "{}"
 # create an instance of ClientTimelineData from a JSON string
 client_timeline_data_instance = ClientTimelineData.from_json(json)
 # print the JSON string representation of the object
-print(ClientTimelineData.to_json())
+print ClientTimelineData.to_json()
 
 # convert the object into a dict
 client_timeline_data_dict = client_timeline_data_instance.to_dict()
 # create an instance of ClientTimelineData from a dict
-client_timeline_data_from_dict = ClientTimelineData.from_dict(client_timeline_data_dict)
+client_timeline_data_form_dict = client_timeline_data.from_dict(client_timeline_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

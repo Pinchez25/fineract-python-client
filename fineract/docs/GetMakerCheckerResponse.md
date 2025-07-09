@@ -37,12 +37,12 @@ json = "{}"
 # create an instance of GetMakerCheckerResponse from a JSON string
 get_maker_checker_response_instance = GetMakerCheckerResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetMakerCheckerResponse.to_json())
+print GetMakerCheckerResponse.to_json()
 
 # convert the object into a dict
 get_maker_checker_response_dict = get_maker_checker_response_instance.to_dict()
 # create an instance of GetMakerCheckerResponse from a dict
-get_maker_checker_response_from_dict = GetMakerCheckerResponse.from_dict(get_maker_checker_response_dict)
+get_maker_checker_response_form_dict = get_maker_checker_response.from_dict(get_maker_checker_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

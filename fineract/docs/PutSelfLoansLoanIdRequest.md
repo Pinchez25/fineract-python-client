@@ -32,12 +32,12 @@ json = "{}"
 # create an instance of PutSelfLoansLoanIdRequest from a JSON string
 put_self_loans_loan_id_request_instance = PutSelfLoansLoanIdRequest.from_json(json)
 # print the JSON string representation of the object
-print(PutSelfLoansLoanIdRequest.to_json())
+print PutSelfLoansLoanIdRequest.to_json()
 
 # convert the object into a dict
 put_self_loans_loan_id_request_dict = put_self_loans_loan_id_request_instance.to_dict()
 # create an instance of PutSelfLoansLoanIdRequest from a dict
-put_self_loans_loan_id_request_from_dict = PutSelfLoansLoanIdRequest.from_dict(put_self_loans_loan_id_request_dict)
+put_self_loans_loan_id_request_form_dict = put_self_loans_loan_id_request.from_dict(put_self_loans_loan_id_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

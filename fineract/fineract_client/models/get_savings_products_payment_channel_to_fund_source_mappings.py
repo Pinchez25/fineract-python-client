@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_savings_products_fund_source_account import GetSavingsProductsFundSourceAccount
 from fineract_client.models.get_savings_products_payment_type import GetSavingsProductsPaymentType
@@ -33,11 +33,11 @@ class GetSavingsProductsPaymentChannelToFundSourceMappings(BaseModel):
     payment_type: Optional[GetSavingsProductsPaymentType] = Field(default=None, alias="paymentType")
     __properties: ClassVar[List[str]] = ["fundSourceAccount", "paymentType"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

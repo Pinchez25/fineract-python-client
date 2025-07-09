@@ -15,10 +15,7 @@ Method | HTTP request | Description
 
 Create a Scorecard entry
 
-Add a new entry to a survey.
-
-Mandatory Fields
-clientId, createdOn, questionId, responseId, staffId
+Add a new entry to a survey.  Mandatory Fields clientId, createdOn, questionId, responseId, staffId
 
 ### Example
 
@@ -101,6 +98,8 @@ void (empty response body)
 
 # **find_by_client1**
 > List[ScorecardData] find_by_client1(client_id)
+
+
 
 ### Example
 
@@ -268,6 +267,8 @@ Name | Type | Description  | Notes
 
 # **find_by_survey_and_client**
 > List[ScorecardData] find_by_survey_and_client(survey_id, client_id)
+
+
 
 ### Example
 

@@ -11,6 +11,8 @@ Method | HTTP request | Description
 # **create_self_service_registration_request**
 > str create_self_service_registration_request(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -90,6 +92,8 @@ Name | Type | Description  | Notes
 
 # **create_self_service_user**
 > str create_self_service_user(body=body)
+
+
 
 ### Example
 

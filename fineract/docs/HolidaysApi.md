@@ -191,9 +191,7 @@ Name | Type | Description  | Notes
 
 Activate a Holiday
 
-Always Holidays are created in pending state. This API allows to activate a holiday.
-
-Only the active holidays are considered for rescheduling the loan repayment.
+Always Holidays are created in pending state. This API allows to activate a holiday.  Only the active holidays are considered for rescheduling the loan repayment.
 
 ### Example
 
@@ -283,9 +281,7 @@ Name | Type | Description  | Notes
 
 List Holidays
 
-Example Requests:
-
-holidays?officeId=1
+Example Requests:  holidays?officeId=1
 
 ### Example
 
@@ -379,9 +375,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Holiday
 
-Example Requests:
-
-holidays/1
+Example Requests:  holidays/1
 
 ### Example
 
@@ -464,6 +458,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_repayment_schedule_updation_tye_options**
 > str retrieve_repayment_schedule_updation_tye_options()
+
+
 
 ### Example
 

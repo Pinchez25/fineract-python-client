@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date, datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_data import EnumOptionData
 from fineract_client.models.external_id import ExternalId
@@ -42,11 +42,11 @@ class ClientSearchData(BaseModel):
     status: Optional[EnumOptionData] = None
     __properties: ClassVar[List[str]] = ["accountNumber", "activationDate", "createdDate", "displayName", "externalId", "id", "mobileNo", "officeId", "officeName", "status"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

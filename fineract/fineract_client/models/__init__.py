@@ -136,6 +136,7 @@ from fineract_client.models.external_transfer_data import ExternalTransferData
 from fineract_client.models.external_transfer_data_details import ExternalTransferDataDetails
 from fineract_client.models.external_transfer_loan_data import ExternalTransferLoanData
 from fineract_client.models.external_transfer_owner_data import ExternalTransferOwnerData
+from fineract_client.models.field import Field
 from fineract_client.models.filter_data import FilterData
 from fineract_client.models.financial_activity_data import FinancialActivityData
 from fineract_client.models.floating_rate import FloatingRate
@@ -878,7 +879,6 @@ from fineract_client.models.local_time import LocalTime
 from fineract_client.models.lookup_table_data import LookupTableData
 from fineract_client.models.lookup_table_entry import LookupTableEntry
 from fineract_client.models.media_type import MediaType
-from fineract_client.models.model_field import ModelField
 from fineract_client.models.monetary_currency import MonetaryCurrency
 from fineract_client.models.money import Money
 from fineract_client.models.money_data import MoneyData

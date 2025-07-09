@@ -38,12 +38,12 @@ json = "{}"
 # create an instance of GetAccountsTypeAccountIdResponse from a JSON string
 get_accounts_type_account_id_response_instance = GetAccountsTypeAccountIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetAccountsTypeAccountIdResponse.to_json())
+print GetAccountsTypeAccountIdResponse.to_json()
 
 # convert the object into a dict
 get_accounts_type_account_id_response_dict = get_accounts_type_account_id_response_instance.to_dict()
 # create an instance of GetAccountsTypeAccountIdResponse from a dict
-get_accounts_type_account_id_response_from_dict = GetAccountsTypeAccountIdResponse.from_dict(get_accounts_type_account_id_response_dict)
+get_accounts_type_account_id_response_form_dict = get_accounts_type_account_id_response.from_dict(get_accounts_type_account_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

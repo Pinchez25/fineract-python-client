@@ -18,9 +18,9 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from fineract_client.models.model_field import ModelField
+from fineract_client.models.field import Field
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,14 +30,14 @@ class HookTemplateData(BaseModel):
     """ # noqa: E501
     id: Optional[StrictInt] = None
     name: Optional[StrictStr] = None
-    var_schema: Optional[List[ModelField]] = Field(default=None, alias="schema")
+    var_schema: Optional[List[Field]] = Field(default=None, alias="schema")
     __properties: ClassVar[List[str]] = ["id", "name", "schema"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -75,9 +75,9 @@ class HookTemplateData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in var_schema (list)
         _items = []
         if self.var_schema:
-            for _item_var_schema in self.var_schema:
-                if _item_var_schema:
-                    _items.append(_item_var_schema.to_dict())
+            for _item in self.var_schema:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['schema'] = _items
         return _dict
 
@@ -93,7 +93,7 @@ class HookTemplateData(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "schema": [ModelField.from_dict(_item) for _item in obj["schema"]] if obj.get("schema") is not None else None
+            "schema": [Field.from_dict(_item) for _item in obj["schema"]] if obj.get("schema") is not None else None
         })
         return _obj
 

@@ -19,19 +19,7 @@ Method | HTTP request | Description
 
 Enable Role | Disable Role
 
-Description : Enable role in case role is disabled. | Disable the role in case role is not associated with any users.
-
-
-
-
-
-Example Request:   https://DomainName/api/v1/roles/{roleId}?command=enable
-
-
-
-
-
-https://DomainName/api/v1/roles/{roleId}?command=disable
+Description : Enable role in case role is disabled. | Disable the role in case role is not associated with any users.      Example Request:   https://DomainName/api/v1/roles/{roleId}?command=enable      https://DomainName/api/v1/roles/{roleId}?command=disable
 
 ### Example
 
@@ -119,8 +107,7 @@ Name | Type | Description  | Notes
 
 Create a New Role
 
-Mandatory Fields
-name, description
+Mandatory Fields name, description
 
 ### Example
 
@@ -293,12 +280,7 @@ Name | Type | Description  | Notes
 
 List Roles
 
-Example Requests:
-
-roles
-
-
-roles?fields=name
+Example Requests:  roles   roles?fields=name
 
 ### Example
 
@@ -380,12 +362,7 @@ This endpoint does not need any parameter.
 
 Retrieve a Role
 
-Example Requests:
-
-roles/1
-
-
-roles/1?fields=name
+Example Requests:  roles/1   roles/1?fields=name
 
 ### Example
 
@@ -471,9 +448,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Role's Permissions
 
-Example Requests:
-
-roles/1/permissions
+Example Requests:  roles/1/permissions
 
 ### Example
 

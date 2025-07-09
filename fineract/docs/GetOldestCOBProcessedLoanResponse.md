@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetOldestCOBProcessedLoanResponse from a JSON string
 get_oldest_cob_processed_loan_response_instance = GetOldestCOBProcessedLoanResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetOldestCOBProcessedLoanResponse.to_json())
+print GetOldestCOBProcessedLoanResponse.to_json()
 
 # convert the object into a dict
 get_oldest_cob_processed_loan_response_dict = get_oldest_cob_processed_loan_response_instance.to_dict()
 # create an instance of GetOldestCOBProcessedLoanResponse from a dict
-get_oldest_cob_processed_loan_response_from_dict = GetOldestCOBProcessedLoanResponse.from_dict(get_oldest_cob_processed_loan_response_dict)
+get_oldest_cob_processed_loan_response_form_dict = get_oldest_cob_processed_loan_response.from_dict(get_oldest_cob_processed_loan_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

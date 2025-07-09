@@ -51,12 +51,12 @@ json = "{}"
 # create an instance of GroupGeneralData from a JSON string
 group_general_data_instance = GroupGeneralData.from_json(json)
 # print the JSON string representation of the object
-print(GroupGeneralData.to_json())
+print GroupGeneralData.to_json()
 
 # convert the object into a dict
 group_general_data_dict = group_general_data_instance.to_dict()
 # create an instance of GroupGeneralData from a dict
-group_general_data_from_dict = GroupGeneralData.from_dict(group_general_data_dict)
+group_general_data_form_dict = group_general_data.from_dict(group_general_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

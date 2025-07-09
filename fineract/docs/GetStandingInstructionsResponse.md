@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetStandingInstructionsResponse from a JSON string
 get_standing_instructions_response_instance = GetStandingInstructionsResponse.from_json(json)
 # print the JSON string representation of the object
-print(GetStandingInstructionsResponse.to_json())
+print GetStandingInstructionsResponse.to_json()
 
 # convert the object into a dict
 get_standing_instructions_response_dict = get_standing_instructions_response_instance.to_dict()
 # create an instance of GetStandingInstructionsResponse from a dict
-get_standing_instructions_response_from_dict = GetStandingInstructionsResponse.from_dict(get_standing_instructions_response_dict)
+get_standing_instructions_response_form_dict = get_standing_instructions_response.from_dict(get_standing_instructions_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

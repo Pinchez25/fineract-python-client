@@ -26,12 +26,12 @@ json = "{}"
 # create an instance of GetAccountsPurchasedShares from a JSON string
 get_accounts_purchased_shares_instance = GetAccountsPurchasedShares.from_json(json)
 # print the JSON string representation of the object
-print(GetAccountsPurchasedShares.to_json())
+print GetAccountsPurchasedShares.to_json()
 
 # convert the object into a dict
 get_accounts_purchased_shares_dict = get_accounts_purchased_shares_instance.to_dict()
 # create an instance of GetAccountsPurchasedShares from a dict
-get_accounts_purchased_shares_from_dict = GetAccountsPurchasedShares.from_dict(get_accounts_purchased_shares_dict)
+get_accounts_purchased_shares_form_dict = get_accounts_purchased_shares.from_dict(get_accounts_purchased_shares_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

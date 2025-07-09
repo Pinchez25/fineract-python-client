@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.charge import Charge
 from fineract_client.models.delinquency_bucket import DelinquencyBucket
@@ -130,11 +130,11 @@ class LoanProduct(BaseModel):
             raise ValueError("must be one of enum values ('INVALID', 'DISBURSEMENT_DATE', 'SUBMITTED_ON_DATE')")
         return value
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -172,23 +172,23 @@ class LoanProduct(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in borrower_cycle_variations (list)
         _items = []
         if self.borrower_cycle_variations:
-            for _item_borrower_cycle_variations in self.borrower_cycle_variations:
-                if _item_borrower_cycle_variations:
-                    _items.append(_item_borrower_cycle_variations.to_dict())
+            for _item in self.borrower_cycle_variations:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['borrowerCycleVariations'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item_charges in self.charges:
-                if _item_charges:
-                    _items.append(_item_charges.to_dict())
+            for _item in self.charges:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in credit_allocation_rules (list)
         _items = []
         if self.credit_allocation_rules:
-            for _item_credit_allocation_rules in self.credit_allocation_rules:
-                if _item_credit_allocation_rules:
-                    _items.append(_item_credit_allocation_rules.to_dict())
+            for _item in self.credit_allocation_rules:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['creditAllocationRules'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -229,9 +229,9 @@ class LoanProduct(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in payment_allocation_rules (list)
         _items = []
         if self.payment_allocation_rules:
-            for _item_payment_allocation_rules in self.payment_allocation_rules:
-                if _item_payment_allocation_rules:
-                    _items.append(_item_payment_allocation_rules.to_dict())
+            for _item in self.payment_allocation_rules:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentAllocationRules'] = _items
         # override the default output from pydantic by calling `to_dict()` of principal_amount
         if self.principal_amount:
@@ -242,9 +242,9 @@ class LoanProduct(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in rates (list)
         _items = []
         if self.rates:
-            for _item_rates in self.rates:
-                if _item_rates:
-                    _items.append(_item_rates.to_dict())
+            for _item in self.rates:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['rates'] = _items
         # override the default output from pydantic by calling `to_dict()` of variable_installment_config
         if self.variable_installment_config:

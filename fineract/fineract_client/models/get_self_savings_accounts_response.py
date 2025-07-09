@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_self_savings_currency import GetSelfSavingsCurrency
 from fineract_client.models.get_self_savings_interest_calculation_days_in_year_type import GetSelfSavingsInterestCalculationDaysInYearType
@@ -53,11 +53,11 @@ class GetSelfSavingsAccountsResponse(BaseModel):
     timeline: Optional[GetSelfSavingsTimeline] = None
     __properties: ClassVar[List[str]] = ["accountNo", "clientId", "clientName", "currency", "fieldOfficerId", "id", "interestCalculationDaysInYearType", "interestCalculationType", "interestCompoundingPeriodType", "interestPostingPeriodType", "nominalAnnualInterestRate", "savingsProductId", "savingsProductName", "status", "summary", "timeline"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

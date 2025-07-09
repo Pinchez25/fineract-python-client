@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of PagedRequestClientTextSearch from a JSON string
 paged_request_client_text_search_instance = PagedRequestClientTextSearch.from_json(json)
 # print the JSON string representation of the object
-print(PagedRequestClientTextSearch.to_json())
+print PagedRequestClientTextSearch.to_json()
 
 # convert the object into a dict
 paged_request_client_text_search_dict = paged_request_client_text_search_instance.to_dict()
 # create an instance of PagedRequestClientTextSearch from a dict
-paged_request_client_text_search_from_dict = PagedRequestClientTextSearch.from_dict(paged_request_client_text_search_dict)
+paged_request_client_text_search_form_dict = paged_request_client_text_search.from_dict(paged_request_client_text_search_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

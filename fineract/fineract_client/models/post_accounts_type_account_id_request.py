@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.post_accounts_requested_shares import PostAccountsRequestedShares
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class PostAccountsTypeAccountIdRequest(BaseModel):
     requested_shares: Optional[List[PostAccountsRequestedShares]] = Field(default=None, alias="requestedShares")
     __properties: ClassVar[List[str]] = ["requestedShares"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class PostAccountsTypeAccountIdRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in requested_shares (list)
         _items = []
         if self.requested_shares:
-            for _item_requested_shares in self.requested_shares:
-                if _item_requested_shares:
-                    _items.append(_item_requested_shares.to_dict())
+            for _item in self.requested_shares:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['requestedShares'] = _items
         return _dict
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_data import EnumOptionData
 from fineract_client.models.report_mailing_job_timeline_data import ReportMailingJobTimelineData
@@ -48,11 +48,11 @@ class GetReportMailingJobsResponse(BaseModel):
     timeline: Optional[ReportMailingJobTimelineData] = None
     __properties: ClassVar[List[str]] = ["description", "emailAttachmentFileFormat", "emailMessage", "emailRecipients", "emailSubject", "id", "isActive", "name", "nextRunDateTime", "numberOfRuns", "recurrence", "runAsUserId", "startDateTime", "stretchyReport", "stretchyReportParamMap", "timeline"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

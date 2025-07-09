@@ -36,13 +36,7 @@ Method | HTTP request | Description
 
 Calculate loan repayment schedule | Submit a new Loan Application
 
-It calculates the loan repayment Schedule
-Submits a new loan application
-Mandatory Fields: clientId, productId, principal, loanTermFrequency, loanTermFrequencyType, loanType, numberOfRepayments, repaymentEvery, repaymentFrequencyType, interestRatePerPeriod, amortizationType, interestType, interestCalculationPeriodType, transactionProcessingStrategyCode, expectedDisbursementDate, submittedOnDate, loanType
-Optional Fields: graceOnPrincipalPayment, graceOnInterestPayment, graceOnInterestCharged, linkAccountId, allowPartialPeriodInterestCalcualtion, fixedEmiAmount, maxOutstandingLoanBalance, disbursementData, graceOnArrearsAgeing, createStandingInstructionAtDisbursement (requires linkedAccountId if set to true)
-Additional Mandatory Fields if interest recalculation is enabled for product and Rest frequency not same as repayment period: recalculationRestFrequencyDate
-Additional Mandatory Fields if interest recalculation with interest/fee compounding is enabled for product and compounding frequency not same as repayment period: recalculationCompoundingFrequencyDate
-Additional Mandatory Field if Entity-Datatable Check is enabled for the entity of type loan: datatables
+It calculates the loan repayment Schedule Submits a new loan application Mandatory Fields: clientId, productId, principal, loanTermFrequency, loanTermFrequencyType, loanType, numberOfRepayments, repaymentEvery, repaymentFrequencyType, interestRatePerPeriod, amortizationType, interestType, interestCalculationPeriodType, transactionProcessingStrategyCode, expectedDisbursementDate, submittedOnDate, loanType Optional Fields: graceOnPrincipalPayment, graceOnInterestPayment, graceOnInterestCharged, linkAccountId, allowPartialPeriodInterestCalcualtion, fixedEmiAmount, maxOutstandingLoanBalance, disbursementData, graceOnArrearsAgeing, createStandingInstructionAtDisbursement (requires linkedAccountId if set to true) Additional Mandatory Fields if interest recalculation is enabled for product and Rest frequency not same as repayment period: recalculationRestFrequencyDate Additional Mandatory Fields if interest recalculation with interest/fee compounding is enabled for product and compounding frequency not same as repayment period: recalculationCompoundingFrequencyDate Additional Mandatory Field if Entity-Datatable Check is enabled for the entity of type loan: datatables
 
 ### Example
 
@@ -305,7 +299,7 @@ Name | Type | Description  | Notes
 
 Delete a Loan Application
 
-Note: Only loans in "Submitted and awaiting approval" status can be deleted.
+Note: Only loans in \"Submitted and awaiting approval\" status can be deleted.
 
 ### Example
 
@@ -391,7 +385,7 @@ Name | Type | Description  | Notes
 
 Delete a Loan Application
 
-Note: Only loans in "Submitted and awaiting approval" status can be deleted.
+Note: Only loans in \"Submitted and awaiting approval\" status can be deleted.
 
 ### Example
 
@@ -643,6 +637,8 @@ Name | Type | Description  | Notes
 # **get_glim_repayment_template**
 > str get_glim_repayment_template(glim_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -891,6 +887,8 @@ Name | Type | Description  | Notes
 # **get_loan_repayment_template**
 > get_loan_repayment_template(office_id=office_id, date_format=date_format)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -970,6 +968,8 @@ void (empty response body)
 
 # **get_loans_template**
 > get_loans_template(office_id=office_id, staff_id=staff_id, date_format=date_format)
+
+
 
 ### Example
 
@@ -1055,31 +1055,7 @@ void (empty response body)
 
 Approve GLIM Application | Undo GLIM Application Approval | Reject GLIM Application | Disburse Loan Disburse Loan To Savings Account | Undo Loan Disbursal
 
-Approve GLIM Application:
-Mandatory Fields: approvedOnDate
-Optional Fields: approvedLoanAmount and expectedDisbursementDate
-Approves the GLIM application
-
-Undo GLIM Application Approval:
-Undoes the GLIM Application Approval
-
-Reject GLIM Application:
-Mandatory Fields: rejectedOnDate
-Allows you to reject the GLIM application
-
-Disburse Loan:
-Mandatory Fields: actualDisbursementDate
-Optional Fields: transactionAmount and fixedEmiAmount
-Disburses the Loan
-
-Disburse Loan To Savings Account:
-Mandatory Fields: actualDisbursementDate
-Optional Fields: transactionAmount and fixedEmiAmount
-Disburses the loan to Saving Account
-
-Undo Loan Disbursal:
-Undoes the Loan Disbursal
-
+Approve GLIM Application: Mandatory Fields: approvedOnDate Optional Fields: approvedLoanAmount and expectedDisbursementDate Approves the GLIM application  Undo GLIM Application Approval: Undoes the GLIM Application Approval  Reject GLIM Application: Mandatory Fields: rejectedOnDate Allows you to reject the GLIM application  Disburse Loan: Mandatory Fields: actualDisbursementDate Optional Fields: transactionAmount and fixedEmiAmount Disburses the Loan  Disburse Loan To Savings Account: Mandatory Fields: actualDisbursementDate Optional Fields: transactionAmount and fixedEmiAmount Disburses the loan to Saving Account  Undo Loan Disbursal: Undoes the Loan Disbursal 
 
 ### Example
 
@@ -1350,6 +1326,8 @@ Name | Type | Description  | Notes
 # **post_loan_repayment_template**
 > str post_loan_repayment_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1433,6 +1411,8 @@ Name | Type | Description  | Notes
 
 # **post_loan_template**
 > str post_loan_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
+
+
 
 ### Example
 
@@ -1520,16 +1500,7 @@ Name | Type | Description  | Notes
 
 List Loans
 
-The list capability of loans can support pagination and sorting.
-Example Requests:
-
-loans
-
-loans?fields=accountNo
-
-loans?offset=10&limit=50
-
-loans?orderBy=accountNo&sortOrder=DESC
+The list capability of loans can support pagination and sorting. Example Requests:  loans  loans?fields=accountNo  loans?offset=10&limit=50  loans?orderBy=accountNo&sortOrder=DESC
 
 ### Example
 
@@ -1625,6 +1596,8 @@ Name | Type | Description  | Notes
 # **retrieve_approval_template**
 > GetLoansApprovalTemplateResponse retrieve_approval_template(loan_id, template_type=template_type)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1707,6 +1680,8 @@ Name | Type | Description  | Notes
 
 # **retrieve_approval_template1**
 > GetLoansApprovalTemplateResponse retrieve_approval_template1(loan_external_id, template_type=template_type)
+
+
 
 ### Example
 
@@ -1793,20 +1768,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan
 
-Note: template=true parameter doesn't apply to this resource.Example Requests:
-
-loans/1
-
-
-loans/1?fields=id,principal,annualInterestRate
-
-
-loans/1?associations=all
-
-loans/1?associations=all&exclude=guarantors
-
-
-loans/1?fields=id,principal,annualInterestRate&associations=repaymentSchedule,transactions
+Note: template=true parameter doesn't apply to this resource.Example Requests:  loans/1   loans/1?fields=id,principal,annualInterestRate   loans/1?associations=all  loans/1?associations=all&exclude=guarantors   loans/1?fields=id,principal,annualInterestRate&associations=repaymentSchedule,transactions
 
 ### Example
 
@@ -1900,20 +1862,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Loan
 
-Note: template=true parameter doesn't apply to this resource.Example Requests:
-
-loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854
-
-
-loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,principal,annualInterestRate
-
-
-loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?associations=all
-
-loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?associations=all&exclude=guarantors
-
-
-loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,principal,annualInterestRate&associations=repaymentSchedule,transactions
+Note: template=true parameter doesn't apply to this resource.Example Requests:  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854   loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,principal,annualInterestRate   loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?associations=all  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?associations=all&exclude=guarantors   loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854?fields=id,principal,annualInterestRate&associations=repaymentSchedule,transactions
 
 ### Example
 
@@ -2007,44 +1956,7 @@ Name | Type | Description  | Notes
 
 Approve Loan Application | Recover Loan Guarantee | Undo Loan Application Approval | Assign a Loan Officer | Unassign a Loan Officer | Reject Loan Application | Applicant Withdraws from Loan Application | Disburse Loan Disburse Loan To Savings Account | Undo Loan Disbursal
 
-Approve Loan Application:
-Mandatory Fields: approvedOnDate
-Optional Fields: approvedLoanAmount and expectedDisbursementDate
-Approves the loan application
-
-Recover Loan Guarantee:
-Recovers the loan guarantee
-
-Undo Loan Application Approval:
-Undoes the Loan Application Approval
-
-Assign a Loan Officer:
-Allows you to assign Loan Officer for existing Loan.
-
-Unassign a Loan Officer:
-Allows you to unassign the Loan Officer.
-
-Reject Loan Application:
-Mandatory Fields: rejectedOnDate
-Allows you to reject the loan application
-
-Applicant Withdraws from Loan Application:
-Mandatory Fields: withdrawnOnDate
-Allows the applicant to withdraw the loan application
-
-Disburse Loan:
-Mandatory Fields: actualDisbursementDate
-Optional Fields: transactionAmount and fixedEmiAmount
-Disburses the Loan
-
-Disburse Loan To Savings Account:
-Mandatory Fields: actualDisbursementDate
-Optional Fields: transactionAmount and fixedEmiAmount
-Disburses the loan to Saving Account
-
-Undo Loan Disbursal:
-Undoes the Loan Disbursal
-Showing request and response for Assign a Loan Officer
+Approve Loan Application: Mandatory Fields: approvedOnDate Optional Fields: approvedLoanAmount and expectedDisbursementDate Approves the loan application  Recover Loan Guarantee: Recovers the loan guarantee  Undo Loan Application Approval: Undoes the Loan Application Approval  Assign a Loan Officer: Allows you to assign Loan Officer for existing Loan.  Unassign a Loan Officer: Allows you to unassign the Loan Officer.  Reject Loan Application: Mandatory Fields: rejectedOnDate Allows you to reject the loan application  Applicant Withdraws from Loan Application: Mandatory Fields: withdrawnOnDate Allows the applicant to withdraw the loan application  Disburse Loan: Mandatory Fields: actualDisbursementDate Optional Fields: transactionAmount and fixedEmiAmount Disburses the Loan  Disburse Loan To Savings Account: Mandatory Fields: actualDisbursementDate Optional Fields: transactionAmount and fixedEmiAmount Disburses the loan to Saving Account  Undo Loan Disbursal: Undoes the Loan Disbursal Showing request and response for Assign a Loan Officer
 
 ### Example
 
@@ -2135,44 +2047,7 @@ Name | Type | Description  | Notes
 
 Approve Loan Application | Recover Loan Guarantee | Undo Loan Application Approval | Assign a Loan Officer | Unassign a Loan Officer | Reject Loan Application | Applicant Withdraws from Loan Application | Disburse Loan Disburse Loan To Savings Account | Undo Loan Disbursal
 
-Approve Loan Application:
-Mandatory Fields: approvedOnDate
-Optional Fields: approvedLoanAmount and expectedDisbursementDate
-Approves the loan application
-
-Recover Loan Guarantee:
-Recovers the loan guarantee
-
-Undo Loan Application Approval:
-Undoes the Loan Application Approval
-
-Assign a Loan Officer:
-Allows you to assign Loan Officer for existing Loan.
-
-Unassign a Loan Officer:
-Allows you to unassign the Loan Officer.
-
-Reject Loan Application:
-Mandatory Fields: rejectedOnDate
-Allows you to reject the loan application
-
-Applicant Withdraws from Loan Application:
-Mandatory Fields: withdrawnOnDate
-Allows the applicant to withdraw the loan application
-
-Disburse Loan:
-Mandatory Fields: actualDisbursementDate
-Optional Fields: transactionAmount and fixedEmiAmount
-Disburses the Loan
-
-Disburse Loan To Savings Account:
-Mandatory Fields: actualDisbursementDate
-Optional Fields: transactionAmount and fixedEmiAmount
-Disburses the loan to Saving Account
-
-Undo Loan Disbursal:
-Undoes the Loan Disbursal
-Showing request and response for Assign a Loan Officer
+Approve Loan Application: Mandatory Fields: approvedOnDate Optional Fields: approvedLoanAmount and expectedDisbursementDate Approves the loan application  Recover Loan Guarantee: Recovers the loan guarantee  Undo Loan Application Approval: Undoes the Loan Application Approval  Assign a Loan Officer: Allows you to assign Loan Officer for existing Loan.  Unassign a Loan Officer: Allows you to unassign the Loan Officer.  Reject Loan Application: Mandatory Fields: rejectedOnDate Allows you to reject the loan application  Applicant Withdraws from Loan Application: Mandatory Fields: withdrawnOnDate Allows the applicant to withdraw the loan application  Disburse Loan: Mandatory Fields: actualDisbursementDate Optional Fields: transactionAmount and fixedEmiAmount Disburses the Loan  Disburse Loan To Savings Account: Mandatory Fields: actualDisbursementDate Optional Fields: transactionAmount and fixedEmiAmount Disburses the loan to Saving Account  Undo Loan Disbursal: Undoes the Loan Disbursal Showing request and response for Assign a Loan Officer
 
 ### Example
 
@@ -2263,16 +2138,7 @@ Name | Type | Description  | Notes
 
 Retrieve Loan Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
-
-Field Defaults
-Allowed description Lists
-Example Requests:
-
-loans/template?templateType=individual&clientId=1
-
-
-loans/template?templateType=individual&clientId=1&productId=1
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Requests:  loans/template?templateType=individual&clientId=1   loans/template?templateType=individual&clientId=1&productId=1
 
 ### Example
 

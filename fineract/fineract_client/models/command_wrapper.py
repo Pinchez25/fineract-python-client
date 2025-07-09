@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -75,11 +75,11 @@ class CommandWrapper(BaseModel):
     working_days_resource: Optional[StrictBool] = Field(default=None, alias="workingDaysResource")
     __properties: ClassVar[List[str]] = ["actionName", "cacheResource", "clientId", "commandId", "create", "createDatatable", "creditBureauId", "currencyResource", "datatableResource", "delete", "deleteDatatable", "deleteMultiple", "deleteOneToOne", "deleteOperation", "entityId", "entityName", "fullFilSurvey", "groupId", "href", "idempotencyKey", "jobName", "json", "loanDisburseDetailResource", "loanId", "noteResource", "officeId", "organisationCreditBureauId", "passwordPreferencesResource", "permissionResource", "productId", "registerDatatable", "registerSurvey", "savingsId", "subentityId", "surveyResource", "taskPermissionName", "templateId", "transactionId", "update", "updateDatatable", "updateDisbursementDate", "updateMultiple", "updateOneToOne", "updateOperation", "userResource", "workingDaysResource"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

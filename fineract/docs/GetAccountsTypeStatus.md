@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of GetAccountsTypeStatus from a JSON string
 get_accounts_type_status_instance = GetAccountsTypeStatus.from_json(json)
 # print the JSON string representation of the object
-print(GetAccountsTypeStatus.to_json())
+print GetAccountsTypeStatus.to_json()
 
 # convert the object into a dict
 get_accounts_type_status_dict = get_accounts_type_status_instance.to_dict()
 # create an instance of GetAccountsTypeStatus from a dict
-get_accounts_type_status_from_dict = GetAccountsTypeStatus.from_dict(get_accounts_type_status_dict)
+get_accounts_type_status_form_dict = get_accounts_type_status.from_dict(get_accounts_type_status_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

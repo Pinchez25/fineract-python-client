@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.financial_activity_data import FinancialActivityData
 from fineract_client.models.gl_account_data import GLAccountData
@@ -34,11 +34,11 @@ class GetFinancialActivityAccountsResponse(BaseModel):
     id: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["financialActivityData", "glAccountData", "id"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:

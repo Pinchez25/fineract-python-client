@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of DeleteSavingsProductsProductIdResponse from a JSON string
 delete_savings_products_product_id_response_instance = DeleteSavingsProductsProductIdResponse.from_json(json)
 # print the JSON string representation of the object
-print(DeleteSavingsProductsProductIdResponse.to_json())
+print DeleteSavingsProductsProductIdResponse.to_json()
 
 # convert the object into a dict
 delete_savings_products_product_id_response_dict = delete_savings_products_product_id_response_instance.to_dict()
 # create an instance of DeleteSavingsProductsProductIdResponse from a dict
-delete_savings_products_product_id_response_from_dict = DeleteSavingsProductsProductIdResponse.from_dict(delete_savings_products_product_id_response_dict)
+delete_savings_products_product_id_response_form_dict = delete_savings_products_product_id_response.from_dict(delete_savings_products_product_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PutInterestRateChartsChartIdRequest from a JSON string
 put_interest_rate_charts_chart_id_request_instance = PutInterestRateChartsChartIdRequest.from_json(json)
 # print the JSON string representation of the object
-print(PutInterestRateChartsChartIdRequest.to_json())
+print PutInterestRateChartsChartIdRequest.to_json()
 
 # convert the object into a dict
 put_interest_rate_charts_chart_id_request_dict = put_interest_rate_charts_chart_id_request_instance.to_dict()
 # create an instance of PutInterestRateChartsChartIdRequest from a dict
-put_interest_rate_charts_chart_id_request_from_dict = PutInterestRateChartsChartIdRequest.from_dict(put_interest_rate_charts_chart_id_request_dict)
+put_interest_rate_charts_chart_id_request_form_dict = put_interest_rate_charts_chart_id_request.from_dict(put_interest_rate_charts_chart_id_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

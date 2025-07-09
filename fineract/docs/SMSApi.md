@@ -15,6 +15,8 @@ Method | HTTP request | Description
 # **create2**
 > str create2(body=body)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -94,6 +96,8 @@ Name | Type | Description  | Notes
 
 # **delete6**
 > str delete6(resource_id)
+
+
 
 ### Example
 
@@ -175,6 +179,8 @@ Name | Type | Description  | Notes
 # **retrieve_all10**
 > str retrieve_all10()
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -250,6 +256,8 @@ This endpoint does not need any parameter.
 
 # **retrieve_all_sms_by_status**
 > str retrieve_all_sms_by_status(campaign_id, status=status, from_date=from_date, to_date=to_date, locale=locale, date_format=date_format, offset=offset, limit=limit, order_by=order_by, sort_order=sort_order)
+
+
 
 ### Example
 
@@ -349,6 +357,8 @@ Name | Type | Description  | Notes
 # **retrieve_one6**
 > str retrieve_one6(resource_id)
 
+
+
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -428,6 +438,8 @@ Name | Type | Description  | Notes
 
 # **update3**
 > str update3(resource_id, body=body)
+
+
 
 ### Example
 

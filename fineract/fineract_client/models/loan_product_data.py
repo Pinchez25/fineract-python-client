@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.advanced_payment_data import AdvancedPaymentData
 from fineract_client.models.charge_data import ChargeData
@@ -190,11 +190,11 @@ class LoanProductData(BaseModel):
     value_condition_type_options: Optional[List[EnumOptionData]] = Field(default=None, alias="valueConditionTypeOptions")
     __properties: ClassVar[List[str]] = ["accountMovesOutOfNPAOnlyOnArrearsCompletion", "accountingMappingOptions", "accountingMappings", "accountingRule", "accountingRuleOptions", "advancedPaymentAllocationFutureInstallmentAllocationRules", "advancedPaymentAllocationTransactionTypes", "advancedPaymentAllocationTypes", "allowApprovedDisbursedAmountsOverApplied", "allowAttributeOverrides", "allowPartialPeriodInterestCalculation", "allowVariableInstallments", "amortizationType", "amortizationTypeOptions", "annualInterestRate", "canDefineInstallmentAmount", "canUseForTopup", "chargeOptions", "charges", "closeDate", "compoundingToBePostedAsTransaction", "creditAllocation", "creditAllocationAllocationTypes", "creditAllocationTransactionTypes", "currency", "currencyOptions", "daysInMonthType", "daysInMonthTypeOptions", "daysInYearType", "daysInYearTypeOptions", "defaultDifferentialLendingRate", "delinquencyBucket", "delinquencyBucketOptions", "description", "disallowExpectedDisbursements", "disbursedAmountPercentageForDownPayment", "dueDaysForRepaymentEvent", "enableAccrualActivityPosting", "enableAutoRepaymentForDownPayment", "enableDownPayment", "enableInstallmentLevelDelinquency", "equalAmortization", "externalId", "feeToIncomeAccountMappings", "fixedLength", "fixedPrincipalPercentagePerInstallment", "floatingInterestRateCalculationAllowed", "floatingRateId", "floatingRateName", "floatingRateOptions", "fundId", "fundName", "fundOptions", "graceOnArrearsAgeing", "graceOnInterestCharged", "graceOnInterestPayment", "graceOnPrincipalPayment", "holdGuaranteeFunds", "id", "inArrearsTolerance", "includeInBorrowerCycle", "installmentAmountInMultiplesOf", "interestCalculationPeriodType", "interestCalculationPeriodTypeOptions", "interestRateDifferential", "interestRateFrequencyType", "interestRateFrequencyTypeOptions", "interestRatePerPeriod", "interestRateVariationsForBorrowerCycle", "interestRecalculationCompoundingTypeOptions", "interestRecalculationData", "interestRecalculationDayOfWeekTypeOptions", "interestRecalculationEnabled", "interestRecalculationFrequencyTypeOptions", "interestRecalculationNthDayTypeOptions", "interestType", "interestTypeOptions", "isAllowPartialPeriodInterestCalculation", "isEqualAmortization", "isFloatingInterestRateCalculationAllowed", "isInterestRecalculationEnabled", "isLinkedToFloatingInterestRates", "isRatesEnabled", "linkedToFloatingInterestRates", "loanProductConfigurableAttributes", "loanScheduleProcessingType", "loanScheduleProcessingTypeOptions", "loanScheduleType", "loanScheduleTypeOptions", "maxDifferentialLendingRate", "maxInterestRatePerPeriod", "maxNumberOfRepayments", "maxPrincipal", "maxTrancheCount", "maximumGap", "minDifferentialLendingRate", "minInterestRatePerPeriod", "minNumberOfRepayments", "minPrincipal", "minimumDaysBetweenDisbursalAndFirstRepayment", "minimumGap", "multiDisburseLoan", "name", "numberOfRepaymentVariationsForBorrowerCycle", "numberOfRepayments", "outstandingLoanBalance", "overAppliedCalculationType", "overAppliedNumber", "overDueDaysForRepaymentEvent", "overdueDaysForNPA", "paymentAllocation", "paymentChannelToFundSourceMappings", "paymentTypeOptions", "penaltyOptions", "penaltyToIncomeAccountMappings", "preClosureInterestCalculationStrategyOptions", "principal", "principalThresholdForLastInstallment", "principalVariationsForBorrowerCycle", "productGuaranteeData", "rateOptions", "rates", "ratesEnabled", "recurringMoratoriumOnPrincipalPeriods", "repaymentEvery", "repaymentFrequencyType", "repaymentFrequencyTypeOptions", "repaymentStartDateType", "repaymentStartDateTypeOptions", "rescheduleStrategyTypeOptions", "shortName", "startDate", "status", "supportedInterestRefundTypes", "supportedInterestRefundTypesOptions", "syncExpectedWithDisbursementDate", "transactionProcessingStrategyCode", "transactionProcessingStrategyName", "transactionProcessingStrategyOptions", "useBorrowerCycle", "valueConditionTypeOptions"]
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
 
 
     def to_str(self) -> str:
@@ -232,10 +232,10 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in accounting_mapping_options (dict of array)
         _field_dict_of_array = {}
         if self.accounting_mapping_options:
-            for _key_accounting_mapping_options in self.accounting_mapping_options:
-                if self.accounting_mapping_options[_key_accounting_mapping_options] is not None:
-                    _field_dict_of_array[_key_accounting_mapping_options] = [
-                        _item.to_dict() for _item in self.accounting_mapping_options[_key_accounting_mapping_options]
+            for _key in self.accounting_mapping_options:
+                if self.accounting_mapping_options[_key] is not None:
+                    _field_dict_of_array[_key] = [
+                        _item.to_dict() for _item in self.accounting_mapping_options[_key]
                     ]
             _dict['accountingMappingOptions'] = _field_dict_of_array
         # override the default output from pydantic by calling `to_dict()` of accounting_rule
@@ -244,30 +244,30 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in accounting_rule_options (list)
         _items = []
         if self.accounting_rule_options:
-            for _item_accounting_rule_options in self.accounting_rule_options:
-                if _item_accounting_rule_options:
-                    _items.append(_item_accounting_rule_options.to_dict())
+            for _item in self.accounting_rule_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['accountingRuleOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in advanced_payment_allocation_future_installment_allocation_rules (list)
         _items = []
         if self.advanced_payment_allocation_future_installment_allocation_rules:
-            for _item_advanced_payment_allocation_future_installment_allocation_rules in self.advanced_payment_allocation_future_installment_allocation_rules:
-                if _item_advanced_payment_allocation_future_installment_allocation_rules:
-                    _items.append(_item_advanced_payment_allocation_future_installment_allocation_rules.to_dict())
+            for _item in self.advanced_payment_allocation_future_installment_allocation_rules:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['advancedPaymentAllocationFutureInstallmentAllocationRules'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in advanced_payment_allocation_transaction_types (list)
         _items = []
         if self.advanced_payment_allocation_transaction_types:
-            for _item_advanced_payment_allocation_transaction_types in self.advanced_payment_allocation_transaction_types:
-                if _item_advanced_payment_allocation_transaction_types:
-                    _items.append(_item_advanced_payment_allocation_transaction_types.to_dict())
+            for _item in self.advanced_payment_allocation_transaction_types:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['advancedPaymentAllocationTransactionTypes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in advanced_payment_allocation_types (list)
         _items = []
         if self.advanced_payment_allocation_types:
-            for _item_advanced_payment_allocation_types in self.advanced_payment_allocation_types:
-                if _item_advanced_payment_allocation_types:
-                    _items.append(_item_advanced_payment_allocation_types.to_dict())
+            for _item in self.advanced_payment_allocation_types:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['advancedPaymentAllocationTypes'] = _items
         # override the default output from pydantic by calling `to_dict()` of allow_attribute_overrides
         if self.allow_attribute_overrides:
@@ -278,44 +278,44 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in amortization_type_options (list)
         _items = []
         if self.amortization_type_options:
-            for _item_amortization_type_options in self.amortization_type_options:
-                if _item_amortization_type_options:
-                    _items.append(_item_amortization_type_options.to_dict())
+            for _item in self.amortization_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['amortizationTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charge_options (list)
         _items = []
         if self.charge_options:
-            for _item_charge_options in self.charge_options:
-                if _item_charge_options:
-                    _items.append(_item_charge_options.to_dict())
+            for _item in self.charge_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['chargeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item_charges in self.charges:
-                if _item_charges:
-                    _items.append(_item_charges.to_dict())
+            for _item in self.charges:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in credit_allocation (list)
         _items = []
         if self.credit_allocation:
-            for _item_credit_allocation in self.credit_allocation:
-                if _item_credit_allocation:
-                    _items.append(_item_credit_allocation.to_dict())
+            for _item in self.credit_allocation:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['creditAllocation'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in credit_allocation_allocation_types (list)
         _items = []
         if self.credit_allocation_allocation_types:
-            for _item_credit_allocation_allocation_types in self.credit_allocation_allocation_types:
-                if _item_credit_allocation_allocation_types:
-                    _items.append(_item_credit_allocation_allocation_types.to_dict())
+            for _item in self.credit_allocation_allocation_types:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['creditAllocationAllocationTypes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in credit_allocation_transaction_types (list)
         _items = []
         if self.credit_allocation_transaction_types:
-            for _item_credit_allocation_transaction_types in self.credit_allocation_transaction_types:
-                if _item_credit_allocation_transaction_types:
-                    _items.append(_item_credit_allocation_transaction_types.to_dict())
+            for _item in self.credit_allocation_transaction_types:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['creditAllocationTransactionTypes'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -323,9 +323,9 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in currency_options (list)
         _items = []
         if self.currency_options:
-            for _item_currency_options in self.currency_options:
-                if _item_currency_options:
-                    _items.append(_item_currency_options.to_dict())
+            for _item in self.currency_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['currencyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of days_in_month_type
         if self.days_in_month_type:
@@ -333,9 +333,9 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in days_in_month_type_options (list)
         _items = []
         if self.days_in_month_type_options:
-            for _item_days_in_month_type_options in self.days_in_month_type_options:
-                if _item_days_in_month_type_options:
-                    _items.append(_item_days_in_month_type_options.to_dict())
+            for _item in self.days_in_month_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['daysInMonthTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of days_in_year_type
         if self.days_in_year_type:
@@ -343,9 +343,9 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in days_in_year_type_options (list)
         _items = []
         if self.days_in_year_type_options:
-            for _item_days_in_year_type_options in self.days_in_year_type_options:
-                if _item_days_in_year_type_options:
-                    _items.append(_item_days_in_year_type_options.to_dict())
+            for _item in self.days_in_year_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['daysInYearTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of delinquency_bucket
         if self.delinquency_bucket:
@@ -353,30 +353,30 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in delinquency_bucket_options (list)
         _items = []
         if self.delinquency_bucket_options:
-            for _item_delinquency_bucket_options in self.delinquency_bucket_options:
-                if _item_delinquency_bucket_options:
-                    _items.append(_item_delinquency_bucket_options.to_dict())
+            for _item in self.delinquency_bucket_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['delinquencyBucketOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in fee_to_income_account_mappings (list)
         _items = []
         if self.fee_to_income_account_mappings:
-            for _item_fee_to_income_account_mappings in self.fee_to_income_account_mappings:
-                if _item_fee_to_income_account_mappings:
-                    _items.append(_item_fee_to_income_account_mappings.to_dict())
+            for _item in self.fee_to_income_account_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['feeToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in floating_rate_options (list)
         _items = []
         if self.floating_rate_options:
-            for _item_floating_rate_options in self.floating_rate_options:
-                if _item_floating_rate_options:
-                    _items.append(_item_floating_rate_options.to_dict())
+            for _item in self.floating_rate_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['floatingRateOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in fund_options (list)
         _items = []
         if self.fund_options:
-            for _item_fund_options in self.fund_options:
-                if _item_fund_options:
-                    _items.append(_item_fund_options.to_dict())
+            for _item in self.fund_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['fundOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_calculation_period_type
         if self.interest_calculation_period_type:
@@ -384,9 +384,9 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_calculation_period_type_options (list)
         _items = []
         if self.interest_calculation_period_type_options:
-            for _item_interest_calculation_period_type_options in self.interest_calculation_period_type_options:
-                if _item_interest_calculation_period_type_options:
-                    _items.append(_item_interest_calculation_period_type_options.to_dict())
+            for _item in self.interest_calculation_period_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestCalculationPeriodTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_rate_frequency_type
         if self.interest_rate_frequency_type:
@@ -394,23 +394,23 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_rate_frequency_type_options (list)
         _items = []
         if self.interest_rate_frequency_type_options:
-            for _item_interest_rate_frequency_type_options in self.interest_rate_frequency_type_options:
-                if _item_interest_rate_frequency_type_options:
-                    _items.append(_item_interest_rate_frequency_type_options.to_dict())
+            for _item in self.interest_rate_frequency_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestRateFrequencyTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in interest_rate_variations_for_borrower_cycle (list)
         _items = []
         if self.interest_rate_variations_for_borrower_cycle:
-            for _item_interest_rate_variations_for_borrower_cycle in self.interest_rate_variations_for_borrower_cycle:
-                if _item_interest_rate_variations_for_borrower_cycle:
-                    _items.append(_item_interest_rate_variations_for_borrower_cycle.to_dict())
+            for _item in self.interest_rate_variations_for_borrower_cycle:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestRateVariationsForBorrowerCycle'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in interest_recalculation_compounding_type_options (list)
         _items = []
         if self.interest_recalculation_compounding_type_options:
-            for _item_interest_recalculation_compounding_type_options in self.interest_recalculation_compounding_type_options:
-                if _item_interest_recalculation_compounding_type_options:
-                    _items.append(_item_interest_recalculation_compounding_type_options.to_dict())
+            for _item in self.interest_recalculation_compounding_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestRecalculationCompoundingTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_recalculation_data
         if self.interest_recalculation_data:
@@ -418,23 +418,23 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_recalculation_day_of_week_type_options (list)
         _items = []
         if self.interest_recalculation_day_of_week_type_options:
-            for _item_interest_recalculation_day_of_week_type_options in self.interest_recalculation_day_of_week_type_options:
-                if _item_interest_recalculation_day_of_week_type_options:
-                    _items.append(_item_interest_recalculation_day_of_week_type_options.to_dict())
+            for _item in self.interest_recalculation_day_of_week_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestRecalculationDayOfWeekTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in interest_recalculation_frequency_type_options (list)
         _items = []
         if self.interest_recalculation_frequency_type_options:
-            for _item_interest_recalculation_frequency_type_options in self.interest_recalculation_frequency_type_options:
-                if _item_interest_recalculation_frequency_type_options:
-                    _items.append(_item_interest_recalculation_frequency_type_options.to_dict())
+            for _item in self.interest_recalculation_frequency_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestRecalculationFrequencyTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in interest_recalculation_nth_day_type_options (list)
         _items = []
         if self.interest_recalculation_nth_day_type_options:
-            for _item_interest_recalculation_nth_day_type_options in self.interest_recalculation_nth_day_type_options:
-                if _item_interest_recalculation_nth_day_type_options:
-                    _items.append(_item_interest_recalculation_nth_day_type_options.to_dict())
+            for _item in self.interest_recalculation_nth_day_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestRecalculationNthDayTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_type
         if self.interest_type:
@@ -442,9 +442,9 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_type_options (list)
         _items = []
         if self.interest_type_options:
-            for _item_interest_type_options in self.interest_type_options:
-                if _item_interest_type_options:
-                    _items.append(_item_interest_type_options.to_dict())
+            for _item in self.interest_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['interestTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of loan_product_configurable_attributes
         if self.loan_product_configurable_attributes:
@@ -455,9 +455,9 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in loan_schedule_processing_type_options (list)
         _items = []
         if self.loan_schedule_processing_type_options:
-            for _item_loan_schedule_processing_type_options in self.loan_schedule_processing_type_options:
-                if _item_loan_schedule_processing_type_options:
-                    _items.append(_item_loan_schedule_processing_type_options.to_dict())
+            for _item in self.loan_schedule_processing_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['loanScheduleProcessingTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of loan_schedule_type
         if self.loan_schedule_type:
@@ -465,65 +465,65 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in loan_schedule_type_options (list)
         _items = []
         if self.loan_schedule_type_options:
-            for _item_loan_schedule_type_options in self.loan_schedule_type_options:
-                if _item_loan_schedule_type_options:
-                    _items.append(_item_loan_schedule_type_options.to_dict())
+            for _item in self.loan_schedule_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['loanScheduleTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in number_of_repayment_variations_for_borrower_cycle (list)
         _items = []
         if self.number_of_repayment_variations_for_borrower_cycle:
-            for _item_number_of_repayment_variations_for_borrower_cycle in self.number_of_repayment_variations_for_borrower_cycle:
-                if _item_number_of_repayment_variations_for_borrower_cycle:
-                    _items.append(_item_number_of_repayment_variations_for_borrower_cycle.to_dict())
+            for _item in self.number_of_repayment_variations_for_borrower_cycle:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['numberOfRepaymentVariationsForBorrowerCycle'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in payment_allocation (list)
         _items = []
         if self.payment_allocation:
-            for _item_payment_allocation in self.payment_allocation:
-                if _item_payment_allocation:
-                    _items.append(_item_payment_allocation.to_dict())
+            for _item in self.payment_allocation:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentAllocation'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in payment_channel_to_fund_source_mappings (list)
         _items = []
         if self.payment_channel_to_fund_source_mappings:
-            for _item_payment_channel_to_fund_source_mappings in self.payment_channel_to_fund_source_mappings:
-                if _item_payment_channel_to_fund_source_mappings:
-                    _items.append(_item_payment_channel_to_fund_source_mappings.to_dict())
+            for _item in self.payment_channel_to_fund_source_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentChannelToFundSourceMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in payment_type_options (list)
         _items = []
         if self.payment_type_options:
-            for _item_payment_type_options in self.payment_type_options:
-                if _item_payment_type_options:
-                    _items.append(_item_payment_type_options.to_dict())
+            for _item in self.payment_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['paymentTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in penalty_options (list)
         _items = []
         if self.penalty_options:
-            for _item_penalty_options in self.penalty_options:
-                if _item_penalty_options:
-                    _items.append(_item_penalty_options.to_dict())
+            for _item in self.penalty_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['penaltyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in penalty_to_income_account_mappings (list)
         _items = []
         if self.penalty_to_income_account_mappings:
-            for _item_penalty_to_income_account_mappings in self.penalty_to_income_account_mappings:
-                if _item_penalty_to_income_account_mappings:
-                    _items.append(_item_penalty_to_income_account_mappings.to_dict())
+            for _item in self.penalty_to_income_account_mappings:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['penaltyToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in pre_closure_interest_calculation_strategy_options (list)
         _items = []
         if self.pre_closure_interest_calculation_strategy_options:
-            for _item_pre_closure_interest_calculation_strategy_options in self.pre_closure_interest_calculation_strategy_options:
-                if _item_pre_closure_interest_calculation_strategy_options:
-                    _items.append(_item_pre_closure_interest_calculation_strategy_options.to_dict())
+            for _item in self.pre_closure_interest_calculation_strategy_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['preClosureInterestCalculationStrategyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in principal_variations_for_borrower_cycle (list)
         _items = []
         if self.principal_variations_for_borrower_cycle:
-            for _item_principal_variations_for_borrower_cycle in self.principal_variations_for_borrower_cycle:
-                if _item_principal_variations_for_borrower_cycle:
-                    _items.append(_item_principal_variations_for_borrower_cycle.to_dict())
+            for _item in self.principal_variations_for_borrower_cycle:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['principalVariationsForBorrowerCycle'] = _items
         # override the default output from pydantic by calling `to_dict()` of product_guarantee_data
         if self.product_guarantee_data:
@@ -531,16 +531,16 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in rate_options (list)
         _items = []
         if self.rate_options:
-            for _item_rate_options in self.rate_options:
-                if _item_rate_options:
-                    _items.append(_item_rate_options.to_dict())
+            for _item in self.rate_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['rateOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in rates (list)
         _items = []
         if self.rates:
-            for _item_rates in self.rates:
-                if _item_rates:
-                    _items.append(_item_rates.to_dict())
+            for _item in self.rates:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['rates'] = _items
         # override the default output from pydantic by calling `to_dict()` of repayment_frequency_type
         if self.repayment_frequency_type:
@@ -548,9 +548,9 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in repayment_frequency_type_options (list)
         _items = []
         if self.repayment_frequency_type_options:
-            for _item_repayment_frequency_type_options in self.repayment_frequency_type_options:
-                if _item_repayment_frequency_type_options:
-                    _items.append(_item_repayment_frequency_type_options.to_dict())
+            for _item in self.repayment_frequency_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['repaymentFrequencyTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of repayment_start_date_type
         if self.repayment_start_date_type:
@@ -558,44 +558,44 @@ class LoanProductData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in repayment_start_date_type_options (list)
         _items = []
         if self.repayment_start_date_type_options:
-            for _item_repayment_start_date_type_options in self.repayment_start_date_type_options:
-                if _item_repayment_start_date_type_options:
-                    _items.append(_item_repayment_start_date_type_options.to_dict())
+            for _item in self.repayment_start_date_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['repaymentStartDateTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in reschedule_strategy_type_options (list)
         _items = []
         if self.reschedule_strategy_type_options:
-            for _item_reschedule_strategy_type_options in self.reschedule_strategy_type_options:
-                if _item_reschedule_strategy_type_options:
-                    _items.append(_item_reschedule_strategy_type_options.to_dict())
+            for _item in self.reschedule_strategy_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['rescheduleStrategyTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in supported_interest_refund_types (list)
         _items = []
         if self.supported_interest_refund_types:
-            for _item_supported_interest_refund_types in self.supported_interest_refund_types:
-                if _item_supported_interest_refund_types:
-                    _items.append(_item_supported_interest_refund_types.to_dict())
+            for _item in self.supported_interest_refund_types:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['supportedInterestRefundTypes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in supported_interest_refund_types_options (list)
         _items = []
         if self.supported_interest_refund_types_options:
-            for _item_supported_interest_refund_types_options in self.supported_interest_refund_types_options:
-                if _item_supported_interest_refund_types_options:
-                    _items.append(_item_supported_interest_refund_types_options.to_dict())
+            for _item in self.supported_interest_refund_types_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['supportedInterestRefundTypesOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in transaction_processing_strategy_options (list)
         _items = []
         if self.transaction_processing_strategy_options:
-            for _item_transaction_processing_strategy_options in self.transaction_processing_strategy_options:
-                if _item_transaction_processing_strategy_options:
-                    _items.append(_item_transaction_processing_strategy_options.to_dict())
+            for _item in self.transaction_processing_strategy_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['transactionProcessingStrategyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in value_condition_type_options (list)
         _items = []
         if self.value_condition_type_options:
-            for _item_value_condition_type_options in self.value_condition_type_options:
-                if _item_value_condition_type_options:
-                    _items.append(_item_value_condition_type_options.to_dict())
+            for _item in self.value_condition_type_options:
+                if _item:
+                    _items.append(_item.to_dict())
             _dict['valueConditionTypeOptions'] = _items
         return _dict
 

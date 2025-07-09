@@ -26,12 +26,12 @@ json = "{}"
 # create an instance of ClientSearchData from a JSON string
 client_search_data_instance = ClientSearchData.from_json(json)
 # print the JSON string representation of the object
-print(ClientSearchData.to_json())
+print ClientSearchData.to_json()
 
 # convert the object into a dict
 client_search_data_dict = client_search_data_instance.to_dict()
 # create an instance of ClientSearchData from a dict
-client_search_data_from_dict = ClientSearchData.from_dict(client_search_data_dict)
+client_search_data_form_dict = client_search_data.from_dict(client_search_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

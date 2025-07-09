@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of ResponseData from a JSON string
 response_data_instance = ResponseData.from_json(json)
 # print the JSON string representation of the object
-print(ResponseData.to_json())
+print ResponseData.to_json()
 
 # convert the object into a dict
 response_data_dict = response_data_instance.to_dict()
 # create an instance of ResponseData from a dict
-response_data_from_dict = ResponseData.from_dict(response_data_dict)
+response_data_form_dict = response_data.from_dict(response_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
