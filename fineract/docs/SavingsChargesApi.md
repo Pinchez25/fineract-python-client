@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_savings_account_charge**
-> DeleteSavingsChargeResponse delete_savings_account_charge(savings_account_id, savings_account_charge_id)
+> DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse delete_savings_account_charge(savings_account_id, savings_account_charge_id)
 
 Delete a Savings account Charge
 
@@ -122,7 +122,7 @@ Note: Currently, A Savings account Charge may only be removed from Savings that 
 
 ```python
 import fineract_client
-from fineract_client.models.delete_savings_charge_response import DeleteSavingsChargeResponse
+from fineract_client.models.delete_savings_accounts_savings_account_id_charges_savings_account_charge_id_response import DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse
 from fineract_client.rest import ApiException
 from pprint import pprint
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteSavingsChargeResponse**](DeleteSavingsChargeResponse.md)
+[**DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse**](DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse.md)
 
 ### Authorization
 

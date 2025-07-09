@@ -131,7 +131,7 @@ docs/DeleteReportsResponse.md
 docs/DeleteResourceTypeResourceIdNotesNoteIdResponse.md
 docs/DeleteRolesRoleIdResponse.md
 docs/DeleteSavingsAccountsAccountIdResponse.md
-docs/DeleteSavingsChargeResponse.md
+docs/DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse.md
 docs/DeleteSavingsProductsProductIdResponse.md
 docs/DeleteSelfBeneficiariesTPTBeneficiaryIdResponse.md
 docs/DeleteTellersTellerIdCashiersCashierIdResponse.md
@@ -1744,7 +1744,7 @@ fineract_client/models/delete_reports_response.py
 fineract_client/models/delete_resource_type_resource_id_notes_note_id_response.py
 fineract_client/models/delete_roles_role_id_response.py
 fineract_client/models/delete_savings_accounts_account_id_response.py
-fineract_client/models/delete_savings_charge_response.py
+fineract_client/models/delete_savings_accounts_savings_account_id_charges_savings_account_charge_id_response.py
 fineract_client/models/delete_savings_products_product_id_response.py
 fineract_client/models/delete_self_beneficiaries_tpt_beneficiary_id_response.py
 fineract_client/models/delete_tellers_teller_id_cashiers_cashier_id_response.py
@@ -3009,5 +3009,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_delete_savings_charge_response.py
 tox.ini

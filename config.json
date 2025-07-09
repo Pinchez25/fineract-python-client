@@ -4,8 +4,7 @@
    "outputDir": "./fineract",
    "modelPackage": "models",
    "apiPackage": "apis",
-   "modelNameMappings": {
-     "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse": "DeleteSavingsChargeResponse"
+   "modelFilenameMapping": {
+      "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse": "DeleteSavingsChargeResponse"
    }
- }
- 
+}

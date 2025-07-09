@@ -1030,7 +1030,7 @@ Class | Method | HTTP request | Description
  - [DeleteResourceTypeResourceIdNotesNoteIdResponse](docs/DeleteResourceTypeResourceIdNotesNoteIdResponse.md)
  - [DeleteRolesRoleIdResponse](docs/DeleteRolesRoleIdResponse.md)
  - [DeleteSavingsAccountsAccountIdResponse](docs/DeleteSavingsAccountsAccountIdResponse.md)
- - [DeleteSavingsChargeResponse](docs/DeleteSavingsChargeResponse.md)
+ - [DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse](docs/DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse.md)
  - [DeleteSavingsProductsProductIdResponse](docs/DeleteSavingsProductsProductIdResponse.md)
  - [DeleteSelfBeneficiariesTPTBeneficiaryIdResponse](docs/DeleteSelfBeneficiariesTPTBeneficiaryIdResponse.md)
  - [DeleteTellersTellerIdCashiersCashierIdResponse](docs/DeleteTellersTellerIdCashiersCashierIdResponse.md)
