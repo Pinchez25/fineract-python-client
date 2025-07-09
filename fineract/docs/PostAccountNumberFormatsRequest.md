@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PostAccountNumberFormatsRequest from a JSON string
 post_account_number_formats_request_instance = PostAccountNumberFormatsRequest.from_json(json)
 # print the JSON string representation of the object
-print PostAccountNumberFormatsRequest.to_json()
+print(PostAccountNumberFormatsRequest.to_json())
 
 # convert the object into a dict
 post_account_number_formats_request_dict = post_account_number_formats_request_instance.to_dict()
 # create an instance of PostAccountNumberFormatsRequest from a dict
-post_account_number_formats_request_form_dict = post_account_number_formats_request.from_dict(post_account_number_formats_request_dict)
+post_account_number_formats_request_from_dict = PostAccountNumberFormatsRequest.from_dict(post_account_number_formats_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

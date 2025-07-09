@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_self_clients_charge_calculation_type import GetSelfClientsChargeCalculationType
 from fineract_client.models.get_self_clients_charge_time_type import GetSelfClientsChargeTimeType
@@ -50,11 +50,11 @@ class GetSelfClientsClientIdChargesChargeIdResponse(BaseModel):
     penalty: Optional[StrictBool] = None
     __properties: ClassVar[List[str]] = ["amount", "amountOutstanding", "amountPaid", "amountWaived", "amountWrittenOff", "chargeCalculationType", "chargeId", "chargeTimeType", "clientId", "currency", "dueDate", "id", "isActive", "isPaid", "isWaived", "name", "penalty"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

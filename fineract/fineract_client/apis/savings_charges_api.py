@@ -18,9 +18,9 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictInt, StrictStr
-from typing import Optional
+from typing import List, Optional
 from typing_extensions import Annotated
-from fineract_client.models.delete_savings_accounts_savings_account_id_charges_savings_account_charge_id_response import DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse
+from fineract_client.models.del_savings_charge_response import DelSavingsChargeResponse
 from fineract_client.models.get_savings_accounts_savings_account_id_charges_response import GetSavingsAccountsSavingsAccountIdChargesResponse
 from fineract_client.models.get_savings_accounts_savings_account_id_charges_savings_account_charge_id_response import GetSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse
 from fineract_client.models.get_savings_accounts_savings_account_id_charges_template_response import GetSavingsAccountsSavingsAccountIdChargesTemplateResponse
@@ -277,7 +277,9 @@ class SavingsChargesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -292,11 +294,12 @@ class SavingsChargesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -353,7 +356,7 @@ class SavingsChargesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse:
+    ) -> DelSavingsChargeResponse:
         """Delete a Savings account Charge
 
         Note: Currently, A Savings account Charge may only be removed from Savings that are not yet approved.
@@ -394,7 +397,7 @@ class SavingsChargesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse",
+            '200': "DelSavingsChargeResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -424,7 +427,7 @@ class SavingsChargesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse]:
+    ) -> ApiResponse[DelSavingsChargeResponse]:
         """Delete a Savings account Charge
 
         Note: Currently, A Savings account Charge may only be removed from Savings that are not yet approved.
@@ -465,7 +468,7 @@ class SavingsChargesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse",
+            '200': "DelSavingsChargeResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -536,7 +539,7 @@ class SavingsChargesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse",
+            '200': "DelSavingsChargeResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -564,7 +567,9 @@ class SavingsChargesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -579,11 +584,12 @@ class SavingsChargesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -864,7 +870,9 @@ class SavingsChargesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -885,11 +893,12 @@ class SavingsChargesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1157,7 +1166,9 @@ class SavingsChargesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1174,11 +1185,12 @@ class SavingsChargesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1433,7 +1445,9 @@ class SavingsChargesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1448,11 +1462,12 @@ class SavingsChargesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1694,7 +1709,9 @@ class SavingsChargesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1707,11 +1724,12 @@ class SavingsChargesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1979,7 +1997,9 @@ class SavingsChargesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1996,11 +2016,12 @@ class SavingsChargesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:

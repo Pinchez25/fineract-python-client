@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.charge_data import ChargeData
 from fineract_client.models.currency_data import CurrencyData
@@ -135,11 +135,11 @@ class SavingsAccountData(BaseModel):
     withdrawal_fee_type_options: Optional[List[EnumOptionData]] = Field(default=None, alias="withdrawalFeeTypeOptions")
     __properties: ClassVar[List[str]] = ["accountNo", "accrualBasedAccountingEnabledOnSavingsProduct", "activatedOnDate", "activationLocalDate", "allowOverdraft", "annualFee", "cashBasedAccountingEnabledOnSavingsProduct", "chargeOptions", "charges", "clientData", "clientId", "clientName", "currency", "datatables", "dateFormat", "daysToDormancy", "daysToEscheat", "daysToInactive", "depositType", "depositTypeId", "enforceMinRequiredBalance", "existingReversedTransactionIds", "existingTransactionIds", "externalId", "fieldOfficerId", "fieldOfficerName", "fieldOfficerOptions", "glAccountIdForInterestOnSavings", "glAccountIdForSavingsControl", "groupGeneralData", "groupId", "groupName", "id", "interestCalculationDaysInYearType", "interestCalculationDaysInYearTypeId", "interestCalculationDaysInYearTypeOptions", "interestCalculationType", "interestCalculationTypeId", "interestCalculationTypeOptions", "interestCompoundingPeriodType", "interestCompoundingPeriodTypeId", "interestCompoundingPeriodTypeOptions", "interestPostingPeriodType", "interestPostingPeriodTypeId", "interestPostingPeriodTypeOptions", "isDormancyTrackingActive", "lastActiveTransactionDate", "lastSavingsAccountTransaction", "lienAllowed", "locale", "lockedInUntilDate", "lockinPeriodFrequency", "lockinPeriodFrequencyType", "lockinPeriodFrequencyTypeId", "lockinPeriodFrequencyTypeOptions", "maxAllowedLienLimit", "minBalanceForInterestCalculation", "minOverdraftForInterestCalculation", "minRequiredBalance", "minRequiredOpeningBalance", "newSavingsAccountTransactionData", "nominalAnnualInterestRate", "nominalAnnualInterestRateOverdraft", "officeId", "onHoldFunds", "overdraftLimit", "productId", "productOptions", "reasonForBlock", "rowIndex", "savingsAccountSummaryData", "savingsAccountTransactionData", "savingsAccountTransactionSummaryWrapper", "savingsAccountTransactionsWithPivotConfig", "savingsAmountOnHold", "savingsHelper", "savingsProduct", "savingsProductData", "savingsProductId", "savingsProductName", "startInterestCalculationDate", "status", "subStatus", "submittedOnDate", "summary", "taxGroup", "timeline", "transactions", "updatedTransactions", "withHoldTax", "withdrawalFee", "withdrawalFeeForTransfers", "withdrawalFeeTypeOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -180,16 +180,16 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charge_options (list)
         _items = []
         if self.charge_options:
-            for _item in self.charge_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charge_options in self.charge_options:
+                if _item_charge_options:
+                    _items.append(_item_charge_options.to_dict())
             _dict['chargeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item in self.charges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charges in self.charges:
+                if _item_charges:
+                    _items.append(_item_charges.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of client_data
         if self.client_data:
@@ -200,9 +200,9 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in datatables (list)
         _items = []
         if self.datatables:
-            for _item in self.datatables:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_datatables in self.datatables:
+                if _item_datatables:
+                    _items.append(_item_datatables.to_dict())
             _dict['datatables'] = _items
         # override the default output from pydantic by calling `to_dict()` of deposit_type
         if self.deposit_type:
@@ -210,9 +210,9 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in field_officer_options (list)
         _items = []
         if self.field_officer_options:
-            for _item in self.field_officer_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_field_officer_options in self.field_officer_options:
+                if _item_field_officer_options:
+                    _items.append(_item_field_officer_options.to_dict())
             _dict['fieldOfficerOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of group_general_data
         if self.group_general_data:
@@ -223,9 +223,9 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_calculation_days_in_year_type_options (list)
         _items = []
         if self.interest_calculation_days_in_year_type_options:
-            for _item in self.interest_calculation_days_in_year_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_interest_calculation_days_in_year_type_options in self.interest_calculation_days_in_year_type_options:
+                if _item_interest_calculation_days_in_year_type_options:
+                    _items.append(_item_interest_calculation_days_in_year_type_options.to_dict())
             _dict['interestCalculationDaysInYearTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_calculation_type
         if self.interest_calculation_type:
@@ -233,9 +233,9 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_calculation_type_options (list)
         _items = []
         if self.interest_calculation_type_options:
-            for _item in self.interest_calculation_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_interest_calculation_type_options in self.interest_calculation_type_options:
+                if _item_interest_calculation_type_options:
+                    _items.append(_item_interest_calculation_type_options.to_dict())
             _dict['interestCalculationTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_compounding_period_type
         if self.interest_compounding_period_type:
@@ -243,9 +243,9 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_compounding_period_type_options (list)
         _items = []
         if self.interest_compounding_period_type_options:
-            for _item in self.interest_compounding_period_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_interest_compounding_period_type_options in self.interest_compounding_period_type_options:
+                if _item_interest_compounding_period_type_options:
+                    _items.append(_item_interest_compounding_period_type_options.to_dict())
             _dict['interestCompoundingPeriodTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_posting_period_type
         if self.interest_posting_period_type:
@@ -253,9 +253,9 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in interest_posting_period_type_options (list)
         _items = []
         if self.interest_posting_period_type_options:
-            for _item in self.interest_posting_period_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_interest_posting_period_type_options in self.interest_posting_period_type_options:
+                if _item_interest_posting_period_type_options:
+                    _items.append(_item_interest_posting_period_type_options.to_dict())
             _dict['interestPostingPeriodTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of last_savings_account_transaction
         if self.last_savings_account_transaction:
@@ -266,23 +266,23 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in lockin_period_frequency_type_options (list)
         _items = []
         if self.lockin_period_frequency_type_options:
-            for _item in self.lockin_period_frequency_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_lockin_period_frequency_type_options in self.lockin_period_frequency_type_options:
+                if _item_lockin_period_frequency_type_options:
+                    _items.append(_item_lockin_period_frequency_type_options.to_dict())
             _dict['lockinPeriodFrequencyTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in new_savings_account_transaction_data (list)
         _items = []
         if self.new_savings_account_transaction_data:
-            for _item in self.new_savings_account_transaction_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_new_savings_account_transaction_data in self.new_savings_account_transaction_data:
+                if _item_new_savings_account_transaction_data:
+                    _items.append(_item_new_savings_account_transaction_data.to_dict())
             _dict['newSavingsAccountTransactionData'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in product_options (list)
         _items = []
         if self.product_options:
-            for _item in self.product_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_product_options in self.product_options:
+                if _item_product_options:
+                    _items.append(_item_product_options.to_dict())
             _dict['productOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of savings_account_summary_data
         if self.savings_account_summary_data:
@@ -290,16 +290,16 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in savings_account_transaction_data (list)
         _items = []
         if self.savings_account_transaction_data:
-            for _item in self.savings_account_transaction_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_savings_account_transaction_data in self.savings_account_transaction_data:
+                if _item_savings_account_transaction_data:
+                    _items.append(_item_savings_account_transaction_data.to_dict())
             _dict['savingsAccountTransactionData'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in savings_account_transactions_with_pivot_config (list)
         _items = []
         if self.savings_account_transactions_with_pivot_config:
-            for _item in self.savings_account_transactions_with_pivot_config:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_savings_account_transactions_with_pivot_config in self.savings_account_transactions_with_pivot_config:
+                if _item_savings_account_transactions_with_pivot_config:
+                    _items.append(_item_savings_account_transactions_with_pivot_config.to_dict())
             _dict['savingsAccountTransactionsWithPivotConfig'] = _items
         # override the default output from pydantic by calling `to_dict()` of savings_product
         if self.savings_product:
@@ -325,16 +325,16 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in transactions (list)
         _items = []
         if self.transactions:
-            for _item in self.transactions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_transactions in self.transactions:
+                if _item_transactions:
+                    _items.append(_item_transactions.to_dict())
             _dict['transactions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in updated_transactions (list)
         _items = []
         if self.updated_transactions:
-            for _item in self.updated_transactions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_updated_transactions in self.updated_transactions:
+                if _item_updated_transactions:
+                    _items.append(_item_updated_transactions.to_dict())
             _dict['updatedTransactions'] = _items
         # override the default output from pydantic by calling `to_dict()` of withdrawal_fee
         if self.withdrawal_fee:
@@ -342,9 +342,9 @@ class SavingsAccountData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in withdrawal_fee_type_options (list)
         _items = []
         if self.withdrawal_fee_type_options:
-            for _item in self.withdrawal_fee_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_withdrawal_fee_type_options in self.withdrawal_fee_type_options:
+                if _item_withdrawal_fee_type_options:
+                    _items.append(_item_withdrawal_fee_type_options.to_dict())
             _dict['withdrawalFeeTypeOptions'] = _items
         return _dict
 

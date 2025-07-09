@@ -26,12 +26,12 @@ json = "{}"
 # create an instance of GetShareAccountsChargeOptions from a JSON string
 get_share_accounts_charge_options_instance = GetShareAccountsChargeOptions.from_json(json)
 # print the JSON string representation of the object
-print GetShareAccountsChargeOptions.to_json()
+print(GetShareAccountsChargeOptions.to_json())
 
 # convert the object into a dict
 get_share_accounts_charge_options_dict = get_share_accounts_charge_options_instance.to_dict()
 # create an instance of GetShareAccountsChargeOptions from a dict
-get_share_accounts_charge_options_form_dict = get_share_accounts_charge_options.from_dict(get_share_accounts_charge_options_dict)
+get_share_accounts_charge_options_from_dict = GetShareAccountsChargeOptions.from_dict(get_share_accounts_charge_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

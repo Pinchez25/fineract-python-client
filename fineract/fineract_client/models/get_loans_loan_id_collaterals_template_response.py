@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_collaterals_template_allowed_types import GetCollateralsTemplateAllowedTypes
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetLoansLoanIdCollateralsTemplateResponse(BaseModel):
     allowed_collateral_types: Optional[List[GetCollateralsTemplateAllowedTypes]] = Field(default=None, alias="allowedCollateralTypes")
     __properties: ClassVar[List[str]] = ["allowedCollateralTypes"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class GetLoansLoanIdCollateralsTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_collateral_types (list)
         _items = []
         if self.allowed_collateral_types:
-            for _item in self.allowed_collateral_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_allowed_collateral_types in self.allowed_collateral_types:
+                if _item_allowed_collateral_types:
+                    _items.append(_item_allowed_collateral_types.to_dict())
             _dict['allowedCollateralTypes'] = _items
         return _dict
 

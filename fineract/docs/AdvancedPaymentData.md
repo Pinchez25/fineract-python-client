@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of AdvancedPaymentData from a JSON string
 advanced_payment_data_instance = AdvancedPaymentData.from_json(json)
 # print the JSON string representation of the object
-print AdvancedPaymentData.to_json()
+print(AdvancedPaymentData.to_json())
 
 # convert the object into a dict
 advanced_payment_data_dict = advanced_payment_data_instance.to_dict()
 # create an instance of AdvancedPaymentData from a dict
-advanced_payment_data_form_dict = advanced_payment_data.from_dict(advanced_payment_data_dict)
+advanced_payment_data_from_dict = AdvancedPaymentData.from_dict(advanced_payment_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

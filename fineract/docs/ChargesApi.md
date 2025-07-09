@@ -190,7 +190,11 @@ Name | Type | Description  | Notes
 
 Retrieve Charges
 
-Returns the list of defined charges.  Example Requests:  charges
+Returns the list of defined charges.
+
+Example Requests:
+
+charges
 
 ### Example
 
@@ -272,7 +276,11 @@ This endpoint does not need any parameter.
 
 Retrieve a Charge
 
-Returns the details of a defined Charge.  Example Requests:  charges/1
+Returns the details of a defined Charge.
+
+Example Requests:
+
+charges/1
 
 ### Example
 
@@ -358,7 +366,14 @@ Name | Type | Description  | Notes
 
 Retrieve Charge Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  charges/template 
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed description Lists
+Example Request:
+
+charges/template
+
 
 ### Example
 

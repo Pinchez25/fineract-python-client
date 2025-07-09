@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_from_account_standing_instruction_swagger import GetFromAccountStandingInstructionSwagger
 from fineract_client.models.get_from_account_type_standing_instruction_swagger import GetFromAccountTypeStandingInstructionSwagger
@@ -65,11 +65,11 @@ class GetStandingInstructionsStandingInstructionIdResponse(BaseModel):
     valid_from: Optional[date] = Field(default=None, alias="validFrom")
     __properties: ClassVar[List[str]] = ["accountDetailId", "amount", "fromAccount", "fromAccountType", "fromClient", "fromOffice", "id", "instructionType", "name", "priority", "recurrenceFrequency", "recurrenceInterval", "recurrenceOnMonthDay", "recurrenceType", "status", "toAccount", "toAccountType", "toClient", "toOffice", "transferType", "validFrom"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **retrieve_xbrl_report**
 > str retrieve_xbrl_report(start_date=start_date, end_date=end_date, currency=currency)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):

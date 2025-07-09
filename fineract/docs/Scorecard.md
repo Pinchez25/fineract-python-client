@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of Scorecard from a JSON string
 scorecard_instance = Scorecard.from_json(json)
 # print the JSON string representation of the object
-print Scorecard.to_json()
+print(Scorecard.to_json())
 
 # convert the object into a dict
 scorecard_dict = scorecard_instance.to_dict()
 # create an instance of Scorecard from a dict
-scorecard_form_dict = scorecard.from_dict(scorecard_dict)
+scorecard_from_dict = Scorecard.from_dict(scorecard_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

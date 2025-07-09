@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_from_account_type_options_response_standing_instruction_swagger import GetFromAccountTypeOptionsResponseStandingInstructionSwagger
 from fineract_client.models.get_from_account_type_response_standing_instruction_swagger import GetFromAccountTypeResponseStandingInstructionSwagger
@@ -55,11 +55,11 @@ class GetStandingInstructionsTemplateResponse(BaseModel):
     transfer_type_options: Optional[List[GetTransferTypeOptionsResponseStandingInstructionSwagger]] = Field(default=None, alias="transferTypeOptions")
     __properties: ClassVar[List[str]] = ["fromAccountType", "fromAccountTypeOptions", "fromClientOptions", "fromOffice", "fromOfficeOptions", "instructionTypeOptions", "priorityOptions", "recurrenceFrequencyOptions", "recurrenceTypeOptions", "statusOptions", "toAccountTypeOptions", "toOfficeOptions", "transferTypeOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -100,16 +100,16 @@ class GetStandingInstructionsTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_account_type_options (list)
         _items = []
         if self.from_account_type_options:
-            for _item in self.from_account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_from_account_type_options in self.from_account_type_options:
+                if _item_from_account_type_options:
+                    _items.append(_item_from_account_type_options.to_dict())
             _dict['fromAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in from_client_options (list)
         _items = []
         if self.from_client_options:
-            for _item in self.from_client_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_from_client_options in self.from_client_options:
+                if _item_from_client_options:
+                    _items.append(_item_from_client_options.to_dict())
             _dict['fromClientOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of from_office
         if self.from_office:
@@ -117,65 +117,65 @@ class GetStandingInstructionsTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_office_options (list)
         _items = []
         if self.from_office_options:
-            for _item in self.from_office_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_from_office_options in self.from_office_options:
+                if _item_from_office_options:
+                    _items.append(_item_from_office_options.to_dict())
             _dict['fromOfficeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in instruction_type_options (list)
         _items = []
         if self.instruction_type_options:
-            for _item in self.instruction_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_instruction_type_options in self.instruction_type_options:
+                if _item_instruction_type_options:
+                    _items.append(_item_instruction_type_options.to_dict())
             _dict['instructionTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in priority_options (list)
         _items = []
         if self.priority_options:
-            for _item in self.priority_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_priority_options in self.priority_options:
+                if _item_priority_options:
+                    _items.append(_item_priority_options.to_dict())
             _dict['priorityOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in recurrence_frequency_options (list)
         _items = []
         if self.recurrence_frequency_options:
-            for _item in self.recurrence_frequency_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_recurrence_frequency_options in self.recurrence_frequency_options:
+                if _item_recurrence_frequency_options:
+                    _items.append(_item_recurrence_frequency_options.to_dict())
             _dict['recurrenceFrequencyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in recurrence_type_options (list)
         _items = []
         if self.recurrence_type_options:
-            for _item in self.recurrence_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_recurrence_type_options in self.recurrence_type_options:
+                if _item_recurrence_type_options:
+                    _items.append(_item_recurrence_type_options.to_dict())
             _dict['recurrenceTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in status_options (list)
         _items = []
         if self.status_options:
-            for _item in self.status_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_status_options in self.status_options:
+                if _item_status_options:
+                    _items.append(_item_status_options.to_dict())
             _dict['statusOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in to_account_type_options (list)
         _items = []
         if self.to_account_type_options:
-            for _item in self.to_account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_to_account_type_options in self.to_account_type_options:
+                if _item_to_account_type_options:
+                    _items.append(_item_to_account_type_options.to_dict())
             _dict['toAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in to_office_options (list)
         _items = []
         if self.to_office_options:
-            for _item in self.to_office_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_to_office_options in self.to_office_options:
+                if _item_to_office_options:
+                    _items.append(_item_to_office_options.to_dict())
             _dict['toOfficeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in transfer_type_options (list)
         _items = []
         if self.transfer_type_options:
-            for _item in self.transfer_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_transfer_type_options in self.transfer_type_options:
+                if _item_transfer_type_options:
+                    _items.append(_item_transfer_type_options.to_dict())
             _dict['transferTypeOptions'] = _items
         return _dict
 

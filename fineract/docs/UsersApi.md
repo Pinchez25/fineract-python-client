@@ -19,7 +19,15 @@ Method | HTTP request | Description
 
 Create a User
 
-Adds new application user.  Note: Password information is not required (or processed). Password details at present are auto-generated and then sent to the email account given (which is why it can take a few seconds to complete).  Mandatory Fields:  username, firstname, lastname, email, officeId, roles, sendPasswordToEmail  Optional Fields:  staffId,passwordNeverExpires,isSelfServiceUser,clients
+Adds new application user.
+
+Note: Password information is not required (or processed). Password details at present are auto-generated and then sent to the email account given (which is why it can take a few seconds to complete).
+
+Mandatory Fields: 
+username, firstname, lastname, email, officeId, roles, sendPasswordToEmail
+
+Optional Fields: 
+staffId,passwordNeverExpires,isSelfServiceUser,clients
 
 ### Example
 
@@ -190,8 +198,6 @@ Name | Type | Description  | Notes
 # **get_user_template**
 > get_user_template(office_id=office_id, staff_id=staff_id, date_format=date_format)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -273,8 +279,6 @@ void (empty response body)
 
 # **post_users_template**
 > str post_users_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
-
-
 
 ### Example
 
@@ -362,7 +366,12 @@ Name | Type | Description  | Notes
 
 Retrieve list of users
 
-Example Requests:  users   users?fields=id,username,email,officeName
+Example Requests:
+
+users
+
+
+users?fields=id,username,email,officeName
 
 ### Example
 
@@ -444,7 +453,15 @@ This endpoint does not need any parameter.
 
 Retrieve a User
 
-Example Requests:  users/1   users/1?template=true   users/1?fields=username,officeName
+Example Requests:
+
+users/1
+
+
+users/1?template=true
+
+
+users/1?fields=username,officeName
 
 ### Example
 
@@ -530,7 +547,13 @@ Name | Type | Description  | Notes
 
 Retrieve User Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  users/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed description Lists
+Example Request:
+
+users/template
 
 ### Example
 

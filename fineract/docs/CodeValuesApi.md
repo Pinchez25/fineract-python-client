@@ -191,7 +191,11 @@ Name | Type | Description  | Notes
 
 List Code Values
 
-Returns the list of Code Values for a given Code  Example Requests:  codes/1/codevalues
+Returns the list of Code Values for a given Code
+
+Example Requests:
+
+codes/1/codevalues
 
 ### Example
 
@@ -277,7 +281,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Code description
 
-Returns the details of a Code Value  Example Requests:  codes/1/codevalues/1
+Returns the details of a Code Value
+
+Example Requests:
+
+codes/1/codevalues/1
 
 ### Example
 

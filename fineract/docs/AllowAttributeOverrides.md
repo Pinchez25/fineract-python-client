@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of AllowAttributeOverrides from a JSON string
 allow_attribute_overrides_instance = AllowAttributeOverrides.from_json(json)
 # print the JSON string representation of the object
-print AllowAttributeOverrides.to_json()
+print(AllowAttributeOverrides.to_json())
 
 # convert the object into a dict
 allow_attribute_overrides_dict = allow_attribute_overrides_instance.to_dict()
 # create an instance of AllowAttributeOverrides from a dict
-allow_attribute_overrides_form_dict = allow_attribute_overrides.from_dict(allow_attribute_overrides_dict)
+allow_attribute_overrides_from_dict = AllowAttributeOverrides.from_dict(allow_attribute_overrides_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

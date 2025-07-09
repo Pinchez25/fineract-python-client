@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of LookupTableData from a JSON string
 lookup_table_data_instance = LookupTableData.from_json(json)
 # print the JSON string representation of the object
-print LookupTableData.to_json()
+print(LookupTableData.to_json())
 
 # convert the object into a dict
 lookup_table_data_dict = lookup_table_data_instance.to_dict()
 # create an instance of LookupTableData from a dict
-lookup_table_data_form_dict = lookup_table_data.from_dict(lookup_table_data_dict)
+lookup_table_data_from_dict = LookupTableData.from_dict(lookup_table_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -26,12 +26,12 @@ json = "{}"
 # create an instance of GetOfficesResponse from a JSON string
 get_offices_response_instance = GetOfficesResponse.from_json(json)
 # print the JSON string representation of the object
-print GetOfficesResponse.to_json()
+print(GetOfficesResponse.to_json())
 
 # convert the object into a dict
 get_offices_response_dict = get_offices_response_instance.to_dict()
 # create an instance of GetOfficesResponse from a dict
-get_offices_response_form_dict = get_offices_response.from_dict(get_offices_response_dict)
+get_offices_response_from_dict = GetOfficesResponse.from_dict(get_offices_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

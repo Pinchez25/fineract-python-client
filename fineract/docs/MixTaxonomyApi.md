@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **retrieve_all14**
 > str retrieve_all14()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):

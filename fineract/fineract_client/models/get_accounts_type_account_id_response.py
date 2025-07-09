@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_accounts_charges import GetAccountsCharges
 from fineract_client.models.get_accounts_currency import GetAccountsCurrency
@@ -57,11 +57,11 @@ class GetAccountsTypeAccountIdResponse(BaseModel):
     timeline: Optional[GetAccountsTimeline] = None
     __properties: ClassVar[List[str]] = ["accountNo", "allowDividendCalculationForInactiveClients", "charges", "clientId", "clientName", "currency", "currentMarketPrice", "dividends", "id", "lockPeriodTypeEnum", "lockinPeriod", "minimumActivePeriod", "minimumActivePeriodTypeEnum", "productId", "productName", "purchasedShares", "savingsAccountId", "savingsAccountNumber", "status", "summary", "timeline"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -99,9 +99,9 @@ class GetAccountsTypeAccountIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item in self.charges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charges in self.charges:
+                if _item_charges:
+                    _items.append(_item_charges.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -115,9 +115,9 @@ class GetAccountsTypeAccountIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in purchased_shares (list)
         _items = []
         if self.purchased_shares:
-            for _item in self.purchased_shares:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_purchased_shares in self.purchased_shares:
+                if _item_purchased_shares:
+                    _items.append(_item_purchased_shares.to_dict())
             _dict['purchasedShares'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

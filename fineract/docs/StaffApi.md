@@ -17,7 +17,13 @@ Method | HTTP request | Description
 
 Create a staff member
 
-Creates a staff member.  Mandatory Fields:  officeId, firstname, lastname  Optional Fields:  isLoanOfficer, isActive
+Creates a staff member.
+
+Mandatory Fields: 
+officeId, firstname, lastname
+
+Optional Fields: 
+isLoanOfficer, isActive
 
 ### Example
 
@@ -102,8 +108,6 @@ Name | Type | Description  | Notes
 # **get_template1**
 > get_template1(office_id=office_id, date_format=date_format)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -183,8 +187,6 @@ void (empty response body)
 
 # **post_template**
 > str post_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
-
-
 
 ### Example
 
@@ -272,7 +274,28 @@ Name | Type | Description  | Notes
 
 Retrieve Staff
 
-Returns the list of staff members.  Example Requests:  staff     Retrieve a Staff by status  Returns the details of a Staff based on status.  By default it Returns all the ACTIVE Staff.  If status=INACTIVE, then it returns all INACTIVE Staff.  and for status=ALL, it Returns both ACTIVE and INACTIVE Staff.  Example Requests:  staff?status=active
+Returns the list of staff members.
+
+Example Requests:
+
+staff
+
+
+
+
+Retrieve a Staff by status
+
+Returns the details of a Staff based on status.
+
+By default it Returns all the ACTIVE Staff.
+
+If status=INACTIVE, then it returns all INACTIVE Staff.
+
+and for status=ALL, it Returns both ACTIVE and INACTIVE Staff.
+
+Example Requests:
+
+staff?status=active
 
 ### Example
 
@@ -364,7 +387,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Staff Member
 
-Returns the details of a Staff Member.  Example Requests:  staff/1
+Returns the details of a Staff Member.
+
+Example Requests:
+
+staff/1
 
 ### Example
 

@@ -13,7 +13,13 @@ Method | HTTP request | Description
 
 Retrieve External Services Configuration
 
-Returns a external Service configurations based on the Service Name.  Service Names supported are S3 and SMTP.  Example Requests:  externalservice/SMTP
+Returns a external Service configurations based on the Service Name.
+
+Service Names supported are S3 and SMTP.
+
+Example Requests:
+
+externalservice/SMTP
 
 ### Example
 
@@ -99,7 +105,11 @@ Name | Type | Description  | Notes
 
 Update External Service
 
-Updates the external Service Configuration for a Service Name.  Example:   externalservice/S3
+Updates the external Service Configuration for a Service Name.
+
+Example: 
+
+externalservice/S3
 
 ### Example
 

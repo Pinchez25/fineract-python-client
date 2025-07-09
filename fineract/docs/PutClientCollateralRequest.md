@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PutClientCollateralRequest from a JSON string
 put_client_collateral_request_instance = PutClientCollateralRequest.from_json(json)
 # print the JSON string representation of the object
-print PutClientCollateralRequest.to_json()
+print(PutClientCollateralRequest.to_json())
 
 # convert the object into a dict
 put_client_collateral_request_dict = put_client_collateral_request_instance.to_dict()
 # create an instance of PutClientCollateralRequest from a dict
-put_client_collateral_request_form_dict = put_client_collateral_request.from_dict(put_client_collateral_request_dict)
+put_client_collateral_request_from_dict = PutClientCollateralRequest.from_dict(put_client_collateral_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

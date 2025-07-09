@@ -16,8 +16,6 @@ Method | HTTP request | Description
 # **create_meeting**
 > str create_meeting(entity_type, entity_id, body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -102,8 +100,6 @@ Name | Type | Description  | Notes
 # **delete_meeting**
 > str delete_meeting(entity_type, entity_id, meeting_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -187,8 +183,6 @@ Name | Type | Description  | Notes
 
 # **perform_meeting_commands**
 > str perform_meeting_commands(entity_type, entity_id, meeting_id, command=command, body=body)
-
-
 
 ### Example
 
@@ -278,8 +272,6 @@ Name | Type | Description  | Notes
 # **retrieve_meeting**
 > str retrieve_meeting(meeting_id, entity_type, entity_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -363,8 +355,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_meetings**
 > str retrieve_meetings(entity_type, entity_id, limit=limit)
-
-
 
 ### Example
 
@@ -450,8 +440,6 @@ Name | Type | Description  | Notes
 # **template11**
 > str template11(entity_type, entity_id, calendar_id=calendar_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -535,8 +523,6 @@ Name | Type | Description  | Notes
 
 # **update_meeting**
 > str update_meeting(entity_type, entity_id, meeting_id, body=body)
-
-
 
 ### Example
 

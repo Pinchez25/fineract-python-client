@@ -42,12 +42,12 @@ json = "{}"
 # create an instance of JournalEntryTransactionItem from a JSON string
 journal_entry_transaction_item_instance = JournalEntryTransactionItem.from_json(json)
 # print the JSON string representation of the object
-print JournalEntryTransactionItem.to_json()
+print(JournalEntryTransactionItem.to_json())
 
 # convert the object into a dict
 journal_entry_transaction_item_dict = journal_entry_transaction_item_instance.to_dict()
 # create an instance of JournalEntryTransactionItem from a dict
-journal_entry_transaction_item_form_dict = journal_entry_transaction_item.from_dict(journal_entry_transaction_item_dict)
+journal_entry_transaction_item_from_dict = JournalEntryTransactionItem.from_dict(journal_entry_transaction_item_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

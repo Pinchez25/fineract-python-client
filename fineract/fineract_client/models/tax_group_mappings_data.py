@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.tax_component_data import TaxComponentData
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class TaxGroupMappingsData(BaseModel):
     tax_component: Optional[TaxComponentData] = Field(default=None, alias="taxComponent")
     __properties: ClassVar[List[str]] = ["taxComponent"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **add_and_delete_disbursement_detail**
 > str add_and_delete_disbursement_detail(loan_id, body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -96,8 +94,6 @@ Name | Type | Description  | Notes
 # **retrive_detail**
 > str retrive_detail(loan_id, disbursement_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -179,8 +175,6 @@ Name | Type | Description  | Notes
 
 # **update_disbursement_date**
 > str update_disbursement_date(loan_id, disbursement_id, body=body)
-
-
 
 ### Example
 

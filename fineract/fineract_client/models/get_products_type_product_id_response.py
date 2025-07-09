@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_charges_currency import GetChargesCurrency
 from fineract_client.models.get_lock_period_type_enum import GetLockPeriodTypeEnum
@@ -64,11 +64,11 @@ class GetProductsTypeProductIdResponse(BaseModel):
     unit_price: Optional[StrictInt] = Field(default=None, alias="unitPrice")
     __properties: ClassVar[List[str]] = ["accountingMappingOptions", "accountingMappings", "accountingRule", "allowDividendCalculationForInactiveClients", "chargeOptions", "charges", "currency", "currencyOptions", "description", "id", "lockPeriodTypeEnum", "lockinPeriod", "lockinPeriodFrequencyTypeOptions", "marketPrice", "maximumShares", "minimumActivePeriod", "minimumActivePeriodForDividendsTypeEnum", "minimumActivePeriodFrequencyTypeOptions", "minimumShares", "name", "nominalShares", "shareCapital", "shortName", "totalShares", "totalSharesIssued", "unitPrice"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -115,16 +115,16 @@ class GetProductsTypeProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charge_options (list)
         _items = []
         if self.charge_options:
-            for _item in self.charge_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charge_options in self.charge_options:
+                if _item_charge_options:
+                    _items.append(_item_charge_options.to_dict())
             _dict['chargeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item in self.charges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charges in self.charges:
+                if _item_charges:
+                    _items.append(_item_charges.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -132,9 +132,9 @@ class GetProductsTypeProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in currency_options (list)
         _items = []
         if self.currency_options:
-            for _item in self.currency_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_currency_options in self.currency_options:
+                if _item_currency_options:
+                    _items.append(_item_currency_options.to_dict())
             _dict['currencyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of lock_period_type_enum
         if self.lock_period_type_enum:
@@ -142,16 +142,16 @@ class GetProductsTypeProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in lockin_period_frequency_type_options (list)
         _items = []
         if self.lockin_period_frequency_type_options:
-            for _item in self.lockin_period_frequency_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_lockin_period_frequency_type_options in self.lockin_period_frequency_type_options:
+                if _item_lockin_period_frequency_type_options:
+                    _items.append(_item_lockin_period_frequency_type_options.to_dict())
             _dict['lockinPeriodFrequencyTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in market_price (list)
         _items = []
         if self.market_price:
-            for _item in self.market_price:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_market_price in self.market_price:
+                if _item_market_price:
+                    _items.append(_item_market_price.to_dict())
             _dict['marketPrice'] = _items
         # override the default output from pydantic by calling `to_dict()` of minimum_active_period_for_dividends_type_enum
         if self.minimum_active_period_for_dividends_type_enum:
@@ -159,9 +159,9 @@ class GetProductsTypeProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in minimum_active_period_frequency_type_options (list)
         _items = []
         if self.minimum_active_period_frequency_type_options:
-            for _item in self.minimum_active_period_frequency_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_minimum_active_period_frequency_type_options in self.minimum_active_period_frequency_type_options:
+                if _item_minimum_active_period_frequency_type_options:
+                    _items.append(_item_minimum_active_period_frequency_type_options.to_dict())
             _dict['minimumActivePeriodFrequencyTypeOptions'] = _items
         return _dict
 

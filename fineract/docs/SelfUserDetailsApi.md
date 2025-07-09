@@ -12,7 +12,9 @@ Method | HTTP request | Description
 
 Fetch authenticated user details
 
-Checks the Authentication and returns the set roles and permissions allowed  For more info visit this link - https://fineract.apache.org/legacy-docs/apiLive.htm#selfoauth
+Checks the Authentication and returns the set roles and permissions allowed
+
+For more info visit this link - https://fineract.apache.org/legacy-docs/apiLive.htm#selfoauth
 
 ### Example
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_recurring_deposit_products_product_id_chart_slabs import GetRecurringDepositProductsProductIdChartSlabs
 from fineract_client.models.get_recurring_deposit_products_product_id_period_type import GetRecurringDepositProductsProductIdPeriodType
@@ -38,11 +38,11 @@ class GetRecurringDepositProductsProductIdActiveChart(BaseModel):
     savings_product_name: Optional[StrictStr] = Field(default=None, alias="savingsProductName")
     __properties: ClassVar[List[str]] = ["chartSlabs", "fromDate", "id", "periodTypes", "savingsProductId", "savingsProductName"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -80,16 +80,16 @@ class GetRecurringDepositProductsProductIdActiveChart(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in chart_slabs (list)
         _items = []
         if self.chart_slabs:
-            for _item in self.chart_slabs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_chart_slabs in self.chart_slabs:
+                if _item_chart_slabs:
+                    _items.append(_item_chart_slabs.to_dict())
             _dict['chartSlabs'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in period_types (list)
         _items = []
         if self.period_types:
-            for _item in self.period_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_period_types in self.period_types:
+                if _item_period_types:
+                    _items.append(_item_period_types.to_dict())
             _dict['periodTypes'] = _items
         return _dict
 

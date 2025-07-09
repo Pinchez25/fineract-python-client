@@ -35,12 +35,12 @@ json = "{}"
 # create an instance of InteropTransactionsData from a JSON string
 interop_transactions_data_instance = InteropTransactionsData.from_json(json)
 # print the JSON string representation of the object
-print InteropTransactionsData.to_json()
+print(InteropTransactionsData.to_json())
 
 # convert the object into a dict
 interop_transactions_data_dict = interop_transactions_data_instance.to_dict()
 # create an instance of InteropTransactionsData from a dict
-interop_transactions_data_form_dict = interop_transactions_data.from_dict(interop_transactions_data_dict)
+interop_transactions_data_from_dict = InteropTransactionsData.from_dict(interop_transactions_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

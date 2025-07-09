@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of PostProvisioningEntriesRequest from a JSON string
 post_provisioning_entries_request_instance = PostProvisioningEntriesRequest.from_json(json)
 # print the JSON string representation of the object
-print PostProvisioningEntriesRequest.to_json()
+print(PostProvisioningEntriesRequest.to_json())
 
 # convert the object into a dict
 post_provisioning_entries_request_dict = post_provisioning_entries_request_instance.to_dict()
 # create an instance of PostProvisioningEntriesRequest from a dict
-post_provisioning_entries_request_form_dict = post_provisioning_entries_request.from_dict(post_provisioning_entries_request_dict)
+post_provisioning_entries_request_from_dict = PostProvisioningEntriesRequest.from_dict(post_provisioning_entries_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

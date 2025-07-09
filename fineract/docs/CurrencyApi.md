@@ -13,7 +13,14 @@ Method | HTTP request | Description
 
 Retrieve Currency Configuration
 
-Returns the list of currencies permitted for use AND the list of currencies not selected (but available for selection).  Example Requests:  currencies   currencies?fields=selectedCurrencyOptions
+Returns the list of currencies permitted for use AND the list of currencies not selected (but available for selection).
+
+Example Requests:
+
+currencies
+
+
+currencies?fields=selectedCurrencyOptions
 
 ### Example
 

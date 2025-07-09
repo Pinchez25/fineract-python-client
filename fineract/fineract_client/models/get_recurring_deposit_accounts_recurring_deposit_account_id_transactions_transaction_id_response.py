@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_recurring_payment_detail_data import GetRecurringPaymentDetailData
 from fineract_client.models.get_recurring_transactions_currency import GetRecurringTransactionsCurrency
@@ -43,11 +43,11 @@ class GetRecurringDepositAccountsRecurringDepositAccountIdTransactionsTransactio
     transaction_type: Optional[GetRecurringTransactionsTransactionType] = Field(default=None, alias="transactionType")
     __properties: ClassVar[List[str]] = ["accountId", "accountNo", "amount", "currency", "date", "id", "paymentDetailData", "reversed", "runningBalance", "transactionType"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -38,12 +38,12 @@ json = "{}"
 # create an instance of AccountTransferData from a JSON string
 account_transfer_data_instance = AccountTransferData.from_json(json)
 # print the JSON string representation of the object
-print AccountTransferData.to_json()
+print(AccountTransferData.to_json())
 
 # convert the object into a dict
 account_transfer_data_dict = account_transfer_data_instance.to_dict()
 # create an instance of AccountTransferData from a dict
-account_transfer_data_form_dict = account_transfer_data.from_dict(account_transfer_data_dict)
+account_transfer_data_from_dict = AccountTransferData.from_dict(account_transfer_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

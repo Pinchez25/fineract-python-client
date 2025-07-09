@@ -17,7 +17,8 @@ Method | HTTP request | Description
 
 Create a new Financial Activity to Accounts Mapping
 
-Mandatory Fields financialActivityId, glAccountId
+Mandatory Fields
+financialActivityId, glAccountId
 
 ### Example
 
@@ -188,7 +189,9 @@ Name | Type | Description  | Notes
 
 Retrieve a Financial Activity to Account Mapping 
 
-Example Requests:  financialactivityaccounts/1
+Example Requests:
+
+financialactivityaccounts/1
 
 ### Example
 
@@ -274,7 +277,9 @@ Name | Type | Description  | Notes
 
 List Financial Activities to Accounts Mappings
 
-Example Requests:  financialactivityaccounts
+Example Requests:
+
+financialactivityaccounts
 
 ### Example
 
@@ -354,8 +359,6 @@ This endpoint does not need any parameter.
 # **retrieve_template**
 > str retrieve_template()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -434,7 +437,8 @@ This endpoint does not need any parameter.
 
 Update a Financial Activity to Account Mapping
 
-the API updates the Ledger account linked to a Financial Activity 
+the API updates the Ledger account linked to a Financial Activity
+
 
 ### Example
 

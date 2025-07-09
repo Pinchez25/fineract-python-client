@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_fixed_deposit_products_interest_calculation_days_in_year_type import GetFixedDepositProductsInterestCalculationDaysInYearType
 from fineract_client.models.get_fixed_deposit_products_interest_calculation_type import GetFixedDepositProductsInterestCalculationType
@@ -61,11 +61,11 @@ class GetFixedDepositProductsProductIdResponse(BaseModel):
     short_name: Optional[StrictStr] = Field(default=None, alias="shortName")
     __properties: ClassVar[List[str]] = ["accountingMappings", "activeChart", "currency", "description", "feeToIncomeAccountMappings", "id", "interestCalculationDaysInYearType", "interestCalculationType", "interestCompoundingPeriodType", "interestPostingPeriodType", "maxDepositTerm", "maxDepositTermType", "minDepositTerm", "minDepositTermType", "name", "penaltyToIncomeAccountMappings", "preClosurePenalApplicable", "preClosurePenalInterest", "preClosurePenalInterestOnType", "shortName"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -112,9 +112,9 @@ class GetFixedDepositProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in fee_to_income_account_mappings (list)
         _items = []
         if self.fee_to_income_account_mappings:
-            for _item in self.fee_to_income_account_mappings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_fee_to_income_account_mappings in self.fee_to_income_account_mappings:
+                if _item_fee_to_income_account_mappings:
+                    _items.append(_item_fee_to_income_account_mappings.to_dict())
             _dict['feeToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_calculation_days_in_year_type
         if self.interest_calculation_days_in_year_type:
@@ -137,9 +137,9 @@ class GetFixedDepositProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in penalty_to_income_account_mappings (list)
         _items = []
         if self.penalty_to_income_account_mappings:
-            for _item in self.penalty_to_income_account_mappings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_penalty_to_income_account_mappings in self.penalty_to_income_account_mappings:
+                if _item_penalty_to_income_account_mappings:
+                    _items.append(_item_penalty_to_income_account_mappings.to_dict())
             _dict['penaltyToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of pre_closure_penal_interest_on_type
         if self.pre_closure_penal_interest_on_type:

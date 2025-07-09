@@ -32,12 +32,12 @@ json = "{}"
 # create an instance of GetSavingsPageItems from a JSON string
 get_savings_page_items_instance = GetSavingsPageItems.from_json(json)
 # print the JSON string representation of the object
-print GetSavingsPageItems.to_json()
+print(GetSavingsPageItems.to_json())
 
 # convert the object into a dict
 get_savings_page_items_dict = get_savings_page_items_instance.to_dict()
 # create an instance of GetSavingsPageItems from a dict
-get_savings_page_items_form_dict = get_savings_page_items.from_dict(get_savings_page_items_dict)
+get_savings_page_items_from_dict = GetSavingsPageItems.from_dict(get_savings_page_items_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

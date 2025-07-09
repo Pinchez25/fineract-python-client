@@ -18,7 +18,13 @@ Method | HTTP request | Description
 
 Create a Savings account Charge
 
-Creates a Savings account Charge  Mandatory Fields for Savings account Charges: chargeId, amount  chargeId, amount, dueDate, dateFormat, locale  chargeId, amount, feeOnMonthDay, monthDayFormat, locale
+Creates a Savings account Charge
+
+Mandatory Fields for Savings account Charges: chargeId, amount
+
+chargeId, amount, dueDate, dateFormat, locale
+
+chargeId, amount, feeOnMonthDay, monthDayFormat, locale
 
 ### Example
 
@@ -103,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_savings_account_charge**
-> DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse delete_savings_account_charge(savings_account_id, savings_account_charge_id)
+> DelSavingsChargeResponse delete_savings_account_charge(savings_account_id, savings_account_charge_id)
 
 Delete a Savings account Charge
 
@@ -116,7 +122,7 @@ Note: Currently, A Savings account Charge may only be removed from Savings that 
 
 ```python
 import fineract_client
-from fineract_client.models.delete_savings_accounts_savings_account_id_charges_savings_account_charge_id_response import DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse
+from fineract_client.models.del_savings_charge_response import DelSavingsChargeResponse
 from fineract_client.rest import ApiException
 from pprint import pprint
 
@@ -171,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse**](DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse.md)
+[**DelSavingsChargeResponse**](DelSavingsChargeResponse.md)
 
 ### Authorization
 
@@ -195,7 +201,19 @@ Name | Type | Description  | Notes
 
 Pay a Savings account Charge | Waive off a Savings account Charge | Inactivate a Savings account Charge
 
-Pay a Savings account Charge:  An active charge will be paid when savings account is active and having sufficient balance.  Waive off a Savings account Charge:  Outstanding charge amount will be waived off.  Inactivate a Savings account Charge:  A charge will be allowed to inactivate when savings account is active and not having any dues as of today. If charge is overpaid, corresponding charge payment transactions will be reversed.  Showing request/response for 'Pay a Savings account Charge'
+Pay a Savings account Charge:
+
+An active charge will be paid when savings account is active and having sufficient balance.
+
+Waive off a Savings account Charge:
+
+Outstanding charge amount will be waived off.
+
+Inactivate a Savings account Charge:
+
+A charge will be allowed to inactivate when savings account is active and not having any dues as of today. If charge is overpaid, corresponding charge payment transactions will be reversed.
+
+Showing request/response for 'Pay a Savings account Charge'
 
 ### Example
 
@@ -288,7 +306,19 @@ Name | Type | Description  | Notes
 
 List Savings Charges
 
-Lists Savings Charges  Example Requests:  savingsaccounts/1/charges  savingsaccounts/1/charges?chargeStatus=all  savingsaccounts/1/charges?chargeStatus=inactive  savingsaccounts/1/charges?chargeStatus=active  savingsaccounts/1/charges?fields=name,amountOrPercentage
+Lists Savings Charges
+
+Example Requests:
+
+savingsaccounts/1/charges
+
+savingsaccounts/1/charges?chargeStatus=all
+
+savingsaccounts/1/charges?chargeStatus=inactive
+
+savingsaccounts/1/charges?chargeStatus=active
+
+savingsaccounts/1/charges?fields=name,amountOrPercentage
 
 ### Example
 
@@ -376,7 +406,14 @@ Name | Type | Description  | Notes
 
 Retrieve a Savings account Charge
 
-Retrieves a Savings account Charge  Example Requests:  /savingsaccounts/1/charges/5   /savingsaccounts/1/charges/5?fields=name,amountOrPercentage
+Retrieves a Savings account Charge
+
+Example Requests:
+
+/savingsaccounts/1/charges/5
+
+
+/savingsaccounts/1/charges/5?fields=name,amountOrPercentage
 
 ### Example
 
@@ -464,7 +501,13 @@ Name | Type | Description  | Notes
 
 Retrieve Savings Charges Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  savingsaccounts/1/charges/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed description Lists
+Example Request:
+
+savingsaccounts/1/charges/template
 
 ### Example
 

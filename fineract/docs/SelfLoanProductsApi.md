@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **retrieve_all_loan_products1**
 > str retrieve_all_loan_products1(client_id=client_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -92,8 +90,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_loan_product_details2**
 > str retrieve_loan_product_details2(product_id, client_id=client_id)
-
-
 
 ### Example
 

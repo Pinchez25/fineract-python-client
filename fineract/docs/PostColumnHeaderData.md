@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of PostColumnHeaderData from a JSON string
 post_column_header_data_instance = PostColumnHeaderData.from_json(json)
 # print the JSON string representation of the object
-print PostColumnHeaderData.to_json()
+print(PostColumnHeaderData.to_json())
 
 # convert the object into a dict
 post_column_header_data_dict = post_column_header_data_instance.to_dict()
 # create an instance of PostColumnHeaderData from a dict
-post_column_header_data_form_dict = post_column_header_data.from_dict(post_column_header_data_dict)
+post_column_header_data_from_dict = PostColumnHeaderData.from_dict(post_column_header_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

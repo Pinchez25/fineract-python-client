@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.put_loans_loan_id_changes import PutLoansLoanIdChanges
 from fineract_client.models.put_loans_loan_id_collateral import PutLoansLoanIdCollateral
@@ -72,11 +72,11 @@ class PutLoansLoanIdRequest(BaseModel):
     transaction_processing_strategy_code: Optional[StrictStr] = Field(default=None, alias="transactionProcessingStrategyCode")
     __properties: ClassVar[List[str]] = ["amortizationType", "charges", "clientId", "collateral", "createStandingInstructionAtDisbursement", "dateFormat", "disbursedAmountPercentageForDownPayment", "disbursementData", "enableAutoRepaymentForDownPayment", "enableDownPayment", "enableInstallmentLevelDelinquency", "expectedDisbursementDate", "fixedLength", "fixedPrincipalPercentagePerInstallment", "fraud", "graceOnArrearsAgeing", "interestCalculationPeriodType", "interestChargedFromDate", "interestRatePerPeriod", "interestType", "isEqualAmortization", "isTopup", "linkAccountId", "loanIdToClose", "loanScheduleProcessingType", "loanTermFrequency", "loanTermFrequencyType", "loanType", "locale", "maxOutstandingLoanBalance", "numberOfRepayments", "principal", "productId", "repaymentEvery", "repaymentFrequencyDayOfWeekType", "repaymentFrequencyNthDayType", "repaymentFrequencyType", "repaymentsStartingFromDate", "submittedOnDate", "transactionProcessingStrategyCode"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -114,23 +114,23 @@ class PutLoansLoanIdRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item in self.charges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charges in self.charges:
+                if _item_charges:
+                    _items.append(_item_charges.to_dict())
             _dict['charges'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in collateral (list)
         _items = []
         if self.collateral:
-            for _item in self.collateral:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_collateral in self.collateral:
+                if _item_collateral:
+                    _items.append(_item_collateral.to_dict())
             _dict['collateral'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in disbursement_data (list)
         _items = []
         if self.disbursement_data:
-            for _item in self.disbursement_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_disbursement_data in self.disbursement_data:
+                if _item_disbursement_data:
+                    _items.append(_item_disbursement_data.to_dict())
             _dict['disbursementData'] = _items
         return _dict
 

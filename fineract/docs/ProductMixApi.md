@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **create_product_mix**
 > str create_product_mix(product_id, body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -97,8 +95,6 @@ Name | Type | Description  | Notes
 # **delete_product_mix**
 > str delete_product_mix(product_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -179,8 +175,6 @@ Name | Type | Description  | Notes
 # **retrieve_template12**
 > str retrieve_template12(product_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -260,8 +254,6 @@ Name | Type | Description  | Notes
 
 # **update_product_mix**
 > str update_product_mix(product_id, body=body)
-
-
 
 ### Example
 

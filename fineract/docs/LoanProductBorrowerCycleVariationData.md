@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of LoanProductBorrowerCycleVariationData from a JSON string
 loan_product_borrower_cycle_variation_data_instance = LoanProductBorrowerCycleVariationData.from_json(json)
 # print the JSON string representation of the object
-print LoanProductBorrowerCycleVariationData.to_json()
+print(LoanProductBorrowerCycleVariationData.to_json())
 
 # convert the object into a dict
 loan_product_borrower_cycle_variation_data_dict = loan_product_borrower_cycle_variation_data_instance.to_dict()
 # create an instance of LoanProductBorrowerCycleVariationData from a dict
-loan_product_borrower_cycle_variation_data_form_dict = loan_product_borrower_cycle_variation_data.from_dict(loan_product_borrower_cycle_variation_data_dict)
+loan_product_borrower_cycle_variation_data_from_dict = LoanProductBorrowerCycleVariationData.from_dict(loan_product_borrower_cycle_variation_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_account_options import GetAccountOptions
 from fineract_client.models.get_from_account_options import GetFromAccountOptions
@@ -34,11 +34,11 @@ class GetAccountTransferTemplateResponse(BaseModel):
     to_account_type_options: Optional[List[GetFromAccountOptions]] = Field(default=None, alias="toAccountTypeOptions")
     __properties: ClassVar[List[str]] = ["accountTypeOptions", "fromAccountTypeOptions", "toAccountTypeOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -76,23 +76,23 @@ class GetAccountTransferTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in account_type_options (list)
         _items = []
         if self.account_type_options:
-            for _item in self.account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_account_type_options in self.account_type_options:
+                if _item_account_type_options:
+                    _items.append(_item_account_type_options.to_dict())
             _dict['accountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in from_account_type_options (list)
         _items = []
         if self.from_account_type_options:
-            for _item in self.from_account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_from_account_type_options in self.from_account_type_options:
+                if _item_from_account_type_options:
+                    _items.append(_item_from_account_type_options.to_dict())
             _dict['fromAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in to_account_type_options (list)
         _items = []
         if self.to_account_type_options:
-            for _item in self.to_account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_to_account_type_options in self.to_account_type_options:
+                if _item_to_account_type_options:
+                    _items.append(_item_to_account_type_options.to_dict())
             _dict['toAccountTypeOptions'] = _items
         return _dict
 

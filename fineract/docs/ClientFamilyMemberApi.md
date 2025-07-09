@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **add_client_family_members**
 > str add_client_family_members(client_id, body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 
 # **delete_client_family_members**
 > str delete_client_family_members(family_member_id, client_id, body=body)
-
-
 
 ### Example
 
@@ -185,8 +181,6 @@ Name | Type | Description  | Notes
 # **get_family_member**
 > str get_family_member(family_member_id, client_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -269,8 +263,6 @@ Name | Type | Description  | Notes
 # **get_family_members**
 > str get_family_members(client_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -351,8 +343,6 @@ Name | Type | Description  | Notes
 # **get_template2**
 > str get_template2(client_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -432,8 +422,6 @@ Name | Type | Description  | Notes
 
 # **update_client_family_members**
 > str update_client_family_members(family_member_id, client_id, body=body)
-
-
 
 ### Example
 

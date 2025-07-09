@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of StaffData from a JSON string
 staff_data_instance = StaffData.from_json(json)
 # print the JSON string representation of the object
-print StaffData.to_json()
+print(StaffData.to_json())
 
 # convert the object into a dict
 staff_data_dict = staff_data_instance.to_dict()
 # create an instance of StaffData from a dict
-staff_data_form_dict = staff_data.from_dict(staff_data_dict)
+staff_data_from_dict = StaffData.from_dict(staff_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

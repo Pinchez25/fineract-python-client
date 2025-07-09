@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetAccountTransfersPageItemsToAccountType from a JSON string
 get_account_transfers_page_items_to_account_type_instance = GetAccountTransfersPageItemsToAccountType.from_json(json)
 # print the JSON string representation of the object
-print GetAccountTransfersPageItemsToAccountType.to_json()
+print(GetAccountTransfersPageItemsToAccountType.to_json())
 
 # convert the object into a dict
 get_account_transfers_page_items_to_account_type_dict = get_account_transfers_page_items_to_account_type_instance.to_dict()
 # create an instance of GetAccountTransfersPageItemsToAccountType from a dict
-get_account_transfers_page_items_to_account_type_form_dict = get_account_transfers_page_items_to_account_type.from_dict(get_account_transfers_page_items_to_account_type_dict)
+get_account_transfers_page_items_to_account_type_from_dict = GetAccountTransfersPageItemsToAccountType.from_dict(get_account_transfers_page_items_to_account_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

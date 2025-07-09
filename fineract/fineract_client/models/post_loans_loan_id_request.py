@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.post_loans_loan_id_disbursement_data import PostLoansLoanIdDisbursementData
 from typing import Optional, Set
@@ -47,11 +47,11 @@ class PostLoansLoanIdRequest(BaseModel):
     withdrawn_on_date: Optional[StrictStr] = Field(default=None, alias="withdrawnOnDate")
     __properties: ClassVar[List[str]] = ["actualDisbursementDate", "approvedLoanAmount", "approvedOnDate", "assignmentDate", "dateFormat", "disbursementData", "expectedDisbursementDate", "externalId", "fromLoanOfficerId", "locale", "note", "paymentTypeId", "rejectedOnDate", "toLoanOfficerId", "transactionAmount", "unassignedDate", "withdrawnOnDate"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -89,9 +89,9 @@ class PostLoansLoanIdRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in disbursement_data (list)
         _items = []
         if self.disbursement_data:
-            for _item in self.disbursement_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_disbursement_data in self.disbursement_data:
+                if _item_disbursement_data:
+                    _items.append(_item_disbursement_data.to_dict())
             _dict['disbursementData'] = _items
         return _dict
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.advanced_query_data import AdvancedQueryData
 from fineract_client.models.table_query_data import TableQueryData
@@ -33,11 +33,11 @@ class AdvancedQueryRequest(BaseModel):
     datatable_queries: Optional[List[TableQueryData]] = Field(default=None, alias="datatableQueries")
     __properties: ClassVar[List[str]] = ["baseQuery", "datatableQueries"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -78,9 +78,9 @@ class AdvancedQueryRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in datatable_queries (list)
         _items = []
         if self.datatable_queries:
-            for _item in self.datatable_queries:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_datatable_queries in self.datatable_queries:
+                if _item_datatable_queries:
+                    _items.append(_item_datatable_queries.to_dict())
             _dict['datatableQueries'] = _items
         return _dict
 

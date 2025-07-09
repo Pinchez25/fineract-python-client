@@ -29,12 +29,12 @@ json = "{}"
 # create an instance of SavingsAccountStatusEnumData from a JSON string
 savings_account_status_enum_data_instance = SavingsAccountStatusEnumData.from_json(json)
 # print the JSON string representation of the object
-print SavingsAccountStatusEnumData.to_json()
+print(SavingsAccountStatusEnumData.to_json())
 
 # convert the object into a dict
 savings_account_status_enum_data_dict = savings_account_status_enum_data_instance.to_dict()
 # create an instance of SavingsAccountStatusEnumData from a dict
-savings_account_status_enum_data_form_dict = savings_account_status_enum_data.from_dict(savings_account_status_enum_data_dict)
+savings_account_status_enum_data_from_dict = SavingsAccountStatusEnumData.from_dict(savings_account_status_enum_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -12,7 +12,19 @@ Method | HTTP request | Description
 
 Calculate loan repayment schedule based on Loan term variations | Updates loan repayment schedule based on Loan term variations | Updates loan repayment schedule by removing Loan term variations
 
-Calculate loan repayment schedule based on Loan term variations:  Mandatory Fields: exceptions,locale,dateFormat  Updates loan repayment schedule based on Loan term variations:  Mandatory Fields: exceptions,locale,dateFormat  Updates loan repayment schedule by removing Loan term variations:  It updates the loan repayment schedule by removing Loan term variations  Showing request/response for 'Updates loan repayment schedule by removing Loan term variations'
+Calculate loan repayment schedule based on Loan term variations:
+
+Mandatory Fields: exceptions,locale,dateFormat
+
+Updates loan repayment schedule based on Loan term variations:
+
+Mandatory Fields: exceptions,locale,dateFormat
+
+Updates loan repayment schedule by removing Loan term variations:
+
+It updates the loan repayment schedule by removing Loan term variations
+
+Showing request/response for 'Updates loan repayment schedule by removing Loan term variations'
 
 ### Example
 

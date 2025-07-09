@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of GetPocketSavingAccounts from a JSON string
 get_pocket_saving_accounts_instance = GetPocketSavingAccounts.from_json(json)
 # print the JSON string representation of the object
-print GetPocketSavingAccounts.to_json()
+print(GetPocketSavingAccounts.to_json())
 
 # convert the object into a dict
 get_pocket_saving_accounts_dict = get_pocket_saving_accounts_instance.to_dict()
 # create an instance of GetPocketSavingAccounts from a dict
-get_pocket_saving_accounts_form_dict = get_pocket_saving_accounts.from_dict(get_pocket_saving_accounts_dict)
+get_pocket_saving_accounts_from_dict = GetPocketSavingAccounts.from_dict(get_pocket_saving_accounts_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

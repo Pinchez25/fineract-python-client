@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.post_accounts_charges import PostAccountsCharges
 from typing import Optional, Set
@@ -45,11 +45,11 @@ class PostAccountsTypeRequest(BaseModel):
     submitted_date: Optional[StrictStr] = Field(default=None, alias="submittedDate")
     __properties: ClassVar[List[str]] = ["allowDividendCalculationForInactiveClients", "applicationDate", "charges", "clientId", "dateFormat", "externalId", "locale", "lockinPeriodFrequency", "lockinPeriodFrequencyType", "minimumActivePeriod", "minimumActivePeriodFrequencyType", "productId", "requestedShares", "savingsAccountId", "submittedDate"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -87,9 +87,9 @@ class PostAccountsTypeRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charges (list)
         _items = []
         if self.charges:
-            for _item in self.charges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charges in self.charges:
+                if _item_charges:
+                    _items.append(_item_charges.to_dict())
             _dict['charges'] = _items
         return _dict
 

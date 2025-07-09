@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of RetrieveOneResponse from a JSON string
 retrieve_one_response_instance = RetrieveOneResponse.from_json(json)
 # print the JSON string representation of the object
-print RetrieveOneResponse.to_json()
+print(RetrieveOneResponse.to_json())
 
 # convert the object into a dict
 retrieve_one_response_dict = retrieve_one_response_instance.to_dict()
 # create an instance of RetrieveOneResponse from a dict
-retrieve_one_response_form_dict = retrieve_one_response.from_dict(retrieve_one_response_dict)
+retrieve_one_response_from_dict = RetrieveOneResponse.from_dict(retrieve_one_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

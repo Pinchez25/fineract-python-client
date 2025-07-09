@@ -40,12 +40,12 @@ json = "{}"
 # create an instance of SavingsAccountApplicationTimelineData from a JSON string
 savings_account_application_timeline_data_instance = SavingsAccountApplicationTimelineData.from_json(json)
 # print the JSON string representation of the object
-print SavingsAccountApplicationTimelineData.to_json()
+print(SavingsAccountApplicationTimelineData.to_json())
 
 # convert the object into a dict
 savings_account_application_timeline_data_dict = savings_account_application_timeline_data_instance.to_dict()
 # create an instance of SavingsAccountApplicationTimelineData from a dict
-savings_account_application_timeline_data_form_dict = savings_account_application_timeline_data.from_dict(savings_account_application_timeline_data_dict)
+savings_account_application_timeline_data_from_dict = SavingsAccountApplicationTimelineData.from_dict(savings_account_application_timeline_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

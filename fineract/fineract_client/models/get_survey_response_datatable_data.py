@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.resultset_column_header_data import ResultsetColumnHeaderData
 from typing import Optional, Set
@@ -33,11 +33,11 @@ class GetSurveyResponseDatatableData(BaseModel):
     registered_table_name: Optional[StrictStr] = Field(default=None, alias="registeredTableName")
     __properties: ClassVar[List[str]] = ["applicationTableName", "columnHeaderData", "registeredTableName"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -75,9 +75,9 @@ class GetSurveyResponseDatatableData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in column_header_data (list)
         _items = []
         if self.column_header_data:
-            for _item in self.column_header_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_column_header_data in self.column_header_data:
+                if _item_column_header_data:
+                    _items.append(_item_column_header_data.to_dict())
             _dict['columnHeaderData'] = _items
         return _dict
 

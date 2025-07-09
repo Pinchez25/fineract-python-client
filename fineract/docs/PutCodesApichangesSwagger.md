@@ -17,12 +17,12 @@ json = "{}"
 # create an instance of PutCodesApichangesSwagger from a JSON string
 put_codes_apichanges_swagger_instance = PutCodesApichangesSwagger.from_json(json)
 # print the JSON string representation of the object
-print PutCodesApichangesSwagger.to_json()
+print(PutCodesApichangesSwagger.to_json())
 
 # convert the object into a dict
 put_codes_apichanges_swagger_dict = put_codes_apichanges_swagger_instance.to_dict()
 # create an instance of PutCodesApichangesSwagger from a dict
-put_codes_apichanges_swagger_form_dict = put_codes_apichanges_swagger.from_dict(put_codes_apichanges_swagger_dict)
+put_codes_apichanges_swagger_from_dict = PutCodesApichangesSwagger.from_dict(put_codes_apichanges_swagger_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

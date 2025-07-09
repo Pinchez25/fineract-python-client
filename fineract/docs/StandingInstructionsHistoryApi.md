@@ -12,7 +12,15 @@ Method | HTTP request | Description
 
 Standing Instructions Logged History
 
-The list capability of history can support pagination and sorting   Example Requests :  standinginstructionrunhistory  standinginstructionrunhistory?orderBy=name&sortOrder=DESC  standinginstructionrunhistory?offset=10&limit=50
+The list capability of history can support pagination and sorting 
+
+Example Requests :
+
+standinginstructionrunhistory
+
+standinginstructionrunhistory?orderBy=name&sortOrder=DESC
+
+standinginstructionrunhistory?offset=10&limit=50
 
 ### Example
 

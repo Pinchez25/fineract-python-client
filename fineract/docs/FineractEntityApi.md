@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **create_map**
 > str create_map(rel_id, body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -99,8 +97,6 @@ Name | Type | Description  | Notes
 # **delete4**
 > str delete4(map_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -180,8 +176,6 @@ Name | Type | Description  | Notes
 
 # **get_entity_to_entity_mappings**
 > str get_entity_to_entity_mappings(map_id, from_id, to_id)
-
-
 
 ### Example
 
@@ -267,8 +261,6 @@ Name | Type | Description  | Notes
 # **retrieve_all7**
 > str retrieve_all7()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -344,8 +336,6 @@ This endpoint does not need any parameter.
 
 # **retrieve_one4**
 > str retrieve_one4(map_id)
-
-
 
 ### Example
 
@@ -426,8 +416,6 @@ Name | Type | Description  | Notes
 
 # **update_map**
 > str update_map(map_id, body=body)
-
-
 
 ### Example
 

@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of PutRecurringDepositProductsRequest from a JSON string
 put_recurring_deposit_products_request_instance = PutRecurringDepositProductsRequest.from_json(json)
 # print the JSON string representation of the object
-print PutRecurringDepositProductsRequest.to_json()
+print(PutRecurringDepositProductsRequest.to_json())
 
 # convert the object into a dict
 put_recurring_deposit_products_request_dict = put_recurring_deposit_products_request_instance.to_dict()
 # create an instance of PutRecurringDepositProductsRequest from a dict
-put_recurring_deposit_products_request_form_dict = put_recurring_deposit_products_request.from_dict(put_recurring_deposit_products_request_dict)
+put_recurring_deposit_products_request_from_dict = PutRecurringDepositProductsRequest.from_dict(put_recurring_deposit_products_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetClientStatus from a JSON string
 get_client_status_instance = GetClientStatus.from_json(json)
 # print the JSON string representation of the object
-print GetClientStatus.to_json()
+print(GetClientStatus.to_json())
 
 # convert the object into a dict
 get_client_status_dict = get_client_status_instance.to_dict()
 # create an instance of GetClientStatus from a dict
-get_client_status_form_dict = get_client_status.from_dict(get_client_status_dict)
+get_client_status_from_dict = GetClientStatus.from_dict(get_client_status_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

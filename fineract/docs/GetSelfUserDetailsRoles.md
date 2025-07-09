@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetSelfUserDetailsRoles from a JSON string
 get_self_user_details_roles_instance = GetSelfUserDetailsRoles.from_json(json)
 # print the JSON string representation of the object
-print GetSelfUserDetailsRoles.to_json()
+print(GetSelfUserDetailsRoles.to_json())
 
 # convert the object into a dict
 get_self_user_details_roles_dict = get_self_user_details_roles_instance.to_dict()
 # create an instance of GetSelfUserDetailsRoles from a dict
-get_self_user_details_roles_form_dict = get_self_user_details_roles.from_dict(get_self_user_details_roles_dict)
+get_self_user_details_roles_from_dict = GetSelfUserDetailsRoles.from_dict(get_self_user_details_roles_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date, datetime
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_data import EnumOptionData
 from fineract_client.models.local_time import LocalTime
@@ -75,11 +75,11 @@ class CalendarData(BaseModel):
     type_id: Optional[StrictStr] = Field(default=None, alias="typeId")
     __properties: ClassVar[List[str]] = ["calendarInstanceId", "calendarTypeOptions", "centerId", "createdByUserId", "createdByUsername", "createdDate", "dateFormat", "description", "duration", "endDate", "entityId", "entityType", "entityTypeOptions", "firstReminder", "frequency", "frequencyNthDayTypeOptions", "frequencyOptions", "humanReadable", "id", "interval", "lastUpdatedByUserId", "lastUpdatedByUsername", "lastUpdatedDate", "locale", "location", "meetingTime", "nextTenRecurringDates", "recentEligibleMeetingDate", "recurrence", "recurringDates", "remindBy", "remindByOptions", "repeating", "repeatsOnDay", "repeatsOnDayOfMonth", "repeatsOnDayOptions", "repeatsOnNthDayOfMonth", "rowIndex", "secondReminder", "startDate", "title", "type", "typeId"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -117,9 +117,9 @@ class CalendarData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in calendar_type_options (list)
         _items = []
         if self.calendar_type_options:
-            for _item in self.calendar_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_calendar_type_options in self.calendar_type_options:
+                if _item_calendar_type_options:
+                    _items.append(_item_calendar_type_options.to_dict())
             _dict['calendarTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of entity_type
         if self.entity_type:
@@ -127,9 +127,9 @@ class CalendarData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in entity_type_options (list)
         _items = []
         if self.entity_type_options:
-            for _item in self.entity_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_entity_type_options in self.entity_type_options:
+                if _item_entity_type_options:
+                    _items.append(_item_entity_type_options.to_dict())
             _dict['entityTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of frequency
         if self.frequency:
@@ -137,16 +137,16 @@ class CalendarData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in frequency_nth_day_type_options (list)
         _items = []
         if self.frequency_nth_day_type_options:
-            for _item in self.frequency_nth_day_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_frequency_nth_day_type_options in self.frequency_nth_day_type_options:
+                if _item_frequency_nth_day_type_options:
+                    _items.append(_item_frequency_nth_day_type_options.to_dict())
             _dict['frequencyNthDayTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in frequency_options (list)
         _items = []
         if self.frequency_options:
-            for _item in self.frequency_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_frequency_options in self.frequency_options:
+                if _item_frequency_options:
+                    _items.append(_item_frequency_options.to_dict())
             _dict['frequencyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of meeting_time
         if self.meeting_time:
@@ -157,9 +157,9 @@ class CalendarData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in remind_by_options (list)
         _items = []
         if self.remind_by_options:
-            for _item in self.remind_by_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_remind_by_options in self.remind_by_options:
+                if _item_remind_by_options:
+                    _items.append(_item_remind_by_options.to_dict())
             _dict['remindByOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of repeats_on_day
         if self.repeats_on_day:
@@ -167,9 +167,9 @@ class CalendarData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in repeats_on_day_options (list)
         _items = []
         if self.repeats_on_day_options:
-            for _item in self.repeats_on_day_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_repeats_on_day_options in self.repeats_on_day_options:
+                if _item_repeats_on_day_options:
+                    _items.append(_item_repeats_on_day_options.to_dict())
             _dict['repeatsOnDayOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of repeats_on_nth_day_of_month
         if self.repeats_on_nth_day_of_month:

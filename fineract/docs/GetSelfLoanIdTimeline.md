@@ -31,12 +31,12 @@ json = "{}"
 # create an instance of GetSelfLoanIdTimeline from a JSON string
 get_self_loan_id_timeline_instance = GetSelfLoanIdTimeline.from_json(json)
 # print the JSON string representation of the object
-print GetSelfLoanIdTimeline.to_json()
+print(GetSelfLoanIdTimeline.to_json())
 
 # convert the object into a dict
 get_self_loan_id_timeline_dict = get_self_loan_id_timeline_instance.to_dict()
 # create an instance of GetSelfLoanIdTimeline from a dict
-get_self_loan_id_timeline_form_dict = get_self_loan_id_timeline.from_dict(get_self_loan_id_timeline_dict)
+get_self_loan_id_timeline_from_dict = GetSelfLoanIdTimeline.from_dict(get_self_loan_id_timeline_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

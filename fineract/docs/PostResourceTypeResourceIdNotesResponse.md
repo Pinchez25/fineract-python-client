@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of PostResourceTypeResourceIdNotesResponse from a JSON string
 post_resource_type_resource_id_notes_response_instance = PostResourceTypeResourceIdNotesResponse.from_json(json)
 # print the JSON string representation of the object
-print PostResourceTypeResourceIdNotesResponse.to_json()
+print(PostResourceTypeResourceIdNotesResponse.to_json())
 
 # convert the object into a dict
 post_resource_type_resource_id_notes_response_dict = post_resource_type_resource_id_notes_response_instance.to_dict()
 # create an instance of PostResourceTypeResourceIdNotesResponse from a dict
-post_resource_type_resource_id_notes_response_form_dict = post_resource_type_resource_id_notes_response.from_dict(post_resource_type_resource_id_notes_response_dict)
+post_resource_type_resource_id_notes_response_from_dict = PostResourceTypeResourceIdNotesResponse.from_dict(post_resource_type_resource_id_notes_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

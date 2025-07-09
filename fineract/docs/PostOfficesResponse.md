@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PostOfficesResponse from a JSON string
 post_offices_response_instance = PostOfficesResponse.from_json(json)
 # print the JSON string representation of the object
-print PostOfficesResponse.to_json()
+print(PostOfficesResponse.to_json())
 
 # convert the object into a dict
 post_offices_response_dict = post_offices_response_instance.to_dict()
 # create an instance of PostOfficesResponse from a dict
-post_offices_response_form_dict = post_offices_response.from_dict(post_offices_response_dict)
+post_offices_response_from_dict = PostOfficesResponse.from_dict(post_offices_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

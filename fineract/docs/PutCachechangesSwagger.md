@@ -17,12 +17,12 @@ json = "{}"
 # create an instance of PutCachechangesSwagger from a JSON string
 put_cachechanges_swagger_instance = PutCachechangesSwagger.from_json(json)
 # print the JSON string representation of the object
-print PutCachechangesSwagger.to_json()
+print(PutCachechangesSwagger.to_json())
 
 # convert the object into a dict
 put_cachechanges_swagger_dict = put_cachechanges_swagger_instance.to_dict()
 # create an instance of PutCachechangesSwagger from a dict
-put_cachechanges_swagger_form_dict = put_cachechanges_swagger.from_dict(put_cachechanges_swagger_dict)
+put_cachechanges_swagger_from_dict = PutCachechangesSwagger.from_dict(put_cachechanges_swagger_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

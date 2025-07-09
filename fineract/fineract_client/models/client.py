@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date, datetime
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.client_identifier import ClientIdentifier
 from fineract_client.models.code_value import CodeValue
@@ -99,11 +99,11 @@ class Client(BaseModel):
     withdrawn_by: Optional[AppUser] = Field(default=None, alias="withdrawnBy")
     __properties: ClassVar[List[str]] = ["accountNumber", "accountNumberRequiresAutoGeneration", "activatedBy", "activationDate", "active", "clientClassification", "clientType", "closed", "closedBy", "closureDate", "closureReason", "createdBy", "createdDate", "createdDateTime", "dateOfBirth", "displayName", "emailAddress", "externalId", "firstname", "fullname", "gender", "groups", "id", "identifiers", "image", "lastModifiedBy", "lastModifiedDate", "lastModifiedDateTime", "lastname", "legalForm", "middlename", "mobileNo", "new", "notActive", "notPending", "notStaff", "office", "officeJoiningDate", "pending", "proposedTransferDate", "reactivateDate", "reactivatedBy", "rejected", "rejectedBy", "rejectedDate", "rejectionDate", "rejectionReason", "reopenedBy", "reopenedDate", "savingsAccountId", "savingsProductId", "staff", "status", "subStatus", "submittedOnDate", "transferInProgress", "transferInProgressOrOnHold", "transferOnHold", "transferToOffice", "withdrawalDate", "withdrawalReason", "withdrawn", "withdrawnBy"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -162,16 +162,16 @@ class Client(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in groups (list)
         _items = []
         if self.groups:
-            for _item in self.groups:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_groups in self.groups:
+                if _item_groups:
+                    _items.append(_item_groups.to_dict())
             _dict['groups'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in identifiers (list)
         _items = []
         if self.identifiers:
-            for _item in self.identifiers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_identifiers in self.identifiers:
+                if _item_identifiers:
+                    _items.append(_item_identifiers.to_dict())
             _dict['identifiers'] = _items
         # override the default output from pydantic by calling `to_dict()` of image
         if self.image:

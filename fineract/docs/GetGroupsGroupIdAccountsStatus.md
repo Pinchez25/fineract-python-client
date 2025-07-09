@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of GetGroupsGroupIdAccountsStatus from a JSON string
 get_groups_group_id_accounts_status_instance = GetGroupsGroupIdAccountsStatus.from_json(json)
 # print the JSON string representation of the object
-print GetGroupsGroupIdAccountsStatus.to_json()
+print(GetGroupsGroupIdAccountsStatus.to_json())
 
 # convert the object into a dict
 get_groups_group_id_accounts_status_dict = get_groups_group_id_accounts_status_instance.to_dict()
 # create an instance of GetGroupsGroupIdAccountsStatus from a dict
-get_groups_group_id_accounts_status_form_dict = get_groups_group_id_accounts_status.from_dict(get_groups_group_id_accounts_status_dict)
+get_groups_group_id_accounts_status_from_dict = GetGroupsGroupIdAccountsStatus.from_dict(get_groups_group_id_accounts_status_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of GetLoanTransactionRelation from a JSON string
 get_loan_transaction_relation_instance = GetLoanTransactionRelation.from_json(json)
 # print the JSON string representation of the object
-print GetLoanTransactionRelation.to_json()
+print(GetLoanTransactionRelation.to_json())
 
 # convert the object into a dict
 get_loan_transaction_relation_dict = get_loan_transaction_relation_instance.to_dict()
 # create an instance of GetLoanTransactionRelation from a dict
-get_loan_transaction_relation_form_dict = get_loan_transaction_relation.from_dict(get_loan_transaction_relation_dict)
+get_loan_transaction_relation_from_dict = GetLoanTransactionRelation.from_dict(get_loan_transaction_relation_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_fixed_deposit_products_accounting_rule import GetFixedDepositProductsAccountingRule
 from fineract_client.models.get_fixed_deposit_products_currency import GetFixedDepositProductsCurrency
@@ -53,11 +53,11 @@ class GetFixedDepositProductsResponse(BaseModel):
     short_name: Optional[StrictStr] = Field(default=None, alias="shortName")
     __properties: ClassVar[List[str]] = ["accountingRule", "currency", "description", "id", "interestCalculationDaysInYearType", "interestCalculationType", "interestCompoundingPeriodType", "interestPostingPeriodType", "maxDepositTerm", "maxDepositTermType", "minDepositTerm", "minDepositTermType", "name", "nominalAnnualInterestRate", "preClosurePenalApplicable", "shortName"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

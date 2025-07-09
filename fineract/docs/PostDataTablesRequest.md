@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of PostDataTablesRequest from a JSON string
 post_data_tables_request_instance = PostDataTablesRequest.from_json(json)
 # print the JSON string representation of the object
-print PostDataTablesRequest.to_json()
+print(PostDataTablesRequest.to_json())
 
 # convert the object into a dict
 post_data_tables_request_dict = post_data_tables_request_instance.to_dict()
 # create an instance of PostDataTablesRequest from a dict
-post_data_tables_request_form_dict = post_data_tables_request.from_dict(post_data_tables_request_dict)
+post_data_tables_request_from_dict = PostDataTablesRequest.from_dict(post_data_tables_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

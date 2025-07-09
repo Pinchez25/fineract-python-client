@@ -33,12 +33,12 @@ json = "{}"
 # create an instance of GetReportMailingJobsResponse from a JSON string
 get_report_mailing_jobs_response_instance = GetReportMailingJobsResponse.from_json(json)
 # print the JSON string representation of the object
-print GetReportMailingJobsResponse.to_json()
+print(GetReportMailingJobsResponse.to_json())
 
 # convert the object into a dict
 get_report_mailing_jobs_response_dict = get_report_mailing_jobs_response_instance.to_dict()
 # create an instance of GetReportMailingJobsResponse from a dict
-get_report_mailing_jobs_response_form_dict = get_report_mailing_jobs_response.from_dict(get_report_mailing_jobs_response_dict)
+get_report_mailing_jobs_response_from_dict = GetReportMailingJobsResponse.from_dict(get_report_mailing_jobs_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

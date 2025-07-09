@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_account_transfers_status import GetAccountTransfersStatus
 from fineract_client.models.get_account_transfers_timeline import GetAccountTransfersTimeline
@@ -47,11 +47,11 @@ class GetAccountTransfersTemplateRefundByTransferFromClient(BaseModel):
     timeline: Optional[GetAccountTransfersTimeline] = None
     __properties: ClassVar[List[str]] = ["accountNo", "activationDate", "active", "clientClassification", "clientType", "displayName", "firstname", "gender", "groups", "id", "lastname", "officeId", "officeName", "status", "timeline"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

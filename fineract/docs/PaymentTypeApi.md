@@ -16,7 +16,11 @@ Method | HTTP request | Description
 
 Create a Payment Type
 
-Creates a new Payment type  Mandatory Fields: name  Optional Fields: Description, isCashPayment,Position
+Creates a new Payment type
+
+Mandatory Fields: name
+
+Optional Fields: Description, isCashPayment,Position
 
 ### Example
 

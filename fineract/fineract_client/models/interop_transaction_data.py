@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.external_id import ExternalId
 from typing import Optional, Set
@@ -66,11 +66,11 @@ class InteropTransactionData(BaseModel):
             raise ValueError("must be one of enum values ('INVALID', 'DEPOSIT', 'WITHDRAWAL', 'INTEREST_POSTING', 'WITHDRAWAL_FEE', 'ANNUAL_FEE', 'WAIVE_CHARGES', 'PAY_CHARGE', 'DIVIDEND_PAYOUT', 'ACCRUAL', 'INITIATE_TRANSFER', 'APPROVE_TRANSFER', 'WITHDRAW_TRANSFER', 'REJECT_TRANSFER', 'WRITTEN_OFF', 'OVERDRAFT_INTEREST', 'WITHHOLD_TAX', 'ESCHEAT', 'AMOUNT_HOLD', 'AMOUNT_RELEASE')")
         return value
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

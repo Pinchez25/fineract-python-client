@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PutClientsClientIdRequest from a JSON string
 put_clients_client_id_request_instance = PutClientsClientIdRequest.from_json(json)
 # print the JSON string representation of the object
-print PutClientsClientIdRequest.to_json()
+print(PutClientsClientIdRequest.to_json())
 
 # convert the object into a dict
 put_clients_client_id_request_dict = put_clients_client_id_request_instance.to_dict()
 # create an instance of PutClientsClientIdRequest from a dict
-put_clients_client_id_request_form_dict = put_clients_client_id_request.from_dict(put_clients_client_id_request_dict)
+put_clients_client_id_request_from_dict = PutClientsClientIdRequest.from_dict(put_clients_client_id_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

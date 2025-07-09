@@ -17,7 +17,13 @@ Method | HTTP request | Description
 
 Create a Share Product
 
-Creates a Share Product  Mandatory Fields: name, shortName, description, currencyCode, digitsAfterDecimal,inMultiplesOf, locale, totalShares, unitPrice, nominalShares,allowDividendCalculationForInactiveClients,accountingRule  Mandatory Fields for Cash based accounting (accountingRule = 2): shareReferenceId, shareSuspenseId, shareEquityId, incomeFromFeeAccountId  Optional Fields: sharesIssued, minimumShares, maximumShares, minimumActivePeriodForDividends, minimumactiveperiodFrequencyType, lockinPeriodFrequency, lockinPeriodFrequencyType, marketPricePeriods, chargesSelected
+Creates a Share Product
+
+Mandatory Fields: name, shortName, description, currencyCode, digitsAfterDecimal,inMultiplesOf, locale, totalShares, unitPrice, nominalShares,allowDividendCalculationForInactiveClients,accountingRule
+
+Mandatory Fields for Cash based accounting (accountingRule = 2): shareReferenceId, shareSuspenseId, shareEquityId, incomeFromFeeAccountId
+
+Optional Fields: sharesIssued, minimumShares, maximumShares, minimumActivePeriodForDividends, minimumactiveperiodFrequencyType, lockinPeriodFrequency, lockinPeriodFrequencyType, marketPricePeriods, chargesSelected
 
 ### Example
 
@@ -103,8 +109,6 @@ Name | Type | Description  | Notes
 
 # **handle_commands3**
 > str handle_commands3(type, product_id, command=command)
-
-
 
 ### Example
 
@@ -192,7 +196,13 @@ Name | Type | Description  | Notes
 
 List Share Products
 
-Lists Share Products  Mandatory Fields: limit, offset  Example Requests:  shareproducts
+Lists Share Products
+
+Mandatory Fields: limit, offset
+
+Example Requests:
+
+shareproducts
 
 ### Example
 
@@ -282,7 +292,14 @@ Name | Type | Description  | Notes
 
 Retrieve a Share Product
 
-Retrieves a Share Product  Example Requests:  products/share/1   products/share/1?template=true
+Retrieves a Share Product
+
+Example Requests:
+
+products/share/1
+
+
+products/share/1?template=true
 
 ### Example
 
@@ -367,8 +384,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_template13**
 > str retrieve_template13(type)
-
-
 
 ### Example
 

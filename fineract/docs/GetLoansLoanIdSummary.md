@@ -84,12 +84,12 @@ json = "{}"
 # create an instance of GetLoansLoanIdSummary from a JSON string
 get_loans_loan_id_summary_instance = GetLoansLoanIdSummary.from_json(json)
 # print the JSON string representation of the object
-print GetLoansLoanIdSummary.to_json()
+print(GetLoansLoanIdSummary.to_json())
 
 # convert the object into a dict
 get_loans_loan_id_summary_dict = get_loans_loan_id_summary_instance.to_dict()
 # create an instance of GetLoansLoanIdSummary from a dict
-get_loans_loan_id_summary_form_dict = get_loans_loan_id_summary.from_dict(get_loans_loan_id_summary_dict)
+get_loans_loan_id_summary_from_dict = GetLoansLoanIdSummary.from_dict(get_loans_loan_id_summary_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

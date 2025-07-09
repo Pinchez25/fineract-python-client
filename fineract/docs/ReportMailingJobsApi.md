@@ -17,7 +17,9 @@ Method | HTTP request | Description
 
 Create a Report Mailing Job
 
-Mandatory Fields: name, startDateTime, stretchyReportId, emailRecipients, emailSubject, emailMessage, emailAttachmentFileFormatId, recurrence, isActive  Optional Fields: description, stretchyReportParamMap
+Mandatory Fields: name, startDateTime, stretchyReportId, emailRecipients, emailSubject, emailMessage, emailAttachmentFileFormatId, recurrence, isActive
+
+Optional Fields: description, stretchyReportParamMap
 
 ### Example
 
@@ -190,7 +192,9 @@ Name | Type | Description  | Notes
 
 List Report Mailing Jobs
 
-Example Requests:  reportmailingjobs
+Example Requests:
+
+reportmailingjobs
 
 ### Example
 
@@ -282,7 +286,12 @@ Name | Type | Description  | Notes
 
 Retrieve a Report Mailing Job
 
-Example Requests:  reportmailingjobs/1   reportmailingjobs/1?template=true
+Example Requests:
+
+reportmailingjobs/1
+
+
+reportmailingjobs/1?template=true
 
 ### Example
 
@@ -368,7 +377,13 @@ Name | Type | Description  | Notes
 
 Retrieve Report Mailing Job Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for report mailing job applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  reportmailingjobs/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for report mailing job applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed description Lists
+Example Request:
+
+reportmailingjobs/template
 
 ### Example
 

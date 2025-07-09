@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.currency_data import CurrencyData
 from fineract_client.models.enum_option_data import EnumOptionData
@@ -52,11 +52,11 @@ class SavingsProductData(BaseModel):
     withdrawal_fee_for_transfers: Optional[StrictBool] = Field(default=None, alias="withdrawalFeeForTransfers")
     __properties: ClassVar[List[str]] = ["accrualBasedAccountingEnabled", "allowOverdraft", "cashBasedAccountingEnabled", "currency", "depositAccountType", "id", "interestCalculationDaysInYearType", "interestCalculationType", "interestCompoundingPeriodType", "interestPostingPeriodType", "lockinPeriodFrequency", "lockinPeriodFrequencyType", "maxAllowedLienLimit", "minRequiredBalance", "minRequiredOpeningBalance", "name", "nominalAnnualInterestRate", "overdraftLimit", "periodicAccrualAccounting", "upfrontAccrualAccounting", "withdrawalFeeForTransfers"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

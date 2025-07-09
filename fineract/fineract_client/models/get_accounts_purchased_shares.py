@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictFloat, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_accounts_purchased_shares_status import GetAccountsPurchasedSharesStatus
 from fineract_client.models.get_accounts_purchased_shares_type import GetAccountsPurchasedSharesType
@@ -42,11 +42,11 @@ class GetAccountsPurchasedShares(BaseModel):
     type: Optional[GetAccountsPurchasedSharesType] = None
     __properties: ClassVar[List[str]] = ["accountId", "amount", "amountPaid", "chargeAmount", "id", "numberOfShares", "purchasedDate", "purchasedPrice", "status", "type"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

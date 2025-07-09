@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_collateral_currency_response import GetCollateralCurrencyResponse
 from fineract_client.models.get_collateral_type_response import GetCollateralTypeResponse
@@ -36,11 +36,11 @@ class GetLoansLoanIdCollateralsResponse(BaseModel):
     value: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["currency", "description", "id", "type", "value"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

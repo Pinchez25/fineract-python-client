@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of GetObligeeData from a JSON string
 get_obligee_data_instance = GetObligeeData.from_json(json)
 # print the JSON string representation of the object
-print GetObligeeData.to_json()
+print(GetObligeeData.to_json())
 
 # convert the object into a dict
 get_obligee_data_dict = get_obligee_data_instance.to_dict()
 # create an instance of GetObligeeData from a dict
-get_obligee_data_form_dict = get_obligee_data.from_dict(get_obligee_data_dict)
+get_obligee_data_from_dict = GetObligeeData.from_dict(get_obligee_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

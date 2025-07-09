@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of GetSelfClientsSavingsAccountsCurrency from a JSON string
 get_self_clients_savings_accounts_currency_instance = GetSelfClientsSavingsAccountsCurrency.from_json(json)
 # print the JSON string representation of the object
-print GetSelfClientsSavingsAccountsCurrency.to_json()
+print(GetSelfClientsSavingsAccountsCurrency.to_json())
 
 # convert the object into a dict
 get_self_clients_savings_accounts_currency_dict = get_self_clients_savings_accounts_currency_instance.to_dict()
 # create an instance of GetSelfClientsSavingsAccountsCurrency from a dict
-get_self_clients_savings_accounts_currency_form_dict = get_self_clients_savings_accounts_currency.from_dict(get_self_clients_savings_accounts_currency_dict)
+get_self_clients_savings_accounts_currency_from_dict = GetSelfClientsSavingsAccountsCurrency.from_dict(get_self_clients_savings_accounts_currency_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

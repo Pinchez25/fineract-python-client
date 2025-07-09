@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of PutTaxesGroupTaxGroupIdRequest from a JSON string
 put_taxes_group_tax_group_id_request_instance = PutTaxesGroupTaxGroupIdRequest.from_json(json)
 # print the JSON string representation of the object
-print PutTaxesGroupTaxGroupIdRequest.to_json()
+print(PutTaxesGroupTaxGroupIdRequest.to_json())
 
 # convert the object into a dict
 put_taxes_group_tax_group_id_request_dict = put_taxes_group_tax_group_id_request_instance.to_dict()
 # create an instance of PutTaxesGroupTaxGroupIdRequest from a dict
-put_taxes_group_tax_group_id_request_form_dict = put_taxes_group_tax_group_id_request.from_dict(put_taxes_group_tax_group_id_request_dict)
+put_taxes_group_tax_group_id_request_from_dict = PutTaxesGroupTaxGroupIdRequest.from_dict(put_taxes_group_tax_group_id_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

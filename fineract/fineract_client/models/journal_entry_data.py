@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.credit_debit import CreditDebit
 from fineract_client.models.currency_data import CurrencyData
@@ -73,11 +73,11 @@ class JournalEntryData(BaseModel):
     transaction_id: Optional[StrictStr] = Field(default=None, alias="transactionId")
     __properties: ClassVar[List[str]] = ["accountNumber", "amount", "bankNumber", "checkNumber", "comments", "createdByUserId", "createdByUserName", "createdDate", "credits", "currency", "currencyCode", "dateFormat", "debits", "entityId", "entityType", "entryType", "glAccountCode", "glAccountId", "glAccountName", "glAccountType", "id", "locale", "manualEntry", "officeId", "officeName", "officeRunningBalance", "organizationRunningBalance", "paymentTypeId", "receiptNumber", "referenceNumber", "reversed", "routingCode", "rowIndex", "runningBalanceComputed", "savingTransactionId", "submittedOnDate", "transactionDate", "transactionDetails", "transactionId"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -115,9 +115,9 @@ class JournalEntryData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in credits (list)
         _items = []
         if self.credits:
-            for _item in self.credits:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_credits in self.credits:
+                if _item_credits:
+                    _items.append(_item_credits.to_dict())
             _dict['credits'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -125,9 +125,9 @@ class JournalEntryData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in debits (list)
         _items = []
         if self.debits:
-            for _item in self.debits:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_debits in self.debits:
+                if _item_debits:
+                    _items.append(_item_debits.to_dict())
             _dict['debits'] = _items
         # override the default output from pydantic by calling `to_dict()` of entity_type
         if self.entity_type:

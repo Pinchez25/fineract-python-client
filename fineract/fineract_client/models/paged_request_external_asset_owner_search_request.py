@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictInt
+from pydantic import BaseModel, ConfigDict, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.external_asset_owner_search_request import ExternalAssetOwnerSearchRequest
 from fineract_client.models.sort_order import SortOrder
@@ -35,11 +35,11 @@ class PagedRequestExternalAssetOwnerSearchRequest(BaseModel):
     sorts: Optional[List[SortOrder]] = None
     __properties: ClassVar[List[str]] = ["page", "request", "size", "sorts"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -80,9 +80,9 @@ class PagedRequestExternalAssetOwnerSearchRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in sorts (list)
         _items = []
         if self.sorts:
-            for _item in self.sorts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sorts in self.sorts:
+                if _item_sorts:
+                    _items.append(_item_sorts.to_dict())
             _dict['sorts'] = _items
         return _dict
 

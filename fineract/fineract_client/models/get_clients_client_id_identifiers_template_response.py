@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_clients_allowed_document_types import GetClientsAllowedDocumentTypes
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetClientsClientIdIdentifiersTemplateResponse(BaseModel):
     allowed_document_types: Optional[List[GetClientsAllowedDocumentTypes]] = Field(default=None, alias="allowedDocumentTypes")
     __properties: ClassVar[List[str]] = ["allowedDocumentTypes"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class GetClientsClientIdIdentifiersTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_document_types (list)
         _items = []
         if self.allowed_document_types:
-            for _item in self.allowed_document_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_allowed_document_types in self.allowed_document_types:
+                if _item_allowed_document_types:
+                    _items.append(_item_allowed_document_types.to_dict())
             _dict['allowedDocumentTypes'] = _items
         return _dict
 

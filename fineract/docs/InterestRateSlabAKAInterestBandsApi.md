@@ -17,7 +17,14 @@ Method | HTTP request | Description
 
 Create a Slab
 
-Creates a new interest rate slab for an interest rate chart. Mandatory Fields periodType, fromPeriod, annualInterestRate Optional Fields toPeriod and description Example Requests:  interestratecharts/1/chartslabs
+Creates a new interest rate slab for an interest rate chart.
+Mandatory Fields
+periodType, fromPeriod, annualInterestRate
+Optional Fields
+toPeriod and description
+Example Requests:
+
+interestratecharts/1/chartslabs
 
 ### Example
 
@@ -194,7 +201,11 @@ Name | Type | Description  | Notes
 
 Retrieve all Slabs
 
-Retrieve list of slabs associated with a chart  Example Requests:  interestratecharts/1/chartslabs
+Retrieve list of slabs associated with a chart
+
+Example Requests:
+
+interestratecharts/1/chartslabs
 
 ### Example
 
@@ -280,7 +291,12 @@ Name | Type | Description  | Notes
 
 Retrieve a Slab
 
-Retrieve a slab associated with an Interest rate chart  Example Requests:  interestratecharts/1/chartslabs/1 
+Retrieve a slab associated with an Interest rate chart
+
+Example Requests:
+
+interestratecharts/1/chartslabs/1
+
 
 ### Example
 
@@ -365,8 +381,6 @@ Name | Type | Description  | Notes
 
 # **template8**
 > str template8(chart_id)
-
-
 
 ### Example
 

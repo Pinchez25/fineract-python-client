@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of PostFixedDepositProductsChartSlabs from a JSON string
 post_fixed_deposit_products_chart_slabs_instance = PostFixedDepositProductsChartSlabs.from_json(json)
 # print the JSON string representation of the object
-print PostFixedDepositProductsChartSlabs.to_json()
+print(PostFixedDepositProductsChartSlabs.to_json())
 
 # convert the object into a dict
 post_fixed_deposit_products_chart_slabs_dict = post_fixed_deposit_products_chart_slabs_instance.to_dict()
 # create an instance of PostFixedDepositProductsChartSlabs from a dict
-post_fixed_deposit_products_chart_slabs_form_dict = post_fixed_deposit_products_chart_slabs.from_dict(post_fixed_deposit_products_chart_slabs_dict)
+post_fixed_deposit_products_chart_slabs_from_dict = PostFixedDepositProductsChartSlabs.from_dict(post_fixed_deposit_products_chart_slabs_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

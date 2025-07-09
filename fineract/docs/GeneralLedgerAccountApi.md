@@ -19,7 +19,9 @@ Method | HTTP request | Description
 
 Create a General Ledger Account
 
-Note: You may optionally create Hierarchical Chart of Accounts by using the \"parentId\" property of an Account Mandatory Fields:  name, glCode, type, usage and manualEntriesAllowed
+Note: You may optionally create Hierarchical Chart of Accounts by using the "parentId" property of an Account
+Mandatory Fields: 
+name, glCode, type, usage and manualEntriesAllowed
 
 ### Example
 
@@ -190,8 +192,6 @@ Name | Type | Description  | Notes
 # **get_gl_accounts_template**
 > get_gl_accounts_template(date_format=date_format)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -269,8 +269,6 @@ void (empty response body)
 
 # **post_gl_accounts_template**
 > str post_gl_accounts_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
-
-
 
 ### Example
 
@@ -358,7 +356,18 @@ Name | Type | Description  | Notes
 
 Retrieve a General Ledger Account
 
-Example Requests:  glaccounts/1   glaccounts/1?template=true   glaccounts/1?fields=name,glCode   glaccounts/1?fetchRunningBalance=true
+Example Requests:
+
+glaccounts/1
+
+
+glaccounts/1?template=true
+
+
+glaccounts/1?fields=name,glCode
+
+
+glaccounts/1?fetchRunningBalance=true
 
 ### Example
 
@@ -446,7 +455,16 @@ Name | Type | Description  | Notes
 
 List General Ledger Accounts
 
-ARGUMENTS type Integer optional manualEntriesAllowed boolean optional usage Integer optional disabled boolean optional parentId Long optional tagId Long optional Example Requests:  glaccounts   glaccounts?type=1&manualEntriesAllowed=true&usage=1&disabled=false  glaccounts?fetchRunningBalance=true
+ARGUMENTS
+type Integer optional manualEntriesAllowed boolean optional usage Integer optional disabled boolean optional parentId Long optional tagId Long optional
+Example Requests:
+
+glaccounts
+
+
+glaccounts?type=1&manualEntriesAllowed=true&usage=1&disabled=false
+
+glaccounts?fetchRunningBalance=true
 
 ### Example
 
@@ -542,7 +560,22 @@ Name | Type | Description  | Notes
 
 Retrieve GL Accounts Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists Example Request:  glaccounts/template glaccounts/template?type=1  type is optional and integer value from 1 to 5.  1.Assets  2.Liabilities  3.Equity  4.Income  5.Expenses
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed Value Lists
+Example Request:
+
+glaccounts/template
+glaccounts/template?type=1
+
+type is optional and integer value from 1 to 5.
+
+1.Assets 
+2.Liabilities 
+3.Equity 
+4.Income 
+5.Expenses
 
 ### Example
 

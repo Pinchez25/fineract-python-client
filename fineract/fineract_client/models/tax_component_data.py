@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.enum_option_data import EnumOptionData
 from fineract_client.models.gl_account_data import GLAccountData
@@ -44,11 +44,11 @@ class TaxComponentData(BaseModel):
     tax_component_histories: Optional[List[TaxComponentHistoryData]] = Field(default=None, alias="taxComponentHistories")
     __properties: ClassVar[List[str]] = ["creditAccount", "creditAccountType", "debitAccount", "debitAccountType", "glAccountOptions", "glAccountTypeOptions", "id", "name", "percentage", "startDate", "taxComponentHistories"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -98,25 +98,25 @@ class TaxComponentData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in gl_account_options (dict of array)
         _field_dict_of_array = {}
         if self.gl_account_options:
-            for _key in self.gl_account_options:
-                if self.gl_account_options[_key] is not None:
-                    _field_dict_of_array[_key] = [
-                        _item.to_dict() for _item in self.gl_account_options[_key]
+            for _key_gl_account_options in self.gl_account_options:
+                if self.gl_account_options[_key_gl_account_options] is not None:
+                    _field_dict_of_array[_key_gl_account_options] = [
+                        _item.to_dict() for _item in self.gl_account_options[_key_gl_account_options]
                     ]
             _dict['glAccountOptions'] = _field_dict_of_array
         # override the default output from pydantic by calling `to_dict()` of each item in gl_account_type_options (list)
         _items = []
         if self.gl_account_type_options:
-            for _item in self.gl_account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_gl_account_type_options in self.gl_account_type_options:
+                if _item_gl_account_type_options:
+                    _items.append(_item_gl_account_type_options.to_dict())
             _dict['glAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in tax_component_histories (list)
         _items = []
         if self.tax_component_histories:
-            for _item in self.tax_component_histories:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tax_component_histories in self.tax_component_histories:
+                if _item_tax_component_histories:
+                    _items.append(_item_tax_component_histories.to_dict())
             _dict['taxComponentHistories'] = _items
         return _dict
 

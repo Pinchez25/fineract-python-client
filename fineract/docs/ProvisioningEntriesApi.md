@@ -16,7 +16,14 @@ Method | HTTP request | Description
 
 Create new Provisioning Entries
 
-Creates a new Provisioning Entries  Mandatory Fields date dateFormat locale Optional Fields createjournalentries
+Creates a new Provisioning Entries
+
+Mandatory Fields
+date
+dateFormat
+locale
+Optional Fields
+createjournalentries
 
 ### Example
 
@@ -277,8 +284,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_proviioning_entries**
 > LoanProductProvisioningEntryData retrieve_proviioning_entries(entry_id=entry_id, offset=offset, limit=limit, office_id=office_id, product_id=product_id, category_id=category_id)
-
-
 
 ### Example
 

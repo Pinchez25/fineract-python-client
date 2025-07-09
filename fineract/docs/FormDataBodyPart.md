@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of FormDataBodyPart from a JSON string
 form_data_body_part_instance = FormDataBodyPart.from_json(json)
 # print the JSON string representation of the object
-print FormDataBodyPart.to_json()
+print(FormDataBodyPart.to_json())
 
 # convert the object into a dict
 form_data_body_part_dict = form_data_body_part_instance.to_dict()
 # create an instance of FormDataBodyPart from a dict
-form_data_body_part_form_dict = form_data_body_part.from_dict(form_data_body_part_dict)
+form_data_body_part_from_dict = FormDataBodyPart.from_dict(form_data_body_part_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

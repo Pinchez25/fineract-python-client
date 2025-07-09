@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **delete5**
 > str delete5(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -96,8 +94,6 @@ Name | Type | Description  | Notes
 
 # **register_device**
 > str register_device(body=body)
-
-
 
 ### Example
 
@@ -179,8 +175,6 @@ Name | Type | Description  | Notes
 # **retrieve_all_device_registrations**
 > str retrieve_all_device_registrations()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **retrieve_device_regiistration**
 > str retrieve_device_regiistration(id)
-
-
 
 ### Example
 
@@ -339,8 +331,6 @@ Name | Type | Description  | Notes
 # **retrieve_device_registration_by_client_id**
 > str retrieve_device_registration_by_client_id(client_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -420,8 +410,6 @@ Name | Type | Description  | Notes
 
 # **update_device_registration**
 > str update_device_registration(id, body=body)
-
-
 
 ### Example
 

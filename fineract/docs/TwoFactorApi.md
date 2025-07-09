@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **get_otp_delivery_methods**
 > str get_otp_delivery_methods()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **request_token**
 > str request_token(delivery_method=delivery_method, extended_token=extended_token)
-
-
 
 ### Example
 
@@ -175,8 +171,6 @@ Name | Type | Description  | Notes
 # **update_configuration2**
 > str update_configuration2(body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ Name | Type | Description  | Notes
 
 # **validate**
 > str validate(token=token)
-
-
 
 ### Example
 

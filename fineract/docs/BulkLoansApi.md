@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **loan_reassignment**
 > str loan_reassignment(body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -92,8 +90,6 @@ Name | Type | Description  | Notes
 
 # **loan_reassignment_template**
 > str loan_reassignment_template(office_id=office_id, from_loan_officer_id=from_loan_officer_id)
-
-
 
 ### Example
 

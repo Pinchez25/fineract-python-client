@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetFixedDepositAccountsTemplateResponse from a JSON string
 get_fixed_deposit_accounts_template_response_instance = GetFixedDepositAccountsTemplateResponse.from_json(json)
 # print the JSON string representation of the object
-print GetFixedDepositAccountsTemplateResponse.to_json()
+print(GetFixedDepositAccountsTemplateResponse.to_json())
 
 # convert the object into a dict
 get_fixed_deposit_accounts_template_response_dict = get_fixed_deposit_accounts_template_response_instance.to_dict()
 # create an instance of GetFixedDepositAccountsTemplateResponse from a dict
-get_fixed_deposit_accounts_template_response_form_dict = get_fixed_deposit_accounts_template_response.from_dict(get_fixed_deposit_accounts_template_response_dict)
+get_fixed_deposit_accounts_template_response_from_dict = GetFixedDepositAccountsTemplateResponse.from_dict(get_fixed_deposit_accounts_template_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

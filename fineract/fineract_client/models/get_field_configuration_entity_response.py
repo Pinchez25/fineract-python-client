@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,7 +28,7 @@ class GetFieldConfigurationEntityResponse(BaseModel):
     GetFieldConfigurationEntityResponse
     """ # noqa: E501
     entity: Optional[StrictStr] = None
-    field: Optional[StrictStr] = None
+    var_field: Optional[StrictStr] = Field(default=None, alias="field")
     field_configuration_id: Optional[StrictInt] = Field(default=None, alias="fieldConfigurationId")
     is_enabled: Optional[StrictStr] = None
     is_mandatory: Optional[StrictStr] = None
@@ -36,11 +36,11 @@ class GetFieldConfigurationEntityResponse(BaseModel):
     validation_regex: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["entity", "field", "fieldConfigurationId", "is_enabled", "is_mandatory", "subentity", "validation_regex"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

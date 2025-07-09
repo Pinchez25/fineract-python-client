@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_data import EnumOptionData
 from typing import Optional, Set
@@ -33,11 +33,11 @@ class GetReportMailingJobsTemplate(BaseModel):
     stretchy_report_param_date_options: Optional[List[EnumOptionData]] = Field(default=None, alias="stretchyReportParamDateOptions")
     __properties: ClassVar[List[str]] = ["emailAttachmentFileFormatOptions", "isActive", "stretchyReportParamDateOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -75,16 +75,16 @@ class GetReportMailingJobsTemplate(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in email_attachment_file_format_options (list)
         _items = []
         if self.email_attachment_file_format_options:
-            for _item in self.email_attachment_file_format_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_email_attachment_file_format_options in self.email_attachment_file_format_options:
+                if _item_email_attachment_file_format_options:
+                    _items.append(_item_email_attachment_file_format_options.to_dict())
             _dict['emailAttachmentFileFormatOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in stretchy_report_param_date_options (list)
         _items = []
         if self.stretchy_report_param_date_options:
-            for _item in self.stretchy_report_param_date_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_stretchy_report_param_date_options in self.stretchy_report_param_date_options:
+                if _item_stretchy_report_param_date_options:
+                    _items.append(_item_stretchy_report_param_date_options.to_dict())
             _dict['stretchyReportParamDateOptions'] = _items
         return _dict
 

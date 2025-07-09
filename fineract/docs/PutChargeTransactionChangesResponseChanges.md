@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of PutChargeTransactionChangesResponseChanges from a JSON string
 put_charge_transaction_changes_response_changes_instance = PutChargeTransactionChangesResponseChanges.from_json(json)
 # print the JSON string representation of the object
-print PutChargeTransactionChangesResponseChanges.to_json()
+print(PutChargeTransactionChangesResponseChanges.to_json())
 
 # convert the object into a dict
 put_charge_transaction_changes_response_changes_dict = put_charge_transaction_changes_response_changes_instance.to_dict()
 # create an instance of PutChargeTransactionChangesResponseChanges from a dict
-put_charge_transaction_changes_response_changes_form_dict = put_charge_transaction_changes_response_changes.from_dict(put_charge_transaction_changes_response_changes_dict)
+put_charge_transaction_changes_response_changes_from_dict = PutChargeTransactionChangesResponseChanges.from_dict(put_charge_transaction_changes_response_changes_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetClientsGroups from a JSON string
 get_clients_groups_instance = GetClientsGroups.from_json(json)
 # print the JSON string representation of the object
-print GetClientsGroups.to_json()
+print(GetClientsGroups.to_json())
 
 # convert the object into a dict
 get_clients_groups_dict = get_clients_groups_instance.to_dict()
 # create an instance of GetClientsGroups from a dict
-get_clients_groups_form_dict = get_clients_groups.from_dict(get_clients_groups_dict)
+get_clients_groups_from_dict = GetClientsGroups.from_dict(get_clients_groups_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

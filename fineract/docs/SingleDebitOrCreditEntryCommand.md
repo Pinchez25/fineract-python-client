@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of SingleDebitOrCreditEntryCommand from a JSON string
 single_debit_or_credit_entry_command_instance = SingleDebitOrCreditEntryCommand.from_json(json)
 # print the JSON string representation of the object
-print SingleDebitOrCreditEntryCommand.to_json()
+print(SingleDebitOrCreditEntryCommand.to_json())
 
 # convert the object into a dict
 single_debit_or_credit_entry_command_dict = single_debit_or_credit_entry_command_instance.to_dict()
 # create an instance of SingleDebitOrCreditEntryCommand from a dict
-single_debit_or_credit_entry_command_form_dict = single_debit_or_credit_entry_command.from_dict(single_debit_or_credit_entry_command_dict)
+single_debit_or_credit_entry_command_from_dict = SingleDebitOrCreditEntryCommand.from_dict(single_debit_or_credit_entry_command_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

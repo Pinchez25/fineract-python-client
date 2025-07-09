@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.lookup_table_entry import LookupTableEntry
 from typing import Optional, Set
@@ -33,11 +33,11 @@ class LookupTableData(BaseModel):
     key: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["description", "entries", "key"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -75,9 +75,9 @@ class LookupTableData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in entries (list)
         _items = []
         if self.entries:
-            for _item in self.entries:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_entries in self.entries:
+                if _item_entries:
+                    _items.append(_item_entries.to_dict())
             _dict['entries'] = _items
         return _dict
 

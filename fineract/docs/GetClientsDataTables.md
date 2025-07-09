@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetClientsDataTables from a JSON string
 get_clients_data_tables_instance = GetClientsDataTables.from_json(json)
 # print the JSON string representation of the object
-print GetClientsDataTables.to_json()
+print(GetClientsDataTables.to_json())
 
 # convert the object into a dict
 get_clients_data_tables_dict = get_clients_data_tables_instance.to_dict()
 # create an instance of GetClientsDataTables from a dict
-get_clients_data_tables_form_dict = get_clients_data_tables.from_dict(get_clients_data_tables_dict)
+get_clients_data_tables_from_dict = GetClientsDataTables.from_dict(get_clients_data_tables_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

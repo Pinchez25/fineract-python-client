@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of ClientCollateralManagementData from a JSON string
 client_collateral_management_data_instance = ClientCollateralManagementData.from_json(json)
 # print the JSON string representation of the object
-print ClientCollateralManagementData.to_json()
+print(ClientCollateralManagementData.to_json())
 
 # convert the object into a dict
 client_collateral_management_data_dict = client_collateral_management_data_instance.to_dict()
 # create an instance of ClientCollateralManagementData from a dict
-client_collateral_management_data_form_dict = client_collateral_management_data.from_dict(client_collateral_management_data_dict)
+client_collateral_management_data_from_dict = ClientCollateralManagementData.from_dict(client_collateral_management_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

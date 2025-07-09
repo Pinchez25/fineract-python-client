@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_interest_rate_charts_chart_id_chart_slabs_attribute_name import GetInterestRateChartsChartIdChartSlabsAttributeName
 from fineract_client.models.get_interest_rate_charts_chart_id_chart_slabs_condition_type import GetInterestRateChartsChartIdChartSlabsConditionType
@@ -41,11 +41,11 @@ class GetInterestRateChartsChartIdChartSlabsIncentives(BaseModel):
     incentive_type: Optional[GetInterestRateChartsChartIdChartSlabsIncentiveType] = Field(default=None, alias="incentiveType")
     __properties: ClassVar[List[str]] = ["amount", "attributeName", "attributeValue", "attributeValueDesc", "conditionType", "entityType", "id", "incentiveType"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

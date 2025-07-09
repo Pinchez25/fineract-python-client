@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **create_ad_hoc_query**
 > str create_ad_hoc_query(body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -96,8 +94,6 @@ Name | Type | Description  | Notes
 
 # **delete_ad_hoc_query**
 > str delete_ad_hoc_query(ad_hoc_id)
-
-
 
 ### Example
 
@@ -179,8 +175,6 @@ Name | Type | Description  | Notes
 # **retrieve_ad_hoc_query**
 > str retrieve_ad_hoc_query(ad_hoc_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -261,8 +255,6 @@ Name | Type | Description  | Notes
 # **retrieve_all2**
 > str retrieve_all2()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -339,8 +331,6 @@ This endpoint does not need any parameter.
 # **template**
 > str template()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -416,8 +406,6 @@ This endpoint does not need any parameter.
 
 # **update**
 > str update(ad_hoc_id, body=body)
-
-
 
 ### Example
 

@@ -18,8 +18,6 @@ Method | HTTP request | Description
 # **accounts_template**
 > str accounts_template(loan_id, client_id=client_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -102,8 +100,6 @@ Name | Type | Description  | Notes
 # **create_guarantor**
 > str create_guarantor(loan_id, body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -185,8 +181,6 @@ Name | Type | Description  | Notes
 
 # **delete_guarantor**
 > str delete_guarantor(loan_id, guarantor_id, guarantor_funding_id=guarantor_funding_id)
-
-
 
 ### Example
 
@@ -272,8 +266,6 @@ Name | Type | Description  | Notes
 # **get_guarantor_template**
 > get_guarantor_template(loan_id, office_id=office_id, date_format=date_format)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -356,8 +348,6 @@ void (empty response body)
 # **new_guarantor_template**
 > str new_guarantor_template(loan_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -437,8 +427,6 @@ Name | Type | Description  | Notes
 
 # **post_guarantor_template**
 > str post_guarantor_template(loan_id, date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
-
-
 
 ### Example
 
@@ -526,8 +514,6 @@ Name | Type | Description  | Notes
 # **retrieve_guarantor_details**
 > str retrieve_guarantor_details(loan_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -607,8 +593,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_guarantor_details1**
 > str retrieve_guarantor_details1(loan_id, guarantor_id)
-
-
 
 ### Example
 
@@ -691,8 +675,6 @@ Name | Type | Description  | Notes
 
 # **update_guarantor**
 > str update_guarantor(loan_id, guarantor_id, body=body)
-
-
 
 ### Example
 

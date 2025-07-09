@@ -19,10 +19,10 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.event import Event
-from fineract_client.models.field import Field
+from fineract_client.models.model_field import ModelField
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,7 +30,7 @@ class GetHookResponse(BaseModel):
     """
     GetHookResponse
     """ # noqa: E501
-    config: Optional[List[Field]] = None
+    config: Optional[List[ModelField]] = None
     created_at: Optional[date] = Field(default=None, alias="createdAt")
     display_name: Optional[StrictStr] = Field(default=None, alias="displayName")
     events: Optional[List[Event]] = None
@@ -42,11 +42,11 @@ class GetHookResponse(BaseModel):
     updated_at: Optional[date] = Field(default=None, alias="updatedAt")
     __properties: ClassVar[List[str]] = ["config", "createdAt", "displayName", "events", "id", "isActive", "name", "templateId", "templateName", "updatedAt"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -84,16 +84,16 @@ class GetHookResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in config (list)
         _items = []
         if self.config:
-            for _item in self.config:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_config in self.config:
+                if _item_config:
+                    _items.append(_item_config.to_dict())
             _dict['config'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in events (list)
         _items = []
         if self.events:
-            for _item in self.events:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_events in self.events:
+                if _item_events:
+                    _items.append(_item_events.to_dict())
             _dict['events'] = _items
         return _dict
 
@@ -107,7 +107,7 @@ class GetHookResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "config": [Field.from_dict(_item) for _item in obj["config"]] if obj.get("config") is not None else None,
+            "config": [ModelField.from_dict(_item) for _item in obj["config"]] if obj.get("config") is not None else None,
             "createdAt": obj.get("createdAt"),
             "displayName": obj.get("displayName"),
             "events": [Event.from_dict(_item) for _item in obj["events"]] if obj.get("events") is not None else None,

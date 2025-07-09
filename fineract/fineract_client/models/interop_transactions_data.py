@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.external_id import ExternalId
 from fineract_client.models.interop_transaction_data import InteropTransactionData
@@ -50,11 +50,11 @@ class InteropTransactionsData(BaseModel):
     transactions: Optional[List[InteropTransactionData]] = None
     __properties: ClassVar[List[str]] = ["changes", "clientId", "commandId", "creditBureauReportData", "glimId", "groupId", "gsimId", "loanId", "officeId", "productId", "resourceExternalId", "resourceId", "resourceIdentifier", "rollbackTransaction", "savingsId", "subResourceExternalId", "subResourceId", "transactionId", "transactions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -98,9 +98,9 @@ class InteropTransactionsData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in transactions (list)
         _items = []
         if self.transactions:
-            for _item in self.transactions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_transactions in self.transactions:
+                if _item_transactions:
+                    _items.append(_item_transactions.to_dict())
             _dict['transactions'] = _items
         return _dict
 

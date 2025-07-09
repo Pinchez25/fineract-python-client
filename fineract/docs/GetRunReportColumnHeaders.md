@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of GetRunReportColumnHeaders from a JSON string
 get_run_report_column_headers_instance = GetRunReportColumnHeaders.from_json(json)
 # print the JSON string representation of the object
-print GetRunReportColumnHeaders.to_json()
+print(GetRunReportColumnHeaders.to_json())
 
 # convert the object into a dict
 get_run_report_column_headers_dict = get_run_report_column_headers_instance.to_dict()
 # create an instance of GetRunReportColumnHeaders from a dict
-get_run_report_column_headers_form_dict = get_run_report_column_headers.from_dict(get_run_report_column_headers_dict)
+get_run_report_column_headers_from_dict = GetRunReportColumnHeaders.from_dict(get_run_report_column_headers_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

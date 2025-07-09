@@ -26,12 +26,12 @@ json = "{}"
 # create an instance of GetSavingsProductsChargeOptions from a JSON string
 get_savings_products_charge_options_instance = GetSavingsProductsChargeOptions.from_json(json)
 # print the JSON string representation of the object
-print GetSavingsProductsChargeOptions.to_json()
+print(GetSavingsProductsChargeOptions.to_json())
 
 # convert the object into a dict
 get_savings_products_charge_options_dict = get_savings_products_charge_options_instance.to_dict()
 # create an instance of GetSavingsProductsChargeOptions from a dict
-get_savings_products_charge_options_form_dict = get_savings_products_charge_options.from_dict(get_savings_products_charge_options_dict)
+get_savings_products_charge_options_from_dict = GetSavingsProductsChargeOptions.from_dict(get_savings_products_charge_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of ReportExportType from a JSON string
 report_export_type_instance = ReportExportType.from_json(json)
 # print the JSON string representation of the object
-print ReportExportType.to_json()
+print(ReportExportType.to_json())
 
 # convert the object into a dict
 report_export_type_dict = report_export_type_instance.to_dict()
 # create an instance of ReportExportType from a dict
-report_export_type_form_dict = report_export_type.from_dict(report_export_type_dict)
+report_export_type_from_dict = ReportExportType.from_dict(report_export_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

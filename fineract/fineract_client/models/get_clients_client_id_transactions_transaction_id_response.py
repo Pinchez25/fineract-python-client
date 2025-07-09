@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_client_transactions_currency import GetClientTransactionsCurrency
 from fineract_client.models.get_clients_client_id_transactions_type import GetClientsClientIdTransactionsType
@@ -41,11 +41,11 @@ class GetClientsClientIdTransactionsTransactionIdResponse(BaseModel):
     type: Optional[GetClientsClientIdTransactionsType] = None
     __properties: ClassVar[List[str]] = ["amount", "currency", "date", "id", "officeId", "officeName", "reversed", "submittedOnDate", "type"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

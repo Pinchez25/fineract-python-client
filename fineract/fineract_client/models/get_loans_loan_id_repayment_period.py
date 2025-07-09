@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
@@ -70,11 +70,11 @@ class GetLoansLoanIdRepaymentPeriod(BaseModel):
     total_written_off_for_period: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalWrittenOffForPeriod")
     __properties: ClassVar[List[str]] = ["complete", "daysInPeriod", "downPaymentPeriod", "dueDate", "feeChargesDue", "feeChargesOutstanding", "feeChargesPaid", "feeChargesWaived", "feeChargesWrittenOff", "fromDate", "interestDue", "interestOriginalDue", "interestOutstanding", "interestPaid", "interestWaived", "interestWrittenOff", "obligationsMetOnDate", "penaltyChargesDue", "penaltyChargesOutstanding", "penaltyChargesPaid", "penaltyChargesWaived", "penaltyChargesWrittenOff", "period", "principalDue", "principalLoanBalanceOutstanding", "principalOriginalDue", "principalOutstanding", "principalPaid", "principalWrittenOff", "totalActualCostOfLoanForPeriod", "totalCredits", "totalDueForPeriod", "totalInstallmentAmountForPeriod", "totalOriginalDueForPeriod", "totalOutstandingForPeriod", "totalPaidForPeriod", "totalPaidInAdvanceForPeriod", "totalPaidLateForPeriod", "totalWaivedForPeriod", "totalWrittenOffForPeriod"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -35,12 +35,12 @@ json = "{}"
 # create an instance of LoanProductConfigurableAttributes from a JSON string
 loan_product_configurable_attributes_instance = LoanProductConfigurableAttributes.from_json(json)
 # print the JSON string representation of the object
-print LoanProductConfigurableAttributes.to_json()
+print(LoanProductConfigurableAttributes.to_json())
 
 # convert the object into a dict
 loan_product_configurable_attributes_dict = loan_product_configurable_attributes_instance.to_dict()
 # create an instance of LoanProductConfigurableAttributes from a dict
-loan_product_configurable_attributes_form_dict = loan_product_configurable_attributes.from_dict(loan_product_configurable_attributes_dict)
+loan_product_configurable_attributes_from_dict = LoanProductConfigurableAttributes.from_dict(loan_product_configurable_attributes_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

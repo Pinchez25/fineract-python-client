@@ -13,7 +13,23 @@ Method | HTTP request | Description
 
 List Application Permissions
 
-ARGUMENTS makerCheckerableoptional, Values are true, false. Default is false. If makerCheckerable=false or not supplied then a list of application permissions is returned. The \"selected\" attribute is always true in this case.  If makerCheckerable=true then the \"selected\" attribute shows whether the permission is enabled for Maker Check functionality.  Note: Each Apache Fineract transaction is associated with a permission.  Example Requests:  permissions   permissions?makerCheckerable=true   permissions?fields=grouping,code
+ARGUMENTS
+makerCheckerableoptional, Values are true, false. Default is false.
+If makerCheckerable=false or not supplied then a list of application permissions is returned. The "selected" attribute is always true in this case.
+
+If makerCheckerable=true then the "selected" attribute shows whether the permission is enabled for Maker Check functionality.
+
+Note: Each Apache Fineract transaction is associated with a permission.
+
+Example Requests:
+
+permissions
+
+
+permissions?makerCheckerable=true
+
+
+permissions?fields=grouping,code
 
 ### Example
 

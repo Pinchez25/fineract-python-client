@@ -28,12 +28,12 @@ json = "{}"
 # create an instance of LoanProductPaymentAllocationRule from a JSON string
 loan_product_payment_allocation_rule_instance = LoanProductPaymentAllocationRule.from_json(json)
 # print the JSON string representation of the object
-print LoanProductPaymentAllocationRule.to_json()
+print(LoanProductPaymentAllocationRule.to_json())
 
 # convert the object into a dict
 loan_product_payment_allocation_rule_dict = loan_product_payment_allocation_rule_instance.to_dict()
 # create an instance of LoanProductPaymentAllocationRule from a dict
-loan_product_payment_allocation_rule_form_dict = loan_product_payment_allocation_rule.from_dict(loan_product_payment_allocation_rule_dict)
+loan_product_payment_allocation_rule_from_dict = LoanProductPaymentAllocationRule.from_dict(loan_product_payment_allocation_rule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_loan_transaction_relation import GetLoanTransactionRelation
 from fineract_client.models.get_loans_currency import GetLoansCurrency
@@ -57,11 +57,11 @@ class GetLoansLoanIdTransactionsTransactionIdResponse(BaseModel):
     unrecognized_income_portion: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="unrecognizedIncomePortion")
     __properties: ClassVar[List[str]] = ["amount", "currency", "date", "externalId", "feeChargesPortion", "id", "interestPortion", "loanChargePaidByList", "manuallyReversed", "netDisbursalAmount", "outstandingLoanBalance", "overpaymentPortion", "paymentDetailData", "penaltyChargesPortion", "possibleNextRepaymentDate", "principalPortion", "reversalExternalId", "reversedOnDate", "submittedOnDate", "transactionRelations", "type", "unrecognizedIncomePortion"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -102,9 +102,9 @@ class GetLoansLoanIdTransactionsTransactionIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in loan_charge_paid_by_list (list)
         _items = []
         if self.loan_charge_paid_by_list:
-            for _item in self.loan_charge_paid_by_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_loan_charge_paid_by_list in self.loan_charge_paid_by_list:
+                if _item_loan_charge_paid_by_list:
+                    _items.append(_item_loan_charge_paid_by_list.to_dict())
             _dict['loanChargePaidByList'] = _items
         # override the default output from pydantic by calling `to_dict()` of payment_detail_data
         if self.payment_detail_data:
@@ -112,9 +112,9 @@ class GetLoansLoanIdTransactionsTransactionIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in transaction_relations (list)
         _items = []
         if self.transaction_relations:
-            for _item in self.transaction_relations:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_transaction_relations in self.transaction_relations:
+                if _item_transaction_relations:
+                    _items.append(_item_transaction_relations.to_dict())
             _dict['transactionRelations'] = _items
         # override the default output from pydantic by calling `to_dict()` of type
         if self.type:

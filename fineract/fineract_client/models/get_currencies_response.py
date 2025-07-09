@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.currency_data import CurrencyData
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class GetCurrenciesResponse(BaseModel):
     selected_currency_options: Optional[List[CurrencyData]] = Field(default=None, alias="selectedCurrencyOptions")
     __properties: ClassVar[List[str]] = ["currencyOptions", "selectedCurrencyOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -74,16 +74,16 @@ class GetCurrenciesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in currency_options (list)
         _items = []
         if self.currency_options:
-            for _item in self.currency_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_currency_options in self.currency_options:
+                if _item_currency_options:
+                    _items.append(_item_currency_options.to_dict())
             _dict['currencyOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in selected_currency_options (list)
         _items = []
         if self.selected_currency_options:
-            for _item in self.selected_currency_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_selected_currency_options in self.selected_currency_options:
+                if _item_selected_currency_options:
+                    _items.append(_item_selected_currency_options.to_dict())
             _dict['selectedCurrencyOptions'] = _items
         return _dict
 

@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetLoansLoanIdDelinquencyPausePeriod from a JSON string
 get_loans_loan_id_delinquency_pause_period_instance = GetLoansLoanIdDelinquencyPausePeriod.from_json(json)
 # print the JSON string representation of the object
-print GetLoansLoanIdDelinquencyPausePeriod.to_json()
+print(GetLoansLoanIdDelinquencyPausePeriod.to_json())
 
 # convert the object into a dict
 get_loans_loan_id_delinquency_pause_period_dict = get_loans_loan_id_delinquency_pause_period_instance.to_dict()
 # create an instance of GetLoansLoanIdDelinquencyPausePeriod from a dict
-get_loans_loan_id_delinquency_pause_period_form_dict = get_loans_loan_id_delinquency_pause_period.from_dict(get_loans_loan_id_delinquency_pause_period_dict)
+get_loans_loan_id_delinquency_pause_period_from_dict = GetLoansLoanIdDelinquencyPausePeriod.from_dict(get_loans_loan_id_delinquency_pause_period_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

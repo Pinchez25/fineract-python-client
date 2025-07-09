@@ -37,12 +37,12 @@ json = "{}"
 # create an instance of PostFixedDepositProductsRequest from a JSON string
 post_fixed_deposit_products_request_instance = PostFixedDepositProductsRequest.from_json(json)
 # print the JSON string representation of the object
-print PostFixedDepositProductsRequest.to_json()
+print(PostFixedDepositProductsRequest.to_json())
 
 # convert the object into a dict
 post_fixed_deposit_products_request_dict = post_fixed_deposit_products_request_instance.to_dict()
 # create an instance of PostFixedDepositProductsRequest from a dict
-post_fixed_deposit_products_request_form_dict = post_fixed_deposit_products_request.from_dict(post_fixed_deposit_products_request_dict)
+post_fixed_deposit_products_request_from_dict = PostFixedDepositProductsRequest.from_dict(post_fixed_deposit_products_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

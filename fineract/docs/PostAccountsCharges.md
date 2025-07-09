@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of PostAccountsCharges from a JSON string
 post_accounts_charges_instance = PostAccountsCharges.from_json(json)
 # print the JSON string representation of the object
-print PostAccountsCharges.to_json()
+print(PostAccountsCharges.to_json())
 
 # convert the object into a dict
 post_accounts_charges_dict = post_accounts_charges_instance.to_dict()
 # create an instance of PostAccountsCharges from a dict
-post_accounts_charges_form_dict = post_accounts_charges.from_dict(post_accounts_charges_dict)
+post_accounts_charges_from_dict = PostAccountsCharges.from_dict(post_accounts_charges_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

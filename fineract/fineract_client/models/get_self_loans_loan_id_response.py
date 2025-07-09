@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_loans_loan_id_amortization_type import GetLoansLoanIdAmortizationType
 from fineract_client.models.get_loans_loan_id_currency import GetLoansLoanIdCurrency
@@ -70,11 +70,11 @@ class GetSelfLoansLoanIdResponse(BaseModel):
     transaction_processing_strategy_code: Optional[StrictStr] = Field(default=None, alias="transactionProcessingStrategyCode")
     __properties: ClassVar[List[str]] = ["accountNo", "amortizationType", "annualInterestRate", "clientId", "clientName", "clientOfficeId", "currency", "id", "interestCalculationPeriodType", "interestRateFrequencyType", "interestRatePerPeriod", "interestType", "loanOfficerId", "loanOfficerName", "loanProductDescription", "loanProductId", "loanProductName", "loanPurposeId", "loanPurposeName", "loanType", "numberOfRepayments", "principal", "repaymentEvery", "repaymentFrequencyType", "status", "summary", "termFrequency", "termPeriodFrequencyType", "timeline", "transactionProcessingStrategyCode"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

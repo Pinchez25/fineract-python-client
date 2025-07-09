@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of ClientIdentifier from a JSON string
 client_identifier_instance = ClientIdentifier.from_json(json)
 # print the JSON string representation of the object
-print ClientIdentifier.to_json()
+print(ClientIdentifier.to_json())
 
 # convert the object into a dict
 client_identifier_dict = client_identifier_instance.to_dict()
 # create an instance of ClientIdentifier from a dict
-client_identifier_form_dict = client_identifier.from_dict(client_identifier_dict)
+client_identifier_from_dict = ClientIdentifier.from_dict(client_identifier_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

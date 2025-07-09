@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of PostClientsAddressRequest from a JSON string
 post_clients_address_request_instance = PostClientsAddressRequest.from_json(json)
 # print the JSON string representation of the object
-print PostClientsAddressRequest.to_json()
+print(PostClientsAddressRequest.to_json())
 
 # convert the object into a dict
 post_clients_address_request_dict = post_clients_address_request_instance.to_dict()
 # create an instance of PostClientsAddressRequest from a dict
-post_clients_address_request_form_dict = post_clients_address_request.from_dict(post_clients_address_request_dict)
+post_clients_address_request_from_dict = PostClientsAddressRequest.from_dict(post_clients_address_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

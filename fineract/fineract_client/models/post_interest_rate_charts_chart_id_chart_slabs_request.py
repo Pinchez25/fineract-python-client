@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.post_interest_rate_charts_chart_id_chart_slabs_incentives import PostInterestRateChartsChartIdChartSlabsIncentives
 from typing import Optional, Set
@@ -37,11 +37,11 @@ class PostInterestRateChartsChartIdChartSlabsRequest(BaseModel):
     to_period: Optional[StrictInt] = Field(default=None, alias="toPeriod")
     __properties: ClassVar[List[str]] = ["annualInterestRate", "description", "fromPeriod", "incentives", "locale", "periodType", "toPeriod"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -79,9 +79,9 @@ class PostInterestRateChartsChartIdChartSlabsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in incentives (list)
         _items = []
         if self.incentives:
-            for _item in self.incentives:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_incentives in self.incentives:
+                if _item_incentives:
+                    _items.append(_item_incentives.to_dict())
             _dict['incentives'] = _items
         return _dict
 

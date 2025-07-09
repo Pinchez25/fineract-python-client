@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of LoanTermTypeOptions from a JSON string
 loan_term_type_options_instance = LoanTermTypeOptions.from_json(json)
 # print the JSON string representation of the object
-print LoanTermTypeOptions.to_json()
+print(LoanTermTypeOptions.to_json())
 
 # convert the object into a dict
 loan_term_type_options_dict = loan_term_type_options_instance.to_dict()
 # create an instance of LoanTermTypeOptions from a dict
-loan_term_type_options_form_dict = loan_term_type_options.from_dict(loan_term_type_options_dict)
+loan_term_type_options_from_dict = LoanTermTypeOptions.from_dict(loan_term_type_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

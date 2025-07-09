@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.external_event_configuration_item_data import ExternalEventConfigurationItemData
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetExternalEventConfigurationsResponse(BaseModel):
     external_event_configuration: Optional[List[ExternalEventConfigurationItemData]] = Field(default=None, alias="externalEventConfiguration")
     __properties: ClassVar[List[str]] = ["externalEventConfiguration"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class GetExternalEventConfigurationsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in external_event_configuration (list)
         _items = []
         if self.external_event_configuration:
-            for _item in self.external_event_configuration:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_external_event_configuration in self.external_event_configuration:
+                if _item_external_event_configuration:
+                    _items.append(_item_external_event_configuration.to_dict())
             _dict['externalEventConfiguration'] = _items
         return _dict
 

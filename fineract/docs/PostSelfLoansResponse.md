@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of PostSelfLoansResponse from a JSON string
 post_self_loans_response_instance = PostSelfLoansResponse.from_json(json)
 # print the JSON string representation of the object
-print PostSelfLoansResponse.to_json()
+print(PostSelfLoansResponse.to_json())
 
 # convert the object into a dict
 post_self_loans_response_dict = post_self_loans_response_instance.to_dict()
 # create an instance of PostSelfLoansResponse from a dict
-post_self_loans_response_form_dict = post_self_loans_response.from_dict(post_self_loans_response_dict)
+post_self_loans_response_from_dict = PostSelfLoansResponse.from_dict(post_self_loans_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

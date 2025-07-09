@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.cashier_data import CashierData
 from fineract_client.models.currency_data import CurrencyData
@@ -41,11 +41,11 @@ class GetTellersTellerIdCashiersCashiersIdTransactionsTemplateResponse(BaseModel
     teller_name: Optional[StrictStr] = Field(default=None, alias="tellerName")
     __properties: ClassVar[List[str]] = ["cashierData", "cashierId", "cashierName", "currencyOptions", "endDate", "officeName", "startDate", "tellerId", "tellerName"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -86,9 +86,9 @@ class GetTellersTellerIdCashiersCashiersIdTransactionsTemplateResponse(BaseModel
         # override the default output from pydantic by calling `to_dict()` of each item in currency_options (list)
         _items = []
         if self.currency_options:
-            for _item in self.currency_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_currency_options in self.currency_options:
+                if _item_currency_options:
+                    _items.append(_item_currency_options.to_dict())
             _dict['currencyOptions'] = _items
         return _dict
 

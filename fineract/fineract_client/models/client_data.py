@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.client_collateral_management_data import ClientCollateralManagementData
 from fineract_client.models.client_family_members_data import ClientFamilyMembersData
@@ -98,11 +98,11 @@ class ClientData(BaseModel):
     transfer_to_office_name: Optional[StrictStr] = Field(default=None, alias="transferToOfficeName")
     __properties: ClassVar[List[str]] = ["accountNo", "activationDate", "active", "address", "clientClassification", "clientClassificationId", "clientClassificationOptions", "clientCollateralManagements", "clientLegalFormOptions", "clientNonPersonConstitutionOptions", "clientNonPersonDetails", "clientNonPersonMainBusinessLineOptions", "clientType", "clientTypeId", "clientTypeOptions", "datatables", "dateFormat", "dateOfBirth", "displayName", "emailAddress", "externalId", "familyMemberOptions", "firstname", "fullname", "gender", "genderId", "genderOptions", "groups", "id", "imageId", "imagePresent", "isAddressEnabled", "isStaff", "lastname", "legalForm", "legalFormId", "locale", "middlename", "mobileNo", "narrations", "officeId", "officeName", "officeOptions", "rowIndex", "savingAccountOptions", "savingProductOptions", "savingsAccountId", "savingsProductId", "savingsProductName", "staffId", "staffName", "staffOptions", "status", "subStatus", "submittedOnDate", "timeline", "transferToOfficeId", "transferToOfficeName"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -143,37 +143,37 @@ class ClientData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in client_classification_options (list)
         _items = []
         if self.client_classification_options:
-            for _item in self.client_classification_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_classification_options in self.client_classification_options:
+                if _item_client_classification_options:
+                    _items.append(_item_client_classification_options.to_dict())
             _dict['clientClassificationOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in client_collateral_managements (list)
         _items = []
         if self.client_collateral_managements:
-            for _item in self.client_collateral_managements:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_collateral_managements in self.client_collateral_managements:
+                if _item_client_collateral_managements:
+                    _items.append(_item_client_collateral_managements.to_dict())
             _dict['clientCollateralManagements'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in client_legal_form_options (list)
         _items = []
         if self.client_legal_form_options:
-            for _item in self.client_legal_form_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_legal_form_options in self.client_legal_form_options:
+                if _item_client_legal_form_options:
+                    _items.append(_item_client_legal_form_options.to_dict())
             _dict['clientLegalFormOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in client_non_person_constitution_options (list)
         _items = []
         if self.client_non_person_constitution_options:
-            for _item in self.client_non_person_constitution_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_non_person_constitution_options in self.client_non_person_constitution_options:
+                if _item_client_non_person_constitution_options:
+                    _items.append(_item_client_non_person_constitution_options.to_dict())
             _dict['clientNonPersonConstitutionOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in client_non_person_main_business_line_options (list)
         _items = []
         if self.client_non_person_main_business_line_options:
-            for _item in self.client_non_person_main_business_line_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_non_person_main_business_line_options in self.client_non_person_main_business_line_options:
+                if _item_client_non_person_main_business_line_options:
+                    _items.append(_item_client_non_person_main_business_line_options.to_dict())
             _dict['clientNonPersonMainBusinessLineOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of client_type
         if self.client_type:
@@ -181,16 +181,16 @@ class ClientData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in client_type_options (list)
         _items = []
         if self.client_type_options:
-            for _item in self.client_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_type_options in self.client_type_options:
+                if _item_client_type_options:
+                    _items.append(_item_client_type_options.to_dict())
             _dict['clientTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in datatables (list)
         _items = []
         if self.datatables:
-            for _item in self.datatables:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_datatables in self.datatables:
+                if _item_datatables:
+                    _items.append(_item_datatables.to_dict())
             _dict['datatables'] = _items
         # override the default output from pydantic by calling `to_dict()` of external_id
         if self.external_id:
@@ -204,16 +204,16 @@ class ClientData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in gender_options (list)
         _items = []
         if self.gender_options:
-            for _item in self.gender_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_gender_options in self.gender_options:
+                if _item_gender_options:
+                    _items.append(_item_gender_options.to_dict())
             _dict['genderOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in groups (list)
         _items = []
         if self.groups:
-            for _item in self.groups:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_groups in self.groups:
+                if _item_groups:
+                    _items.append(_item_groups.to_dict())
             _dict['groups'] = _items
         # override the default output from pydantic by calling `to_dict()` of legal_form
         if self.legal_form:
@@ -221,37 +221,37 @@ class ClientData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in narrations (list)
         _items = []
         if self.narrations:
-            for _item in self.narrations:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_narrations in self.narrations:
+                if _item_narrations:
+                    _items.append(_item_narrations.to_dict())
             _dict['narrations'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in office_options (list)
         _items = []
         if self.office_options:
-            for _item in self.office_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_office_options in self.office_options:
+                if _item_office_options:
+                    _items.append(_item_office_options.to_dict())
             _dict['officeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in saving_account_options (list)
         _items = []
         if self.saving_account_options:
-            for _item in self.saving_account_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_saving_account_options in self.saving_account_options:
+                if _item_saving_account_options:
+                    _items.append(_item_saving_account_options.to_dict())
             _dict['savingAccountOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in saving_product_options (list)
         _items = []
         if self.saving_product_options:
-            for _item in self.saving_product_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_saving_product_options in self.saving_product_options:
+                if _item_saving_product_options:
+                    _items.append(_item_saving_product_options.to_dict())
             _dict['savingProductOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in staff_options (list)
         _items = []
         if self.staff_options:
-            for _item in self.staff_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_staff_options in self.staff_options:
+                if _item_staff_options:
+                    _items.append(_item_staff_options.to_dict())
             _dict['staffOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

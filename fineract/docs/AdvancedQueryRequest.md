@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of AdvancedQueryRequest from a JSON string
 advanced_query_request_instance = AdvancedQueryRequest.from_json(json)
 # print the JSON string representation of the object
-print AdvancedQueryRequest.to_json()
+print(AdvancedQueryRequest.to_json())
 
 # convert the object into a dict
 advanced_query_request_dict = advanced_query_request_instance.to_dict()
 # create an instance of AdvancedQueryRequest from a dict
-advanced_query_request_form_dict = advanced_query_request.from_dict(advanced_query_request_dict)
+advanced_query_request_from_dict = AdvancedQueryRequest.from_dict(advanced_query_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

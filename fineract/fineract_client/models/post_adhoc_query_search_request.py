@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -42,11 +42,11 @@ class PostAdhocQuerySearchRequest(BaseModel):
     outstanding_amount_condition: Optional[StrictStr] = Field(default=None, alias="outstandingAmountCondition")
     __properties: ClassVar[List[str]] = ["dateFormat", "includeOutStandingAmountPercentage", "includeOutstandingAmount", "loanDateOption", "loanFromDate", "loanToDate", "locale", "maxOutstandingAmount", "minOutstandingAmount", "outStandingAmountPercentage", "outStandingAmountPercentageCondition", "outstandingAmountCondition"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

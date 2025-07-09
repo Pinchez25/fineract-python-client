@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetCentersOfficeOptions from a JSON string
 get_centers_office_options_instance = GetCentersOfficeOptions.from_json(json)
 # print the JSON string representation of the object
-print GetCentersOfficeOptions.to_json()
+print(GetCentersOfficeOptions.to_json())
 
 # convert the object into a dict
 get_centers_office_options_dict = get_centers_office_options_instance.to_dict()
 # create an instance of GetCentersOfficeOptions from a dict
-get_centers_office_options_form_dict = get_centers_office_options.from_dict(get_centers_office_options_dict)
+get_centers_office_options_from_dict = GetCentersOfficeOptions.from_dict(get_centers_office_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

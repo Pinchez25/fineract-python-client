@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetShareAccountsChargeAppliesTo from a JSON string
 get_share_accounts_charge_applies_to_instance = GetShareAccountsChargeAppliesTo.from_json(json)
 # print the JSON string representation of the object
-print GetShareAccountsChargeAppliesTo.to_json()
+print(GetShareAccountsChargeAppliesTo.to_json())
 
 # convert the object into a dict
 get_share_accounts_charge_applies_to_dict = get_share_accounts_charge_applies_to_instance.to_dict()
 # create an instance of GetShareAccountsChargeAppliesTo from a dict
-get_share_accounts_charge_applies_to_form_dict = get_share_accounts_charge_applies_to.from_dict(get_share_accounts_charge_applies_to_dict)
+get_share_accounts_charge_applies_to_from_dict = GetShareAccountsChargeAppliesTo.from_dict(get_share_accounts_charge_applies_to_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_groups_group_id_timeline import GetGroupsGroupIdTimeline
 from typing import Optional, Set
@@ -37,11 +37,11 @@ class GetGroupsGroupIdResponse(BaseModel):
     timeline: Optional[GetGroupsGroupIdTimeline] = None
     __properties: ClassVar[List[str]] = ["externalId", "hierarchy", "id", "name", "officeId", "officeName", "timeline"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

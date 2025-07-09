@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.calendar_data import CalendarData
 from fineract_client.models.center_data import CenterData
@@ -73,11 +73,11 @@ class GroupGeneralData(BaseModel):
     timeline: Optional[Dict[str, Any]] = None
     __properties: ClassVar[List[str]] = ["accountNo", "activationDate", "active", "activeClientMembers", "availableRoles", "calendarsData", "centerId", "centerName", "centerOptions", "childGroup", "clientMembers", "clientOptions", "closureReasons", "collectionMeetingCalendar", "datatables", "dateFormat", "externalId", "groupLevel", "groupRoles", "hierarchy", "id", "locale", "name", "officeId", "officeName", "officeOptions", "parentId", "rowIndex", "selectedRole", "staffId", "staffName", "staffOptions", "status", "submittedOnDate", "timeline"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -115,51 +115,51 @@ class GroupGeneralData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in active_client_members (list)
         _items = []
         if self.active_client_members:
-            for _item in self.active_client_members:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_active_client_members in self.active_client_members:
+                if _item_active_client_members:
+                    _items.append(_item_active_client_members.to_dict())
             _dict['activeClientMembers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in available_roles (list)
         _items = []
         if self.available_roles:
-            for _item in self.available_roles:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_available_roles in self.available_roles:
+                if _item_available_roles:
+                    _items.append(_item_available_roles.to_dict())
             _dict['availableRoles'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in calendars_data (list)
         _items = []
         if self.calendars_data:
-            for _item in self.calendars_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_calendars_data in self.calendars_data:
+                if _item_calendars_data:
+                    _items.append(_item_calendars_data.to_dict())
             _dict['calendarsData'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in center_options (list)
         _items = []
         if self.center_options:
-            for _item in self.center_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_center_options in self.center_options:
+                if _item_center_options:
+                    _items.append(_item_center_options.to_dict())
             _dict['centerOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in client_members (list)
         _items = []
         if self.client_members:
-            for _item in self.client_members:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_members in self.client_members:
+                if _item_client_members:
+                    _items.append(_item_client_members.to_dict())
             _dict['clientMembers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in client_options (list)
         _items = []
         if self.client_options:
-            for _item in self.client_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_options in self.client_options:
+                if _item_client_options:
+                    _items.append(_item_client_options.to_dict())
             _dict['clientOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in closure_reasons (list)
         _items = []
         if self.closure_reasons:
-            for _item in self.closure_reasons:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_closure_reasons in self.closure_reasons:
+                if _item_closure_reasons:
+                    _items.append(_item_closure_reasons.to_dict())
             _dict['closureReasons'] = _items
         # override the default output from pydantic by calling `to_dict()` of collection_meeting_calendar
         if self.collection_meeting_calendar:
@@ -167,23 +167,23 @@ class GroupGeneralData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in datatables (list)
         _items = []
         if self.datatables:
-            for _item in self.datatables:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_datatables in self.datatables:
+                if _item_datatables:
+                    _items.append(_item_datatables.to_dict())
             _dict['datatables'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in group_roles (list)
         _items = []
         if self.group_roles:
-            for _item in self.group_roles:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_group_roles in self.group_roles:
+                if _item_group_roles:
+                    _items.append(_item_group_roles.to_dict())
             _dict['groupRoles'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in office_options (list)
         _items = []
         if self.office_options:
-            for _item in self.office_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_office_options in self.office_options:
+                if _item_office_options:
+                    _items.append(_item_office_options.to_dict())
             _dict['officeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of selected_role
         if self.selected_role:
@@ -191,9 +191,9 @@ class GroupGeneralData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in staff_options (list)
         _items = []
         if self.staff_options:
-            for _item in self.staff_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_staff_options in self.staff_options:
+                if _item_staff_options:
+                    _items.append(_item_staff_options.to_dict())
             _dict['staffOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

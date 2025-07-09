@@ -467,8 +467,6 @@ Name | Type | Description  | Notes
 # **transfer_request_with_id**
 > PostInitiateTransferResponse transfer_request_with_id(id, command=command)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -553,8 +551,6 @@ Name | Type | Description  | Notes
 # **transfer_request_with_id1**
 > PostInitiateTransferResponse transfer_request_with_id1(external_id, command=command)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -638,8 +634,6 @@ Name | Type | Description  | Notes
 
 # **transfer_request_with_loan_external_id**
 > PostInitiateTransferResponse transfer_request_with_loan_external_id(loan_external_id, post_initiate_transfer_request, command=command)
-
-
 
 ### Example
 
@@ -727,8 +721,6 @@ Name | Type | Description  | Notes
 
 # **transfer_request_with_loan_id**
 > PostInitiateTransferResponse transfer_request_with_loan_id(loan_id, post_initiate_transfer_request, command=command)
-
-
 
 ### Example
 

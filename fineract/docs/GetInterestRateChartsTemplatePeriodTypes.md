@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetInterestRateChartsTemplatePeriodTypes from a JSON string
 get_interest_rate_charts_template_period_types_instance = GetInterestRateChartsTemplatePeriodTypes.from_json(json)
 # print the JSON string representation of the object
-print GetInterestRateChartsTemplatePeriodTypes.to_json()
+print(GetInterestRateChartsTemplatePeriodTypes.to_json())
 
 # convert the object into a dict
 get_interest_rate_charts_template_period_types_dict = get_interest_rate_charts_template_period_types_instance.to_dict()
 # create an instance of GetInterestRateChartsTemplatePeriodTypes from a dict
-get_interest_rate_charts_template_period_types_form_dict = get_interest_rate_charts_template_period_types.from_dict(get_interest_rate_charts_template_period_types_dict)
+get_interest_rate_charts_template_period_types_from_dict = GetInterestRateChartsTemplatePeriodTypes.from_dict(get_interest_rate_charts_template_period_types_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

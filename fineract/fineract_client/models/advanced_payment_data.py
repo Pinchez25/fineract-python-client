@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.payment_allocation_order import PaymentAllocationOrder
 from typing import Optional, Set
@@ -33,11 +33,11 @@ class AdvancedPaymentData(BaseModel):
     transaction_type: Optional[StrictStr] = Field(default=None, alias="transactionType")
     __properties: ClassVar[List[str]] = ["futureInstallmentAllocationRule", "paymentAllocationOrder", "transactionType"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -75,9 +75,9 @@ class AdvancedPaymentData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in payment_allocation_order (list)
         _items = []
         if self.payment_allocation_order:
-            for _item in self.payment_allocation_order:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_payment_allocation_order in self.payment_allocation_order:
+                if _item_payment_allocation_order:
+                    _items.append(_item_payment_allocation_order.to_dict())
             _dict['paymentAllocationOrder'] = _items
         return _dict
 

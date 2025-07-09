@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date, datetime
-from pydantic import BaseModel, Field, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.extension_data import ExtensionData
 from fineract_client.models.geo_code_data import GeoCodeData
@@ -62,11 +62,11 @@ class InteropQuoteRequestData(BaseModel):
             raise ValueError("must be one of enum values ('PAYER', 'PAYEE')")
         return value
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -107,9 +107,9 @@ class InteropQuoteRequestData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extension_list (list)
         _items = []
         if self.extension_list:
-            for _item in self.extension_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extension_list in self.extension_list:
+                if _item_extension_list:
+                    _items.append(_item_extension_list.to_dict())
             _dict['extensionList'] = _items
         # override the default output from pydantic by calling `to_dict()` of fees
         if self.fees:

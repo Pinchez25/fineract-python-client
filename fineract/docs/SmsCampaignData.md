@@ -29,12 +29,12 @@ json = "{}"
 # create an instance of SmsCampaignData from a JSON string
 sms_campaign_data_instance = SmsCampaignData.from_json(json)
 # print the JSON string representation of the object
-print SmsCampaignData.to_json()
+print(SmsCampaignData.to_json())
 
 # convert the object into a dict
 sms_campaign_data_dict = sms_campaign_data_instance.to_dict()
 # create an instance of SmsCampaignData from a dict
-sms_campaign_data_form_dict = sms_campaign_data.from_dict(sms_campaign_data_dict)
+sms_campaign_data_from_dict = SmsCampaignData.from_dict(sms_campaign_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

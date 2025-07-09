@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of SubjectName from a JSON string
 subject_name_instance = SubjectName.from_json(json)
 # print the JSON string representation of the object
-print SubjectName.to_json()
+print(SubjectName.to_json())
 
 # convert the object into a dict
 subject_name_dict = subject_name_instance.to_dict()
 # create an instance of SubjectName from a dict
-subject_name_form_dict = subject_name.from_dict(subject_name_dict)
+subject_name_from_dict = SubjectName.from_dict(subject_name_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
@@ -41,11 +41,11 @@ class PostRecurringDepositAccountsRequest(BaseModel):
     submitted_on_date: Optional[StrictStr] = Field(default=None, alias="submittedOnDate")
     __properties: ClassVar[List[str]] = ["clientId", "dateFormat", "depositAmount", "depositPeriod", "depositPeriodFrequencyId", "isCalendarInherited", "locale", "mandatoryRecommendedDepositAmount", "productId", "recurringFrequency", "recurringFrequencyType", "submittedOnDate"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

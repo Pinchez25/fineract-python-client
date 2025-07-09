@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of GetLoanProductsCurrencyOptions from a JSON string
 get_loan_products_currency_options_instance = GetLoanProductsCurrencyOptions.from_json(json)
 # print the JSON string representation of the object
-print GetLoanProductsCurrencyOptions.to_json()
+print(GetLoanProductsCurrencyOptions.to_json())
 
 # convert the object into a dict
 get_loan_products_currency_options_dict = get_loan_products_currency_options_instance.to_dict()
 # create an instance of GetLoanProductsCurrencyOptions from a dict
-get_loan_products_currency_options_form_dict = get_loan_products_currency_options.from_dict(get_loan_products_currency_options_dict)
+get_loan_products_currency_options_from_dict = GetLoanProductsCurrencyOptions.from_dict(get_loan_products_currency_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

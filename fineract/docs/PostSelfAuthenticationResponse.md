@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of PostSelfAuthenticationResponse from a JSON string
 post_self_authentication_response_instance = PostSelfAuthenticationResponse.from_json(json)
 # print the JSON string representation of the object
-print PostSelfAuthenticationResponse.to_json()
+print(PostSelfAuthenticationResponse.to_json())
 
 # convert the object into a dict
 post_self_authentication_response_dict = post_self_authentication_response_instance.to_dict()
 # create an instance of PostSelfAuthenticationResponse from a dict
-post_self_authentication_response_form_dict = post_self_authentication_response.from_dict(post_self_authentication_response_dict)
+post_self_authentication_response_from_dict = PostSelfAuthenticationResponse.from_dict(post_self_authentication_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -17,7 +17,8 @@ Method | HTTP request | Description
 
 Create an Identifier for a Client
 
-Mandatory Fields documentKey, documentTypeId
+Mandatory Fields
+documentKey, documentTypeId
 
 ### Example
 
@@ -194,7 +195,14 @@ Name | Type | Description  | Notes
 
 Retrieve Client Identifier Details Template
 
-This is a convenience resource useful for building maintenance user interface screens for client applications. The template data returned consists of any or all of:   Field Defaults  Allowed description Lists   Example Request: clients/1/identifiers/template
+This is a convenience resource useful for building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+ Field Defaults
+ Allowed description Lists
+
+
+Example Request:
+clients/1/identifiers/template
 
 ### Example
 
@@ -280,7 +288,11 @@ Name | Type | Description  | Notes
 
 List all Identifiers for a Client
 
-Example Requests: clients/1/identifiers   clients/1/identifiers?fields=documentKey,documentType,description
+Example Requests:
+clients/1/identifiers
+
+
+clients/1/identifiers?fields=documentKey,documentType,description
 
 ### Example
 
@@ -366,7 +378,13 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Identifier
 
-Example Requests: clients/1/identifier/2   clients/1/identifier/2?template=true  clients/1/identifiers/2?fields=documentKey,documentType,description
+Example Requests:
+clients/1/identifier/2
+
+
+clients/1/identifier/2?template=true
+
+clients/1/identifiers/2?fields=documentKey,documentType,description
 
 ### Example
 

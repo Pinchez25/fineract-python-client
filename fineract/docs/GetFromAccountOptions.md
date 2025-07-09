@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of GetFromAccountOptions from a JSON string
 get_from_account_options_instance = GetFromAccountOptions.from_json(json)
 # print the JSON string representation of the object
-print GetFromAccountOptions.to_json()
+print(GetFromAccountOptions.to_json())
 
 # convert the object into a dict
 get_from_account_options_dict = get_from_account_options_instance.to_dict()
 # create an instance of GetFromAccountOptions from a dict
-get_from_account_options_form_dict = get_from_account_options.from_dict(get_from_account_options_dict)
+get_from_account_options_from_dict = GetFromAccountOptions.from_dict(get_from_account_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

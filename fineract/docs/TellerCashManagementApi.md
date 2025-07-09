@@ -30,7 +30,8 @@ Method | HTTP request | Description
 
 Allocate Cash To Cashier
 
-Mandatory Fields:  Date, Amount, Currency, Notes/Comments
+Mandatory Fields: 
+Date, Amount, Currency, Notes/Comments
 
 ### Example
 
@@ -121,7 +122,13 @@ Name | Type | Description  | Notes
 
 Create Cashiers
 
-Mandatory Fields:  Cashier/staff, Fromm Date, To Date, Full Day or From time and To time    Optional Fields:  Description/Notes
+Mandatory Fields: 
+Cashier/staff, Fromm Date, To Date, Full Day or From time and To time
+
+
+
+Optional Fields: 
+Description/Notes
 
 ### Example
 
@@ -210,7 +217,10 @@ Name | Type | Description  | Notes
 
 Create teller
 
-Mandatory Fields Teller name, OfficeId, Description, Start Date, Status Optional Fields End Date
+Mandatory Fields
+Teller name, OfficeId, Description, Start Date, Status
+Optional Fields
+End Date
 
 ### Example
 
@@ -380,8 +390,6 @@ Name | Type | Description  | Notes
 
 # **delete_teller**
 > str delete_teller(teller_id)
-
-
 
 ### Example
 
@@ -632,8 +640,6 @@ Name | Type | Description  | Notes
 
 # **find_transaction_data**
 > str find_transaction_data(teller_id, transaction_id)
-
-
 
 ### Example
 
@@ -975,8 +981,6 @@ Name | Type | Description  | Notes
 # **get_journal_data**
 > str get_journal_data(teller_id, cashier_id=cashier_id, date_range=date_range)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1146,8 +1150,6 @@ Name | Type | Description  | Notes
 
 # **get_transaction_data**
 > str get_transaction_data(teller_id, date_range=date_range)
-
-
 
 ### Example
 
@@ -1425,7 +1427,8 @@ Name | Type | Description  | Notes
 
 Settle Cash From Cashier
 
-Mandatory Fields Date, Amount, Currency, Notes/Comments
+Mandatory Fields
+Date, Amount, Currency, Notes/Comments
 
 ### Example
 

@@ -188,7 +188,14 @@ Name | Type | Description  | Notes
 
 Retrieve Report Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists  Example Request :   reports/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed description Lists
+
+Example Request : 
+
+reports/template
 
 ### Example
 
@@ -270,7 +277,12 @@ This endpoint does not need any parameter.
 
 Retrieve a Report 
 
-Example Requests:  reports/1   reports/1?template=true
+Example Requests:
+
+reports/1
+
+
+reports/1?template=true
 
 ### Example
 
@@ -356,7 +368,11 @@ Name | Type | Description  | Notes
 
 List Reports
 
-Lists all reports and their parameters.  Example Request:  reports
+Lists all reports and their parameters.
+
+Example Request:
+
+reports
 
 ### Example
 

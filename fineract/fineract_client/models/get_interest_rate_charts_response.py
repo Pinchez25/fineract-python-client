@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_interest_rate_charts_chart_slabs import GetInterestRateChartsChartSlabs
 from typing import Optional, Set
@@ -36,11 +36,11 @@ class GetInterestRateChartsResponse(BaseModel):
     savings_product_name: Optional[StrictStr] = Field(default=None, alias="savingsProductName")
     __properties: ClassVar[List[str]] = ["chartSlabs", "fromDate", "id", "savingsProductId", "savingsProductName"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -78,9 +78,9 @@ class GetInterestRateChartsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in chart_slabs (list)
         _items = []
         if self.chart_slabs:
-            for _item in self.chart_slabs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_chart_slabs in self.chart_slabs:
+                if _item_chart_slabs:
+                    _items.append(_item_chart_slabs.to_dict())
             _dict['chartSlabs'] = _items
         return _dict
 

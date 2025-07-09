@@ -59,12 +59,12 @@ json = "{}"
 # create an instance of CalendarData from a JSON string
 calendar_data_instance = CalendarData.from_json(json)
 # print the JSON string representation of the object
-print CalendarData.to_json()
+print(CalendarData.to_json())
 
 # convert the object into a dict
 calendar_data_dict = calendar_data_instance.to_dict()
 # create an instance of CalendarData from a dict
-calendar_data_form_dict = calendar_data.from_dict(calendar_data_dict)
+calendar_data_from_dict = CalendarData.from_dict(calendar_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

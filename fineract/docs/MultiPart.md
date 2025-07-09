@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of MultiPart from a JSON string
 multi_part_instance = MultiPart.from_json(json)
 # print the JSON string representation of the object
-print MultiPart.to_json()
+print(MultiPart.to_json())
 
 # convert the object into a dict
 multi_part_dict = multi_part_instance.to_dict()
 # create an instance of MultiPart from a dict
-multi_part_form_dict = multi_part.from_dict(multi_part_dict)
+multi_part_from_dict = MultiPart.from_dict(multi_part_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

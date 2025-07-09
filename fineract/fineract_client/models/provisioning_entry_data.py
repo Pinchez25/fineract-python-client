@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.loan_product_provisioning_entry_data import LoanProductProvisioningEntryData
 from typing import Optional, Set
@@ -40,11 +40,11 @@ class ProvisioningEntryData(BaseModel):
     reserved_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="reservedAmount")
     __properties: ClassVar[List[str]] = ["createdById", "createdDate", "createdUser", "id", "journalEntry", "modifiedById", "modifiedUser", "provisioningEntries", "reservedAmount"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -82,9 +82,9 @@ class ProvisioningEntryData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in provisioning_entries (list)
         _items = []
         if self.provisioning_entries:
-            for _item in self.provisioning_entries:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_provisioning_entries in self.provisioning_entries:
+                if _item_provisioning_entries:
+                    _items.append(_item_provisioning_entries.to_dict())
             _dict['provisioningEntries'] = _items
         return _dict
 

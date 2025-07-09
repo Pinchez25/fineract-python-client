@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetSavingsTimeline from a JSON string
 get_savings_timeline_instance = GetSavingsTimeline.from_json(json)
 # print the JSON string representation of the object
-print GetSavingsTimeline.to_json()
+print(GetSavingsTimeline.to_json())
 
 # convert the object into a dict
 get_savings_timeline_dict = get_savings_timeline_instance.to_dict()
 # create an instance of GetSavingsTimeline from a dict
-get_savings_timeline_form_dict = get_savings_timeline.from_dict(get_savings_timeline_dict)
+get_savings_timeline_from_dict = GetSavingsTimeline.from_dict(get_savings_timeline_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

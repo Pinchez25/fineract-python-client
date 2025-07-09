@@ -90,6 +90,7 @@ docs/CurrencyItem.md
 docs/DataTablesApi.md
 docs/DatatableData.md
 docs/DefaultApi.md
+docs/DelSavingsChargeResponse.md
 docs/DeleteAccountNumberFormatsResponse.md
 docs/DeleteAccountingRulesResponse.md
 docs/DeleteCentersCenterIdResponse.md
@@ -131,7 +132,6 @@ docs/DeleteReportsResponse.md
 docs/DeleteResourceTypeResourceIdNotesNoteIdResponse.md
 docs/DeleteRolesRoleIdResponse.md
 docs/DeleteSavingsAccountsAccountIdResponse.md
-docs/DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse.md
 docs/DeleteSavingsProductsProductIdResponse.md
 docs/DeleteSelfBeneficiariesTPTBeneficiaryIdResponse.md
 docs/DeleteTellersTellerIdCashiersCashierIdResponse.md
@@ -168,7 +168,6 @@ docs/ExternalTransferDataDetails.md
 docs/ExternalTransferLoanData.md
 docs/ExternalTransferOwnerData.md
 docs/FetchAuthenticatedUserDetailsApi.md
-docs/Field.md
 docs/FilterData.md
 docs/FinancialActivityData.md
 docs/FineractEntityApi.md
@@ -948,6 +947,7 @@ docs/MeetingsApi.md
 docs/MixMappingApi.md
 docs/MixReportApi.md
 docs/MixTaxonomyApi.md
+docs/ModelField.md
 docs/MonetaryCurrency.md
 docs/Money.md
 docs/MoneyData.md
@@ -1703,6 +1703,7 @@ fineract_client/models/credit_debit.py
 fineract_client/models/currency_data.py
 fineract_client/models/currency_item.py
 fineract_client/models/datatable_data.py
+fineract_client/models/del_savings_charge_response.py
 fineract_client/models/delete_account_number_formats_response.py
 fineract_client/models/delete_accounting_rules_response.py
 fineract_client/models/delete_centers_center_id_response.py
@@ -1744,7 +1745,6 @@ fineract_client/models/delete_reports_response.py
 fineract_client/models/delete_resource_type_resource_id_notes_note_id_response.py
 fineract_client/models/delete_roles_role_id_response.py
 fineract_client/models/delete_savings_accounts_account_id_response.py
-fineract_client/models/delete_savings_accounts_savings_account_id_charges_savings_account_charge_id_response.py
 fineract_client/models/delete_savings_products_product_id_response.py
 fineract_client/models/delete_self_beneficiaries_tpt_beneficiary_id_response.py
 fineract_client/models/delete_tellers_teller_id_cashiers_cashier_id_response.py
@@ -1771,7 +1771,6 @@ fineract_client/models/external_transfer_data.py
 fineract_client/models/external_transfer_data_details.py
 fineract_client/models/external_transfer_loan_data.py
 fineract_client/models/external_transfer_owner_data.py
-fineract_client/models/field.py
 fineract_client/models/filter_data.py
 fineract_client/models/financial_activity_data.py
 fineract_client/models/floating_rate.py
@@ -2514,6 +2513,7 @@ fineract_client/models/local_time.py
 fineract_client/models/lookup_table_data.py
 fineract_client/models/lookup_table_entry.py
 fineract_client/models/media_type.py
+fineract_client/models/model_field.py
 fineract_client/models/monetary_currency.py
 fineract_client/models/money.py
 fineract_client/models/money_data.py
@@ -3009,5 +3009,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_field.py
+test/test_del_savings_charge_response.py
 tox.ini

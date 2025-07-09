@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -73,11 +73,11 @@ class LoanProductPaymentAllocationRule(BaseModel):
             raise ValueError("must be one of enum values ('DEFAULT', 'REPAYMENT', 'DOWN_PAYMENT', 'MERCHANT_ISSUED_REFUND', 'PAYOUT_REFUND', 'GOODWILL_CREDIT', 'CHARGE_REFUND', 'CHARGE_ADJUSTMENT', 'WAIVE_INTEREST', 'CHARGE_PAYMENT', 'REFUND_FOR_ACTIVE_LOAN', 'INTEREST_PAYMENT_WAIVER', 'INTEREST_REFUND')")
         return value
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

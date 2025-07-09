@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.loan_product_data import LoanProductData
 from fineract_client.models.provisioning_criteria_definition_data import ProvisioningCriteriaDefinitionData
@@ -34,11 +34,11 @@ class PostProvisioningCriteriaRequest(BaseModel):
     provisioningcriteria: Optional[List[ProvisioningCriteriaDefinitionData]] = None
     __properties: ClassVar[List[str]] = ["criteriaName", "loanProducts", "provisioningcriteria"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -76,16 +76,16 @@ class PostProvisioningCriteriaRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in loan_products (list)
         _items = []
         if self.loan_products:
-            for _item in self.loan_products:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_loan_products in self.loan_products:
+                if _item_loan_products:
+                    _items.append(_item_loan_products.to_dict())
             _dict['loanProducts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in provisioningcriteria (list)
         _items = []
         if self.provisioningcriteria:
-            for _item in self.provisioningcriteria:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_provisioningcriteria in self.provisioningcriteria:
+                if _item_provisioningcriteria:
+                    _items.append(_item_provisioningcriteria.to_dict())
             _dict['provisioningcriteria'] = _items
         return _dict
 

@@ -104,7 +104,11 @@ void (empty response body)
 
 Retrieve Scheduler Jobs
 
-Returns the list of jobs.  Example Requests:  jobs
+Returns the list of jobs.
+
+Example Requests:
+
+jobs
 
 ### Example
 
@@ -186,7 +190,9 @@ This endpoint does not need any parameter.
 
 Retrieve Job Run History
 
-Example Requests:  jobs/5/runhistory?offset=0&limit=200
+Example Requests:
+
+jobs/5/runhistory?offset=0&limit=200
 
 ### Example
 
@@ -280,7 +286,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Job
 
-Returns the details of a Job.  Example Requests:  jobs/5
+Returns the details of a Job.
+
+Example Requests:
+
+jobs/5
 
 ### Example
 

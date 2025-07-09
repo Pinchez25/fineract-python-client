@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.image import Image
 from fineract_client.models.office import Office
@@ -49,11 +49,11 @@ class Staff(BaseModel):
     organisational_role_type: Optional[StrictInt] = Field(default=None, alias="organisationalRoleType")
     __properties: ClassVar[List[str]] = ["active", "displayName", "emailAddress", "externalId", "firstname", "id", "image", "joiningDate", "lastname", "loanOfficer", "mobileNo", "new", "notActive", "notLoanOfficer", "office", "organisationalRoleParentStaff", "organisationalRoleType"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

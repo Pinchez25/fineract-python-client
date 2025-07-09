@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of InteropTransactionRequestData from a JSON string
 interop_transaction_request_data_instance = InteropTransactionRequestData.from_json(json)
 # print the JSON string representation of the object
-print InteropTransactionRequestData.to_json()
+print(InteropTransactionRequestData.to_json())
 
 # convert the object into a dict
 interop_transaction_request_data_dict = interop_transaction_request_data_instance.to_dict()
 # create an instance of InteropTransactionRequestData from a dict
-interop_transaction_request_data_form_dict = interop_transaction_request_data.from_dict(interop_transaction_request_data_dict)
+interop_transaction_request_data_from_dict = InteropTransactionRequestData.from_dict(interop_transaction_request_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

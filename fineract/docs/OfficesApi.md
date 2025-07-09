@@ -20,7 +20,8 @@ Method | HTTP request | Description
 
 Create an Office
 
-Mandatory Fields name, openingDate, parentId
+Mandatory Fields
+name, openingDate, parentId
 
 ### Example
 
@@ -105,8 +106,6 @@ Name | Type | Description  | Notes
 # **get_office_template**
 > get_office_template(date_format=date_format)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -184,8 +183,6 @@ void (empty response body)
 
 # **post_office_template**
 > str post_office_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
-
-
 
 ### Example
 
@@ -273,7 +270,15 @@ Name | Type | Description  | Notes
 
 Retrieve an Office
 
-Example Requests:  offices/1   offices/1?template=true   offices/1?fields=id,name,parentName
+Example Requests:
+
+offices/1
+
+
+offices/1?template=true
+
+
+offices/1?fields=id,name,parentName
 
 ### Example
 
@@ -359,7 +364,15 @@ Name | Type | Description  | Notes
 
 Retrieve an Office using external id
 
-Example Requests:  offices/external-id/asd123   offices/external-id/asd123?template=true   offices/external-id/asd123?fields=id,name,parentName
+Example Requests:
+
+offices/external-id/asd123
+
+
+offices/external-id/asd123?template=true
+
+
+offices/external-id/asd123?fields=id,name,parentName
 
 ### Example
 
@@ -445,7 +458,13 @@ Name | Type | Description  | Notes
 
 Retrieve Office Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed description Lists Example Request:  offices/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed description Lists
+Example Request:
+
+offices/template
 
 ### Example
 
@@ -527,7 +546,12 @@ This endpoint does not need any parameter.
 
 List Offices
 
-Example Requests:  offices   offices?fields=id,name,openingDate
+Example Requests:
+
+offices
+
+
+offices?fields=id,name,openingDate
 
 ### Example
 

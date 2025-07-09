@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of PostClientsClientIdChargesChargeIdResponse from a JSON string
 post_clients_client_id_charges_charge_id_response_instance = PostClientsClientIdChargesChargeIdResponse.from_json(json)
 # print the JSON string representation of the object
-print PostClientsClientIdChargesChargeIdResponse.to_json()
+print(PostClientsClientIdChargesChargeIdResponse.to_json())
 
 # convert the object into a dict
 post_clients_client_id_charges_charge_id_response_dict = post_clients_client_id_charges_charge_id_response_instance.to_dict()
 # create an instance of PostClientsClientIdChargesChargeIdResponse from a dict
-post_clients_client_id_charges_charge_id_response_form_dict = post_clients_client_id_charges_charge_id_response.from_dict(post_clients_client_id_charges_charge_id_response_dict)
+post_clients_client_id_charges_charge_id_response_from_dict = PostClientsClientIdChargesChargeIdResponse.from_dict(post_clients_client_id_charges_charge_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -24,7 +24,105 @@ Method | HTTP request | Description
 
 Activate a Group | Associate Clients | Disassociate Clients | Transfer Clients across groups | Generate Collection Sheet | Save Collection Sheet | Unassign a Staff | Assign a Staff | Close a Group | Unassign a Role | Update a Role
 
-Activate a Group:  Groups can be created in a Pending state. This API exists to enable group activation.    If the group happens to be already active this API will result in an error.  Mandatory Fields: activationDate  Associate Clients:  This API allows to associate existing clients to a group.    The clients are listed from the office to which the group is associated.    If client(s) is already associated with group then API will result in an error.  Mandatory Fields: clientMembers  Disassociate Clients:  This API allows to disassociate clients from a group.    Disassociating a client with active joint liability group loans results in an error.  Mandatory Fields: clientMembers  Transfer Clients across groups:  This API allows to transfer clients from one group to another  Mandatory Fields: destinationGroupId and clients  Optional Fields: inheritDestinationGroupLoanOfficer (defaults to true) and transferActiveLoans (defaults to true)  Generate Collection Sheet:  This API retrieves repayment details of all jlg loans of all members of a group on a specified meeting date.  Mandatory Fields: calendarId and transactionDate  Save Collection Sheet:  This api allows the loan officer to perform bulk repayments of JLG loans for a group on its meeting date.  Mandatory Fields: calendarId, transactionDate, actualDisbursementDate  Optional Fields: clientsAttendance, bulkRepaymentTransaction, bulkDisbursementTransactions  Unassign a Staff:  Allows you to unassign the Staff.  Mandatory Fields: staffId  Assign a Staff:  Allows you to assign Staff to an existing Group.    The selected Staff should be belong to the same office (or an office higher up in the hierarchy) as this groupMandatory Fields: staffId  Optional Fields: inheritStaffForClientAccounts (Optional: Boolean if true all members of the group (i.e all clients with active loans and savings ) will inherit the staffId)  Close a Group:  This API exists to close a group. Groups can be closed if they don't have any non-closed clients/loans/savingsAccounts.    If the group has any active clients/loans/savingsAccount, this API will result in an error.Assign a Role:  Allows you to assign a Role to an existing member of a group.    We can define the different roles applicable to group members by adding code values to the pre-defined system code GROUPROLE. Example:Group leader etc.  Mandatory Fields: clientId, role  Unassign a Role:  Allows you to unassign Roles associated tp Group members.  Update a Role:  Allows you to update the member Role.  Mandatory Fields: role  Showing request/response for Transfer Clients across groups
+Activate a Group:
+
+Groups can be created in a Pending state. This API exists to enable group activation.
+
+
+
+If the group happens to be already active this API will result in an error.
+
+Mandatory Fields: activationDate
+
+Associate Clients:
+
+This API allows to associate existing clients to a group.
+
+
+
+The clients are listed from the office to which the group is associated.
+
+
+
+If client(s) is already associated with group then API will result in an error.
+
+Mandatory Fields: clientMembers
+
+Disassociate Clients:
+
+This API allows to disassociate clients from a group.
+
+
+
+Disassociating a client with active joint liability group loans results in an error.
+
+Mandatory Fields: clientMembers
+
+Transfer Clients across groups:
+
+This API allows to transfer clients from one group to another
+
+Mandatory Fields: destinationGroupId and clients
+
+Optional Fields: inheritDestinationGroupLoanOfficer (defaults to true) and transferActiveLoans (defaults to true)
+
+Generate Collection Sheet:
+
+This API retrieves repayment details of all jlg loans of all members of a group on a specified meeting date.
+
+Mandatory Fields: calendarId and transactionDate
+
+Save Collection Sheet:
+
+This api allows the loan officer to perform bulk repayments of JLG loans for a group on its meeting date.
+
+Mandatory Fields: calendarId, transactionDate, actualDisbursementDate
+
+Optional Fields: clientsAttendance, bulkRepaymentTransaction, bulkDisbursementTransactions
+
+Unassign a Staff:
+
+Allows you to unassign the Staff.
+
+Mandatory Fields: staffId
+
+Assign a Staff:
+
+Allows you to assign Staff to an existing Group.
+
+
+
+The selected Staff should be belong to the same office (or an office higher up in the hierarchy) as this groupMandatory Fields: staffId
+
+Optional Fields: inheritStaffForClientAccounts (Optional: Boolean if true all members of the group (i.e all clients with active loans and savings ) will inherit the staffId)
+
+Close a Group:
+
+This API exists to close a group. Groups can be closed if they don't have any non-closed clients/loans/savingsAccounts.
+
+
+
+If the group has any active clients/loans/savingsAccount, this API will result in an error.Assign a Role:
+
+Allows you to assign a Role to an existing member of a group.
+
+
+
+We can define the different roles applicable to group members by adding code values to the pre-defined system code GROUPROLE. Example:Group leader etc.
+
+Mandatory Fields: clientId, role
+
+Unassign a Role:
+
+Allows you to unassign Roles associated tp Group members.
+
+Update a Role:
+
+Allows you to update the member Role.
+
+Mandatory Fields: role
+
+Showing request/response for Transfer Clients across groups
 
 ### Example
 
@@ -117,7 +215,11 @@ Name | Type | Description  | Notes
 
 Create a Group
 
-Creates a Group  Mandatory Fields: name, officeId, active, activationDate (if active=true)  Optional Fields: externalId, staffId, clientMembers
+Creates a Group
+
+Mandatory Fields: name, officeId, active, activationDate (if active=true)
+
+Optional Fields: externalId, staffId, clientMembers
 
 ### Example
 
@@ -288,8 +390,6 @@ Name | Type | Description  | Notes
 # **get_groups_template**
 > get_groups_template(office_id=office_id, staff_id=staff_id, date_format=date_format)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -371,8 +471,6 @@ void (empty response body)
 
 # **post_group_template**
 > str post_group_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
-
-
 
 ### Example
 
@@ -460,7 +558,23 @@ Name | Type | Description  | Notes
 
 Retrieve Group accounts overview
 
-Retrieves details of all Loan and Savings accounts associated with this group.    Example Requests:    groups/1/accounts      groups/1/accounts?fields=loanAccounts,savingsAccounts,memberLoanAccounts,  memberSavingsAccounts
+Retrieves details of all Loan and Savings accounts associated with this group.
+
+
+
+Example Requests:
+
+
+
+groups/1/accounts
+
+
+
+
+
+groups/1/accounts?fields=loanAccounts,savingsAccounts,memberLoanAccounts,
+
+memberSavingsAccounts
 
 ### Example
 
@@ -546,7 +660,25 @@ Name | Type | Description  | Notes
 
 List Groups
 
-The default implementation of listing Groups returns 200 entries with support for pagination and sorting. Using the parameter limit with description -1 returns all entries.  Example Requests:    groups    groups?fields=name,officeName,joinedDate    groups?offset=10&limit=50    groups?orderBy=name&sortOrder=DESC
+The default implementation of listing Groups returns 200 entries with support for pagination and sorting. Using the parameter limit with description -1 returns all entries.
+
+Example Requests:
+
+
+
+groups
+
+
+
+groups?fields=name,officeName,joinedDate
+
+
+
+groups?offset=10&limit=50
+
+
+
+groups?orderBy=name&sortOrder=DESC
 
 ### Example
 
@@ -650,8 +782,6 @@ Name | Type | Description  | Notes
 # **retrieve_gsim_accounts**
 > str retrieve_gsim_accounts(group_id, parent_gsim_account_no=parent_gsim_account_no, parent_gsimid=parent_gsimid)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -738,7 +868,17 @@ Name | Type | Description  | Notes
 
 Retrieve a Group
 
-Retrieve group information.  Example Requests:    groups/1    groups/1?associations=clientMembers
+Retrieve group information.
+
+Example Requests:
+
+
+
+groups/1
+
+
+
+groups/1?associations=clientMembers
 
 ### Example
 
@@ -828,7 +968,31 @@ Name | Type | Description  | Notes
 
 Retrieve Group Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:    Field Defaults  Allowed Value Lists  Example Requests:    groups/template    groups/template?officeId=2    groups/template?centerId=1    groups/template?centerId=1&staffInSelectedOfficeOnly=true
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+
+
+Field Defaults
+
+Allowed Value Lists
+
+Example Requests:
+
+
+
+groups/template
+
+
+
+groups/template?officeId=2
+
+
+
+groups/template?centerId=1
+
+
+
+groups/template?centerId=1&staffInSelectedOfficeOnly=true
 
 ### Example
 
@@ -920,8 +1084,6 @@ Name | Type | Description  | Notes
 # **retrieveglim_accounts**
 > str retrieveglim_accounts(group_id, parent_loan_account_no=parent_loan_account_no)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -1006,7 +1168,9 @@ Name | Type | Description  | Notes
 
 Unassign a Staff
 
-Allows you to unassign the Staff.  Mandatory Fields: staffId
+Allows you to unassign the Staff.
+
+Mandatory Fields: staffId
 
 ### Example
 

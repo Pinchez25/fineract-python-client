@@ -17,12 +17,12 @@ json = "{}"
 # create an instance of GetSavingsProductsLiabilityTagId from a JSON string
 get_savings_products_liability_tag_id_instance = GetSavingsProductsLiabilityTagId.from_json(json)
 # print the JSON string representation of the object
-print GetSavingsProductsLiabilityTagId.to_json()
+print(GetSavingsProductsLiabilityTagId.to_json())
 
 # convert the object into a dict
 get_savings_products_liability_tag_id_dict = get_savings_products_liability_tag_id_instance.to_dict()
 # create an instance of GetSavingsProductsLiabilityTagId from a dict
-get_savings_products_liability_tag_id_form_dict = get_savings_products_liability_tag_id.from_dict(get_savings_products_liability_tag_id_dict)
+get_savings_products_liability_tag_id_from_dict = GetSavingsProductsLiabilityTagId.from_dict(get_savings_products_liability_tag_id_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

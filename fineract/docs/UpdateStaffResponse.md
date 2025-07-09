@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of UpdateStaffResponse from a JSON string
 update_staff_response_instance = UpdateStaffResponse.from_json(json)
 # print the JSON string representation of the object
-print UpdateStaffResponse.to_json()
+print(UpdateStaffResponse.to_json())
 
 # convert the object into a dict
 update_staff_response_dict = update_staff_response_instance.to_dict()
 # create an instance of UpdateStaffResponse from a dict
-update_staff_response_form_dict = update_staff_response.from_dict(update_staff_response_dict)
+update_staff_response_from_dict = UpdateStaffResponse.from_dict(update_staff_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

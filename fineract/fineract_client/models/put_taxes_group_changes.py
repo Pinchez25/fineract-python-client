@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.put_taxes_group_modified_components import PutTaxesGroupModifiedComponents
 from typing import Optional, Set
@@ -33,11 +33,11 @@ class PutTaxesGroupChanges(BaseModel):
     name: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["addComponents", "modifiedComponents", "name"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -75,9 +75,9 @@ class PutTaxesGroupChanges(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in modified_components (list)
         _items = []
         if self.modified_components:
-            for _item in self.modified_components:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_modified_components in self.modified_components:
+                if _item_modified_components:
+                    _items.append(_item_modified_components.to_dict())
             _dict['modifiedComponents'] = _items
         return _dict
 

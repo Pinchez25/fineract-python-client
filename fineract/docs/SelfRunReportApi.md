@@ -12,7 +12,13 @@ Method | HTTP request | Description
 
 Running A Report
 
-Example Requests:   self/runreports/Client%20Details?R_officeId=1   self/runreports/Client%20Details?R_officeId=1&exportCSV=true
+Example Requests:
+
+
+self/runreports/Client%20Details?R_officeId=1
+
+
+self/runreports/Client%20Details?R_officeId=1&exportCSV=true
 
 ### Example
 

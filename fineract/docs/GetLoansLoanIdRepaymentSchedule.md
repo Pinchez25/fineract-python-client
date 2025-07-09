@@ -31,12 +31,12 @@ json = "{}"
 # create an instance of GetLoansLoanIdRepaymentSchedule from a JSON string
 get_loans_loan_id_repayment_schedule_instance = GetLoansLoanIdRepaymentSchedule.from_json(json)
 # print the JSON string representation of the object
-print GetLoansLoanIdRepaymentSchedule.to_json()
+print(GetLoansLoanIdRepaymentSchedule.to_json())
 
 # convert the object into a dict
 get_loans_loan_id_repayment_schedule_dict = get_loans_loan_id_repayment_schedule_instance.to_dict()
 # create an instance of GetLoansLoanIdRepaymentSchedule from a dict
-get_loans_loan_id_repayment_schedule_form_dict = get_loans_loan_id_repayment_schedule.from_dict(get_loans_loan_id_repayment_schedule_dict)
+get_loans_loan_id_repayment_schedule_from_dict = GetLoansLoanIdRepaymentSchedule.from_dict(get_loans_loan_id_repayment_schedule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -29,12 +29,12 @@ json = "{}"
 # create an instance of TaxComponent from a JSON string
 tax_component_instance = TaxComponent.from_json(json)
 # print the JSON string representation of the object
-print TaxComponent.to_json()
+print(TaxComponent.to_json())
 
 # convert the object into a dict
 tax_component_dict = tax_component_instance.to_dict()
 # create an instance of TaxComponent from a dict
-tax_component_form_dict = tax_component.from_dict(tax_component_dict)
+tax_component_from_dict = TaxComponent.from_dict(tax_component_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

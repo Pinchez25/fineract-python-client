@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetFloatingRatesResponse from a JSON string
 get_floating_rates_response_instance = GetFloatingRatesResponse.from_json(json)
 # print the JSON string representation of the object
-print GetFloatingRatesResponse.to_json()
+print(GetFloatingRatesResponse.to_json())
 
 # convert the object into a dict
 get_floating_rates_response_dict = get_floating_rates_response_instance.to_dict()
 # create an instance of GetFloatingRatesResponse from a dict
-get_floating_rates_response_form_dict = get_floating_rates_response.from_dict(get_floating_rates_response_dict)
+get_floating_rates_response_from_dict = GetFloatingRatesResponse.from_dict(get_floating_rates_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

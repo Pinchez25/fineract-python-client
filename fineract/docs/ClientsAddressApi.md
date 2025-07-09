@@ -15,7 +15,8 @@ Method | HTTP request | Description
 
 Create an address for a Client
 
-Mandatory Fields :  type and clientId
+Mandatory Fields : 
+type and clientId
 
 ### Example
 
@@ -106,7 +107,12 @@ Name | Type | Description  | Notes
 
 List all addresses for a Client
 
-Example Requests:  client/1/addresses   clients/1/addresses?status=false,true&&type=1,2,3
+Example Requests:
+
+client/1/addresses
+
+
+clients/1/addresses?status=false,true&&type=1,2,3
 
 ### Example
 
@@ -194,8 +200,6 @@ Name | Type | Description  | Notes
 # **get_addresses_template**
 > str get_addresses_template()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -274,7 +278,10 @@ This endpoint does not need any parameter.
 
 Update an address for a Client
 
-All the address fields can be updated by using update client address API  Mandatory Fields type and addressId
+All the address fields can be updated by using update client address API
+
+Mandatory Fields
+type and addressId
 
 ### Example
 

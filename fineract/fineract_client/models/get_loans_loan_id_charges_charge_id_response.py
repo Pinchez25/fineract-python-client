@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_loan_charge_calculation_type import GetLoanChargeCalculationType
 from fineract_client.models.get_loan_charge_currency import GetLoanChargeCurrency
@@ -51,11 +51,11 @@ class GetLoansLoanIdChargesChargeIdResponse(BaseModel):
     submitted_on_date: Optional[date] = Field(default=None, alias="submittedOnDate")
     __properties: ClassVar[List[str]] = ["amount", "amountOrPercentage", "amountOutstanding", "amountPaid", "amountPercentageAppliedTo", "amountWaived", "amountWrittenOff", "chargeCalculationType", "chargeId", "chargeTimeType", "currency", "dueDate", "externalId", "id", "name", "penalty", "percentage", "submittedOnDate"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

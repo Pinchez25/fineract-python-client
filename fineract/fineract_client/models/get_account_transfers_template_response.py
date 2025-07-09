@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_account_transfers_from_account_type import GetAccountTransfersFromAccountType
 from fineract_client.models.get_account_transfers_from_account_type_options import GetAccountTransfersFromAccountTypeOptions
@@ -46,11 +46,11 @@ class GetAccountTransfersTemplateResponse(BaseModel):
     transfer_date: Optional[date] = Field(default=None, alias="transferDate")
     __properties: ClassVar[List[str]] = ["fromAccountType", "fromAccountTypeOptions", "fromClientOptions", "fromOffice", "fromOfficeOptions", "toAccountTypeOptions", "toOfficeOptions", "transferAmount", "transferDate"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -91,16 +91,16 @@ class GetAccountTransfersTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_account_type_options (list)
         _items = []
         if self.from_account_type_options:
-            for _item in self.from_account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_from_account_type_options in self.from_account_type_options:
+                if _item_from_account_type_options:
+                    _items.append(_item_from_account_type_options.to_dict())
             _dict['fromAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in from_client_options (list)
         _items = []
         if self.from_client_options:
-            for _item in self.from_client_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_from_client_options in self.from_client_options:
+                if _item_from_client_options:
+                    _items.append(_item_from_client_options.to_dict())
             _dict['fromClientOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of from_office
         if self.from_office:
@@ -108,23 +108,23 @@ class GetAccountTransfersTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in from_office_options (list)
         _items = []
         if self.from_office_options:
-            for _item in self.from_office_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_from_office_options in self.from_office_options:
+                if _item_from_office_options:
+                    _items.append(_item_from_office_options.to_dict())
             _dict['fromOfficeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in to_account_type_options (list)
         _items = []
         if self.to_account_type_options:
-            for _item in self.to_account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_to_account_type_options in self.to_account_type_options:
+                if _item_to_account_type_options:
+                    _items.append(_item_to_account_type_options.to_dict())
             _dict['toAccountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in to_office_options (list)
         _items = []
         if self.to_office_options:
-            for _item in self.to_office_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_to_office_options in self.to_office_options:
+                if _item_to_office_options:
+                    _items.append(_item_to_office_options.to_dict())
             _dict['toOfficeOptions'] = _items
         return _dict
 

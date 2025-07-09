@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_data import EnumOptionData
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class GetAccountNumberFormatsResponseTemplate(BaseModel):
     prefix_type_options: Optional[Dict[str, List[EnumOptionData]]] = Field(default=None, alias="prefixTypeOptions")
     __properties: ClassVar[List[str]] = ["accountTypeOptions", "prefixTypeOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -74,17 +74,17 @@ class GetAccountNumberFormatsResponseTemplate(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in account_type_options (list)
         _items = []
         if self.account_type_options:
-            for _item in self.account_type_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_account_type_options in self.account_type_options:
+                if _item_account_type_options:
+                    _items.append(_item_account_type_options.to_dict())
             _dict['accountTypeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each value in prefix_type_options (dict of array)
         _field_dict_of_array = {}
         if self.prefix_type_options:
-            for _key in self.prefix_type_options:
-                if self.prefix_type_options[_key] is not None:
-                    _field_dict_of_array[_key] = [
-                        _item.to_dict() for _item in self.prefix_type_options[_key]
+            for _key_prefix_type_options in self.prefix_type_options:
+                if self.prefix_type_options[_key_prefix_type_options] is not None:
+                    _field_dict_of_array[_key_prefix_type_options] = [
+                        _item.to_dict() for _item in self.prefix_type_options[_key_prefix_type_options]
                     ]
             _dict['prefixTypeOptions'] = _field_dict_of_array
         return _dict

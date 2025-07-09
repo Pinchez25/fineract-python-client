@@ -17,12 +17,12 @@ json = "{}"
 # create an instance of PostHolidaysRequestOffices from a JSON string
 post_holidays_request_offices_instance = PostHolidaysRequestOffices.from_json(json)
 # print the JSON string representation of the object
-print PostHolidaysRequestOffices.to_json()
+print(PostHolidaysRequestOffices.to_json())
 
 # convert the object into a dict
 post_holidays_request_offices_dict = post_holidays_request_offices_instance.to_dict()
 # create an instance of PostHolidaysRequestOffices from a dict
-post_holidays_request_offices_form_dict = post_holidays_request_offices.from_dict(post_holidays_request_offices_dict)
+post_holidays_request_offices_from_dict = PostHolidaysRequestOffices.from_dict(post_holidays_request_offices_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

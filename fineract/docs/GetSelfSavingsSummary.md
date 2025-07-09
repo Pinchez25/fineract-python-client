@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of GetSelfSavingsSummary from a JSON string
 get_self_savings_summary_instance = GetSelfSavingsSummary.from_json(json)
 # print the JSON string representation of the object
-print GetSelfSavingsSummary.to_json()
+print(GetSelfSavingsSummary.to_json())
 
 # convert the object into a dict
 get_self_savings_summary_dict = get_self_savings_summary_instance.to_dict()
 # create an instance of GetSelfSavingsSummary from a dict
-get_self_savings_summary_form_dict = get_self_savings_summary.from_dict(get_self_savings_summary_dict)
+get_self_savings_summary_from_dict = GetSelfSavingsSummary.from_dict(get_self_savings_summary_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

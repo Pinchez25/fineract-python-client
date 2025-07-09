@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **retrieve_all38**
 > str retrieve_all38(client_id=client_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -92,8 +90,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_one29**
 > str retrieve_one29(product_id, client_id=client_id)
-
-
 
 ### Example
 

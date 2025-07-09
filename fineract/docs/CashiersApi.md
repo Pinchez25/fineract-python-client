@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_cashier_data**
 > str get_cashier_data(office_id=office_id, teller_id=teller_id, staff_id=staff_id, var_date=var_date)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):

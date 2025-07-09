@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of GetStandingInstructionHistoryPageItemsFromClient from a JSON string
 get_standing_instruction_history_page_items_from_client_instance = GetStandingInstructionHistoryPageItemsFromClient.from_json(json)
 # print the JSON string representation of the object
-print GetStandingInstructionHistoryPageItemsFromClient.to_json()
+print(GetStandingInstructionHistoryPageItemsFromClient.to_json())
 
 # convert the object into a dict
 get_standing_instruction_history_page_items_from_client_dict = get_standing_instruction_history_page_items_from_client_instance.to_dict()
 # create an instance of GetStandingInstructionHistoryPageItemsFromClient from a dict
-get_standing_instruction_history_page_items_from_client_form_dict = get_standing_instruction_history_page_items_from_client.from_dict(get_standing_instruction_history_page_items_from_client_dict)
+get_standing_instruction_history_page_items_from_client_from_dict = GetStandingInstructionHistoryPageItemsFromClient.from_dict(get_standing_instruction_history_page_items_from_client_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.journal_entry_data import JournalEntryData
 from fineract_client.models.pageable import Pageable
@@ -43,11 +43,11 @@ class PageJournalEntryData(BaseModel):
     total_pages: Optional[StrictInt] = Field(default=None, alias="totalPages")
     __properties: ClassVar[List[str]] = ["content", "empty", "first", "last", "number", "numberOfElements", "pageable", "size", "sort", "totalElements", "totalPages"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -85,9 +85,9 @@ class PageJournalEntryData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in content (list)
         _items = []
         if self.content:
-            for _item in self.content:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_content in self.content:
+                if _item_content:
+                    _items.append(_item_content.to_dict())
             _dict['content'] = _items
         # override the default output from pydantic by calling `to_dict()` of pageable
         if self.pageable:

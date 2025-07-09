@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.charge_data import ChargeData
 from fineract_client.models.charge_fee_on_month_day import ChargeFeeOnMonthDay
@@ -65,11 +65,11 @@ class SavingsAccountChargeData(BaseModel):
     withdrawal_fee: Optional[StrictBool] = Field(default=None, alias="withdrawalFee")
     __properties: ClassVar[List[str]] = ["accountId", "amount", "amountOrPercentage", "amountOutstanding", "amountPaid", "amountPercentageAppliedTo", "amountWaived", "amountWrittenOff", "annualFee", "chargeCalculationType", "chargeData", "chargeId", "chargeOptions", "chargeTimeType", "currency", "dueDate", "feeCharge", "feeInterval", "feeOnMonthDay", "freeWithdrawalChargeFrequency", "id", "inactivationDate", "isActive", "isFreeWithdrawal", "name", "penalty", "percentage", "restartFrequency", "restartFrequencyEnum", "savingsActivation", "withdrawalFee"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -113,9 +113,9 @@ class SavingsAccountChargeData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charge_options (list)
         _items = []
         if self.charge_options:
-            for _item in self.charge_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charge_options in self.charge_options:
+                if _item_charge_options:
+                    _items.append(_item_charge_options.to_dict())
             _dict['chargeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of charge_time_type
         if self.charge_time_type:

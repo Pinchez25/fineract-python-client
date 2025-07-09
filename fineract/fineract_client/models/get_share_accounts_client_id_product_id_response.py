@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_client_id_product_id_charge_options import GetClientIdProductIdChargeOptions
 from fineract_client.models.get_client_id_product_id_product_options import GetClientIdProductIdProductOptions
@@ -33,11 +33,11 @@ class GetShareAccountsClientIdProductIdResponse(BaseModel):
     product_options: Optional[List[GetClientIdProductIdProductOptions]] = Field(default=None, alias="productOptions")
     __properties: ClassVar[List[str]] = ["chargeOptions", "productOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -75,16 +75,16 @@ class GetShareAccountsClientIdProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in charge_options (list)
         _items = []
         if self.charge_options:
-            for _item in self.charge_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_charge_options in self.charge_options:
+                if _item_charge_options:
+                    _items.append(_item_charge_options.to_dict())
             _dict['chargeOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in product_options (list)
         _items = []
         if self.product_options:
-            for _item in self.product_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_product_options in self.product_options:
+                if _item_product_options:
+                    _items.append(_item_product_options.to_dict())
             _dict['productOptions'] = _items
         return _dict
 

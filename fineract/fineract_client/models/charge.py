@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.charge_fee_on_month_day import ChargeFeeOnMonthDay
 from fineract_client.models.gl_account import GLAccount
@@ -71,11 +71,11 @@ class Charge(BaseModel):
     tax_group: Optional[TaxGroup] = Field(default=None, alias="taxGroup")
     __properties: ClassVar[List[str]] = ["account", "active", "allowedClientChargeCalculationType", "allowedClientChargeTime", "allowedLoanChargeTime", "allowedSavingsChargeCalculationType", "allowedSavingsChargeTime", "amount", "annualFee", "chargeCalculation", "chargePaymentMode", "chargeTimeType", "clientCharge", "currencyCode", "deleted", "disbursementCharge", "enableFreeWithdrawal", "enablePaymentType", "feeInterval", "feeOnMonthDay", "frequencyFreeWithdrawalCharge", "id", "incomeAccountId", "loanCharge", "maxCap", "minCap", "monthlyFee", "name", "new", "overdueInstallment", "paymentType", "penalty", "percentageOfApprovedAmount", "percentageOfDisbursementAmount", "restartFrequency", "restartFrequencyEnum", "savingsCharge", "taxGroup"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -13,7 +13,13 @@ Method | HTTP request | Description
 
 Create new Transfer
 
-Ability to create new transfer of monetary funds from one account to another.   Example Requests:   self/accounttransfers/ 
+Ability to create new transfer of monetary funds from one account to another.
+
+
+Example Requests:
+
+ self/accounttransfers/
+
 
 ### Example
 
@@ -101,7 +107,13 @@ Name | Type | Description  | Notes
 
 Retrieve Account Transfer Template
 
-Returns list of loan/savings accounts that can be used for account transfer   Example Requests:  self/accounttransfers/template 
+Returns list of loan/savings accounts that can be used for account transfer
+
+
+Example Requests:
+
+self/accounttransfers/template
+
 
 ### Example
 

@@ -16,7 +16,11 @@ Method | HTTP request | Description
 
 Create a new Tax Component
 
-Creates a new Tax Component  Mandatory Fields: name, percentage  Optional Fields: debitAccountType, debitAcountId, creditAccountType, creditAcountId, startDate
+Creates a new Tax Component
+
+Mandatory Fields: name, percentage
+
+Optional Fields: debitAccountType, debitAcountId, creditAccountType, creditAcountId, startDate
 
 ### Example
 
@@ -268,8 +272,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_template21**
 > str retrieve_template21()
-
-
 
 ### Example
 

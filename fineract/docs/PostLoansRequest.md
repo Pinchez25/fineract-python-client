@@ -51,12 +51,12 @@ json = "{}"
 # create an instance of PostLoansRequest from a JSON string
 post_loans_request_instance = PostLoansRequest.from_json(json)
 # print the JSON string representation of the object
-print PostLoansRequest.to_json()
+print(PostLoansRequest.to_json())
 
 # convert the object into a dict
 post_loans_request_dict = post_loans_request_instance.to_dict()
 # create an instance of PostLoansRequest from a dict
-post_loans_request_form_dict = post_loans_request.from_dict(post_loans_request_dict)
+post_loans_request_from_dict = PostLoansRequest.from_dict(post_loans_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

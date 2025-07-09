@@ -26,12 +26,12 @@ json = "{}"
 # create an instance of GetLoansTotal from a JSON string
 get_loans_total_instance = GetLoansTotal.from_json(json)
 # print the JSON string representation of the object
-print GetLoansTotal.to_json()
+print(GetLoansTotal.to_json())
 
 # convert the object into a dict
 get_loans_total_dict = get_loans_total_instance.to_dict()
 # create an instance of GetLoansTotal from a dict
-get_loans_total_form_dict = get_loans_total.from_dict(get_loans_total_dict)
+get_loans_total_from_dict = GetLoansTotal.from_dict(get_loans_total_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -17,7 +17,14 @@ Method | HTTP request | Description
 
 Create a Fixed Deposit Product
 
-Creates a Fixed Deposit Product  Mandatory Fields: name, shortName, description, currencyCode, digitsAfterDecimal,inMultiplesOf, interestCompoundingPeriodType, interestCalculationType, interestCalculationDaysInYearType, minDepositTerm, minDepositTermTypeId, accountingRule  Optional Fields: lockinPeriodFrequency, lockinPeriodFrequencyType, maxDepositTerm, maxDepositTermTypeId, inMultiplesOfDepositTerm, inMultiplesOfDepositTermTypeId, preClosurePenalApplicable, preClosurePenalInterest, preClosurePenalInterestOnTypeId, feeToIncomeAccountMappings, penaltyToIncomeAccountMappings, charges, charts, , withHoldTax, taxGroupId   Mandatory Fields for Cash based accounting (accountingRule = 2): savingsReferenceAccountId, savingsControlAccountId, interestOnSavingsAccountId, incomeFromFeeAccountId, transfersInSuspenseAccountId, incomeFromPenaltyAccountId
+Creates a Fixed Deposit Product
+
+Mandatory Fields: name, shortName, description, currencyCode, digitsAfterDecimal,inMultiplesOf, interestCompoundingPeriodType, interestCalculationType, interestCalculationDaysInYearType, minDepositTerm, minDepositTermTypeId, accountingRule
+
+Optional Fields: lockinPeriodFrequency, lockinPeriodFrequencyType, maxDepositTerm, maxDepositTermTypeId, inMultiplesOfDepositTerm, inMultiplesOfDepositTermTypeId, preClosurePenalApplicable, preClosurePenalInterest, preClosurePenalInterestOnTypeId, feeToIncomeAccountMappings, penaltyToIncomeAccountMappings, charges, charts, , withHoldTax, taxGroupId
+
+
+Mandatory Fields for Cash based accounting (accountingRule = 2): savingsReferenceAccountId, savingsControlAccountId, interestOnSavingsAccountId, incomeFromFeeAccountId, transfersInSuspenseAccountId, incomeFromPenaltyAccountId
 
 ### Example
 
@@ -190,7 +197,14 @@ Name | Type | Description  | Notes
 
 List Fixed Deposit Products
 
-Lists Fixed Deposit Products  Example Requests:  fixeddepositproducts   fixeddepositproducts?fields=name
+Lists Fixed Deposit Products
+
+Example Requests:
+
+fixeddepositproducts
+
+
+fixeddepositproducts?fields=name
 
 ### Example
 
@@ -272,7 +286,17 @@ This endpoint does not need any parameter.
 
 Retrieve a Fixed Deposit Product
 
-Retrieves a Fixed Deposit Product  Example Requests:  fixeddepositproducts/1   fixeddepositproducts/1?template=true   fixeddepositproducts/1?fields=name,description
+Retrieves a Fixed Deposit Product
+
+Example Requests:
+
+fixeddepositproducts/1
+
+
+fixeddepositproducts/1?template=true
+
+
+fixeddepositproducts/1?fields=name,description
 
 ### Example
 
@@ -355,8 +379,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_template15**
 > str retrieve_template15()
-
-
 
 ### Example
 

@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **retrieve_taxonomy_mapping**
 > str retrieve_taxonomy_mapping()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -88,8 +86,6 @@ This endpoint does not need any parameter.
 
 # **update_taxonomy_mapping**
 > str update_taxonomy_mapping(body=body)
-
-
 
 ### Example
 

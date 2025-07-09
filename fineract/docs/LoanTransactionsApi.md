@@ -27,7 +27,9 @@ Method | HTTP request | Description
 
 Adjust a Transaction
 
-Note: there is no need to specify command={transactionType} parameter.  Mandatory Fields: transactionDate, transactionAmount
+Note: there is no need to specify command={transactionType} parameter.
+
+Mandatory Fields: transactionDate, transactionAmount
 
 ### Example
 
@@ -120,7 +122,9 @@ Name | Type | Description  | Notes
 
 Adjust a Transaction
 
-Note: there is no need to specify command={transactionType} parameter.  Mandatory Fields: transactionDate, transactionAmount
+Note: there is no need to specify command={transactionType} parameter.
+
+Mandatory Fields: transactionDate, transactionAmount
 
 ### Example
 
@@ -213,7 +217,9 @@ Name | Type | Description  | Notes
 
 Adjust a Transaction
 
-Note: there is no need to specify command={transactionType} parameter.  Mandatory Fields: transactionDate, transactionAmount
+Note: there is no need to specify command={transactionType} parameter.
+
+Mandatory Fields: transactionDate, transactionAmount
 
 ### Example
 
@@ -306,7 +312,9 @@ Name | Type | Description  | Notes
 
 Adjust a Transaction
 
-Note: there is no need to specify command={transactionType} parameter.  Mandatory Fields: transactionDate, transactionAmount
+Note: there is no need to specify command={transactionType} parameter.
+
+Mandatory Fields: transactionDate, transactionAmount
 
 ### Example
 
@@ -399,7 +407,27 @@ Name | Type | Description  | Notes
 
 Significant Loan Transactions
 
-This API covers the major loan transaction functionality  Example Requests:  loans/1/transactions?command=repayment | Make a Repayment |  loans/1/transactions?command=merchantIssuedRefund | Merchant Issued Refund |  loans/1/transactions?command=payoutRefund | Payout Refund |  loans/1/transactions?command=goodwillCredit | Goodwil Credit |  loans/1/transactions?command=chargeRefund | Charge Refund |  loans/1/transactions?command=waiveinterest | Waive Interest |  loans/1/transactions?command=writeoff | Write-off Loan |  loans/1/transactions?command=close-rescheduled | Close Rescheduled Loan |  loans/1/transactions?command=close | Close Loan |  loans/1/transactions?command=undowriteoff | Undo Loan Write-off |  loans/1/transactions?command=recoverypayment | Make Recovery Payment |  loans/1/transactions?command=refundByCash | Make a Refund of an Active Loan by Cash |  loans/1/transactions?command=foreclosure | Foreclosure of an Active Loan |  loans/1/transactions?command=creditBalanceRefund | Credit Balance Refund |   loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=charge-off | Charge-off Loan |   loans/1/transactions?command=downPayment | Down Payment | 
+This API covers the major loan transaction functionality
+
+Example Requests:
+
+loans/1/transactions?command=repayment | Make a Repayment | 
+loans/1/transactions?command=merchantIssuedRefund | Merchant Issued Refund | 
+loans/1/transactions?command=payoutRefund | Payout Refund | 
+loans/1/transactions?command=goodwillCredit | Goodwil Credit | 
+loans/1/transactions?command=chargeRefund | Charge Refund | 
+loans/1/transactions?command=waiveinterest | Waive Interest | 
+loans/1/transactions?command=writeoff | Write-off Loan | 
+loans/1/transactions?command=close-rescheduled | Close Rescheduled Loan | 
+loans/1/transactions?command=close | Close Loan | 
+loans/1/transactions?command=undowriteoff | Undo Loan Write-off | 
+loans/1/transactions?command=recoverypayment | Make Recovery Payment | 
+loans/1/transactions?command=refundByCash | Make a Refund of an Active Loan by Cash | 
+loans/1/transactions?command=foreclosure | Foreclosure of an Active Loan | 
+loans/1/transactions?command=creditBalanceRefund | Credit Balance Refund |  
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=charge-off | Charge-off Loan |  
+loans/1/transactions?command=downPayment | Down Payment |
+
 
 ### Example
 
@@ -490,7 +518,27 @@ Name | Type | Description  | Notes
 
 Significant Loan Transactions
 
-This API covers the major loan transaction functionality  Example Requests:  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=repayment | Make a Repayment |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=merchantIssuedRefund | Merchant Issued Refund |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=payoutRefund | Payout Refund |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=goodwillCredit | Goodwil Credit |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=chargeRefund | Charge Refund |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=waiveinterest | Waive Interest |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=writeoff | Write-off Loan |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=close-rescheduled | Close Rescheduled Loan |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=close | Close Loan |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=undowriteoff | Undo Loan Write-off |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=recoverypayment | Make Recovery Payment |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=refundByCash | Make a Refund of an Active Loan by Cash |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=foreclosure | Foreclosure of an Active Loan |  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=creditBalanceRefund | Credit Balance Refund |   loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=charge-off | Charge-off Loan |   loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=downPayment | Down Payment | 
+This API covers the major loan transaction functionality
+
+Example Requests:
+
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=repayment | Make a Repayment | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=merchantIssuedRefund | Merchant Issued Refund | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=payoutRefund | Payout Refund | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=goodwillCredit | Goodwil Credit | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=chargeRefund | Charge Refund | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=waiveinterest | Waive Interest | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=writeoff | Write-off Loan | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=close-rescheduled | Close Rescheduled Loan | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=close | Close Loan | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=undowriteoff | Undo Loan Write-off | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=recoverypayment | Make Recovery Payment | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=refundByCash | Make a Refund of an Active Loan by Cash | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=foreclosure | Foreclosure of an Active Loan | 
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=creditBalanceRefund | Credit Balance Refund |  
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=charge-off | Charge-off Loan |  
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions?command=downPayment | Down Payment |
+
 
 ### Example
 
@@ -581,7 +629,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Transaction Details
 
-Retrieves a Transaction Details  Example Request:  loans/5/transactions/3
+Retrieves a Transaction Details
+
+Example Request:
+
+loans/5/transactions/3
 
 ### Example
 
@@ -671,7 +723,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Transaction Details
 
-Retrieves a Transaction Details  Example Request:  loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/external-id/5dd80a7c-ccba-4446-b378-01eb6f53e871
+Retrieves a Transaction Details
+
+Example Request:
+
+loans/external-id/7dd80a7c-ycba-a446-t378-91eb6f53e854/transactions/external-id/5dd80a7c-ccba-4446-b378-01eb6f53e871
 
 ### Example
 
@@ -761,7 +817,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Transaction Details
 
-Retrieves a Transaction Details  Example Request:  loans/5/transactions/3
+Retrieves a Transaction Details
+
+Example Request:
+
+loans/5/transactions/3
 
 ### Example
 
@@ -851,7 +911,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Transaction Details
 
-Retrieves a Transaction Details  Example Request:  loans/5/transactions/external-id/5dd80a7c-ccba-4446-b378-01eb6f53e871
+Retrieves a Transaction Details
+
+Example Request:
+
+loans/5/transactions/external-id/5dd80a7c-ccba-4446-b378-01eb6f53e871
 
 ### Example
 
@@ -941,7 +1005,30 @@ Name | Type | Description  | Notes
 
 Retrieve Loan Transaction Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists  Example Requests:  loans/1/transactions/template?command=repaymentloans/1/transactions/template?command=merchantIssuedRefundloans/1/transactions/template?command=payoutRefundloans/1/transactions/template?command=goodwillCredit loans/1/transactions/template?command=waiveinterest loans/1/transactions/template?command=writeoff loans/1/transactions/template?command=close-rescheduled loans/1/transactions/template?command=close loans/1/transactions/template?command=disburse loans/1/transactions/template?command=disburseToSavings loans/1/transactions/template?command=recoverypayment loans/1/transactions/template?command=prepayLoan loans/1/transactions/template?command=refundbycash loans/1/transactions/template?command=refundbytransfer loans/1/transactions/template?command=foreclosure loans/1/transactions/template?command=interestPaymentWaiver loans/1/transactions/template?command=creditBalanceRefund (returned 'amount' field will have the overpaid value) loans/1/transactions/template?command=charge-off loans/1/transactions/template?command=downPayment 
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed Value Lists
+
+Example Requests:
+
+loans/1/transactions/template?command=repaymentloans/1/transactions/template?command=merchantIssuedRefundloans/1/transactions/template?command=payoutRefundloans/1/transactions/template?command=goodwillCredit
+loans/1/transactions/template?command=waiveinterest
+loans/1/transactions/template?command=writeoff
+loans/1/transactions/template?command=close-rescheduled
+loans/1/transactions/template?command=close
+loans/1/transactions/template?command=disburse
+loans/1/transactions/template?command=disburseToSavings
+loans/1/transactions/template?command=recoverypayment
+loans/1/transactions/template?command=prepayLoan
+loans/1/transactions/template?command=refundbycash
+loans/1/transactions/template?command=refundbytransfer
+loans/1/transactions/template?command=foreclosure
+loans/1/transactions/template?command=interestPaymentWaiver
+loans/1/transactions/template?command=creditBalanceRefund (returned 'amount' field will have the overpaid value)
+loans/1/transactions/template?command=charge-off
+loans/1/transactions/template?command=downPayment
+
 
 ### Example
 
@@ -1035,7 +1122,30 @@ Name | Type | Description  | Notes
 
 Retrieve Loan Transaction Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists  Example Requests:  loans/1/transactions/template?command=repaymentloans/1/transactions/template?command=merchantIssuedRefundloans/1/transactions/template?command=payoutRefundloans/1/transactions/template?command=goodwillCredit loans/1/transactions/template?command=waiveinterest loans/1/transactions/template?command=writeoff loans/1/transactions/template?command=close-rescheduled loans/1/transactions/template?command=close loans/1/transactions/template?command=disburse loans/1/transactions/template?command=disburseToSavings loans/1/transactions/template?command=recoverypayment loans/1/transactions/template?command=prepayLoan loans/1/transactions/template?command=refundbycash loans/1/transactions/template?command=refundbytransfer loans/1/transactions/template?command=foreclosure loans/1/transactions/template?command=interestPaymentWaiver loans/1/transactions/template?command=creditBalanceRefund (returned 'amount' field will have the overpaid value) loans/1/transactions/template?command=charge-off loans/1/transactions/template?command=downPayment 
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed Value Lists
+
+Example Requests:
+
+loans/1/transactions/template?command=repaymentloans/1/transactions/template?command=merchantIssuedRefundloans/1/transactions/template?command=payoutRefundloans/1/transactions/template?command=goodwillCredit
+loans/1/transactions/template?command=waiveinterest
+loans/1/transactions/template?command=writeoff
+loans/1/transactions/template?command=close-rescheduled
+loans/1/transactions/template?command=close
+loans/1/transactions/template?command=disburse
+loans/1/transactions/template?command=disburseToSavings
+loans/1/transactions/template?command=recoverypayment
+loans/1/transactions/template?command=prepayLoan
+loans/1/transactions/template?command=refundbycash
+loans/1/transactions/template?command=refundbytransfer
+loans/1/transactions/template?command=foreclosure
+loans/1/transactions/template?command=interestPaymentWaiver
+loans/1/transactions/template?command=creditBalanceRefund (returned 'amount' field will have the overpaid value)
+loans/1/transactions/template?command=charge-off
+loans/1/transactions/template?command=downPayment
+
 
 ### Example
 

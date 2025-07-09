@@ -12,7 +12,11 @@ Method | HTTP request | Description
 
 List Report Mailing Job History
 
-The list capability of report mailing job history can support pagination and sorting.  Example Requests:  reportmailingjobrunhistory/1
+The list capability of report mailing job history can support pagination and sorting.
+
+Example Requests:
+
+reportmailingjobrunhistory/1
 
 ### Example
 

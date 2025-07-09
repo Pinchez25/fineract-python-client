@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of GetTaxesComponentsResponse from a JSON string
 get_taxes_components_response_instance = GetTaxesComponentsResponse.from_json(json)
 # print the JSON string representation of the object
-print GetTaxesComponentsResponse.to_json()
+print(GetTaxesComponentsResponse.to_json())
 
 # convert the object into a dict
 get_taxes_components_response_dict = get_taxes_components_response_instance.to_dict()
 # create an instance of GetTaxesComponentsResponse from a dict
-get_taxes_components_response_form_dict = get_taxes_components_response.from_dict(get_taxes_components_response_dict)
+get_taxes_components_response_from_dict = GetTaxesComponentsResponse.from_dict(get_taxes_components_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

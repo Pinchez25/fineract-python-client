@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.post_loans_loan_id_charges_charge_id_changes import PostLoansLoanIdChargesChargeIdChanges
 from typing import Optional, Set
@@ -39,11 +39,11 @@ class PostLoansLoanIdChargesChargeIdResponse(BaseModel):
     sub_resource_id: Optional[StrictInt] = Field(default=None, alias="subResourceId")
     __properties: ClassVar[List[str]] = ["changes", "clientId", "loanId", "officeId", "resourceExternalId", "resourceId", "savingsId", "subResourceExternalId", "subResourceId"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

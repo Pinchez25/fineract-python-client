@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.loan_product_data import LoanProductData
 from fineract_client.models.savings_product_data import SavingsProductData
@@ -39,11 +39,11 @@ class GetEntityDatatableChecksTemplateResponse(BaseModel):
     status_savings: Optional[List[Dict[str, Any]]] = Field(default=None, alias="statusSavings")
     __properties: ClassVar[List[str]] = ["datatables", "entities", "loanProductDatas", "savingsProductDatas", "statusClient", "statusGroup", "statusLoans", "statusSavings"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -81,16 +81,16 @@ class GetEntityDatatableChecksTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in loan_product_datas (list)
         _items = []
         if self.loan_product_datas:
-            for _item in self.loan_product_datas:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_loan_product_datas in self.loan_product_datas:
+                if _item_loan_product_datas:
+                    _items.append(_item_loan_product_datas.to_dict())
             _dict['loanProductDatas'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in savings_product_datas (list)
         _items = []
         if self.savings_product_datas:
-            for _item in self.savings_product_datas:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_savings_product_datas in self.savings_product_datas:
+                if _item_savings_product_datas:
+                    _items.append(_item_savings_product_datas.to_dict())
             _dict['savingsProductDatas'] = _items
         return _dict
 

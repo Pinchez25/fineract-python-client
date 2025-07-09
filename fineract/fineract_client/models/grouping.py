@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.entity import Entity
 from typing import Optional, Set
@@ -32,11 +32,11 @@ class Grouping(BaseModel):
     name: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["entities", "name"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -74,9 +74,9 @@ class Grouping(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in entities (list)
         _items = []
         if self.entities:
-            for _item in self.entities:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_entities in self.entities:
+                if _item_entities:
+                    _items.append(_item_entities.to_dict())
             _dict['entities'] = _items
         return _dict
 

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.enum_option_data import EnumOptionData
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class GetWorkingDaysTemplateResponse(BaseModel):
     repayment_reschedule_options: Optional[List[EnumOptionData]] = Field(default=None, alias="repaymentRescheduleOptions")
     __properties: ClassVar[List[str]] = ["repaymentRescheduleOptions"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -73,9 +73,9 @@ class GetWorkingDaysTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in repayment_reschedule_options (list)
         _items = []
         if self.repayment_reschedule_options:
-            for _item in self.repayment_reschedule_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_repayment_reschedule_options in self.repayment_reschedule_options:
+                if _item_repayment_reschedule_options:
+                    _items.append(_item_repayment_reschedule_options.to_dict())
             _dict['repaymentRescheduleOptions'] = _items
         return _dict
 

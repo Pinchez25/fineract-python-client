@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.app_user_data import AppUserData
 from fineract_client.models.processing_result_lookup import ProcessingResultLookup
@@ -35,11 +35,11 @@ class GetMakerCheckersSearchTemplateResponse(BaseModel):
     processing_results: Optional[List[ProcessingResultLookup]] = Field(default=None, alias="processingResults")
     __properties: ClassVar[List[str]] = ["actionNames", "appUsers", "entityNames", "processingResults"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -77,16 +77,16 @@ class GetMakerCheckersSearchTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in app_users (list)
         _items = []
         if self.app_users:
-            for _item in self.app_users:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_app_users in self.app_users:
+                if _item_app_users:
+                    _items.append(_item_app_users.to_dict())
             _dict['appUsers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in processing_results (list)
         _items = []
         if self.processing_results:
-            for _item in self.processing_results:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_processing_results in self.processing_results:
+                if _item_processing_results:
+                    _items.append(_item_processing_results.to_dict())
             _dict['processingResults'] = _items
         return _dict
 

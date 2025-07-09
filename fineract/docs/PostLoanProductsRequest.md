@@ -131,12 +131,12 @@ json = "{}"
 # create an instance of PostLoanProductsRequest from a JSON string
 post_loan_products_request_instance = PostLoanProductsRequest.from_json(json)
 # print the JSON string representation of the object
-print PostLoanProductsRequest.to_json()
+print(PostLoanProductsRequest.to_json())
 
 # convert the object into a dict
 post_loan_products_request_dict = post_loan_products_request_instance.to_dict()
 # create an instance of PostLoanProductsRequest from a dict
-post_loan_products_request_form_dict = post_loan_products_request.from_dict(post_loan_products_request_dict)
+post_loan_products_request_from_dict = PostLoanProductsRequest.from_dict(post_loan_products_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

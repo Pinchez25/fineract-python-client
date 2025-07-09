@@ -27,12 +27,12 @@ json = "{}"
 # create an instance of PostLoansRepaymentSchedulePeriods from a JSON string
 post_loans_repayment_schedule_periods_instance = PostLoansRepaymentSchedulePeriods.from_json(json)
 # print the JSON string representation of the object
-print PostLoansRepaymentSchedulePeriods.to_json()
+print(PostLoansRepaymentSchedulePeriods.to_json())
 
 # convert the object into a dict
 post_loans_repayment_schedule_periods_dict = post_loans_repayment_schedule_periods_instance.to_dict()
 # create an instance of PostLoansRepaymentSchedulePeriods from a dict
-post_loans_repayment_schedule_periods_form_dict = post_loans_repayment_schedule_periods.from_dict(post_loans_repayment_schedule_periods_dict)
+post_loans_repayment_schedule_periods_from_dict = PostLoansRepaymentSchedulePeriods.from_dict(post_loans_repayment_schedule_periods_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

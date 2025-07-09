@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.granted_authority import GrantedAuthority
 from fineract_client.models.office import Office
@@ -61,11 +61,11 @@ class AppUser(BaseModel):
     username: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["accountNonExpired", "accountNonLocked", "appUserClientMappings", "authorities", "bypassUser", "checkerSuperUser", "credentialsNonExpired", "deleted", "displayName", "email", "enabled", "firstname", "id", "lastTimePasswordUpdated", "lastname", "new", "notEnabled", "office", "password", "passwordNeverExpires", "roles", "selfServiceUser", "staff", "staffDisplayName", "staffId", "systemUser", "username"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -103,16 +103,16 @@ class AppUser(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in app_user_client_mappings (list)
         _items = []
         if self.app_user_client_mappings:
-            for _item in self.app_user_client_mappings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_app_user_client_mappings in self.app_user_client_mappings:
+                if _item_app_user_client_mappings:
+                    _items.append(_item_app_user_client_mappings.to_dict())
             _dict['appUserClientMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in authorities (list)
         _items = []
         if self.authorities:
-            for _item in self.authorities:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_authorities in self.authorities:
+                if _item_authorities:
+                    _items.append(_item_authorities.to_dict())
             _dict['authorities'] = _items
         # override the default output from pydantic by calling `to_dict()` of office
         if self.office:
@@ -120,9 +120,9 @@ class AppUser(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in roles (list)
         _items = []
         if self.roles:
-            for _item in self.roles:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_roles in self.roles:
+                if _item_roles:
+                    _items.append(_item_roles.to_dict())
             _dict['roles'] = _items
         # override the default output from pydantic by calling `to_dict()` of staff
         if self.staff:

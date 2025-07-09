@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.app_user import AppUser
 from fineract_client.models.client import Client
@@ -44,11 +44,11 @@ class Scorecard(BaseModel):
     value: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["appUser", "client", "createdOn", "id", "new", "question", "response", "survey", "value"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

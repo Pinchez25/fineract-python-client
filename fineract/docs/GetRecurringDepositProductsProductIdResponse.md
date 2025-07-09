@@ -39,12 +39,12 @@ json = "{}"
 # create an instance of GetRecurringDepositProductsProductIdResponse from a JSON string
 get_recurring_deposit_products_product_id_response_instance = GetRecurringDepositProductsProductIdResponse.from_json(json)
 # print the JSON string representation of the object
-print GetRecurringDepositProductsProductIdResponse.to_json()
+print(GetRecurringDepositProductsProductIdResponse.to_json())
 
 # convert the object into a dict
 get_recurring_deposit_products_product_id_response_dict = get_recurring_deposit_products_product_id_response_instance.to_dict()
 # create an instance of GetRecurringDepositProductsProductIdResponse from a dict
-get_recurring_deposit_products_product_id_response_form_dict = get_recurring_deposit_products_product_id_response.from_dict(get_recurring_deposit_products_product_id_response_dict)
+get_recurring_deposit_products_product_id_response_from_dict = GetRecurringDepositProductsProductIdResponse.from_dict(get_recurring_deposit_products_product_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

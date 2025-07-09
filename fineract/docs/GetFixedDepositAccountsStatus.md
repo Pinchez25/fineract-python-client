@@ -28,12 +28,12 @@ json = "{}"
 # create an instance of GetFixedDepositAccountsStatus from a JSON string
 get_fixed_deposit_accounts_status_instance = GetFixedDepositAccountsStatus.from_json(json)
 # print the JSON string representation of the object
-print GetFixedDepositAccountsStatus.to_json()
+print(GetFixedDepositAccountsStatus.to_json())
 
 # convert the object into a dict
 get_fixed_deposit_accounts_status_dict = get_fixed_deposit_accounts_status_instance.to_dict()
 # create an instance of GetFixedDepositAccountsStatus from a dict
-get_fixed_deposit_accounts_status_form_dict = get_fixed_deposit_accounts_status.from_dict(get_fixed_deposit_accounts_status_dict)
+get_fixed_deposit_accounts_status_from_dict = GetFixedDepositAccountsStatus.from_dict(get_fixed_deposit_accounts_status_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

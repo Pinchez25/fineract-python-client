@@ -31,12 +31,12 @@ json = "{}"
 # create an instance of JournalEntryCommand from a JSON string
 journal_entry_command_instance = JournalEntryCommand.from_json(json)
 # print the JSON string representation of the object
-print JournalEntryCommand.to_json()
+print(JournalEntryCommand.to_json())
 
 # convert the object into a dict
 journal_entry_command_dict = journal_entry_command_instance.to_dict()
 # create an instance of JournalEntryCommand from a dict
-journal_entry_command_form_dict = journal_entry_command.from_dict(journal_entry_command_dict)
+journal_entry_command_from_dict = JournalEntryCommand.from_dict(journal_entry_command_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

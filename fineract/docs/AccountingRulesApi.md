@@ -17,7 +17,15 @@ Method | HTTP request | Description
 
 Create/Define a Accounting rule
 
-Define a new Accounting rule.  Mandatory Fields name, officeId, accountToDebit OR debitTags, accountToCredit OR creditTags.  Optional Fields description
+Define a new Accounting rule.
+
+Mandatory Fields
+name, officeId,
+accountToDebit OR debitTags,
+accountToCredit OR creditTags.
+
+Optional Fields
+description
 
 ### Example
 
@@ -190,7 +198,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Accounting rule
 
-Returns the details of a defined Accounting rule.  Example Requests:  accountingrules/1
+Returns the details of a defined Accounting rule.
+
+Example Requests:
+
+accountingrules/1
 
 ### Example
 
@@ -276,7 +288,11 @@ Name | Type | Description  | Notes
 
 Retrieve Accounting Rules
 
-Returns the list of defined accounting rules.  Example Requests:  accountingrules
+Returns the list of defined accounting rules.
+
+Example Requests:
+
+accountingrules
 
 ### Example
 
@@ -358,7 +374,13 @@ This endpoint does not need any parameter.
 
 Retrieve Accounting Rule Details Template
 
-This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:  Field Defaults Allowed Value Lists Example Request:  accountingrules/template
+This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:
+
+Field Defaults
+Allowed Value Lists
+Example Request:
+
+accountingrules/template
 
 ### Example
 

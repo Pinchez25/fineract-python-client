@@ -23,12 +23,12 @@ json = "{}"
 # create an instance of GetRecurringPaymentDetailData from a JSON string
 get_recurring_payment_detail_data_instance = GetRecurringPaymentDetailData.from_json(json)
 # print the JSON string representation of the object
-print GetRecurringPaymentDetailData.to_json()
+print(GetRecurringPaymentDetailData.to_json())
 
 # convert the object into a dict
 get_recurring_payment_detail_data_dict = get_recurring_payment_detail_data_instance.to_dict()
 # create an instance of GetRecurringPaymentDetailData from a dict
-get_recurring_payment_detail_data_form_dict = get_recurring_payment_detail_data.from_dict(get_recurring_payment_detail_data_dict)
+get_recurring_payment_detail_data_from_dict = GetRecurringPaymentDetailData.from_dict(get_recurring_payment_detail_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

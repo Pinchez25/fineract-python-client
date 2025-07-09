@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.app_user import AppUser
 from typing import Optional, Set
@@ -42,11 +42,11 @@ class Rate(BaseModel):
     product_apply: Optional[StrictInt] = Field(default=None, alias="productApply")
     __properties: ClassVar[List[str]] = ["active", "approveUser", "createdBy", "createdDate", "id", "lastModifiedBy", "lastModifiedDate", "name", "new", "percentage", "productApply"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

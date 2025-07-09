@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of PostFinancialActivityAccountsResponse from a JSON string
 post_financial_activity_accounts_response_instance = PostFinancialActivityAccountsResponse.from_json(json)
 # print the JSON string representation of the object
-print PostFinancialActivityAccountsResponse.to_json()
+print(PostFinancialActivityAccountsResponse.to_json())
 
 # convert the object into a dict
 post_financial_activity_accounts_response_dict = post_financial_activity_accounts_response_instance.to_dict()
 # create an instance of PostFinancialActivityAccountsResponse from a dict
-post_financial_activity_accounts_response_form_dict = post_financial_activity_accounts_response.from_dict(post_financial_activity_accounts_response_dict)
+post_financial_activity_accounts_response_from_dict = PostFinancialActivityAccountsResponse.from_dict(post_financial_activity_accounts_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of PostDelinquencyBucketResponse from a JSON string
 post_delinquency_bucket_response_instance = PostDelinquencyBucketResponse.from_json(json)
 # print the JSON string representation of the object
-print PostDelinquencyBucketResponse.to_json()
+print(PostDelinquencyBucketResponse.to_json())
 
 # convert the object into a dict
 post_delinquency_bucket_response_dict = post_delinquency_bucket_response_instance.to_dict()
 # create an instance of PostDelinquencyBucketResponse from a dict
-post_delinquency_bucket_response_form_dict = post_delinquency_bucket_response.from_dict(post_delinquency_bucket_response_dict)
+post_delinquency_bucket_response_from_dict = PostDelinquencyBucketResponse.from_dict(post_delinquency_bucket_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

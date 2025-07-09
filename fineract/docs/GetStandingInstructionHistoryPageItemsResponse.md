@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of GetStandingInstructionHistoryPageItemsResponse from a JSON string
 get_standing_instruction_history_page_items_response_instance = GetStandingInstructionHistoryPageItemsResponse.from_json(json)
 # print the JSON string representation of the object
-print GetStandingInstructionHistoryPageItemsResponse.to_json()
+print(GetStandingInstructionHistoryPageItemsResponse.to_json())
 
 # convert the object into a dict
 get_standing_instruction_history_page_items_response_dict = get_standing_instruction_history_page_items_response_instance.to_dict()
 # create an instance of GetStandingInstructionHistoryPageItemsResponse from a dict
-get_standing_instruction_history_page_items_response_form_dict = get_standing_instruction_history_page_items_response.from_dict(get_standing_instruction_history_page_items_response_dict)
+get_standing_instruction_history_page_items_response_from_dict = GetStandingInstructionHistoryPageItemsResponse.from_dict(get_standing_instruction_history_page_items_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

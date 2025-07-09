@@ -39,12 +39,12 @@ json = "{}"
 # create an instance of PostStandingInstructionsRequest from a JSON string
 post_standing_instructions_request_instance = PostStandingInstructionsRequest.from_json(json)
 # print the JSON string representation of the object
-print PostStandingInstructionsRequest.to_json()
+print(PostStandingInstructionsRequest.to_json())
 
 # convert the object into a dict
 post_standing_instructions_request_dict = post_standing_instructions_request_instance.to_dict()
 # create an instance of PostStandingInstructionsRequest from a dict
-post_standing_instructions_request_form_dict = post_standing_instructions_request.from_dict(post_standing_instructions_request_dict)
+post_standing_instructions_request_from_dict = PostStandingInstructionsRequest.from_dict(post_standing_instructions_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

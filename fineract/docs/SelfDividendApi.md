@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_dividend_detail**
 > str create_dividend_detail(product_id, body=body)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **delete_dividend_detail**
 > str delete_dividend_detail(product_id, dividend_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -181,8 +177,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_all39**
 > str retrieve_all39(product_id, offset=offset, limit=limit, order_by=order_by, sort_order=sort_order, status=status)
-
-
 
 ### Example
 
@@ -273,8 +267,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_dividend_details**
 > str retrieve_dividend_details(dividend_id, product_id, offset=offset, limit=limit, order_by=order_by, sort_order=sort_order, account_no=account_no)
-
-
 
 ### Example
 
@@ -367,8 +359,6 @@ Name | Type | Description  | Notes
 
 # **update_dividend_detail**
 > str update_dividend_detail(product_id, dividend_id, command=command, body=body)
-
-
 
 ### Example
 

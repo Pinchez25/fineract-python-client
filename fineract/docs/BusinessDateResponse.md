@@ -20,12 +20,12 @@ json = "{}"
 # create an instance of BusinessDateResponse from a JSON string
 business_date_response_instance = BusinessDateResponse.from_json(json)
 # print the JSON string representation of the object
-print BusinessDateResponse.to_json()
+print(BusinessDateResponse.to_json())
 
 # convert the object into a dict
 business_date_response_dict = business_date_response_instance.to_dict()
 # create an instance of BusinessDateResponse from a dict
-business_date_response_form_dict = business_date_response.from_dict(business_date_response_dict)
+business_date_response_from_dict = BusinessDateResponse.from_dict(business_date_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

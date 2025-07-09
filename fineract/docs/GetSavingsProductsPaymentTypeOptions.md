@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of GetSavingsProductsPaymentTypeOptions from a JSON string
 get_savings_products_payment_type_options_instance = GetSavingsProductsPaymentTypeOptions.from_json(json)
 # print the JSON string representation of the object
-print GetSavingsProductsPaymentTypeOptions.to_json()
+print(GetSavingsProductsPaymentTypeOptions.to_json())
 
 # convert the object into a dict
 get_savings_products_payment_type_options_dict = get_savings_products_payment_type_options_instance.to_dict()
 # create an instance of GetSavingsProductsPaymentTypeOptions from a dict
-get_savings_products_payment_type_options_form_dict = get_savings_products_payment_type_options.from_dict(get_savings_products_payment_type_options_dict)
+get_savings_products_payment_type_options_from_dict = GetSavingsProductsPaymentTypeOptions.from_dict(get_savings_products_payment_type_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

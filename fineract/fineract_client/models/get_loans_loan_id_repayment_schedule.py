@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictFloat, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_loans_loan_id_currency import GetLoansLoanIdCurrency
 from fineract_client.models.get_loans_loan_id_repayment_period import GetLoansLoanIdRepaymentPeriod
@@ -46,11 +46,11 @@ class GetLoansLoanIdRepaymentSchedule(BaseModel):
     total_written_off: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalWrittenOff")
     __properties: ClassVar[List[str]] = ["currency", "loanTermInDays", "periods", "totalFeeChargesCharged", "totalInterestCharged", "totalOutstanding", "totalPaidInAdvance", "totalPaidLate", "totalPenaltyChargesCharged", "totalPrincipalDisbursed", "totalPrincipalExpected", "totalPrincipalPaid", "totalRepaymentExpected", "totalWaived", "totalWrittenOff"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -91,9 +91,9 @@ class GetLoansLoanIdRepaymentSchedule(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in periods (list)
         _items = []
         if self.periods:
-            for _item in self.periods:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_periods in self.periods:
+                if _item_periods:
+                    _items.append(_item_periods.to_dict())
             _dict['periods'] = _items
         return _dict
 

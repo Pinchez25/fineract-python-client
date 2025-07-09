@@ -34,12 +34,12 @@ json = "{}"
 # create an instance of CommandProcessingResult from a JSON string
 command_processing_result_instance = CommandProcessingResult.from_json(json)
 # print the JSON string representation of the object
-print CommandProcessingResult.to_json()
+print(CommandProcessingResult.to_json())
 
 # convert the object into a dict
 command_processing_result_dict = command_processing_result_instance.to_dict()
 # create an instance of CommandProcessingResult from a dict
-command_processing_result_form_dict = command_processing_result.from_dict(command_processing_result_dict)
+command_processing_result_from_dict = CommandProcessingResult.from_dict(command_processing_result_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.group_level import GroupLevel
 from fineract_client.models.office import Office
@@ -56,11 +56,11 @@ class Group(BaseModel):
     transfer_on_hold: Optional[StrictBool] = Field(default=None, alias="transferOnHold")
     __properties: ClassVar[List[str]] = ["accountNumberRequiresAutoGeneration", "activationDate", "active", "activeClientMembers", "center", "childGroup", "clientMembers", "closed", "group", "groupLevel", "groupMembers", "id", "new", "notActive", "notPending", "office", "parent", "pending", "staff", "submittedOnDate", "transferInProgress", "transferInProgressOrOnHold", "transferOnHold"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -98,16 +98,16 @@ class Group(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in active_client_members (list)
         _items = []
         if self.active_client_members:
-            for _item in self.active_client_members:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_active_client_members in self.active_client_members:
+                if _item_active_client_members:
+                    _items.append(_item_active_client_members.to_dict())
             _dict['activeClientMembers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in client_members (list)
         _items = []
         if self.client_members:
-            for _item in self.client_members:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_client_members in self.client_members:
+                if _item_client_members:
+                    _items.append(_item_client_members.to_dict())
             _dict['clientMembers'] = _items
         # override the default output from pydantic by calling `to_dict()` of group_level
         if self.group_level:
@@ -115,9 +115,9 @@ class Group(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in group_members (list)
         _items = []
         if self.group_members:
-            for _item in self.group_members:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_group_members in self.group_members:
+                if _item_group_members:
+                    _items.append(_item_group_members.to_dict())
             _dict['groupMembers'] = _items
         # override the default output from pydantic by calling `to_dict()` of office
         if self.office:

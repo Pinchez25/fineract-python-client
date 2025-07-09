@@ -14,7 +14,10 @@ Method | HTTP request | Description
 
 Create a Lookup Table entry
 
-Add a new entry to a survey.  Mandatory Fields key, score, validFrom, validTo
+Add a new entry to a survey.
+
+Mandatory Fields
+key, score, validFrom, validTo
 
 ### Example
 

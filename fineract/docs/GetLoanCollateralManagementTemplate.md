@@ -22,12 +22,12 @@ json = "{}"
 # create an instance of GetLoanCollateralManagementTemplate from a JSON string
 get_loan_collateral_management_template_instance = GetLoanCollateralManagementTemplate.from_json(json)
 # print the JSON string representation of the object
-print GetLoanCollateralManagementTemplate.to_json()
+print(GetLoanCollateralManagementTemplate.to_json())
 
 # convert the object into a dict
 get_loan_collateral_management_template_dict = get_loan_collateral_management_template_instance.to_dict()
 # create an instance of GetLoanCollateralManagementTemplate from a dict
-get_loan_collateral_management_template_form_dict = get_loan_collateral_management_template.from_dict(get_loan_collateral_management_template_dict)
+get_loan_collateral_management_template_from_dict = GetLoanCollateralManagementTemplate.from_dict(get_loan_collateral_management_template_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetGlAccountMapping from a JSON string
 get_gl_account_mapping_instance = GetGlAccountMapping.from_json(json)
 # print the JSON string representation of the object
-print GetGlAccountMapping.to_json()
+print(GetGlAccountMapping.to_json())
 
 # convert the object into a dict
 get_gl_account_mapping_dict = get_gl_account_mapping_instance.to_dict()
 # create an instance of GetGlAccountMapping from a dict
-get_gl_account_mapping_form_dict = get_gl_account_mapping.from_dict(get_gl_account_mapping_dict)
+get_gl_account_mapping_from_dict = GetGlAccountMapping.from_dict(get_gl_account_mapping_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

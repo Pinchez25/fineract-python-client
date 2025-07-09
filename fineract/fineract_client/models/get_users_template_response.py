@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.office_data import OfficeData
 from fineract_client.models.role_data import RoleData
@@ -34,11 +34,11 @@ class GetUsersTemplateResponse(BaseModel):
     self_service_roles: Optional[List[RoleData]] = Field(default=None, alias="selfServiceRoles")
     __properties: ClassVar[List[str]] = ["allowedOffices", "availableRoles", "selfServiceRoles"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -76,23 +76,23 @@ class GetUsersTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_offices (list)
         _items = []
         if self.allowed_offices:
-            for _item in self.allowed_offices:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_allowed_offices in self.allowed_offices:
+                if _item_allowed_offices:
+                    _items.append(_item_allowed_offices.to_dict())
             _dict['allowedOffices'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in available_roles (list)
         _items = []
         if self.available_roles:
-            for _item in self.available_roles:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_available_roles in self.available_roles:
+                if _item_available_roles:
+                    _items.append(_item_available_roles.to_dict())
             _dict['availableRoles'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in self_service_roles (list)
         _items = []
         if self.self_service_roles:
-            for _item in self.self_service_roles:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_self_service_roles in self.self_service_roles:
+                if _item_self_service_roles:
+                    _items.append(_item_self_service_roles.to_dict())
             _dict['selfServiceRoles'] = _items
         return _dict
 

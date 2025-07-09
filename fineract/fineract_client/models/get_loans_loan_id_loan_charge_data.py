@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_loans_loan_id_currency import GetLoansLoanIdCurrency
 from fineract_client.models.get_loans_loan_id_enum_option_data import GetLoansLoanIdEnumOptionData
@@ -57,11 +57,11 @@ class GetLoansLoanIdLoanChargeData(BaseModel):
     waived: Optional[StrictBool] = None
     __properties: ClassVar[List[str]] = ["amount", "amountOrPercentage", "amountOutstanding", "amountPaid", "amountPercentageAppliedTo", "amountWaived", "amountWrittenOff", "chargeCalculationType", "chargeId", "chargePayable", "chargePaymentMode", "chargeTimeType", "currency", "dueDate", "id", "installmentChargeData", "loanId", "maxCap", "minCap", "name", "paid", "penalty", "percentage", "waived"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -111,9 +111,9 @@ class GetLoansLoanIdLoanChargeData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in installment_charge_data (list)
         _items = []
         if self.installment_charge_data:
-            for _item in self.installment_charge_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_installment_charge_data in self.installment_charge_data:
+                if _item_installment_charge_data:
+                    _items.append(_item_installment_charge_data.to_dict())
             _dict['installmentChargeData'] = _items
         return _dict
 

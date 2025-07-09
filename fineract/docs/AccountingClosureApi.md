@@ -16,7 +16,8 @@ Method | HTTP request | Description
 
 Create an Accounting Closure
 
-Mandatory Fields officeId,closingDate
+Mandatory Fields
+officeId,closingDate
 
 ### Example
 
@@ -189,7 +190,12 @@ Name | Type | Description  | Notes
 
 Retrieve an Accounting Closure
 
-Example Requests:  glclosures/1   /glclosures/1?fields=officeName,closingDate
+Example Requests:
+
+glclosures/1
+
+
+/glclosures/1?fields=officeName,closingDate
 
 ### Example
 
@@ -275,7 +281,9 @@ Name | Type | Description  | Notes
 
 List Accounting closures
 
-Example Requests:  glclosures
+Example Requests:
+
+glclosures
 
 ### Example
 

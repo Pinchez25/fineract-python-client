@@ -17,7 +17,14 @@ Method | HTTP request | Description
 
 Create a new Provisioning Criteria
 
-Creates a new Provisioning Criteria  Mandatory Fields:  criteriaName provisioningcriteria  Optional Fields:  loanProducts
+Creates a new Provisioning Criteria
+
+Mandatory Fields: 
+criteriaName
+provisioningcriteria
+
+Optional Fields: 
+loanProducts
 
 ### Example
 
@@ -356,8 +363,6 @@ Name | Type | Description  | Notes
 # **retrieve_template3**
 > str retrieve_template3()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -436,7 +441,10 @@ This endpoint does not need any parameter.
 
 Updates a new Provisioning Criteria
 
-Updates a new Provisioning Criteria  Optional Fields criteriaName, loanProducts, provisioningcriteria
+Updates a new Provisioning Criteria
+
+Optional Fields
+criteriaName, loanProducts, provisioningcriteria
 
 ### Example
 

@@ -17,7 +17,11 @@ Method | HTTP request | Description
 
 Add Client Charge
 
- This API associates a Client charge with an implicit Client account Mandatory Fields :  chargeId and dueDate   Optional Fields :  amount
+ This API associates a Client charge with an implicit Client account
+Mandatory Fields : 
+chargeId and dueDate  
+Optional Fields : 
+amount
 
 ### Example
 
@@ -194,7 +198,16 @@ Name | Type | Description  | Notes
 
 Pay a Client Charge | Waive a Client Charge
 
-Pay a Client Charge:  Mandatory Fields:transactionDate and amount \"Pay either a part of or the entire due amount for a charge.(command=paycharge)  Waive a Client Charge:   This API provides the facility of waiving off the remaining amount on a client charge (command=waive)  Showing request/response for 'Pay a Client Charge'
+Pay a Client Charge:
+
+Mandatory Fields:transactionDate and amount "Pay either a part of or the entire due amount for a charge.(command=paycharge)
+
+Waive a Client Charge:
+
+
+This API provides the facility of waiving off the remaining amount on a client charge (command=waive)
+
+Showing request/response for 'Pay a Client Charge'
 
 ### Example
 
@@ -287,7 +300,10 @@ Name | Type | Description  | Notes
 
 List Client Charges
 
-The list capability of client charges supports pagination.Example Requests: clients/1/charges  clients/1/charges?offset=0&limit=5
+The list capability of client charges supports pagination.Example Requests:
+clients/1/charges
+
+clients/1/charges?offset=0&limit=5
 
 ### Example
 
@@ -381,7 +397,11 @@ Name | Type | Description  | Notes
 
 Retrieve a Client Charge
 
-Example Requests: clients/1/charges/1   clients/1/charges/1?fields=name,id
+Example Requests:
+clients/1/charges/1
+
+
+clients/1/charges/1?fields=name,id
 
 ### Example
 
@@ -466,8 +486,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_template4**
 > str retrieve_template4(client_id)
-
-
 
 ### Example
 

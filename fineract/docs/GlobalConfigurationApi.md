@@ -15,7 +15,18 @@ Method | HTTP request | Description
 
 Retrieve Global Configuration | Retrieve Global Configuration for surveys
 
-Returns the list global enable/disable configurations.  Example Requests:  configurations   Returns the list global enable/disable survey configurations.  Example Requests:  configurations/survey
+Returns the list global enable/disable configurations.
+
+Example Requests:
+
+configurations
+
+
+Returns the list global enable/disable survey configurations.
+
+Example Requests:
+
+configurations/survey
 
 ### Example
 
@@ -101,7 +112,11 @@ Name | Type | Description  | Notes
 
 Retrieve Global Configuration
 
-Returns a global enable/disable configurations.  Example Requests:  configurations/1
+Returns a global enable/disable configurations.
+
+Example Requests:
+
+configurations/1
 
 ### Example
 
@@ -187,7 +202,11 @@ Name | Type | Description  | Notes
 
 Retrieve Global Configuration
 
-Returns a global enable/disable configuration.  Example Requests:  configurations/name/Enable-Address
+Returns a global enable/disable configuration.
+
+Example Requests:
+
+configurations/name/Enable-Address
 
 ### Example
 

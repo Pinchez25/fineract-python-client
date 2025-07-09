@@ -43,12 +43,12 @@ json = "{}"
 # create an instance of GetProductsTypeProductIdResponse from a JSON string
 get_products_type_product_id_response_instance = GetProductsTypeProductIdResponse.from_json(json)
 # print the JSON string representation of the object
-print GetProductsTypeProductIdResponse.to_json()
+print(GetProductsTypeProductIdResponse.to_json())
 
 # convert the object into a dict
 get_products_type_product_id_response_dict = get_products_type_product_id_response_instance.to_dict()
 # create an instance of GetProductsTypeProductIdResponse from a dict
-get_products_type_product_id_response_form_dict = get_products_type_product_id_response.from_dict(get_products_type_product_id_response_dict)
+get_products_type_product_id_response_from_dict = GetProductsTypeProductIdResponse.from_dict(get_products_type_product_id_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

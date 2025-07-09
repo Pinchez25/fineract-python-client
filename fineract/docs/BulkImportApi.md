@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_output_template**
 > get_output_template(import_document_id=import_document_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -91,8 +89,6 @@ void (empty response body)
 
 # **retrieve_import_documents**
 > str retrieve_import_documents(entity_type=entity_type)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **retrive_output_template_location**
 > str retrive_output_template_location(import_document_id=import_document_id)
-
-
 
 ### Example
 

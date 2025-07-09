@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.get_offices_response import GetOfficesResponse
 from typing import Optional, Set
@@ -33,11 +33,11 @@ class GetOfficesTemplateResponse(BaseModel):
     opening_date: Optional[date] = Field(default=None, alias="openingDate")
     __properties: ClassVar[List[str]] = ["allowedParents", "openingDate"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -75,9 +75,9 @@ class GetOfficesTemplateResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in allowed_parents (list)
         _items = []
         if self.allowed_parents:
-            for _item in self.allowed_parents:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_allowed_parents in self.allowed_parents:
+                if _item_allowed_parents:
+                    _items.append(_item_allowed_parents.to_dict())
             _dict['allowedParents'] = _items
         return _dict
 

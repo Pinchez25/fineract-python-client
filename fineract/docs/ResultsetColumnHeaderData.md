@@ -37,12 +37,12 @@ json = "{}"
 # create an instance of ResultsetColumnHeaderData from a JSON string
 resultset_column_header_data_instance = ResultsetColumnHeaderData.from_json(json)
 # print the JSON string representation of the object
-print ResultsetColumnHeaderData.to_json()
+print(ResultsetColumnHeaderData.to_json())
 
 # convert the object into a dict
 resultset_column_header_data_dict = resultset_column_header_data_instance.to_dict()
 # create an instance of ResultsetColumnHeaderData from a dict
-resultset_column_header_data_form_dict = resultset_column_header_data.from_dict(resultset_column_header_data_dict)
+resultset_column_header_data_from_dict = ResultsetColumnHeaderData.from_dict(resultset_column_header_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

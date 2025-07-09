@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of PagedLocalRequestAdvancedQueryDataLocaleObject from a JSON string
 paged_local_request_advanced_query_data_locale_object_instance = PagedLocalRequestAdvancedQueryDataLocaleObject.from_json(json)
 # print the JSON string representation of the object
-print PagedLocalRequestAdvancedQueryDataLocaleObject.to_json()
+print(PagedLocalRequestAdvancedQueryDataLocaleObject.to_json())
 
 # convert the object into a dict
 paged_local_request_advanced_query_data_locale_object_dict = paged_local_request_advanced_query_data_locale_object_instance.to_dict()
 # create an instance of PagedLocalRequestAdvancedQueryDataLocaleObject from a dict
-paged_local_request_advanced_query_data_locale_object_form_dict = paged_local_request_advanced_query_data_locale_object.from_dict(paged_local_request_advanced_query_data_locale_object_dict)
+paged_local_request_advanced_query_data_locale_object_from_dict = PagedLocalRequestAdvancedQueryDataLocaleObject.from_dict(paged_local_request_advanced_query_data_locale_object_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

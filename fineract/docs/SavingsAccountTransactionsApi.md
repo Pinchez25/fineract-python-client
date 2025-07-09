@@ -17,7 +17,14 @@ Method | HTTP request | Description
 
 Undo/Reverse/Modify/Release Amount transaction API
 
-Undo/Reverse/Modify/Release Amount transaction API  Example Requests:   savingsaccounts/{savingsId}/transactions/{transactionId}?command=reverse  Accepted command = undo, reverse, modify, releaseAmount
+Undo/Reverse/Modify/Release Amount transaction API
+
+Example Requests:
+
+
+savingsaccounts/{savingsId}/transactions/{transactionId}?command=reverse
+
+Accepted command = undo, reverse, modify, releaseAmount
 
 ### Example
 
@@ -193,8 +200,6 @@ Name | Type | Description  | Notes
 # **retrieve_one24**
 > str retrieve_one24(savings_id, transaction_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -276,8 +281,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_template19**
 > str retrieve_template19(savings_id)
-
-
 
 ### Example
 
@@ -472,8 +475,6 @@ Name | Type | Description  | Notes
 
 # **transaction2**
 > PostSavingsAccountTransactionsResponse transaction2(savings_id, post_savings_account_transactions_request, command=command, idempotency_key=idempotency_key)
-
-
 
 ### Example
 

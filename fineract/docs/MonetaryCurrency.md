@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of MonetaryCurrency from a JSON string
 monetary_currency_instance = MonetaryCurrency.from_json(json)
 # print the JSON string representation of the object
-print MonetaryCurrency.to_json()
+print(MonetaryCurrency.to_json())
 
 # convert the object into a dict
 monetary_currency_dict = monetary_currency_instance.to_dict()
 # create an instance of MonetaryCurrency from a dict
-monetary_currency_form_dict = monetary_currency.from_dict(monetary_currency_dict)
+monetary_currency_from_dict = MonetaryCurrency.from_dict(monetary_currency_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictFloat, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.get_loans_loan_id_delinquency_pause_period import GetLoansLoanIdDelinquencyPausePeriod
 from fineract_client.models.get_loans_loan_id_loan_installment_level_delinquency import GetLoansLoanIdLoanInstallmentLevelDelinquency
@@ -48,11 +48,11 @@ class GetLoansLoanIdDelinquencySummary(BaseModel):
     past_due_days: Optional[StrictInt] = Field(default=None, alias="pastDueDays")
     __properties: ClassVar[List[str]] = ["availableDisbursementAmount", "delinquencyPausePeriods", "delinquentAmount", "delinquentDate", "delinquentDays", "delinquentFee", "delinquentInterest", "delinquentPenalty", "delinquentPrincipal", "installmentLevelDelinquency", "lastPaymentAmount", "lastPaymentDate", "lastRepaymentAmount", "lastRepaymentDate", "nextPaymentDueDate", "pastDueDays"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -90,16 +90,16 @@ class GetLoansLoanIdDelinquencySummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in delinquency_pause_periods (list)
         _items = []
         if self.delinquency_pause_periods:
-            for _item in self.delinquency_pause_periods:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_delinquency_pause_periods in self.delinquency_pause_periods:
+                if _item_delinquency_pause_periods:
+                    _items.append(_item_delinquency_pause_periods.to_dict())
             _dict['delinquencyPausePeriods'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in installment_level_delinquency (list)
         _items = []
         if self.installment_level_delinquency:
-            for _item in self.installment_level_delinquency:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_installment_level_delinquency in self.installment_level_delinquency:
+                if _item_installment_level_delinquency:
+                    _items.append(_item_installment_level_delinquency.to_dict())
             _dict['installmentLevelDelinquency'] = _items
         return _dict
 

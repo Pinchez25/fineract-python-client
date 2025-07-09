@@ -19,7 +19,22 @@ Method | HTTP request | Description
 
 Create \"Balanced\" Journal Entries
 
-Note: A Balanced (simple) Journal entry would have atleast one \"Debit\" and one \"Credit\" entry whose amounts are equal  Compound Journal entries may have \"n\" debits and \"m\" credits where both \"m\" and \"n\" are greater than 0 and the net sum or all debits and credits are equal    Mandatory Fields officeId, transactionDate   credits- glAccountId, amount, comments    debits-  glAccountId, amount, comments    Optional Fields paymentTypeId, accountNumber, checkNumber, routingCode, receiptNumber, bankNumber
+Note: A Balanced (simple) Journal entry would have atleast one "Debit" and one "Credit" entry whose amounts are equal 
+Compound Journal entries may have "n" debits and "m" credits where both "m" and "n" are greater than 0 and the net sum or all debits and credits are equal 
+
+
+Mandatory Fields
+officeId, transactionDate
+
+
+credits- glAccountId, amount, comments
+
+ 
+debits-  glAccountId, amount, comments
+
+ 
+Optional Fields
+paymentTypeId, accountNumber, checkNumber, routingCode, receiptNumber, bankNumber
 
 ### Example
 
@@ -108,7 +123,9 @@ Name | Type | Description  | Notes
 
 Update Running balances for Journal Entries
 
-This API calculates the running balances for office. If office ID not provided this API calculates running balances for all offices.  Mandatory Fields officeId
+This API calculates the running balances for office. If office ID not provided this API calculates running balances for all offices. 
+Mandatory Fields
+officeId
 
 ### Example
 
@@ -197,8 +214,6 @@ Name | Type | Description  | Notes
 # **get_journal_entries_template**
 > get_journal_entries_template(office_id=office_id, date_format=date_format)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -278,8 +293,6 @@ void (empty response body)
 
 # **post_journal_entries_template**
 > str post_journal_entries_template(date_format=date_format, locale=locale, uploaded_input_stream=uploaded_input_stream)
-
-
 
 ### Example
 
@@ -367,7 +380,29 @@ Name | Type | Description  | Notes
 
 List Journal Entries
 
-The list capability of journal entries can support pagination and sorting.  Example Requests:  journalentries  journalentries?transactionId=PB37X8Y21EQUY4S  journalentries?officeId=1&manualEntriesOnly=true&fromDate=1 July 2013&toDate=15 July 2013&dateFormat=dd MMMM yyyy&locale=en  journalentries?fields=officeName,glAccountName,transactionDate  journalentries?offset=10&limit=50  journalentries?orderBy=transactionId&sortOrder=DESC  journalentries?runningBalance=true  journalentries?transactionDetails=true  journalentries?loanId=12  journalentries?savingsId=24
+The list capability of journal entries can support pagination and sorting.
+
+Example Requests:
+
+journalentries
+
+journalentries?transactionId=PB37X8Y21EQUY4S
+
+journalentries?officeId=1&manualEntriesOnly=true&fromDate=1 July 2013&toDate=15 July 2013&dateFormat=dd MMMM yyyy&locale=en
+
+journalentries?fields=officeName,glAccountName,transactionDate
+
+journalentries?offset=10&limit=50
+
+journalentries?orderBy=transactionId&sortOrder=DESC
+
+journalentries?runningBalance=true
+
+journalentries?transactionDetails=true
+
+journalentries?loanId=12
+
+journalentries?savingsId=24
 
 ### Example
 
@@ -487,8 +522,6 @@ Name | Type | Description  | Notes
 # **retrieve_journal_entries**
 > str retrieve_journal_entries(offset=offset, limit=limit, entry_id=entry_id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -575,7 +608,17 @@ Name | Type | Description  | Notes
 
 Retrieve a single Entry
 
-Example Requests:  journalentries/1    journalentries/1?fields=officeName,glAccountId,entryType,amount  journalentries/1?runningBalance=true  journalentries/1?transactionDetails=true
+Example Requests:
+
+journalentries/1
+
+
+
+journalentries/1?fields=officeName,glAccountId,entryType,amount
+
+journalentries/1?runningBalance=true
+
+journalentries/1?transactionDetails=true
 
 ### Example
 
@@ -662,8 +705,6 @@ Name | Type | Description  | Notes
 
 # **retrieve_opening_balance**
 > str retrieve_opening_balance(office_id=office_id, currency_code=currency_code)
-
-
 
 ### Example
 

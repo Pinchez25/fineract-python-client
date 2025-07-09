@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetLoanProductsParamType from a JSON string
 get_loan_products_param_type_instance = GetLoanProductsParamType.from_json(json)
 # print the JSON string representation of the object
-print GetLoanProductsParamType.to_json()
+print(GetLoanProductsParamType.to_json())
 
 # convert the object into a dict
 get_loan_products_param_type_dict = get_loan_products_param_type_instance.to_dict()
 # create an instance of GetLoanProductsParamType from a dict
-get_loan_products_param_type_form_dict = get_loan_products_param_type.from_dict(get_loan_products_param_type_dict)
+get_loan_products_param_type_from_dict = GetLoanProductsParamType.from_dict(get_loan_products_param_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

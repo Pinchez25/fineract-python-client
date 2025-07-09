@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.currency_item import CurrencyItem
 from fineract_client.models.enum_option_type import EnumOptionType
@@ -59,11 +59,11 @@ class JournalEntryTransactionItem(BaseModel):
     transaction_id: Optional[StrictStr] = Field(default=None, alias="transactionId")
     __properties: ClassVar[List[str]] = ["amount", "comments", "createdByUserId", "createdByUserName", "createdDate", "currency", "entityId", "entityType", "entryType", "glAccountCode", "glAccountId", "glAccountName", "glAccountType", "id", "manualEntry", "officeId", "officeName", "officeRunningBalance", "organizationRunningBalance", "referenceNumber", "reversed", "runningBalanceComputed", "submittedOnDate", "transactionDate", "transactionDetails", "transactionId"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

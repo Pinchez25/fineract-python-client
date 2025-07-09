@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of GetRunReportResponse from a JSON string
 get_run_report_response_instance = GetRunReportResponse.from_json(json)
 # print the JSON string representation of the object
-print GetRunReportResponse.to_json()
+print(GetRunReportResponse.to_json())
 
 # convert the object into a dict
 get_run_report_response_dict = get_run_report_response_instance.to_dict()
 # create an instance of GetRunReportResponse from a dict
-get_run_report_response_form_dict = get_run_report_response.from_dict(get_run_report_response_dict)
+get_run_report_response_from_dict = GetRunReportResponse.from_dict(get_run_report_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

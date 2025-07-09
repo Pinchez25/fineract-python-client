@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetLoanChargeTemplateChargeOptions from a JSON string
 get_loan_charge_template_charge_options_instance = GetLoanChargeTemplateChargeOptions.from_json(json)
 # print the JSON string representation of the object
-print GetLoanChargeTemplateChargeOptions.to_json()
+print(GetLoanChargeTemplateChargeOptions.to_json())
 
 # convert the object into a dict
 get_loan_charge_template_charge_options_dict = get_loan_charge_template_charge_options_instance.to_dict()
 # create an instance of GetLoanChargeTemplateChargeOptions from a dict
-get_loan_charge_template_charge_options_form_dict = get_loan_charge_template_charge_options.from_dict(get_loan_charge_template_charge_options_dict)
+get_loan_charge_template_charge_options_from_dict = GetLoanChargeTemplateChargeOptions.from_dict(get_loan_charge_template_charge_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

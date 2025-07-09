@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of GetSelfClientsClientIdTransactionsPageItems from a JSON string
 get_self_clients_client_id_transactions_page_items_instance = GetSelfClientsClientIdTransactionsPageItems.from_json(json)
 # print the JSON string representation of the object
-print GetSelfClientsClientIdTransactionsPageItems.to_json()
+print(GetSelfClientsClientIdTransactionsPageItems.to_json())
 
 # convert the object into a dict
 get_self_clients_client_id_transactions_page_items_dict = get_self_clients_client_id_transactions_page_items_instance.to_dict()
 # create an instance of GetSelfClientsClientIdTransactionsPageItems from a dict
-get_self_clients_client_id_transactions_page_items_form_dict = get_self_clients_client_id_transactions_page_items.from_dict(get_self_clients_client_id_transactions_page_items_dict)
+get_self_clients_client_id_transactions_page_items_from_dict = GetSelfClientsClientIdTransactionsPageItems.from_dict(get_self_clients_client_id_transactions_page_items_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

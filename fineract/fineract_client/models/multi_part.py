@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fineract_client.models.body_part_headers import BodyPartHeaders
 from fineract_client.models.body_part_parameterized_headers import BodyPartParameterizedHeaders
@@ -42,11 +42,11 @@ class MultiPart(BaseModel):
     providers: Optional[Dict[str, Any]] = None
     __properties: ClassVar[List[str]] = ["bodyParts", "contentDisposition", "entity", "headers", "mediaType", "messageBodyWorkers", "parameterizedHeaders", "parent", "providers"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -84,9 +84,9 @@ class MultiPart(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in body_parts (list)
         _items = []
         if self.body_parts:
-            for _item in self.body_parts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_body_parts in self.body_parts:
+                if _item_body_parts:
+                    _items.append(_item_body_parts.to_dict())
             _dict['bodyParts'] = _items
         # override the default output from pydantic by calling `to_dict()` of content_disposition
         if self.content_disposition:

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from fineract_client.models.advanced_payment_data import AdvancedPaymentData
 from fineract_client.models.credit_allocation_data import CreditAllocationData
@@ -118,11 +118,11 @@ class GetLoanProductsProductIdResponse(BaseModel):
     use_borrower_cycle: Optional[StrictBool] = Field(default=None, alias="useBorrowerCycle")
     __properties: ClassVar[List[str]] = ["accountingMappings", "accountingRule", "allowApprovedDisbursedAmountsOverApplied", "allowPartialPeriodInterestCalculation", "allowVariableInstallments", "amortizationType", "annualInterestRate", "canDefineInstallmentAmount", "canUseForTopup", "charges", "creditAllocation", "currency", "delinquencyBucket", "delinquencyBucketOptions", "description", "disallowExpectedDisbursements", "disbursedAmountPercentageForDownPayment", "dueDaysForRepaymentEvent", "enableAccrualActivityPosting", "enableAutoRepaymentForDownPayment", "enableDownPayment", "enableInstallmentLevelDelinquency", "feeToIncomeAccountMappings", "fixedLength", "fixedPrincipalPercentagePerInstallment", "id", "inArrearsTolerance", "includeInBorrowerCycle", "interestCalculationPeriodType", "interestRateFrequencyType", "interestRatePerPeriod", "interestRateVariationsForBorrowerCycle", "interestRecalculationData", "interestType", "isFloatingInterestRateCalculationAllowed", "isInterestRecalculationEnabled", "isLinkedToFloatingInterestRates", "isRatesEnabled", "loanScheduleProcessingType", "loanScheduleType", "maxInterestRatePerPeriod", "maxNumberOfRepayments", "maxPrincipal", "maxTrancheCount", "maximumGap", "minInterestRatePerPeriod", "minNumberOfRepayments", "minPrincipal", "minimumGap", "multiDisburseLoan", "name", "numberOfRepaymentVariationsForBorrowerCycle", "numberOfRepayments", "outstandingLoanBalance", "overAppliedCalculationType", "overDueDaysForRepaymentEvent", "overdueDaysForNPA", "paymentAllocation", "paymentChannelToFundSourceMappings", "principal", "principalThresholdForLastInstalment", "productsPrincipalVariationsForBorrowerCycle", "repaymentEvery", "repaymentFrequencyType", "repaymentStartDateType", "shortName", "status", "supportedInterestRefundTypes", "transactionProcessingStrategyCode", "transactionProcessingStrategyName", "useBorrowerCycle"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -169,9 +169,9 @@ class GetLoanProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in credit_allocation (list)
         _items = []
         if self.credit_allocation:
-            for _item in self.credit_allocation:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_credit_allocation in self.credit_allocation:
+                if _item_credit_allocation:
+                    _items.append(_item_credit_allocation.to_dict())
             _dict['creditAllocation'] = _items
         # override the default output from pydantic by calling `to_dict()` of currency
         if self.currency:
@@ -182,16 +182,16 @@ class GetLoanProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in delinquency_bucket_options (list)
         _items = []
         if self.delinquency_bucket_options:
-            for _item in self.delinquency_bucket_options:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_delinquency_bucket_options in self.delinquency_bucket_options:
+                if _item_delinquency_bucket_options:
+                    _items.append(_item_delinquency_bucket_options.to_dict())
             _dict['delinquencyBucketOptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in fee_to_income_account_mappings (list)
         _items = []
         if self.fee_to_income_account_mappings:
-            for _item in self.fee_to_income_account_mappings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_fee_to_income_account_mappings in self.fee_to_income_account_mappings:
+                if _item_fee_to_income_account_mappings:
+                    _items.append(_item_fee_to_income_account_mappings.to_dict())
             _dict['feeToIncomeAccountMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of interest_calculation_period_type
         if self.interest_calculation_period_type:
@@ -214,23 +214,23 @@ class GetLoanProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in payment_allocation (list)
         _items = []
         if self.payment_allocation:
-            for _item in self.payment_allocation:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_payment_allocation in self.payment_allocation:
+                if _item_payment_allocation:
+                    _items.append(_item_payment_allocation.to_dict())
             _dict['paymentAllocation'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in payment_channel_to_fund_source_mappings (list)
         _items = []
         if self.payment_channel_to_fund_source_mappings:
-            for _item in self.payment_channel_to_fund_source_mappings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_payment_channel_to_fund_source_mappings in self.payment_channel_to_fund_source_mappings:
+                if _item_payment_channel_to_fund_source_mappings:
+                    _items.append(_item_payment_channel_to_fund_source_mappings.to_dict())
             _dict['paymentChannelToFundSourceMappings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in products_principal_variations_for_borrower_cycle (list)
         _items = []
         if self.products_principal_variations_for_borrower_cycle:
-            for _item in self.products_principal_variations_for_borrower_cycle:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_products_principal_variations_for_borrower_cycle in self.products_principal_variations_for_borrower_cycle:
+                if _item_products_principal_variations_for_borrower_cycle:
+                    _items.append(_item_products_principal_variations_for_borrower_cycle.to_dict())
             _dict['productsPrincipalVariationsForBorrowerCycle'] = _items
         # override the default output from pydantic by calling `to_dict()` of repayment_frequency_type
         if self.repayment_frequency_type:
@@ -241,9 +241,9 @@ class GetLoanProductsProductIdResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in supported_interest_refund_types (list)
         _items = []
         if self.supported_interest_refund_types:
-            for _item in self.supported_interest_refund_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_supported_interest_refund_types in self.supported_interest_refund_types:
+                if _item_supported_interest_refund_types:
+                    _items.append(_item_supported_interest_refund_types.to_dict())
             _dict['supportedInterestRefundTypes'] = _items
         return _dict
 
