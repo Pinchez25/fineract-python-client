@@ -19430,6 +19430,7 @@ paths:
             default: false
       responses:
         '200':
+          description: A list of available export types
           content:
             application/json:
               schema:
@@ -20733,6 +20734,12 @@ paths:
             format: int64
         - in: query
           name: command
+          schema:
+            type: string
+        - in: header
+          name: Idempotency-Key
+          required: false
+          description: Optional idempotency key to prevent duplicate submissions
           schema:
             type: string
       requestBody:
