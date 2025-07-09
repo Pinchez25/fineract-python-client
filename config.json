@@ -3,5 +3,9 @@
    "apiVersion": "1.0.0",
    "outputDir": "./fineract",
    "modelPackage": "models",
-   "apiPackage": "apis"
-}
+   "apiPackage": "apis",
+   "modelNameMappings": {
+     "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse": "DeleteSavingsChargeResponse"
+   }
+ }
+ 

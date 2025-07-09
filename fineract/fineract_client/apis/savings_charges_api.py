@@ -20,7 +20,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import List, Optional
 from typing_extensions import Annotated
-from fineract_client.models.delete_savings_accounts_savings_account_id_charges_savings_account_charge_id_response import DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse
+from fineract_client.models.delete_savings_charge_response import DeleteSavingsChargeResponse
 from fineract_client.models.get_savings_accounts_savings_account_id_charges_response import GetSavingsAccountsSavingsAccountIdChargesResponse
 from fineract_client.models.get_savings_accounts_savings_account_id_charges_savings_account_charge_id_response import GetSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse
 from fineract_client.models.get_savings_accounts_savings_account_id_charges_template_response import GetSavingsAccountsSavingsAccountIdChargesTemplateResponse
@@ -356,7 +356,7 @@ class SavingsChargesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse:
+    ) -> DeleteSavingsChargeResponse:
         """Delete a Savings account Charge
 
         Note: Currently, A Savings account Charge may only be removed from Savings that are not yet approved.
@@ -397,7 +397,7 @@ class SavingsChargesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse",
+            '200': "DeleteSavingsChargeResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -427,7 +427,7 @@ class SavingsChargesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse]:
+    ) -> ApiResponse[DeleteSavingsChargeResponse]:
         """Delete a Savings account Charge
 
         Note: Currently, A Savings account Charge may only be removed from Savings that are not yet approved.
@@ -468,7 +468,7 @@ class SavingsChargesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse",
+            '200': "DeleteSavingsChargeResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -539,7 +539,7 @@ class SavingsChargesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeleteSavingsAccountsSavingsAccountIdChargesSavingsAccountChargeIdResponse",
+            '200': "DeleteSavingsChargeResponse",
         }
         response_data = self.api_client.call_api(
             *_param,
